@@ -1,38 +1,64 @@
-# Add "Book Sunil Grover" page
+# Add 13 individual Bollywood actress booking pages
 
 ## Goal
-Create a new prerendered static page at `/book-sunil-grover` that matches the visual style, fonts, and SEO depth of the existing `/book-shah-rukh-khan` and `/book-alia-bhatt` pages, and wire it into the Comedian dropdown so it's reachable from `/comedian-booking-india`.
+Create 13 new static, prerendered pages under `/book-{name}` for Deepika Padukone, Priyanka Chopra, Anushka Sharma, Kriti Sanon, Kiara Advani, Kangana Ranaut, Taapsee Pannu, Vaani Kapoor, Nora Fatehi, Tamannaah Bhatia, Esha Gupta, Jacqueline Fernandez, Sunny Leone — matching the visual style and SEO depth of the existing `/book-alia-bhatt` and `/book-kareena-kapoor` pages, and wire them into the "Bollywood Actresses" dropdown across the whole site.
+
+## URLs (added to dropdown in this order, after Alia and Kareena)
+
+3. `/book-deepika-padukone` — Deepika Padukone
+4. `/book-priyanka-chopra` — Priyanka Chopra
+5. `/book-anushka-sharma` — Anushka Sharma
+6. `/book-kriti-sanon` — Kriti Sanon
+7. `/book-kiara-advani` — Kiara Advani
+8. `/book-kangana-ranaut` — Kangana Ranaut
+9. `/book-taapsee-pannu` — Taapsee Pannu
+10. `/book-vaani-kapoor` — Vaani Kapoor
+11. `/book-nora-fatehi` — Nora Fatehi
+12. `/book-tamannaah-bhatia` — Tamannaah Bhatia
+13. `/book-esha-gupta` — Esha Gupta
+14. `/book-jacqueline-fernandez` — Jacqueline Fernandez
+15. `/book-sunny-leone` — Sunny Leone
 
 ## What gets built
 
-1. **New page** — `book-sunil-grover/index.html`
-   - Cloned from `book-shah-rukh-khan/index.html` (same header, footer, fonts Inter + Space Grotesk, shared `styles-B3eDpzGa.css`, main JS bundle).
-   - Sunil-specific content:
-     - Hero with name, tagline, signature roles (Gutthi, Dr. Mashoor Gulati, Sunflower, Tandav, United Kacche).
-     - Fee block: ~₹35–50 L per show (corporate / private) — consistent with the ₹35 L figure already on the comedian page.
-     - "Why book Sunil Grover" — versatility, character comedy, brand-safe, family-friendly, wedding/sangeet favourite.
-     - Event types: corporate annual days, brand launches, weddings & sangeets, award shows, HNI private events.
-     - 3-step booking process (same template as SRK).
-     - 8-question FAQ block (fees, advance notice, customisation, international, weddings, NDA, rider, what TKC manages).
-     - Sticky / dark CTA section with WhatsApp + call + email.
-   - SEO: unique title, meta description, canonical, OG, Twitter cards, JSON-LD `Person` + `FAQPage` + `BreadcrumbList` + `HowTo`.
+### 1. 13 new static HTML pages
+Each page cloned from `book-kareena-kapoor/index.html` as the template (same header, footer, fonts Inter + Space Grotesk, shared CSS bundle). **No 3D carousel** on any of these pages — just static content blocks.
 
-2. **Images** — copy the 7 uploaded photos into `assets/` as `sunil-1.webp … sunil-7.webp` (convert the .jpg uploads to .webp via `cwebp` so file sizes match the rest of the site). Used for the hero, gallery strip, and OG image.
+Per-page unique content:
+- **Hero**: actress name, tagline, signature films/roles
+- **Fee block**: indicative per-event range (consistent with `/bollywood-celebrity-charges`)
+- **Why book {name}**: 4–6 USPs (audience pull, brand fit, event types she's known for)
+- **Event types**: corporate, brand launches, weddings/sangeets, award shows, private events
+- **3-step booking process** (same template)
+- **8-question FAQ** (fees, advance notice, customisation, international, weddings, NDA, rider, what TKC manages)
+- **Strong CTA section** (sticky/dark) with WhatsApp + call + email
+- **SEO head**: unique `<title>`, meta description, canonical, OG, Twitter cards
+- **JSON-LD**: `Person` + `FAQPage` + `BreadcrumbList` schemas for AEO / LLM-rankability
 
-3. **Sitemap** — add `<url><loc>https://tkctalent.com/book-sunil-grover</loc>…` to `sitemap.xml`.
+### 2. Hero images
+Reuse existing `/actresses/{slug}.png` images already in the repo (verified present for all 13). Wire each into hero, OG image, and `twitter:image`. No new image generation needed.
 
-4. **llms.txt** — add a `Book Sunil Grover` line under Pages.
+Image map:
+- deepika-padukone.png, priyanka-chopra.png, anushka-sharma.png, kirti-sanan.png (Kriti), kiara-adwani.png (Kiara), kangana-ranaut.png, taapsee-pannu.png, vaani-kapoor.png, nora-fatehi.png, tamanna-bhatia.png, esha-gupta.png, jacqueline-fern-ndez.png, sunny-leone.png
 
-5. **Comedian dropdown nav** — the nav is baked into every prerendered HTML page. The comedian sub-menu currently has no individual-artist links. Adding "Sunil Grover" to the dropdown across the whole site means a mechanical search-and-replace insert into the comedian `<ul>` of each existing `index.html` (~14 files).
+### 3. Dropdown nav update (sitewide)
+The Bollywood Actresses sub-menu lives in `assets/Footer-Cl7ZiBEX.js` AND is baked into every prerendered `index.html` (~15 files). Mechanical search-and-replace insert into the `children:[{label:"Book Alia Bhatt",...},{label:"Book Kareena Kapoor Khan",...}]` array to append the 13 new entries in order.
+
+### 4. Sitemap
+Append 13 `<url>` entries to `sitemap.xml`.
+
+### 5. llms.txt
+Append 13 `Book {Name}` lines under Pages section.
 
 ## Technical notes
 
-- This working tree is a prerendered static export — no `src/` or `package.json`. All edits are direct HTML/asset edits, same workflow used for the recent `sitemap.xml`, `.htaccess`, and `llms.txt` changes.
-- Fonts load from Google Fonts and `styles-B3eDpzGa.css` — both already referenced on every page, so the new page inherits styling automatically.
-- OG image: `assets/sunil-1.webp` (Jim Beam / floral-shirt portrait).
-- After files land, redeploy to Hostinger via the existing FTP / zip-and-extract flow.
+- Static prerendered export — no `src/` rebuild. All edits direct HTML/asset edits.
+- Fonts and CSS load from already-referenced bundles — new pages inherit styling automatically.
+- React hydration script is intentionally omitted on individual-artist pages (same approach as Sunil Grover / SRK / Alia / Kareena) to avoid the React #418 hydration error on mobile.
+- No 3D carousel JS injected — these pages are pure HTML + CSS.
 
 ## Out of scope
 
-- No rebuild of the React/TanStack source (not present in this workspace).
-- No route-tree edits — purely static additions.
+- No new images (use existing `/actresses/*.png`).
+- No edits to the parent `/bollywood-actress-booking` page content beyond the dropdown nav.
+- No rebuild of React source.
