@@ -1,0 +1,58 @@
+# cPanel / Apache config for the static export of the TKC Talent site.
+# Maps pretty URLs like /about → /about.html, falls back to /404.html.
+
+Options -MultiViews
+DirectoryIndex index.html
+
+# Output uses subfolder/index.html, so Apache's DirectoryIndex resolves
+# pretty URLs like /book-alia-bhatt → /book-alia-bhatt/index.html natively.
+# We add an explicit rewrite as a safety net for hosts where the prerender
+# emitted /book-alia-bhatt.html instead of a folder, then fall through to
+# /404.html for anything that genuinely doesn't exist.
+#
+# IMPORTANT — never RewriteRule directly to /404.html. That would serve the
+# 404 body with HTTP 200, which Google treats as a "soft 404". We rely on
+# Apache's ErrorDocument below so the response keeps the real 404 status.
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # 301 redirect: old /celebrity-charges URL → new /bollywood-celebrity-charges
+  RewriteRule ^celebrity-charges/?$ /bollywood-celebrity-charges [R=301,L]
+
+  # If the request isn't a real file/folder, try appending .html
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{DOCUMENT_ROOT}/$1.html -f
+  RewriteRule ^(.+?)/?$ /$1.html [L]
+
+  # Anything still unresolved (no real file, no .html sibling, no folder)
+  # falls through to Apache, which sends ErrorDocument 404 /404.html below
+  # with the correct 404 status code.
+</IfModule>
+
+# ErrorDocument with a local path preserves the 404 status code while
+# serving the styled /404.html body. Do NOT use a Redirect or absolute URL
+# here — both would change the status to 200 or 302.
+ErrorDocument 404 /404.html
+
+# Belt-and-braces: tell crawlers not to index the 404 page itself.
+<IfModule mod_headers.c>
+  <Files "404.html">
+    Header set X-Robots-Tag "noindex"
+  </Files>
+</IfModule>
+
+# Long-cache hashed assets, never cache HTML.
+<IfModule mod_headers.c>
+  <FilesMatch "\.(?:js|css|woff2?|ttf|otf|eot|png|jpe?g|gif|svg|webp|avif|ico)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+  <FilesMatch "\.html$">
+    Header set Cache-Control "no-cache"
+  </FilesMatch>
+</IfModule>
+
+# Gzip / Brotli where available.
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css application/javascript application/json image/svg+xml text/xml application/xml
+</IfModule>

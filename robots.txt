@@ -1,0 +1,27 @@
+# robots.txt for the prerendered static export of TKC Talent.
+# All 14 prerendered routes are listed in /sitemap.xml.
+
+User-agent: *
+Allow: /
+Disallow: /404.html
+
+# Explicitly welcome major AI / answer-engine crawlers.
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+Sitemap: https://tkctalent.com/sitemap.xml
