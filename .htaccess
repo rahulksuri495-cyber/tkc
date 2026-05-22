@@ -16,6 +16,12 @@ DirectoryIndex index.html
 <IfModule mod_rewrite.c>
   RewriteEngine On
 
+  # Canonicalize hostname: always redirect www → apex (non-www).
+  # Google should only ever see one hostname; serving the same content
+  # at both www and apex creates duplicate-content / indexing confusion.
+  RewriteCond %{HTTP_HOST} ^www\.tkctalent\.com$ [NC]
+  RewriteRule ^(.*)$ https://tkctalent.com/$1 [R=301,L]
+
   # 301 redirect: old /celebrity-charges URL → new /bollywood-celebrity-charges
   RewriteRule ^celebrity-charges/?$ /bollywood-celebrity-charges [R=301,L]
 
