@@ -19,6 +19,16 @@ DirectoryIndex index.html
   # 301 redirect: old /celebrity-charges URL → new /bollywood-celebrity-charges
   RewriteRule ^celebrity-charges/?$ /bollywood-celebrity-charges [R=301,L]
 
+  # Canonical URL form: always use a trailing slash for directory routes.
+  # If the request maps to an existing directory but is missing the trailing
+  # slash (e.g. /book-vaani-kapoor), 301 redirect to the slashed form.
+  # Preserves the query string and skips real files (so /sitemap.xml,
+  # /robots.txt, /llms.txt, /favicon.ico, /assets/* etc. are untouched).
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteCond %{REQUEST_URI} !(/$)
+  RewriteRule ^(.+)$ /$1/ [R=301,L]
+
   # If the request isn't a real file/folder, try appending .html
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
