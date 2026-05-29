@@ -1,64 +1,40 @@
-# Add 13 individual Bollywood actress booking pages
-
 ## Goal
-Create 13 new static, prerendered pages under `/book-{name}` for Deepika Padukone, Priyanka Chopra, Anushka Sharma, Kriti Sanon, Kiara Advani, Kangana Ranaut, Taapsee Pannu, Vaani Kapoor, Nora Fatehi, Tamannaah Bhatia, Esha Gupta, Jacqueline Fernandez, Sunny Leone — matching the visual style and SEO depth of the existing `/book-alia-bhatt` and `/book-kareena-kapoor` pages, and wire them into the "Bollywood Actresses" dropdown across the whole site.
+Publish 9 new press articles (May 19, 2026 — "Leading Entrepreneurs, Businesses and Thought Leaders of India 2026") to the Newsroom page, inserted as **cards #7–#15** (after the existing first 6, before the rest). Same card style as existing entries; on desktop and mobile.
 
-## URLs (added to dropdown in this order, after Alia and Kareena)
+## 9 Articles to insert (in this order)
 
-3. `/book-deepika-padukone` — Deepika Padukone
-4. `/book-priyanka-chopra` — Priyanka Chopra
-5. `/book-anushka-sharma` — Anushka Sharma
-6. `/book-kriti-sanon` — Kriti Sanon
-7. `/book-kiara-advani` — Kiara Advani
-8. `/book-kangana-ranaut` — Kangana Ranaut
-9. `/book-taapsee-pannu` — Taapsee Pannu
-10. `/book-vaani-kapoor` — Vaani Kapoor
-11. `/book-nora-fatehi` — Nora Fatehi
-12. `/book-tamannaah-bhatia` — Tamannaah Bhatia
-13. `/book-esha-gupta` — Esha Gupta
-14. `/book-jacqueline-fernandez` — Jacqueline Fernandez
-15. `/book-sunny-leone` — Sunny Leone
+| # | Publisher | URL | Logo file (uploaded) |
+|---|---|---|---|
+| 7 | Google News | https://news.google.com/search?q=Leading+Entrepreneurs+Businesses+and+Thought+Leaders+of+India+2026&hl=en-IN&gl=IN&ceid=IN:en | google_news.png |
+| 8 | MSN | https://www.msn.com/en-in/news/India/leading-entrepreneurs-businesses-and-thought-leaders-of-india-2026/ar-AA23yvgE | msn.png |
+| 9 | Yahoo News | https://search.yahoo.com/search?p=Leading+Entrepreneurs+Businesses+and+Thought+Leaders+of+India+2026 | yahoo_news.png |
+| 10 | Business Standard | https://www.business-standard.com/content/press-releases-ani/leading-entrepreneurs-businesses-and-thought-leaders-of-india-2026-125051900672_1.html | business_standard.png |
+| 11 | ANI News | https://www.aninews.in/news/business/business/leading-entrepreneurs-businesses-and-thought-leaders-of-india-202620260519181636/ | ani.png |
+| 12 | News18 | https://www.news18.com/business/leading-entrepreneurs-businesses-and-thought-leaders-of-india-2026-10100214.html | news_18.png |
+| 13 | Tribune India | https://www.tribuneindia.com/news/business/leading-entrepreneurs-businesses-and-thought-leaders-of-india-2026/amp/?utm=relatedarticles | the_tribune.png |
+| 14 | Lokmat Times | https://www.lokmattimes.com/business/leading-entrepreneurs-businesses-and-thought-leaders-of-india-2026/ | Lokmat_Times.png |
+| 15 | World News Network | https://www.worldnewsnetwork.net/news/leading-entrepreneurs-businesses-and-thought-leaders-of-india-202620260519181636/ | world_news_network.png |
 
-## What gets built
+Each card uses publisher name, the shared headline "Leading Entrepreneurs, Businesses and Thought Leaders of India 2026", date badge "May 19, 2026", a short E-E-A-T body summary referencing TKC's inclusion, the logo, and the URL (target=_blank, rel=noopener nofollow).
 
-### 1. 13 new static HTML pages
-Each page cloned from `book-kareena-kapoor/index.html` as the template (same header, footer, fonts Inter + Space Grotesk, shared CSS bundle). **No 3D carousel** on any of these pages — just static content blocks.
+## Files changed
 
-Per-page unique content:
-- **Hero**: actress name, tagline, signature films/roles
-- **Fee block**: indicative per-event range (consistent with `/bollywood-celebrity-charges`)
-- **Why book {name}**: 4–6 USPs (audience pull, brand fit, event types she's known for)
-- **Event types**: corporate, brand launches, weddings/sangeets, award shows, private events
-- **3-step booking process** (same template)
-- **8-question FAQ** (fees, advance notice, customisation, international, weddings, NDA, rider, what TKC manages)
-- **Strong CTA section** (sticky/dark) with WhatsApp + call + email
-- **SEO head**: unique `<title>`, meta description, canonical, OG, Twitter cards
-- **JSON-LD**: `Person` + `FAQPage` + `BreadcrumbList` schemas for AEO / LLM-rankability
-
-### 2. Hero images
-Reuse existing `/actresses/{slug}.png` images already in the repo (verified present for all 13). Wire each into hero, OG image, and `twitter:image`. No new image generation needed.
-
-Image map:
-- deepika-padukone.png, priyanka-chopra.png, anushka-sharma.png, kirti-sanan.png (Kriti), kiara-adwani.png (Kiara), kangana-ranaut.png, taapsee-pannu.png, vaani-kapoor.png, nora-fatehi.png, tamanna-bhatia.png, esha-gupta.png, jacqueline-fern-ndez.png, sunny-leone.png
-
-### 3. Dropdown nav update (sitewide)
-The Bollywood Actresses sub-menu lives in `assets/Footer-Cl7ZiBEX.js` AND is baked into every prerendered `index.html` (~15 files). Mechanical search-and-replace insert into the `children:[{label:"Book Alia Bhatt",...},{label:"Book Kareena Kapoor Khan",...}]` array to append the 13 new entries in order.
-
-### 4. Sitemap
-Append 13 `<url>` entries to `sitemap.xml`.
-
-### 5. llms.txt
-Append 13 `Book {Name}` lines under Pages section.
-
-## Technical notes
-
-- Static prerendered export — no `src/` rebuild. All edits direct HTML/asset edits.
-- Fonts and CSS load from already-referenced bundles — new pages inherit styling automatically.
-- React hydration script is intentionally omitted on individual-artist pages (same approach as Sunil Grover / SRK / Alia / Kareena) to avoid the React #418 hydration error on mobile.
-- No 3D carousel JS injected — these pages are pure HTML + CSS.
+1. **Copy 9 logos** → `assets/` (hashed-name not needed; use simple names like `assets/google-news.png`, etc.). Reuse existing simple references.
+2. **`assets/main-CQYOkFRQ.js`** (bundled press array `I2`):
+   - Add 9 logo URL constants (e.g. `Gn1="/assets/google-news.png"`).
+   - Insert 9 new object entries into `I2` immediately after the 6th entry (byte offset already located at position 2642 inside the array). Existing 26 entries become 35.
+3. **`newsroom/index.html`** (prerendered SSR markup):
+   - Locate the 6th `<li>` press card and inject 9 sibling `<li>` cards with identical class structure / Tailwind classes before the 7th.
+   - Update the `(NN)` count badge in section header from `(26)` to `(35)`.
+   - Update the "Press features" stat from `26+` to `35+` in the hero stats.
+4. **`assets/newsroom-BPng2Qdx.js`** — only update the hero stats string `26+` → `35+`. **Do NOT touch** the `Publications` (18-logo) grid — that's a curated logo set, not the article list.
 
 ## Out of scope
+- Publishers grid (curated 18 outlets) — not changing.
+- No new react route, no sitemap change (newsroom URL unchanged).
+- No design/layout change — cards inherit existing card style exactly.
 
-- No new images (use existing `/actresses/*.png`).
-- No edits to the parent `/bollywood-actress-booking` page content beyond the dropdown nav.
-- No rebuild of React source.
+## Verification
+- Grep for the 9 publisher names in both `main-CQYOkFRQ.js` and `newsroom/index.html` after edit.
+- Confirm `(35)` badge and `35+` hero stat render.
+- Visually confirm cards #7–#15 in preview (desktop + mobile viewport).
