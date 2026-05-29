@@ -1,1 +1,1 @@
-import{j as o,y as t}from"./main-CQYOkFRQ.js";import{C as a}from"./CategoryPageLayout-BZ1ShLCw.js";import"./Footer-Cl7ZiBEX.js";const s=()=>o.jsx(a,{data:t});export{s as component};
+import{j as o,y as t}from"./main-CQYOkFRR.js";import{C as a}from"./CategoryPageLayout-BZ1ShLCw.js";import"./Footer-Cl7ZiBEX.js";const s=()=>o.jsx(a,{data:t});export{s as component};

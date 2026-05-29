@@ -20,7 +20,7 @@ Each card uses publisher name, the shared headline "Leading Entrepreneurs, Busin
 ## Files changed
 
 1. **Copy 9 logos** → `assets/` (hashed-name not needed; use simple names like `assets/google-news.png`, etc.). Reuse existing simple references.
-2. **`assets/main-CQYOkFRQ.js`** (bundled press array `I2`):
+2. **`assets/main-CQYOkFRR.js`** (bundled press array `I2`):
    - Add 9 logo URL constants (e.g. `Gn1="/assets/google-news.png"`).
    - Insert 9 new object entries into `I2` immediately after the 6th entry (byte offset already located at position 2642 inside the array). Existing 26 entries become 35.
 3. **`newsroom/index.html`** (prerendered SSR markup):
@@ -35,6 +35,6 @@ Each card uses publisher name, the shared headline "Leading Entrepreneurs, Busin
 - No design/layout change — cards inherit existing card style exactly.
 
 ## Verification
-- Grep for the 9 publisher names in both `main-CQYOkFRQ.js` and `newsroom/index.html` after edit.
+- Grep for the 9 publisher names in both `main-CQYOkFRR.js` and `newsroom/index.html` after edit.
 - Confirm `(35)` badge and `35+` hero stat render.
 - Visually confirm cards #7–#15 in preview (desktop + mobile viewport).
