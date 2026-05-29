@@ -15,11 +15,49 @@ document.addEventListener('click',function(e){var a=e.target.closest('a');if(!a)
 (function(){
   var button=document.querySelector('[aria-controls="mobile-nav-drawer"]');
   var drawer=document.getElementById('mobile-nav-drawer');
-  if(!button||!drawer)return;
+  if(!button||!drawer||drawer.getAttribute('data-static-nav-ready')==='true')return;
+  drawer.setAttribute('data-static-nav-ready','true');
   var backdrop=drawer.previousElementSibling;
+  var menu=drawer.querySelector('ul');
+  var currentPath=window.location.pathname.replace(/\/$/,'')||'/';
+  function isActive(href){
+    var path=href.split('#')[0].replace(/\/$/,'')||'/';
+    return path===currentPath;
+  }
+  function attrs(href){
+    return isActive(href)?' data-status="active" aria-current="page"':'';
+  }
+  function link(label,href,extra){
+    var active=isActive(href)?' bg-foreground text-background hover:bg-foreground':'';
+    return '<a href="'+href+'"'+attrs(href)+' class="'+extra+active+'">'+label+'</a>';
+  }
+  function nestedLink(label,href){
+    return '<li>'+link(label,href,'flex min-h-9 items-center rounded-lg px-3 py-2 text-xs text-foreground/80 transition hover:bg-foreground/5')+'</li>';
+  }
+  function group(label,href,children){
+    return '<li>'+link(label,href,'flex min-h-10 items-center rounded-lg px-3 py-2 text-sm transition hover:bg-foreground/5')+'<ul class="ml-3 mt-1 flex max-h-64 flex-col gap-1 overflow-y-auto overscroll-contain border-l border-foreground/10 pl-3">'+children.map(function(item){return nestedLink(item[0],item[1]);}).join('')+'</ul></li>';
+  }
+  var actors=[['Book Shah Rukh Khan','/book-shah-rukh-khan/']];
+  var actresses=[['Book Alia Bhatt','/book-alia-bhatt/'],['Book Kareena Kapoor Khan','/book-kareena-kapoor/'],['Book Deepika Padukone','/book-deepika-padukone/'],['Book Priyanka Chopra Jonas','/book-priyanka-chopra/'],['Book Anushka Sharma','/book-anushka-sharma/'],['Book Kriti Sanon','/book-kriti-sanon/'],['Book Kiara Advani','/book-kiara-advani/'],['Book Kangana Ranaut','/book-kangana-ranaut/'],['Book Taapsee Pannu','/book-taapsee-pannu/'],['Book Vaani Kapoor','/book-vaani-kapoor/'],['Book Nora Fatehi','/book-nora-fatehi/'],['Book Tamannaah Bhatia','/book-tamannaah-bhatia/'],['Book Esha Gupta','/book-esha-gupta/'],['Book Jacqueline Fernandez','/book-jacqueline-fernandez/'],['Book Sunny Leone','/book-sunny-leone/'],['Book Akanksha Puri','/book-akanksha-puri/']];
+  var comedians=[['Book Kapil Sharma','/book-kapil-sharma/'],['Book Sunil Grover','/book-sunil-grover/'],['Book Munawar Faruqui','/book-munawar-faruqui/'],['Book Bharti Singh','/book-bharti-singh/'],['Book Krushna Abhishek','/book-krushna-abhishek/'],['Book Zakir Khan','/book-zakir-khan/'],['Book Anubhav Singh Bassi','/book-anubhav-singh-bassi/'],['Book Aakash Gupta','/book-aakash-gupta/'],['Book Kenny Sebastian','/book-kenny-sebastian/'],['Book Kanan Gill','/book-kanan-gill/'],['Book Biswa Kalyan Rath','/book-biswa-kalyan-rath/'],['Book Abish Mathew','/book-abish-mathew/'],['Book Samay Raina','/book-samay-raina/'],['Book Gaurav Kapoor','/book-gaurav-kapoor/'],['Book Rahul Subramanian','/book-rahul-subramanian/'],['Book Nishant Tanwar','/book-nishant-tanwar/']];
+  if(menu){
+    menu.innerHTML='<li>'+link('Home','/','flex min-h-11 items-center rounded-lg px-3 py-3 transition hover:bg-foreground/5')+'</li><li><button type="button" data-mobile-dropdown="celebrity" aria-expanded="false" class="flex min-h-11 w-full items-center justify-between rounded-lg px-3 py-3 transition hover:bg-foreground/5"><span>Celebrity Booking India</span><span aria-hidden="true" class="transition-transform">⌄</span></button><ul data-mobile-submenu="celebrity" class="hidden ml-3 mt-1 flex flex-col gap-1 border-l border-foreground/10 pl-3">'+link('Overview','/celebrity-booking-india/','flex min-h-10 items-center rounded-lg px-3 py-2 text-sm transition hover:bg-foreground/5')+group('Bollywood Actors','/bollywood-celebrity-booking/',actors)+group('Bollywood Actresses','/bollywood-actress-booking/',actresses)+'<li>'+link('Singers & Performers','/singer-booking-india/','flex min-h-10 items-center rounded-lg px-3 py-2 text-sm transition hover:bg-foreground/5')+'</li>'+group('Comedian Booking India','/comedian-booking-india/',comedians)+'<li>'+link('Celebrity DJs','/celebrity-dj-booking/','flex min-h-10 items-center rounded-lg px-3 py-2 text-sm transition hover:bg-foreground/5')+'</li><li>'+link('Pan-India Celebrities','/pan-india-celebrity-booking/','flex min-h-10 items-center rounded-lg px-3 py-2 text-sm transition hover:bg-foreground/5')+'</li><li>'+link('Digital Influencers','/influencer-booking-india/','flex min-h-10 items-center rounded-lg px-3 py-2 text-sm transition hover:bg-foreground/5')+'</li></ul></li><li>'+link('Celebrity Charges','/bollywood-celebrity-charges/','flex min-h-11 items-center rounded-lg px-3 py-3 transition hover:bg-foreground/5')+'</li><li>'+link('Newsroom','/newsroom/','flex min-h-11 items-center rounded-lg px-3 py-3 transition hover:bg-foreground/5')+'</li><li>'+link('Services','/#services','flex min-h-11 items-center rounded-lg px-3 py-3 transition hover:bg-foreground/5')+'</li><li>'+link('Pricing','/#pricing','flex min-h-11 items-center rounded-lg px-3 py-3 transition hover:bg-foreground/5')+'</li><li>'+link('Locations','/#locations','flex min-h-11 items-center rounded-lg px-3 py-3 transition hover:bg-foreground/5')+'</li><li>'+link('Contact','/#book','flex min-h-11 items-center rounded-lg px-3 py-3 transition hover:bg-foreground/5')+'</li>';
+    var dropdown=menu.querySelector('[data-mobile-dropdown="celebrity"]');
+    var submenu=menu.querySelector('[data-mobile-submenu="celebrity"]');
+    if(dropdown&&submenu){
+      dropdown.addEventListener('click',function(){
+        var open=dropdown.getAttribute('aria-expanded')!=='true';
+        dropdown.setAttribute('aria-expanded',open?'true':'false');
+        submenu.classList.toggle('hidden',!open);
+        var arrow=dropdown.querySelector('[aria-hidden="true"]');
+        if(arrow)arrow.style.transform=open?'rotate(180deg)':'rotate(0deg)';
+      });
+    }
+  }
   function setOpen(open){
     button.setAttribute('aria-expanded',open?'true':'false');
     button.setAttribute('aria-label',open?'Close menu':'Open menu');
+    button.style.mixBlendMode=open?'normal':'difference';
     drawer.classList.toggle('translate-x-full',!open);
     drawer.classList.toggle('translate-x-0',open);
     if(backdrop){
