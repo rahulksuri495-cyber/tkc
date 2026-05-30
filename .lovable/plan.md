@@ -1,17 +1,23 @@
-I verified the issue in the mobile preview: the drawer opens, but the “Celebrity Booking India” dropdown has no submenu content rendered underneath it. The click is happening, but because hydration was disabled earlier, React never creates the conditional submenu DOM.
+# Add 3 singers to Singer Booking India page
 
-Plan:
+Add Altaf Raja, Sara Gurpal, and Sunanda Sharma to the singer roster with prices and photos.
 
-1. Repair the static mobile navigation
-   - Add a robust vanilla JavaScript fallback for the mobile drawer.
-   - Ensure dropdown buttons actually create/show their submenu links, not only toggle `aria-expanded`.
-   - Keep nested groups visible and usable on mobile, including Bollywood Actors, Bollywood Actresses, Comedians, Singers & Performers, DJs, Pan-India Celebrities, and Influencers.
+## Singer entries
 
-2. Apply the same fix across all affected static pages
-   - Update every page where hydration was disabled and the mobile nav depends on static JS.
-   - Do not alter page content, SEO data, or desktop navigation styling.
+| Name | Tier | Fee | Events |
+|---|---|---|---|
+| Altaf Raja | Mid Tier | ₹5 L – ₹7 L | Weddings, sangeet nights, retro nights |
+| Sara Gurpal | Emerging | ₹5 L | Sangeet, Punjabi weddings, corporate |
+| Sunanda Sharma | Mid Tier | On Demand | Weddings, sangeet, Punjabi events |
 
-3. Verify before delivery
-   - Test at mobile width around 320px.
-   - Confirm: hamburger opens, “Celebrity Booking India” expands, submenu links appear, nested category links are reachable, and links close/navigate correctly.
-   - Spot-check at least home, celebrity booking, singer booking, and a category page before marking done.
+## Steps
+
+1. **Source photos via Google Images** — fetch one clean portrait per artist (Wikipedia/press photo preferred for licensing). Save as `singers/altaf-raja.jpeg`, `singers/sara-gurpal.jpeg`, `singers/sunanda-sharma.jpeg`.
+2. **Update roster data** in bundled `assets/main-CQYOkFRR.js` — append 3 objects to the singers roster array (`{name, tier, fee, events, slug, image}`) matching existing schema.
+3. **Update static `singer-booking-india/index.html`** — append 3 roster cards mirroring existing Jasmine Sandlas / Neha Bhasin card markup, and append 3 entries to the `BreadcrumbList` JSON-LD (positions 33–35).
+4. **Update `sitemap.xml`** to include the new `/book-altaf-raja`, `/book-sara-gurpal`, `/book-sunanda-sharma` URLs (no detail HTML pages will be created — same as other singers in roster which only link to slugs).
+5. **Verify** in the preview at `/singer-booking-india` that the 3 new cards render with images, names, tier badges, and fees.
+
+## Notes
+- No individual `book-*` detail pages exist for any singer in this roster, so we won't create new ones — slugs link to placeholder paths matching the existing pattern.
+- If a clean Google image cannot be fetched, fallback to an AI-generated placeholder portrait.
