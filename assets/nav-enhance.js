@@ -1,5 +1,40 @@
 (function(){
   var MARK='data-tkc-singers-enhanced';
+  var singers=[
+    ['Book Altaf Raja','/book-altaf-raja/'],['Book A.R. Rahman','/book-ar-rahman/'],['Book Arijit Singh','/book-arijit-singh/'],['Book Armaan Malik','/book-armaan-malik/'],['Book Asees Kaur','/book-asees-kaur/'],['Book B Praak','/book-b-praak/'],['Book Badshah','/book-badshah/'],['Book Darshan Raval','/book-darshan-raval/'],['Book Diljit Dosanjh','/book-diljit-dosanjh/'],['Book Guru Randhawa','/book-guru-randhawa/'],['Book Hanumankind','/book-hanumankind/'],['Book Jasmine Sandlas','/book-jasmine-sandlas/'],['Book Jonita Gandhi','/book-jonita-gandhi/'],['Book Jubin Nautiyal','/book-jubin-nautiyal/'],['Book Kanika Kapoor','/book-kanika-kapoor/'],['Book Kumar Sanu','/book-kumar-sanu/'],['Book Lucky Ali','/book-lucky-ali/'],['Book Meet Bros','/book-meet-bros/'],['Book Mohit Chauhan','/book-mohit-chauhan/'],['Book Neha Bhasin','/book-neha-bhasin/'],['Book Neha Kakkar','/book-neha-kakkar/'],['Book Palak Muchhal','/book-palak-muchhal/'],['Book Pritam','/book-pritam/'],['Book Sachet-Parampara','/book-sachet-parampara/'],['Book Sachin-Jigar','/book-sachin-jigar/'],['Book Salim-Sulaiman','/book-salim-sulaiman/'],['Book Sara Gurpal','/book-sara-gurpal/'],['Book Shamsher Lehri','/book-shamsher-lehri/'],['Book Shankar Mahadevan','/book-shankar-mahadevan/'],['Book Shreya Ghoshal','/book-shreya-ghoshal/'],['Book Sonu Nigam','/book-sonu-nigam/'],['Book Sunanda Sharma','/book-sunanda-sharma/'],['Book Sunidhi Chauhan','/book-sunidhi-chauhan/'],['Book Tanishk Bagchi','/book-tanishk-bagchi/'],['Book Vishal-Shekhar','/book-vishal-shekhar/']
+  ];
+
+  function singerItemHtml(item, cls){
+    return '<li><a href="'+item[1]+'" class="'+cls+'">'+item[0]+'</a></li>';
+  }
+
+  function chevronRight(){
+    return '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down h-3.5 w-3.5 -rotate-90" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg>';
+  }
+
+  function ensureSingerSubmenus(){
+    document.querySelectorAll('nav a[href="/singer-booking-india/"]').forEach(function(a){
+      if((a.textContent||'').indexOf('Singers')===-1) return;
+      if(a.closest('#mobile-nav-drawer')) return;
+      var li=a.parentElement;
+      if(!li || li.tagName!=='LI') return;
+      if(li.querySelector('ul a[href="/book-arijit-singh/"]')) return;
+      li.classList.add('relative','group/sub');
+      a.classList.remove('block');
+      a.classList.add('flex','items-center','justify-between','gap-2','group-hover/sub:bg-foreground','group-hover/sub:text-background');
+      if(!a.querySelector('svg')) a.insertAdjacentHTML('beforeend',chevronRight());
+      a.insertAdjacentHTML('afterend','<ul class="invisible absolute left-full top-0 z-50 ml-1 max-h-[75vh] min-w-60 overflow-y-auto overscroll-contain rounded-xl border border-foreground/10 bg-background p-2 text-foreground opacity-0 shadow-2xl ring-1 ring-foreground/5 transition-all duration-150 group-hover/sub:visible group-hover/sub:opacity-100 group-focus-within/sub:visible group-focus-within/sub:opacity-100">'+singers.map(function(item){return singerItemHtml(item,'block rounded-md px-3 py-2 text-sm font-medium text-foreground/80 transition-colors hover:bg-foreground hover:text-background');}).join('')+'</ul>');
+    });
+
+    var drawer=document.getElementById('mobile-nav-drawer');
+    if(!drawer) return;
+    drawer.querySelectorAll('a[href="/singer-booking-india/"]').forEach(function(a){
+      if((a.textContent||'').indexOf('Singers')===-1) return;
+      var li=a.parentElement;
+      if(!li || li.tagName!=='LI' || li.querySelector('ul a[href="/book-arijit-singh/"]')) return;
+      li.insertAdjacentHTML('beforeend','<ul class="ml-3 mt-1 flex max-h-64 flex-col gap-1 overflow-y-auto overscroll-contain border-l border-foreground/10 pl-3">'+singers.map(function(item){return singerItemHtml(item,'flex min-h-9 items-center rounded-lg px-3 py-2 text-xs text-foreground/80 transition hover:bg-foreground/5');}).join('')+'</ul>');
+    });
+  }
 
   function bgOf(el){
     var n=el;
@@ -71,6 +106,7 @@
   }
 
   function scan(){
+    ensureSingerSubmenus();
     document.querySelectorAll('ul').forEach(function(ul){
       if(ul.hasAttribute(MARK)) return;
       if(ul.children.length<15) return;
