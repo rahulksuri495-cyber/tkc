@@ -1,0 +1,4 @@
+# tkctalent.com — ads.txt
+# This site does not currently sell programmatic advertising.
+# Per IAB Tech Lab ads.txt v1.1 spec, no authorized digital sellers are declared.
+contact=hello&#64;tkctalent.com
