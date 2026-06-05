@@ -1,0 +1,31 @@
+{
+  "$schema": "https://modelcontextprotocol.io/schema/server-card.json",
+  "serverInfo": {
+    "name": "tkc-talent-site",
+    "version": "1.0.0",
+    "title": "TKC Talent site discovery",
+    "description": "Read-only discovery card for TKC Talent's public website. No live MCP transport is currently exposed; clients should treat the listed resources as the authoritative content surface."
+  },
+  "capabilities": {
+    "resources": { "listChanged": false },
+    "tools": {},
+    "prompts": {}
+  },
+  "resources": [
+    {
+      "uri": "https://tkctalent.com/llms.txt",
+      "name": "Site overview for LLMs",
+      "mimeType": "text/markdown"
+    },
+    {
+      "uri": "https://tkctalent.com/sitemap.xml",
+      "name": "Sitemap",
+      "mimeType": "application/xml"
+    },
+    {
+      "uri": "https://tkctalent.com/.well-known/api-catalog",
+      "name": "API catalog (RFC 9727)",
+      "mimeType": "application/linkset+json"
+    }
+  ]
+}
