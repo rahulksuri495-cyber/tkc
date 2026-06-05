@@ -35,11 +35,11 @@ for route in "${ROUTES[@]}"; do
   # Show raw Link headers
   echo "${link_lines}" | sed 's/^/   /'
 
-  # Extract every rel="…" value
-  rels=$(printf '%s\n' "${link_lines}" | grep -oE 'rel="[^"]+"' | sed 's/rel="//;s/"$//' | sort -u | tr '\n' ' ' || true)
+  # Extract every rel=\"…\" value (headers contain escaped quotes)
+  rels=$(printf '%s\n' "${link_lines}" | grep -oE 'rel=\\"[^\\"]+\\"' | sed 's/rel=\\"//;s/\\"$//' | sort -u | tr '\n' ' ' || true)
 
   # Check for disallowed rels
-  disallowed=$(printf '%s\n' "${link_lines}" | grep -oE 'rel="[^"]+"' | sed 's/rel="//;s/"$//' | grep -vE "^(${ALLOWED_RELS})$" || true)
+  disallowed=$(printf '%s\n' "${link_lines}" | grep -oE 'rel=\\"[^\\"]+\\"' | sed 's/rel=\\"//;s/\\"$//' | grep -vE "^(${ALLOWED_RELS})$" || true)
 
   if [ -n "${disallowed}" ]; then
     echo "   ❌ DISALLOWED rels found: ${disallowed}"
