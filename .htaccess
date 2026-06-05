@@ -78,3 +78,24 @@ ErrorDocument 404 /404.html
   Header always set X-Content-Type-Options "nosniff"
   Header always set Referrer-Policy "strict-origin-when-cross-origin"
 </IfModule>
+
+# RFC 8288 Link response headers — point AI agents at discovery resources.
+# Emitted on every HTML response so crawlers that don't parse <head> still
+# find the API catalog, llms.txt, sitemap, agent card and MCP server card.
+<IfModule mod_headers.c>
+  <FilesMatch "\.html$">
+    Header append Link "</.well-known/api-catalog>; rel=\"api-catalog\"; type=\"application/linkset+json\""
+    Header append Link "</llms.txt>; rel=\"service-doc\"; type=\"text/markdown\""
+    Header append Link "</sitemap.xml>; rel=\"sitemap\"; type=\"application/xml\""
+    Header append Link "</.well-known/agent-card.json>; rel=\"https://a2a-protocol.org/rel/agent-card\"; type=\"application/json\""
+    Header append Link "</.well-known/mcp/server-card.json>; rel=\"https://modelcontextprotocol.io/rel/server-card\"; type=\"application/json\""
+    Header append Link "</.well-known/agent-skills/index.json>; rel=\"https://agentskills.io/rel/index\"; type=\"application/json\""
+  </FilesMatch>
+</IfModule>
+
+# Serve extensionless /.well-known/api-catalog with the linkset+json type.
+<IfModule mod_headers.c>
+  <Files "api-catalog">
+    Header set Content-Type "application/linkset+json"
+  </Files>
+</IfModule>
