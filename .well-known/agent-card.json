@@ -1,0 +1,40 @@
+{
+  "name": "TKC Talent",
+  "version": "1.0.0",
+  "description": "Discovery card for TKC Talent (The Kabir Company) — India's celebrity management and artist booking agency. This card lets AI agents discover the public site content, booking categories, and contact channels.",
+  "url": "https://tkctalent.com",
+  "provider": {
+    "organization": "The Kabir Company",
+    "url": "https://tkctalent.com"
+  },
+  "documentationUrl": "https://tkctalent.com/llms.txt",
+  "supportedInterfaces": [
+    {
+      "transport": "https",
+      "url": "https://tkctalent.com",
+      "protocol": "web"
+    }
+  ],
+  "capabilities": {
+    "streaming": false,
+    "pushNotifications": false,
+    "stateTransitionHistory": false
+  },
+  "skills": [
+    {
+      "id": "browse-talent-roster",
+      "name": "Browse talent roster",
+      "description": "Discover Bollywood actors, actresses, singers, comedians, DJs and influencers available for booking via TKC Talent. Pages list indicative fees and event suitability."
+    },
+    {
+      "id": "request-celebrity-quote",
+      "name": "Request a celebrity booking quote",
+      "description": "Submit event details (date, city, type, audience) through the contact form on tkctalent.com to receive a tailored quote within 24–48 hours."
+    },
+    {
+      "id": "lookup-celebrity-fees",
+      "name": "Look up indicative celebrity fees",
+      "description": "Read transparent 2026 indicative fee ranges for individual celebrities and categories on /bollywood-celebrity-charges and the per-artist /book-<artist> pages."
+    }
+  ]
+}
