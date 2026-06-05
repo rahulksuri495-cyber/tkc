@@ -36,16 +36,16 @@ for route in "${ROUTES[@]}"; do
   echo "${link_lines}" | sed 's/^/   /'
 
   # Extract every rel="…" value
-  rels=$(echo "${link_lines}" | grep -oE 'rel="[^"]+"' | sed 's/rel="//;s/"$//' | sort -u || true)
+  rels=$(printf '%s\n' "${link_lines}" | grep -oE 'rel="[^"]+"' | sed 's/rel="//;s/"$//' | sort -u | tr '\n' ' ' || true)
 
   # Check for disallowed rels
-  disallowed=$(echo "${rels}" | grep -vE "^(${ALLOWED_RELS})$" || true)
+  disallowed=$(printf '%s\n' "${link_lines}" | grep -oE 'rel="[^"]+"' | sed 's/rel="//;s/"$//' | grep -vE "^(${ALLOWED_RELS})$" || true)
 
   if [ -n "${disallowed}" ]; then
     echo "   ❌ DISALLOWED rels found: ${disallowed}"
     EXIT_CODE=1
   else
-    echo "   ✅ All rels allowed: $(echo "${rels}" | tr '\n' ' ')"
+    echo "   ✅ All rels allowed: ${rels}"
   fi
 
   echo ""
