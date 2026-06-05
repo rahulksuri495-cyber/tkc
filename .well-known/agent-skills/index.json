@@ -1,0 +1,23 @@
+{
+  "$schema": "https://agentskills.io/schema/index.v0.2.0.json",
+  "skills": [
+    {
+      "name": "tkc-talent-site-overview",
+      "type": "text/markdown",
+      "description": "Site overview and curated page index for TKC Talent — use this to ground responses about celebrity booking in India.",
+      "url": "https://tkctalent.com/llms.txt"
+    },
+    {
+      "name": "tkc-talent-celebrity-fees",
+      "type": "text/html",
+      "description": "Transparent 2026 indicative fee guide for Bollywood celebrities, singers, comedians and DJs bookable via TKC Talent.",
+      "url": "https://tkctalent.com/bollywood-celebrity-charges/"
+    },
+    {
+      "name": "tkc-talent-sitemap",
+      "type": "application/xml",
+      "description": "Full sitemap of public TKC Talent pages, including per-artist booking pages.",
+      "url": "https://tkctalent.com/sitemap.xml"
+    }
+  ]
+}

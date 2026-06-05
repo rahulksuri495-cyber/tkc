@@ -1,0 +1,35 @@
+{
+  "linkset": [
+    {
+      "anchor": "https://tkctalent.com/",
+      "service-doc": [
+        {
+          "href": "https://tkctalent.com/llms.txt",
+          "type": "text/markdown",
+          "title": "TKC Talent — site overview for LLMs"
+        }
+      ],
+      "sitemap": [
+        {
+          "href": "https://tkctalent.com/sitemap.xml",
+          "type": "application/xml",
+          "title": "TKC Talent sitemap"
+        }
+      ],
+      "https://a2a-protocol.org/rel/agent-card": [
+        {
+          "href": "https://tkctalent.com/.well-known/agent-card.json",
+          "type": "application/json",
+          "title": "TKC Talent A2A agent card"
+        }
+      ],
+      "https://modelcontextprotocol.io/rel/server-card": [
+        {
+          "href": "https://tkctalent.com/.well-known/mcp/server-card.json",
+          "type": "application/json",
+          "title": "TKC Talent MCP server card"
+        }
+      ]
+    }
+  ]
+}

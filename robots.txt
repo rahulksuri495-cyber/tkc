@@ -1,6 +1,11 @@
 # robots.txt for the prerendered static export of TKC Talent.
 # All 14 prerendered routes are listed in /sitemap.xml.
 
+# Content Signals (https://contentsignals.org/) — declare AI usage preferences.
+# Search indexing is welcomed; AI training and AI-input (RAG/answer) usage are
+# not permitted without an explicit licence from The Kabir Company.
+Content-Signal: ai-train=no, search=yes, ai-input=no
+
 User-agent: *
 Allow: /
 Disallow: /404.html
