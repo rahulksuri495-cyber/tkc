@@ -36,6 +36,66 @@
     });
   }
 
+
+  // ===== Actresses enhancement =====
+  var ACT_MARK='data-tkc-actresses-enhanced';
+  var actresses=[["Book Adah Sharma","/book-adah-sharma/"],["Book Aditi Rao Hydari","/book-aditi-rao-hydari/"],["Book Alia Bhatt","/book-alia-bhatt/"],["Book Ananya Panday","/book-ananya-panday/"],["Book Aneet Padda","/book-aneet-padda/"],["Book Anushka Sharma","/book-anushka-sharma/"],["Book Chitrangada Singh","/book-chitrangada-singh/"],["Book Deepika Padukone","/book-deepika-padukone/"],["Book Dia Mirza","/book-dia-mirza/"],["Book Disha Patani","/book-disha-patani/"],["Book Esha Gupta","/book-esha-gupta/"],["Book Fatima Sana Shaikh","/book-fatima-sana-shaikh/"],["Book Huma Qureshi","/book-huma-qureshi/"],["Book Jacqueline Fernandez","/book-jacqueline-fernandez/"],["Book Janhvi Kapoor","/book-janhvi-kapoor/"],["Book Jennifer Winget","/book-jennifer-winget/"],["Book Kajol","/book-kajol/"],["Book Kangana Ranaut","/book-kangana-ranaut/"],["Book Kareena Kapoor Khan","/book-kareena-kapoor/"],["Book Karishma Tanna","/book-karishma-tanna/"],["Book Katrina Kaif","/book-katrina-kaif/"],["Book Kiara Advani","/book-kiara-advani/"],["Book Konkona Sen Sharma","/book-konkona-sen-sharma/"],["Book Kriti Sanon","/book-kriti-sanon/"],["Book Lara Dutta","/book-lara-dutta/"],["Book Mandira Bedi","/book-mandira-bedi/"],["Book Mrunal Thakur","/book-mrunal-thakur/"],["Book Nikita Dutta","/book-nikita-dutta/"],["Book Nimrat Kaur","/book-nimrat-kaur/"],["Book Nora Fatehi","/book-nora-fatehi/"],["Book Nushrratt Bharuccha","/book-nushrratt-bharuccha/"],["Book Palak Tiwari","/book-palak-tiwari/"],["Book Pooja Hegde","/book-pooja-hegde/"],["Book Priyanka Chopra","/book-priyanka-chopra/"],["Book Rakul Preet","/book-rakul-preet/"],["Book Rani Mukerji","/book-rani-mukerji/"],["Book Rashmika Mandanna","/book-rashmika-mandanna/"],["Book Rhea Chakraborty","/book-rhea-chakraborty/"],["Book Sanya Malhotra","/book-sanya-malhotra/"],["Book Sara Ali Khan","/book-sara-ali-khan/"],["Book Saumya Tandon","/book-saumya-tandon/"],["Book Shanaya Kapoor","/book-shanaya-kapoor/"],["Book Sharvari Wagh","/book-sharvari-wagh/"],["Book Shehnaaz Gill","/book-shehnaaz-gill/"],["Book Shilpa Shetty","/book-shilpa-shetty/"],["Book Shraddha Kapoor","/book-shraddha-kapoor/"],["Book Shruti Haasan","/book-shruti-haasan/"],["Book Shweta Tiwari","/book-shweta-tiwari/"],["Book Sonakshi Sinha","/book-sonakshi-sinha/"],["Book Sonam Bajwa","/book-sonam-bajwa/"],["Book Sreeleela","/book-sreeleela/"],["Book Sunny Leone","/book-sunny-leone/"],["Book Taapsee Pannu","/book-taapsee-pannu/"],["Book Tamannaah Bhatia","/book-tamannaah-bhatia/"],["Book Tara Sutaria","/book-tara-sutaria/"],["Book Urvashi Rautela","/book-urvashi-rautela/"],["Book Vaani Kapoor","/book-vaani-kapoor/"],["Book Vidya Balan","/book-vidya-balan/"],["Book Wamiqa Gabbi","/book-wamiqa-gabbi/"],["Book Yami Gautam","/book-yami-gautam/"]];
+  var actressNameMap={"Adah Sharma":"/book-adah-sharma/","Aditi Rao Hydari":"/book-aditi-rao-hydari/","Alia Bhatt":"/book-alia-bhatt/","Ananya Panday":"/book-ananya-panday/","Aneet Padda":"/book-aneet-padda/","Anushka Sharma":"/book-anushka-sharma/","Chitrangada Singh":"/book-chitrangada-singh/","Deepika Padukone":"/book-deepika-padukone/","Dia Mirza":"/book-dia-mirza/","Disha Patani":"/book-disha-patani/","Esha Gupta":"/book-esha-gupta/","Fatima Sana Shaikh":"/book-fatima-sana-shaikh/","Huma Qureshi":"/book-huma-qureshi/","Jacqueline Fernandez":"/book-jacqueline-fernandez/","Janhvi Kapoor":"/book-janhvi-kapoor/","Jennifer Winget":"/book-jennifer-winget/","Kajol":"/book-kajol/","Kangana Ranaut":"/book-kangana-ranaut/","Kareena Kapoor Khan":"/book-kareena-kapoor/","Karishma Tanna":"/book-karishma-tanna/","Katrina Kaif":"/book-katrina-kaif/","Kiara Advani":"/book-kiara-advani/","Konkona Sen Sharma":"/book-konkona-sen-sharma/","Kriti Sanon":"/book-kriti-sanon/","Lara Dutta":"/book-lara-dutta/","Mandira Bedi":"/book-mandira-bedi/","Mrunal Thakur":"/book-mrunal-thakur/","Nikita Dutta":"/book-nikita-dutta/","Nimrat Kaur":"/book-nimrat-kaur/","Nora Fatehi":"/book-nora-fatehi/","Nushrratt Bharuccha":"/book-nushrratt-bharuccha/","Palak Tiwari":"/book-palak-tiwari/","Pooja Hegde":"/book-pooja-hegde/","Priyanka Chopra":"/book-priyanka-chopra/","Rakul Preet":"/book-rakul-preet/","Rani Mukerji":"/book-rani-mukerji/","Rashmika Mandanna":"/book-rashmika-mandanna/","Rhea Chakraborty":"/book-rhea-chakraborty/","Sanya Malhotra":"/book-sanya-malhotra/","Sara Ali Khan":"/book-sara-ali-khan/","Saumya Tandon":"/book-saumya-tandon/","Shanaya Kapoor":"/book-shanaya-kapoor/","Sharvari Wagh":"/book-sharvari-wagh/","Shehnaaz Gill":"/book-shehnaaz-gill/","Shilpa Shetty":"/book-shilpa-shetty/","Shraddha Kapoor":"/book-shraddha-kapoor/","Shruti Haasan":"/book-shruti-haasan/","Shweta Tiwari":"/book-shweta-tiwari/","Sonakshi Sinha":"/book-sonakshi-sinha/","Sonam Bajwa":"/book-sonam-bajwa/","Sreeleela":"/book-sreeleela/","Sunny Leone":"/book-sunny-leone/","Taapsee Pannu":"/book-taapsee-pannu/","Tamannaah Bhatia":"/book-tamannaah-bhatia/","Tara Sutaria":"/book-tara-sutaria/","Urvashi Rautela":"/book-urvashi-rautela/","Vaani Kapoor":"/book-vaani-kapoor/","Vidya Balan":"/book-vidya-balan/","Wamiqa Gabbi":"/book-wamiqa-gabbi/","Yami Gautam":"/book-yami-gautam/"};
+
+  function actressItemHtml(item, cls){
+    return '<li><a href="'+item[1]+'" class="'+cls+'">'+item[0]+'</a></li>';
+  }
+
+  function ensureActressSubmenus(){
+    document.querySelectorAll('nav a[href="/bollywood-actress-booking/"]').forEach(function(a){
+      if((a.textContent||'').toLowerCase().indexOf('actress')===-1) return;
+      if(a.closest('#mobile-nav-drawer')) return;
+      var li=a.parentElement;
+      if(!li || li.tagName!=='LI') return;
+      if(li.querySelector('ul a[href="/book-alia-bhatt/"]')) return;
+      li.classList.add('relative','group/sub');
+      a.classList.remove('block');
+      a.classList.add('flex','items-center','justify-between','gap-2','group-hover/sub:bg-foreground','group-hover/sub:text-background');
+      if(!a.querySelector('svg')) a.insertAdjacentHTML('beforeend',chevronRight());
+      a.insertAdjacentHTML('afterend','<ul class="invisible absolute left-full top-0 z-50 ml-1 max-h-[75vh] min-w-60 overflow-y-auto overscroll-contain rounded-xl border border-foreground/10 bg-background p-2 text-foreground opacity-0 shadow-2xl ring-1 ring-foreground/5 transition-all duration-150 group-hover/sub:visible group-hover/sub:opacity-100 group-focus-within/sub:visible group-focus-within/sub:opacity-100">'+actresses.map(function(item){return actressItemHtml(item,'block rounded-md px-3 py-2 text-sm font-medium text-foreground/80 transition-colors hover:bg-foreground hover:text-background');}).join('')+'</ul>');
+    });
+
+    var drawer=document.getElementById('mobile-nav-drawer');
+    if(!drawer) return;
+    drawer.querySelectorAll('a[href="/bollywood-actress-booking/"]').forEach(function(a){
+      if((a.textContent||'').toLowerCase().indexOf('actress')===-1) return;
+      var li=a.parentElement;
+      if(!li || li.tagName!=='LI' || li.querySelector('ul a[href="/book-alia-bhatt/"]')) return;
+      li.insertAdjacentHTML('beforeend','<ul class="ml-3 mt-1 flex max-h-64 flex-col gap-1 overflow-y-auto overscroll-contain border-l border-foreground/10 pl-3">'+actresses.map(function(item){return actressItemHtml(item,'flex min-h-9 items-center rounded-lg px-3 py-2 text-xs text-foreground/80 transition hover:bg-foreground/5');}).join('')+'</ul>');
+    });
+  }
+
+  function linkActressCards(){
+    if(location.pathname.replace(/\/$/,'')!=='/bollywood-actress-booking') return;
+    document.querySelectorAll('h3').forEach(function(h){
+      var name=(h.textContent||'').trim();
+      var href=actressNameMap[name];
+      if(!href) return;
+      var card=h.closest('li, article, div');
+      if(!card) return;
+      if(card.querySelector('a[data-tkc-card-link]')) return;
+      // Find the outer card container (first ancestor that looks like a card)
+      var outer=card;
+      while(outer && outer.parentElement && !(outer.className||'').toString().match(/rounded-2xl|rounded-xl/)){
+        outer=outer.parentElement;
+        if(outer===document.body) return;
+      }
+      var a=document.createElement('a');
+      a.href=href; a.setAttribute('data-tkc-card-link','1');
+      a.setAttribute('aria-label','Book '+name);
+      a.className='absolute inset-0 z-10';
+      a.style.cssText='position:absolute;inset:0;z-index:10;';
+      var pos=getComputedStyle(outer).position;
+      if(pos==='static') outer.style.position='relative';
+      outer.appendChild(a);
+    });
+  }
+
   function bgOf(el){
     var n=el;
     while(n && n!==document.body){
@@ -107,6 +167,8 @@
 
   function scan(){
     ensureSingerSubmenus();
+    ensureActressSubmenus();
+    linkActressCards();
     document.querySelectorAll('ul').forEach(function(ul){
       if(ul.hasAttribute(MARK)) return;
       if(ul.children.length<15) return;
