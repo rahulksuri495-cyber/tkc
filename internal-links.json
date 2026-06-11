@@ -1,0 +1,2642 @@
+{
+  "book-adah-sharma": {
+    "name": "Adah Sharma",
+    "tier": "Mid-Tier",
+    "fee_text": "\u20b915\u201325 L",
+    "fee_mid_lakhs": 20.0,
+    "related": [
+      {
+        "slug": "book-karishma-tanna",
+        "name": "Karishma Tanna",
+        "tier": "Mid-Tier",
+        "fee_text": "\u20b915\u201325 L",
+        "url": "/book-karishma-tanna/",
+        "image": "/actresses/karishma-tanna.png",
+        "reason": "same-tier"
+      },
+      {
+        "slug": "book-mandira-bedi",
+        "name": "Mandira Bedi",
+        "tier": "Mid-Tier",
+        "fee_text": "\u20b915\u201325 L",
+        "url": "/book-mandira-bedi/",
+        "image": "/actresses/mandira-bedi.png",
+        "reason": "same-tier"
+      },
+      {
+        "slug": "book-rhea-chakraborty",
+        "name": "Rhea Chakraborty",
+        "tier": "Mid-Tier",
+        "fee_text": "\u20b915\u201325 L",
+        "url": "/book-rhea-chakraborty/",
+        "image": "/actresses/rhea-chakraborty.png",
+        "reason": "same-tier"
+      },
+      {
+        "slug": "book-pooja-hegde",
+        "name": "Pooja Hegde",
+        "tier": "Icon",
+        "fee_text": "\u20b960\u201390 L",
+        "url": "/book-pooja-hegde/",
+        "image": "/actresses/pooja-hegde.png",
+        "reason": "cross-tier-popular"
+      }
+    ]
+  },
+  "book-aditi-rao-hydari": {
+    "name": "Aditi Rao Hydari",
+    "tier": "Mid-Tier",
+    "fee_text": "\u20b925\u201345 L",
+    "fee_mid_lakhs": 35.0,
+    "related": [
+      {
+        "slug": "book-chitrangada-singh",
+        "name": "Chitrangada Singh",
+        "tier": "Mid-Tier",
+        "fee_text": "\u20b925\u201345 L",
+        "url": "/book-chitrangada-singh/",
+        "image": "/actresses/chitrangada-singh.png",
+        "reason": "same-tier"
+      },
+      {
+        "slug": "book-fatima-sana-shaikh",
+        "name": "Fatima Sana Shaikh",
+        "tier": "Mid-Tier",
+        "fee_text": "\u20b925\u201345 L",
+        "url": "/book-fatima-sana-shaikh/",
+        "image": "/actresses/fatima-sana-shaikh.png",
+        "reason": "same-tier"
+      },
+      {
+        "slug": "book-mrunal-thakur",
+        "name": "Mrunal Thakur",
+        "tier": "Mid-Tier",
+        "fee_text": "\u20b925\u201345 L",
+        "url": "/book-mrunal-thakur/",
+        "image": "/actresses/mrinal-thakur.png",
+        "reason": "same-tier"
+      },
+      {
+        "slug": "book-pooja-hegde",
+        "name": "Pooja Hegde",
+        "tier": "Icon",
+        "fee_text": "\u20b960\u201390 L",
+        "url": "/book-pooja-hegde/",
+        "image": "/actresses/pooja-hegde.png",
+        "reason": "cross-tier-popular"
+      }
+    ]
+  },
+  "book-alia-bhatt": {
+    "name": "Alia Bhatt",
+    "tier": "A-List",
+    "fee_text": "\u20b92\u20132.5 Cr",
+    "fee_mid_lakhs": 225.0,
+    "related": [
+      {
+        "slug": "book-anushka-sharma",
+        "name": "Anushka Sharma",
+        "tier": "A-List",
+        "fee_text": "\u20b92\u20133 Cr",
+        "url": "/book-anushka-sharma/",
+        "image": "/actresses/anushka-sharma.png",
+        "reason": "same-tier"
+      },
+      {
+        "slug": "book-deepika-padukone",
+        "name": "Deepika Padukone",
+        "tier": "A-List",
+        "fee_text": "\u20b92\u20133 Cr",
+        "url": "/book-deepika-padukone/",
+        "image": "/actresses/deepika-padukone.png",
+        "reason": "same-tier"
+      },
+      {
+        "slug": "book-kangana-ranaut",
+        "name": "Kangana Ranaut",
+        "tier": "A-List",
+        "fee_text": "\u20b91.5\u20132.5 Cr",
+        "url": "/book-kangana-ranaut/",
+        "image": "/actresses/kangana-ranaut.png",
+        "reason": "same-tier"
+      },
+      {
+        "slug": "book-tamannaah-bhatia",
+        "name": "Tamannaah Bhatia",
+        "tier": "Top",
+        "fee_text": "\u20b91.5\u20132 Cr",
+        "url": "/book-tamannaah-bhatia/",
+        "image": "/actresses/tamanna-bhatia.png",
+        "reason": "cross-tier-popular"
+      }
+    ]
+  },
+  "book-ananya-panday": {
+    "name": "Ananya Panday",
+    "tier": "Top",
+    "fee_text": "\u20b990 L\u20131 Cr",
+    "fee_mid_lakhs": 95.0,
+    "related": [
+      {
+        "slug": "book-vidya-balan",
+        "name": "Vidya Balan",
+        "tier": "Top",
+        "fee_text": "\u20b975 L\u20131.25 Cr",
+        "url": "/book-vidya-balan/",
+        "image": "/actresses/vidya-balan.png",
+        "reason": "same-tier"
+      },
+      {
+        "slug": "book-shilpa-shetty",
+        "name": "Shilpa Shetty",
+        "tier": "Top",
+        "fee_text": "\u20b975 L\u20131 Cr",
+        "url": "/book-shilpa-shetty/",
+        "image": "/actresses/shilpa-shetty.png",
+        "reason": "same-tier"
+      },
+      {
+        "slug": "book-shraddha-kapoor",
+        "name": "Shraddha Kapoor",
+        "tier": "Top",
+        "fee_text": "\u20b91\u20131.2 Cr",
+        "url": "/book-shraddha-kapoor/",
+        "image": "/actresses/shraddha-kapoor.png",
+        "reason": "same-tier"
+      },
+      {
+        "slug": "book-priyanka-chopra",
+        "name": "Priyanka Chopra Jonas",
+        "tier": "A-List",
+        "fee_text": "\u20b92.5\u20134 Cr",
+        "url": "/book-priyanka-chopra/",
+        "image": "/actresses/priyanka-chopra.png",
+        "reason": "cross-tier-popular"
+      }
+    ]
+  },
+  "book-aneet-padda": {
+    "name": "Aneet Padda",
+    "tier": "Mid-Tier",
+    "fee_text": "\u20b925\u201340 L",
+    "fee_mid_lakhs": 32.5,
+    "related": [
+      {
+        "slug": "book-aditi-rao-hydari",
+        "name": "Aditi Rao Hydari",
+        "tier": "Mid-Tier",
+        "fee_text": "\u20b925\u201345 L",
+        "url": "/book-aditi-rao-hydari/",
+        "image": "/actresses/aditi-rao-hydari.png",
+        "reason": "same-tier"
+      },
+      {
+        "slug": "book-chitrangada-singh",
+        "name": "Chitrangada Singh",
+        "tier": "Mid-Tier",
+        "fee_text": "\u20b925\u201345 L",
+        "url": "/book-chitrangada-singh/",
+        "image": "/actresses/chitrangada-singh.png",
+        "reason": "same-tier"
+      },
+      {
+        "slug": "book-fatima-sana-shaikh",
+        "name": "Fatima Sana Shaikh",
+        "tier": "Mid-Tier",
+        "fee_text": "\u20b925\u201345 L",
+        "url": "/book-fatima-sana-shaikh/",
+        "image": "/actresses/fatima-sana-shaikh.png",
+        "reason": "same-tier"
+      },
+      {
+        "slug": "book-pooja-hegde",
+        "name": "Pooja Hegde",
+        "tier": "Icon",
+        "fee_text": "\u20b960\u201390 L",
+        "url": "/book-pooja-hegde/",
+        "image": "/actresses/pooja-hegde.png",
+        "reason": "cross-tier-popular"
+      }
+    ]
+  },
+  "book-anushka-sharma": {
+    "name": "Anushka Sharma",
+    "tier": "A-List",
+    "fee_text": "\u20b92\u20133 Cr",
+    "fee_mid_lakhs": 250.0,
+    "related": [
+      {
+        "slug": "book-deepika-padukone",
+        "name": "Deepika Padukone",
+        "tier": "A-List",
+        "fee_text": "\u20b92\u20133 Cr",
+        "url": "/book-deepika-padukone/",
+        "image": "/actresses/deepika-padukone.png",
+        "reason": "same-tier"
+      },
+      {
+        "slug": "book-alia-bhatt",
+        "name": "Alia Bhatt",
+        "tier": "A-List",
+        "fee_text": "\u20b92\u20132.5 Cr",
+        "url": "/book-alia-bhatt/",
+        "image": "/actresses/alia-bhatt.png",
+        "reason": "same-tier"
+      },
+      {
+        "slug": "book-kareena-kapoor",
+        "name": "Kareena Kapoor Khan",
+        "tier": "A-List",
+        "fee_text": "\u20b92.5\u20133.5 Cr",
+        "url": "/book-kareena-kapoor/",
+        "image": "/actresses/kareena-kapoor.png",
+        "reason": "same-tier"
+      },
+      {
+        "slug": "book-tamannaah-bhatia",
+        "name": "Tamannaah Bhatia",
+        "tier": "Top",
+        "fee_text": "\u20b91.5\u20132 Cr",
+        "url": "/book-tamannaah-bhatia/",
+        "image": "/actresses/tamanna-bhatia.png",
+        "reason": "cross-tier-popular"
+      }
+    ]
+  },
+  "book-chitrangada-singh": {
+    "name": "Chitrangada Singh",
+    "tier": "Mid-Tier",
+    "fee_text": "\u20b925\u201345 L",
+    "fee_mid_lakhs": 35.0,
+    "related": [
+      {
+        "slug": "book-aditi-rao-hydari",
+        "name": "Aditi Rao Hydari",
+        "tier": "Mid-Tier",
+        "fee_text": "\u20b925\u201345 L",
+        "url": "/book-aditi-rao-hydari/",
+        "image": "/actresses/aditi-rao-hydari.png",
+        "reason": "same-tier"
+      },
+      {
+        "slug": "book-fatima-sana-shaikh",
+        "name": "Fatima Sana Shaikh",
+        "tier": "Mid-Tier",
+        "fee_text": "\u20b925\u201345 L",
+        "url": "/book-fatima-sana-shaikh/",
+        "image": "/actresses/fatima-sana-shaikh.png",
+        "reason": "same-tier"
+      },
+      {
+        "slug": "book-mrunal-thakur",
+        "name": "Mrunal Thakur",
+        "tier": "Mid-Tier",
+        "fee_text": "\u20b925\u201345 L",
+        "url": "/book-mrunal-thakur/",
+        "image": "/actresses/mrinal-thakur.png",
+        "reason": "same-tier"
+      },
+      {
+        "slug": "book-pooja-hegde",
+        "name": "Pooja Hegde",
+        "tier": "Icon",
+        "fee_text": "\u20b960\u201390 L",
+        "url": "/book-pooja-hegde/",
+        "image": "/actresses/pooja-hegde.png",
+        "reason": "cross-tier-popular"
+      }
+    ]
+  },
+  "book-deepika-padukone": {
+    "name": "Deepika Padukone",
+    "tier": "A-List",
+    "fee_text": "\u20b92\u20133 Cr",
+    "fee_mid_lakhs": 250.0,
+    "related": [
+      {
+        "slug": "book-anushka-sharma",
+        "name": "Anushka Sharma",
+        "tier": "A-List",
+        "fee_text": "\u20b92\u20133 Cr",
+        "url": "/book-anushka-sharma/",
+        "image": "/actresses/anushka-sharma.png",
+        "reason": "same-tier"
+      },
+      {
+        "slug": "book-alia-bhatt",
+        "name": "Alia Bhatt",
+        "tier": "A-List",
+        "fee_text": "\u20b92\u20132.5 Cr",
+        "url": "/book-alia-bhatt/",
+        "image": "/actresses/alia-bhatt.png",
+        "reason": "same-tier"
+      },
+      {
+        "slug": "book-kareena-kapoor",
+        "name": "Kareena Kapoor Khan",
+        "tier": "A-List",
+        "fee_text": "\u20b92.5\u20133.5 Cr",
+        "url": "/book-kareena-kapoor/",
+        "image": "/actresses/kareena-kapoor.png",
+        "reason": "same-tier"
+      },
+      {
+        "slug": "book-tamannaah-bhatia",
+        "name": "Tamannaah Bhatia",
+        "tier": "Top",
+        "fee_text": "\u20b91.5\u20132 Cr",
+        "url": "/book-tamannaah-bhatia/",
+        "image": "/actresses/tamanna-bhatia.png",
+        "reason": "cross-tier-popular"
+      }
+    ]
+  },
+  "book-dia-mirza": {
+    "name": "Dia Mirza",
+    "tier": "Mid-Tier",
+    "fee_text": "\u20b920\u201335 L",
+    "fee_mid_lakhs": 27.5,
+    "related": [
+      {
+        "slug": "book-konkona-sen-sharma",
+        "name": "Konkona Sen Sharma",
+        "tier": "Mid-Tier",
+        "fee_text": "\u20b920\u201335 L",
+        "url": "/book-konkona-sen-sharma/",
+        "image": "/actresses/konkona-sen-sharma.png",
+        "reason": "same-tier"
+      },
+      {
+        "slug": "book-lara-dutta",
+        "name": "Lara Dutta",
+        "tier": "Mid-Tier",
+        "fee_text": "\u20b920\u201335 L",
+        "url": "/book-lara-dutta/",
+        "image": "/actresses/lara-dutta.png",
+        "reason": "same-tier"
+      },
+      {
+        "slug": "book-nimrat-kaur",
+        "name": "Nimrat Kaur",
+        "tier": "Mid-Tier",
+        "fee_text": "\u20b920\u201335 L",
+        "url": "/book-nimrat-kaur/",
+        "image": "/actresses/nimrat-kaur.png",
+        "reason": "same-tier"
+      },
+      {
+        "slug": "book-pooja-hegde",
+        "name": "Pooja Hegde",
+        "tier": "Icon",
+        "fee_text": "\u20b960\u201390 L",
+        "url": "/book-pooja-hegde/",
+        "image": "/actresses/pooja-hegde.png",
+        "reason": "cross-tier-popular"
+      }
+    ]
+  },
+  "book-disha-patani": {
+    "name": "Disha Patani",
+    "tier": "Icon",
+    "fee_text": "\u20b950\u201375 L",
+    "fee_mid_lakhs": 62.5,
+    "related": [
+      {
+        "slug": "book-sanya-malhotra",
+        "name": "Sanya Malhotra",
+        "tier": "Icon",
+        "fee_text": "\u20b950\u201375 L",
+        "url": "/book-sanya-malhotra/",
+        "image": "/actresses/sanya-malhotra.png",
+        "reason": "same-tier"
+      },
+      {
+        "slug": "book-sunny-leone",
+        "name": "Sunny Leone",
+        "tier": "Icon",
+        "fee_text": "\u20b90.4\u20130.8 Cr",
+        "url": "/book-sunny-leone/",
+        "image": "/actresses/sunny-leone.png",
+        "reason": "same-tier"
+      },
+      {
+        "slug": "book-esha-gupta",
+        "name": "Esha Gupta",
+        "tier": "Icon",
+        "fee_text": "\u20b90.4\u20130.75 Cr",
+        "url": "/book-esha-gupta/",
+        "image": "/actresses/esha-gupta.png",
+        "reason": "same-tier"
+      },
+      {
+        "slug": "book-tamannaah-bhatia",
+        "name": "Tamannaah Bhatia",
+        "tier": "Top",
+        "fee_text": "\u20b91.5\u20132 Cr",
+        "url": "/book-tamannaah-bhatia/",
+        "image": "/actresses/tamanna-bhatia.png",
+        "reason": "cross-tier-popular"
+      }
+    ]
+  },
+  "book-esha-gupta": {
+    "name": "Esha Gupta",
+    "tier": "Icon",
+    "fee_text": "\u20b90.4\u20130.75 Cr",
+    "fee_mid_lakhs": 57.5,
+    "related": [
+      {
+        "slug": "book-sunny-leone",
+        "name": "Sunny Leone",
+        "tier": "Icon",
+        "fee_text": "\u20b90.4\u20130.8 Cr",
+        "url": "/book-sunny-leone/",
+        "image": "/actresses/sunny-leone.png",
+        "reason": "same-tier"
+      },
+      {
+        "slug": "book-rakul-preet",
+        "name": "Rakul Preet",
+        "tier": "Icon",
+        "fee_text": "\u20b940\u201370 L",
+        "url": "/book-rakul-preet/",
+        "image": "/actresses/rakul-preet.png",
+        "reason": "same-tier"
+      },
+      {
+        "slug": "book-shehnaaz-gill",
+        "name": "Shehnaaz Gill",
+        "tier": "Icon",
+        "fee_text": "\u20b940\u201370 L",
+        "url": "/book-shehnaaz-gill/",
+        "image": "/actresses/shehnaz-gill.png",
+        "reason": "same-tier"
+      },
+      {
+        "slug": "book-tamannaah-bhatia",
+        "name": "Tamannaah Bhatia",
+        "tier": "Top",
+        "fee_text": "\u20b91.5\u20132 Cr",
+        "url": "/book-tamannaah-bhatia/",
+        "image": "/actresses/tamanna-bhatia.png",
+        "reason": "cross-tier-popular"
+      }
+    ]
+  },
+  "book-fatima-sana-shaikh": {
+    "name": "Fatima Sana Shaikh",
+    "tier": "Mid-Tier",
+    "fee_text": "\u20b925\u201345 L",
+    "fee_mid_lakhs": 35.0,
+    "related": [
+      {
+        "slug": "book-aditi-rao-hydari",
+        "name": "Aditi Rao Hydari",
+        "tier": "Mid-Tier",
+        "fee_text": "\u20b925\u201345 L",
+        "url": "/book-aditi-rao-hydari/",
+        "image": "/actresses/aditi-rao-hydari.png",
+        "reason": "same-tier"
+      },
+      {
+        "slug": "book-chitrangada-singh",
+        "name": "Chitrangada Singh",
+        "tier": "Mid-Tier",
+        "fee_text": "\u20b925\u201345 L",
+        "url": "/book-chitrangada-singh/",
+        "image": "/actresses/chitrangada-singh.png",
+        "reason": "same-tier"
+      },
+      {
+        "slug": "book-mrunal-thakur",
+        "name": "Mrunal Thakur",
+        "tier": "Mid-Tier",
+        "fee_text": "\u20b925\u201345 L",
+        "url": "/book-mrunal-thakur/",
+        "image": "/actresses/mrinal-thakur.png",
+        "reason": "same-tier"
+      },
+      {
+        "slug": "book-pooja-hegde",
+        "name": "Pooja Hegde",
+        "tier": "Icon",
+        "fee_text": "\u20b960\u201390 L",
+        "url": "/book-pooja-hegde/",
+        "image": "/actresses/pooja-hegde.png",
+        "reason": "cross-tier-popular"
+      }
+    ]
+  },
+  "book-huma-qureshi": {
+    "name": "Huma Qureshi",
+    "tier": "Icon",
+    "fee_text": "\u20b930\u201350 L",
+    "fee_mid_lakhs": 40.0,
+    "related": [
+      {
+        "slug": "book-tara-sutaria",
+        "name": "Tara Sutaria",
+        "tier": "Icon",
+        "fee_text": "\u20b930\u201350 L",
+        "url": "/book-tara-sutaria/",
+        "image": "/actresses/tara-sutaria.png",
+        "reason": "same-tier"
+      },
+      {
+        "slug": "book-yami-gautam",
+        "name": "Yami Gautam",
+        "tier": "Icon",
+        "fee_text": "\u20b930\u201360 L",
+        "url": "/book-yami-gautam/",
+        "image": "/actresses/yami-gautam.png",
+        "reason": "same-tier"
+      },
+      {
+        "slug": "book-sharvari-wagh",
+        "name": "Sharvari Wagh",
+        "tier": "Icon",
+        "fee_text": "\u20b940\u201360 L",
+        "url": "/book-sharvari-wagh/",
+        "image": "/actresses/sharvari-wagh.png",
+        "reason": "same-tier"
+      },
+      {
+        "slug": "book-tamannaah-bhatia",
+        "name": "Tamannaah Bhatia",
+        "tier": "Top",
+        "fee_text": "\u20b91.5\u20132 Cr",
+        "url": "/book-tamannaah-bhatia/",
+        "image": "/actresses/tamanna-bhatia.png",
+        "reason": "cross-tier-popular"
+      }
+    ]
+  },
+  "book-jacqueline-fernandez": {
+    "name": "Jacqueline Fernandez",
+    "tier": "Top",
+    "fee_text": "\u20b91.25\u20132 Cr",
+    "fee_mid_lakhs": 162.5,
+    "related": [
+      {
+        "slug": "book-tamannaah-bhatia",
+        "name": "Tamannaah Bhatia",
+        "tier": "Top",
+        "fee_text": "\u20b91.5\u20132 Cr",
+        "url": "/book-tamannaah-bhatia/",
+        "image": "/actresses/tamanna-bhatia.png",
+        "reason": "same-tier"
+      },
+      {
+        "slug": "book-kriti-sanon",
+        "name": "Kriti Sanon",
+        "tier": "Top",
+        "fee_text": "\u20b91\u20131.75 Cr",
+        "url": "/book-kriti-sanon/",
+        "image": "/actresses/kirti-sanan.png",
+        "reason": "same-tier"
+      },
+      {
+        "slug": "book-kajol",
+        "name": "Kajol",
+        "tier": "Top",
+        "fee_text": "\u20b91\u20131.5 Cr",
+        "url": "/book-kajol/",
+        "image": "/actresses/kajol.png",
+        "reason": "same-tier"
+      },
+      {
+        "slug": "book-priyanka-chopra",
+        "name": "Priyanka Chopra Jonas",
+        "tier": "A-List",
+        "fee_text": "\u20b92.5\u20134 Cr",
+        "url": "/book-priyanka-chopra/",
+        "image": "/actresses/priyanka-chopra.png",
+        "reason": "cross-tier-popular"
+      }
+    ]
+  },
+  "book-janhvi-kapoor": {
+    "name": "Janhvi Kapoor",
+    "tier": "Icon",
+    "fee_text": "\u20b960\u201380 L",
+    "fee_mid_lakhs": 70.0,
+    "related": [
+      {
+        "slug": "book-sara-ali-khan",
+        "name": "Sara Ali Khan",
+        "tier": "Icon",
+        "fee_text": "\u20b960\u201380 L",
+        "url": "/book-sara-ali-khan/",
+        "image": "/actresses/sara-ali-khan.png",
+        "reason": "same-tier"
+      },
+      {
+        "slug": "book-pooja-hegde",
+        "name": "Pooja Hegde",
+        "tier": "Icon",
+        "fee_text": "\u20b960\u201390 L",
+        "url": "/book-pooja-hegde/",
+        "image": "/actresses/pooja-hegde.png",
+        "reason": "same-tier"
+      },
+      {
+        "slug": "book-disha-patani",
+        "name": "Disha Patani",
+        "tier": "Icon",
+        "fee_text": "\u20b950\u201375 L",
+        "url": "/book-disha-patani/",
+        "image": "/actresses/disha-patani.png",
+        "reason": "same-tier"
+      },
+      {
+        "slug": "book-tamannaah-bhatia",
+        "name": "Tamannaah Bhatia",
+        "tier": "Top",
+        "fee_text": "\u20b91.5\u20132 Cr",
+        "url": "/book-tamannaah-bhatia/",
+        "image": "/actresses/tamanna-bhatia.png",
+        "reason": "cross-tier-popular"
+      }
+    ]
+  },
+  "book-jennifer-winget": {
+    "name": "Jennifer Winget",
+    "tier": "Rising",
+    "fee_text": "\u20b915\u201320 L",
+    "fee_mid_lakhs": 17.5,
+    "related": [
+      {
+        "slug": "book-palak-tiwari",
+        "name": "Palak Tiwari",
+        "tier": "Rising",
+        "fee_text": "\u20b914\u201320 L",
+        "url": "/book-palak-tiwari/",
+        "image": "/actresses/palak-tiwari.png",
+        "reason": "same-tier"
+      },
+      {
+        "slug": "book-shweta-tiwari",
+        "name": "Shweta Tiwari",
+        "tier": "Rising",
+        "fee_text": "\u20b910\u201312 L",
+        "url": "/book-shweta-tiwari/",
+        "image": "/actresses/shweta-tiwari.png",
+        "reason": "same-tier"
+      },
+      {
+        "slug": "book-saumya-tandon",
+        "name": "Saumya Tandon",
+        "tier": "Rising",
+        "fee_text": "\u20b98\u201310 L",
+        "url": "/book-saumya-tandon/",
+        "image": "/actresses/saumya-tandon.png",
+        "reason": "same-tier"
+      },
+      {
+        "slug": "book-aditi-rao-hydari",
+        "name": "Aditi Rao Hydari",
+        "tier": "Mid-Tier",
+        "fee_text": "\u20b925\u201345 L",
+        "url": "/book-aditi-rao-hydari/",
+        "image": "/actresses/aditi-rao-hydari.png",
+        "reason": "cross-tier-popular"
+      }
+    ]
+  },
+  "book-kajol": {
+    "name": "Kajol",
+    "tier": "Top",
+    "fee_text": "\u20b91\u20131.5 Cr",
+    "fee_mid_lakhs": 125.0,
+    "related": [
+      {
+        "slug": "book-rani-mukerji",
+        "name": "Rani Mukerji",
+        "tier": "Top",
+        "fee_text": "\u20b91\u20131.5 Cr",
+        "url": "/book-rani-mukerji/",
+        "image": "/actresses/rani-mukerji.png",
+        "reason": "same-tier"
+      },
+      {
+        "slug": "book-taapsee-pannu",
+        "name": "Taapsee Pannu",
+        "tier": "Top",
+        "fee_text": "\u20b91\u20131.5 Cr",
+        "url": "/book-taapsee-pannu/",
+        "image": "/actresses/taapsee-pannu.png",
+        "reason": "same-tier"
+      },
+      {
+        "slug": "book-kriti-sanon",
+        "name": "Kriti Sanon",
+        "tier": "Top",
+        "fee_text": "\u20b91\u20131.75 Cr",
+        "url": "/book-kriti-sanon/",
+        "image": "/actresses/kirti-sanan.png",
+        "reason": "same-tier"
+      },
+      {
+        "slug": "book-priyanka-chopra",
+        "name": "Priyanka Chopra Jonas",
+        "tier": "A-List",
+        "fee_text": "\u20b92.5\u20134 Cr",
+        "url": "/book-priyanka-chopra/",
+        "image": "/actresses/priyanka-chopra.png",
+        "reason": "cross-tier-popular"
+      }
+    ]
+  },
+  "book-kangana-ranaut": {
+    "name": "Kangana Ranaut",
+    "tier": "A-List",
+    "fee_text": "\u20b91.5\u20132.5 Cr",
+    "fee_mid_lakhs": 200.0,
+    "related": [
+      {
+        "slug": "book-katrina-kaif",
+        "name": "Katrina Kaif",
+        "tier": "A-List",
+        "fee_text": "\u20b91.5\u20132.5 Cr",
+        "url": "/book-katrina-kaif/",
+        "image": "/actresses/katrina-kaif.png",
+        "reason": "same-tier"
+      },
+      {
+        "slug": "book-kiara-advani",
+        "name": "Kiara Advani",
+        "tier": "A-List",
+        "fee_text": "\u20b91.5\u20132.5 Cr",
+        "url": "/book-kiara-advani/",
+        "image": "/actresses/kiara-adwani.png",
+        "reason": "same-tier"
+      },
+      {
+        "slug": "book-alia-bhatt",
+        "name": "Alia Bhatt",
+        "tier": "A-List",
+        "fee_text": "\u20b92\u20132.5 Cr",
+        "url": "/book-alia-bhatt/",
+        "image": "/actresses/alia-bhatt.png",
+        "reason": "same-tier"
+      },
+      {
+        "slug": "book-tamannaah-bhatia",
+        "name": "Tamannaah Bhatia",
+        "tier": "Top",
+        "fee_text": "\u20b91.5\u20132 Cr",
+        "url": "/book-tamannaah-bhatia/",
+        "image": "/actresses/tamanna-bhatia.png",
+        "reason": "cross-tier-popular"
+      }
+    ]
+  },
+  "book-kareena-kapoor": {
+    "name": "Kareena Kapoor Khan",
+    "tier": "A-List",
+    "fee_text": "\u20b92.5\u20133.5 Cr",
+    "fee_mid_lakhs": 300.0,
+    "related": [
+      {
+        "slug": "book-priyanka-chopra",
+        "name": "Priyanka Chopra Jonas",
+        "tier": "A-List",
+        "fee_text": "\u20b92.5\u20134 Cr",
+        "url": "/book-priyanka-chopra/",
+        "image": "/actresses/priyanka-chopra.png",
+        "reason": "same-tier"
+      },
+      {
+        "slug": "book-anushka-sharma",
+        "name": "Anushka Sharma",
+        "tier": "A-List",
+        "fee_text": "\u20b92\u20133 Cr",
+        "url": "/book-anushka-sharma/",
+        "image": "/actresses/anushka-sharma.png",
+        "reason": "same-tier"
+      },
+      {
+        "slug": "book-deepika-padukone",
+        "name": "Deepika Padukone",
+        "tier": "A-List",
+        "fee_text": "\u20b92\u20133 Cr",
+        "url": "/book-deepika-padukone/",
+        "image": "/actresses/deepika-padukone.png",
+        "reason": "same-tier"
+      },
+      {
+        "slug": "book-tamannaah-bhatia",
+        "name": "Tamannaah Bhatia",
+        "tier": "Top",
+        "fee_text": "\u20b91.5\u20132 Cr",
+        "url": "/book-tamannaah-bhatia/",
+        "image": "/actresses/tamanna-bhatia.png",
+        "reason": "cross-tier-popular"
+      }
+    ]
+  },
+  "book-karishma-tanna": {
+    "name": "Karishma Tanna",
+    "tier": "Mid-Tier",
+    "fee_text": "\u20b915\u201325 L",
+    "fee_mid_lakhs": 20.0,
+    "related": [
+      {
+        "slug": "book-adah-sharma",
+        "name": "Adah Sharma",
+        "tier": "Mid-Tier",
+        "fee_text": "\u20b915\u201325 L",
+        "url": "/book-adah-sharma/",
+        "image": "/actresses/adah-sharma.png",
+        "reason": "same-tier"
+      },
+      {
+        "slug": "book-mandira-bedi",
+        "name": "Mandira Bedi",
+        "tier": "Mid-Tier",
+        "fee_text": "\u20b915\u201325 L",
+        "url": "/book-mandira-bedi/",
+        "image": "/actresses/mandira-bedi.png",
+        "reason": "same-tier"
+      },
+      {
+        "slug": "book-rhea-chakraborty",
+        "name": "Rhea Chakraborty",
+        "tier": "Mid-Tier",
+        "fee_text": "\u20b915\u201325 L",
+        "url": "/book-rhea-chakraborty/",
+        "image": "/actresses/rhea-chakraborty.png",
+        "reason": "same-tier"
+      },
+      {
+        "slug": "book-pooja-hegde",
+        "name": "Pooja Hegde",
+        "tier": "Icon",
+        "fee_text": "\u20b960\u201390 L",
+        "url": "/book-pooja-hegde/",
+        "image": "/actresses/pooja-hegde.png",
+        "reason": "cross-tier-popular"
+      }
+    ]
+  },
+  "book-katrina-kaif": {
+    "name": "Katrina Kaif",
+    "tier": "A-List",
+    "fee_text": "\u20b91.5\u20132.5 Cr",
+    "fee_mid_lakhs": 200.0,
+    "related": [
+      {
+        "slug": "book-kangana-ranaut",
+        "name": "Kangana Ranaut",
+        "tier": "A-List",
+        "fee_text": "\u20b91.5\u20132.5 Cr",
+        "url": "/book-kangana-ranaut/",
+        "image": "/actresses/kangana-ranaut.png",
+        "reason": "same-tier"
+      },
+      {
+        "slug": "book-kiara-advani",
+        "name": "Kiara Advani",
+        "tier": "A-List",
+        "fee_text": "\u20b91.5\u20132.5 Cr",
+        "url": "/book-kiara-advani/",
+        "image": "/actresses/kiara-adwani.png",
+        "reason": "same-tier"
+      },
+      {
+        "slug": "book-alia-bhatt",
+        "name": "Alia Bhatt",
+        "tier": "A-List",
+        "fee_text": "\u20b92\u20132.5 Cr",
+        "url": "/book-alia-bhatt/",
+        "image": "/actresses/alia-bhatt.png",
+        "reason": "same-tier"
+      },
+      {
+        "slug": "book-tamannaah-bhatia",
+        "name": "Tamannaah Bhatia",
+        "tier": "Top",
+        "fee_text": "\u20b91.5\u20132 Cr",
+        "url": "/book-tamannaah-bhatia/",
+        "image": "/actresses/tamanna-bhatia.png",
+        "reason": "cross-tier-popular"
+      }
+    ]
+  },
+  "book-kiara-advani": {
+    "name": "Kiara Advani",
+    "tier": "A-List",
+    "fee_text": "\u20b91.5\u20132.5 Cr",
+    "fee_mid_lakhs": 200.0,
+    "related": [
+      {
+        "slug": "book-kangana-ranaut",
+        "name": "Kangana Ranaut",
+        "tier": "A-List",
+        "fee_text": "\u20b91.5\u20132.5 Cr",
+        "url": "/book-kangana-ranaut/",
+        "image": "/actresses/kangana-ranaut.png",
+        "reason": "same-tier"
+      },
+      {
+        "slug": "book-katrina-kaif",
+        "name": "Katrina Kaif",
+        "tier": "A-List",
+        "fee_text": "\u20b91.5\u20132.5 Cr",
+        "url": "/book-katrina-kaif/",
+        "image": "/actresses/katrina-kaif.png",
+        "reason": "same-tier"
+      },
+      {
+        "slug": "book-alia-bhatt",
+        "name": "Alia Bhatt",
+        "tier": "A-List",
+        "fee_text": "\u20b92\u20132.5 Cr",
+        "url": "/book-alia-bhatt/",
+        "image": "/actresses/alia-bhatt.png",
+        "reason": "same-tier"
+      },
+      {
+        "slug": "book-tamannaah-bhatia",
+        "name": "Tamannaah Bhatia",
+        "tier": "Top",
+        "fee_text": "\u20b91.5\u20132 Cr",
+        "url": "/book-tamannaah-bhatia/",
+        "image": "/actresses/tamanna-bhatia.png",
+        "reason": "cross-tier-popular"
+      }
+    ]
+  },
+  "book-konkona-sen-sharma": {
+    "name": "Konkona Sen Sharma",
+    "tier": "Mid-Tier",
+    "fee_text": "\u20b920\u201335 L",
+    "fee_mid_lakhs": 27.5,
+    "related": [
+      {
+        "slug": "book-dia-mirza",
+        "name": "Dia Mirza",
+        "tier": "Mid-Tier",
+        "fee_text": "\u20b920\u201335 L",
+        "url": "/book-dia-mirza/",
+        "image": "/actresses/dia-mirza.png",
+        "reason": "same-tier"
+      },
+      {
+        "slug": "book-lara-dutta",
+        "name": "Lara Dutta",
+        "tier": "Mid-Tier",
+        "fee_text": "\u20b920\u201335 L",
+        "url": "/book-lara-dutta/",
+        "image": "/actresses/lara-dutta.png",
+        "reason": "same-tier"
+      },
+      {
+        "slug": "book-nimrat-kaur",
+        "name": "Nimrat Kaur",
+        "tier": "Mid-Tier",
+        "fee_text": "\u20b920\u201335 L",
+        "url": "/book-nimrat-kaur/",
+        "image": "/actresses/nimrat-kaur.png",
+        "reason": "same-tier"
+      },
+      {
+        "slug": "book-pooja-hegde",
+        "name": "Pooja Hegde",
+        "tier": "Icon",
+        "fee_text": "\u20b960\u201390 L",
+        "url": "/book-pooja-hegde/",
+        "image": "/actresses/pooja-hegde.png",
+        "reason": "cross-tier-popular"
+      }
+    ]
+  },
+  "book-kriti-sanon": {
+    "name": "Kriti Sanon",
+    "tier": "Top",
+    "fee_text": "\u20b91\u20131.75 Cr",
+    "fee_mid_lakhs": 137.5,
+    "related": [
+      {
+        "slug": "book-kajol",
+        "name": "Kajol",
+        "tier": "Top",
+        "fee_text": "\u20b91\u20131.5 Cr",
+        "url": "/book-kajol/",
+        "image": "/actresses/kajol.png",
+        "reason": "same-tier"
+      },
+      {
+        "slug": "book-rani-mukerji",
+        "name": "Rani Mukerji",
+        "tier": "Top",
+        "fee_text": "\u20b91\u20131.5 Cr",
+        "url": "/book-rani-mukerji/",
+        "image": "/actresses/rani-mukerji.png",
+        "reason": "same-tier"
+      },
+      {
+        "slug": "book-taapsee-pannu",
+        "name": "Taapsee Pannu",
+        "tier": "Top",
+        "fee_text": "\u20b91\u20131.5 Cr",
+        "url": "/book-taapsee-pannu/",
+        "image": "/actresses/taapsee-pannu.png",
+        "reason": "same-tier"
+      },
+      {
+        "slug": "book-priyanka-chopra",
+        "name": "Priyanka Chopra Jonas",
+        "tier": "A-List",
+        "fee_text": "\u20b92.5\u20134 Cr",
+        "url": "/book-priyanka-chopra/",
+        "image": "/actresses/priyanka-chopra.png",
+        "reason": "cross-tier-popular"
+      }
+    ]
+  },
+  "book-lara-dutta": {
+    "name": "Lara Dutta",
+    "tier": "Mid-Tier",
+    "fee_text": "\u20b920\u201335 L",
+    "fee_mid_lakhs": 27.5,
+    "related": [
+      {
+        "slug": "book-dia-mirza",
+        "name": "Dia Mirza",
+        "tier": "Mid-Tier",
+        "fee_text": "\u20b920\u201335 L",
+        "url": "/book-dia-mirza/",
+        "image": "/actresses/dia-mirza.png",
+        "reason": "same-tier"
+      },
+      {
+        "slug": "book-konkona-sen-sharma",
+        "name": "Konkona Sen Sharma",
+        "tier": "Mid-Tier",
+        "fee_text": "\u20b920\u201335 L",
+        "url": "/book-konkona-sen-sharma/",
+        "image": "/actresses/konkona-sen-sharma.png",
+        "reason": "same-tier"
+      },
+      {
+        "slug": "book-nimrat-kaur",
+        "name": "Nimrat Kaur",
+        "tier": "Mid-Tier",
+        "fee_text": "\u20b920\u201335 L",
+        "url": "/book-nimrat-kaur/",
+        "image": "/actresses/nimrat-kaur.png",
+        "reason": "same-tier"
+      },
+      {
+        "slug": "book-pooja-hegde",
+        "name": "Pooja Hegde",
+        "tier": "Icon",
+        "fee_text": "\u20b960\u201390 L",
+        "url": "/book-pooja-hegde/",
+        "image": "/actresses/pooja-hegde.png",
+        "reason": "cross-tier-popular"
+      }
+    ]
+  },
+  "book-mandira-bedi": {
+    "name": "Mandira Bedi",
+    "tier": "Mid-Tier",
+    "fee_text": "\u20b915\u201325 L",
+    "fee_mid_lakhs": 20.0,
+    "related": [
+      {
+        "slug": "book-adah-sharma",
+        "name": "Adah Sharma",
+        "tier": "Mid-Tier",
+        "fee_text": "\u20b915\u201325 L",
+        "url": "/book-adah-sharma/",
+        "image": "/actresses/adah-sharma.png",
+        "reason": "same-tier"
+      },
+      {
+        "slug": "book-karishma-tanna",
+        "name": "Karishma Tanna",
+        "tier": "Mid-Tier",
+        "fee_text": "\u20b915\u201325 L",
+        "url": "/book-karishma-tanna/",
+        "image": "/actresses/karishma-tanna.png",
+        "reason": "same-tier"
+      },
+      {
+        "slug": "book-rhea-chakraborty",
+        "name": "Rhea Chakraborty",
+        "tier": "Mid-Tier",
+        "fee_text": "\u20b915\u201325 L",
+        "url": "/book-rhea-chakraborty/",
+        "image": "/actresses/rhea-chakraborty.png",
+        "reason": "same-tier"
+      },
+      {
+        "slug": "book-pooja-hegde",
+        "name": "Pooja Hegde",
+        "tier": "Icon",
+        "fee_text": "\u20b960\u201390 L",
+        "url": "/book-pooja-hegde/",
+        "image": "/actresses/pooja-hegde.png",
+        "reason": "cross-tier-popular"
+      }
+    ]
+  },
+  "book-mrunal-thakur": {
+    "name": "Mrunal Thakur",
+    "tier": "Mid-Tier",
+    "fee_text": "\u20b925\u201345 L",
+    "fee_mid_lakhs": 35.0,
+    "related": [
+      {
+        "slug": "book-aditi-rao-hydari",
+        "name": "Aditi Rao Hydari",
+        "tier": "Mid-Tier",
+        "fee_text": "\u20b925\u201345 L",
+        "url": "/book-aditi-rao-hydari/",
+        "image": "/actresses/aditi-rao-hydari.png",
+        "reason": "same-tier"
+      },
+      {
+        "slug": "book-chitrangada-singh",
+        "name": "Chitrangada Singh",
+        "tier": "Mid-Tier",
+        "fee_text": "\u20b925\u201345 L",
+        "url": "/book-chitrangada-singh/",
+        "image": "/actresses/chitrangada-singh.png",
+        "reason": "same-tier"
+      },
+      {
+        "slug": "book-fatima-sana-shaikh",
+        "name": "Fatima Sana Shaikh",
+        "tier": "Mid-Tier",
+        "fee_text": "\u20b925\u201345 L",
+        "url": "/book-fatima-sana-shaikh/",
+        "image": "/actresses/fatima-sana-shaikh.png",
+        "reason": "same-tier"
+      },
+      {
+        "slug": "book-pooja-hegde",
+        "name": "Pooja Hegde",
+        "tier": "Icon",
+        "fee_text": "\u20b960\u201390 L",
+        "url": "/book-pooja-hegde/",
+        "image": "/actresses/pooja-hegde.png",
+        "reason": "cross-tier-popular"
+      }
+    ]
+  },
+  "book-nikita-dutta": {
+    "name": "Nikita Dutta",
+    "tier": "Rising",
+    "fee_text": "\u20b95\u20137 L",
+    "fee_mid_lakhs": 6.0,
+    "related": [
+      {
+        "slug": "book-saumya-tandon",
+        "name": "Saumya Tandon",
+        "tier": "Rising",
+        "fee_text": "\u20b98\u201310 L",
+        "url": "/book-saumya-tandon/",
+        "image": "/actresses/saumya-tandon.png",
+        "reason": "same-tier"
+      },
+      {
+        "slug": "book-shweta-tiwari",
+        "name": "Shweta Tiwari",
+        "tier": "Rising",
+        "fee_text": "\u20b910\u201312 L",
+        "url": "/book-shweta-tiwari/",
+        "image": "/actresses/shweta-tiwari.png",
+        "reason": "same-tier"
+      },
+      {
+        "slug": "book-palak-tiwari",
+        "name": "Palak Tiwari",
+        "tier": "Rising",
+        "fee_text": "\u20b914\u201320 L",
+        "url": "/book-palak-tiwari/",
+        "image": "/actresses/palak-tiwari.png",
+        "reason": "same-tier"
+      },
+      {
+        "slug": "book-aditi-rao-hydari",
+        "name": "Aditi Rao Hydari",
+        "tier": "Mid-Tier",
+        "fee_text": "\u20b925\u201345 L",
+        "url": "/book-aditi-rao-hydari/",
+        "image": "/actresses/aditi-rao-hydari.png",
+        "reason": "cross-tier-popular"
+      }
+    ]
+  },
+  "book-nimrat-kaur": {
+    "name": "Nimrat Kaur",
+    "tier": "Mid-Tier",
+    "fee_text": "\u20b920\u201335 L",
+    "fee_mid_lakhs": 27.5,
+    "related": [
+      {
+        "slug": "book-dia-mirza",
+        "name": "Dia Mirza",
+        "tier": "Mid-Tier",
+        "fee_text": "\u20b920\u201335 L",
+        "url": "/book-dia-mirza/",
+        "image": "/actresses/dia-mirza.png",
+        "reason": "same-tier"
+      },
+      {
+        "slug": "book-konkona-sen-sharma",
+        "name": "Konkona Sen Sharma",
+        "tier": "Mid-Tier",
+        "fee_text": "\u20b920\u201335 L",
+        "url": "/book-konkona-sen-sharma/",
+        "image": "/actresses/konkona-sen-sharma.png",
+        "reason": "same-tier"
+      },
+      {
+        "slug": "book-lara-dutta",
+        "name": "Lara Dutta",
+        "tier": "Mid-Tier",
+        "fee_text": "\u20b920\u201335 L",
+        "url": "/book-lara-dutta/",
+        "image": "/actresses/lara-dutta.png",
+        "reason": "same-tier"
+      },
+      {
+        "slug": "book-pooja-hegde",
+        "name": "Pooja Hegde",
+        "tier": "Icon",
+        "fee_text": "\u20b960\u201390 L",
+        "url": "/book-pooja-hegde/",
+        "image": "/actresses/pooja-hegde.png",
+        "reason": "cross-tier-popular"
+      }
+    ]
+  },
+  "book-nora-fatehi": {
+    "name": "Nora Fatehi",
+    "tier": "Top",
+    "fee_text": "\u20b90.75\u20131.5 Cr",
+    "fee_mid_lakhs": 112.5,
+    "related": [
+      {
+        "slug": "book-rashmika-mandanna",
+        "name": "Rashmika Mandanna",
+        "tier": "Top",
+        "fee_text": "\u20b975 L\u20131.5 Cr",
+        "url": "/book-rashmika-mandanna/",
+        "image": "/actresses/rashmika-mandanna.png",
+        "reason": "same-tier"
+      },
+      {
+        "slug": "book-shraddha-kapoor",
+        "name": "Shraddha Kapoor",
+        "tier": "Top",
+        "fee_text": "\u20b91\u20131.2 Cr",
+        "url": "/book-shraddha-kapoor/",
+        "image": "/actresses/shraddha-kapoor.png",
+        "reason": "same-tier"
+      },
+      {
+        "slug": "book-kajol",
+        "name": "Kajol",
+        "tier": "Top",
+        "fee_text": "\u20b91\u20131.5 Cr",
+        "url": "/book-kajol/",
+        "image": "/actresses/kajol.png",
+        "reason": "same-tier"
+      },
+      {
+        "slug": "book-priyanka-chopra",
+        "name": "Priyanka Chopra Jonas",
+        "tier": "A-List",
+        "fee_text": "\u20b92.5\u20134 Cr",
+        "url": "/book-priyanka-chopra/",
+        "image": "/actresses/priyanka-chopra.png",
+        "reason": "cross-tier-popular"
+      }
+    ]
+  },
+  "book-nushrratt-bharuccha": {
+    "name": "Nushrratt Bharuccha",
+    "tier": "Mid-Tier",
+    "fee_text": "\u20b920\u201335 L",
+    "fee_mid_lakhs": 27.5,
+    "related": [
+      {
+        "slug": "book-dia-mirza",
+        "name": "Dia Mirza",
+        "tier": "Mid-Tier",
+        "fee_text": "\u20b920\u201335 L",
+        "url": "/book-dia-mirza/",
+        "image": "/actresses/dia-mirza.png",
+        "reason": "same-tier"
+      },
+      {
+        "slug": "book-konkona-sen-sharma",
+        "name": "Konkona Sen Sharma",
+        "tier": "Mid-Tier",
+        "fee_text": "\u20b920\u201335 L",
+        "url": "/book-konkona-sen-sharma/",
+        "image": "/actresses/konkona-sen-sharma.png",
+        "reason": "same-tier"
+      },
+      {
+        "slug": "book-lara-dutta",
+        "name": "Lara Dutta",
+        "tier": "Mid-Tier",
+        "fee_text": "\u20b920\u201335 L",
+        "url": "/book-lara-dutta/",
+        "image": "/actresses/lara-dutta.png",
+        "reason": "same-tier"
+      },
+      {
+        "slug": "book-pooja-hegde",
+        "name": "Pooja Hegde",
+        "tier": "Icon",
+        "fee_text": "\u20b960\u201390 L",
+        "url": "/book-pooja-hegde/",
+        "image": "/actresses/pooja-hegde.png",
+        "reason": "cross-tier-popular"
+      }
+    ]
+  },
+  "book-palak-tiwari": {
+    "name": "Palak Tiwari",
+    "tier": "Rising",
+    "fee_text": "\u20b914\u201320 L",
+    "fee_mid_lakhs": 17.0,
+    "related": [
+      {
+        "slug": "book-jennifer-winget",
+        "name": "Jennifer Winget",
+        "tier": "Rising",
+        "fee_text": "\u20b915\u201320 L",
+        "url": "/book-jennifer-winget/",
+        "image": "/actresses/jennifer-winget.png",
+        "reason": "same-tier"
+      },
+      {
+        "slug": "book-shweta-tiwari",
+        "name": "Shweta Tiwari",
+        "tier": "Rising",
+        "fee_text": "\u20b910\u201312 L",
+        "url": "/book-shweta-tiwari/",
+        "image": "/actresses/shweta-tiwari.png",
+        "reason": "same-tier"
+      },
+      {
+        "slug": "book-saumya-tandon",
+        "name": "Saumya Tandon",
+        "tier": "Rising",
+        "fee_text": "\u20b98\u201310 L",
+        "url": "/book-saumya-tandon/",
+        "image": "/actresses/saumya-tandon.png",
+        "reason": "same-tier"
+      },
+      {
+        "slug": "book-aditi-rao-hydari",
+        "name": "Aditi Rao Hydari",
+        "tier": "Mid-Tier",
+        "fee_text": "\u20b925\u201345 L",
+        "url": "/book-aditi-rao-hydari/",
+        "image": "/actresses/aditi-rao-hydari.png",
+        "reason": "cross-tier-popular"
+      }
+    ]
+  },
+  "book-pooja-hegde": {
+    "name": "Pooja Hegde",
+    "tier": "Icon",
+    "fee_text": "\u20b960\u201390 L",
+    "fee_mid_lakhs": 75.0,
+    "related": [
+      {
+        "slug": "book-janhvi-kapoor",
+        "name": "Janhvi Kapoor",
+        "tier": "Icon",
+        "fee_text": "\u20b960\u201380 L",
+        "url": "/book-janhvi-kapoor/",
+        "image": "/actresses/janhvi-kapoor.png",
+        "reason": "same-tier"
+      },
+      {
+        "slug": "book-sara-ali-khan",
+        "name": "Sara Ali Khan",
+        "tier": "Icon",
+        "fee_text": "\u20b960\u201380 L",
+        "url": "/book-sara-ali-khan/",
+        "image": "/actresses/sara-ali-khan.png",
+        "reason": "same-tier"
+      },
+      {
+        "slug": "book-disha-patani",
+        "name": "Disha Patani",
+        "tier": "Icon",
+        "fee_text": "\u20b950\u201375 L",
+        "url": "/book-disha-patani/",
+        "image": "/actresses/disha-patani.png",
+        "reason": "same-tier"
+      },
+      {
+        "slug": "book-tamannaah-bhatia",
+        "name": "Tamannaah Bhatia",
+        "tier": "Top",
+        "fee_text": "\u20b91.5\u20132 Cr",
+        "url": "/book-tamannaah-bhatia/",
+        "image": "/actresses/tamanna-bhatia.png",
+        "reason": "cross-tier-popular"
+      }
+    ]
+  },
+  "book-priyanka-chopra": {
+    "name": "Priyanka Chopra Jonas",
+    "tier": "A-List",
+    "fee_text": "\u20b92.5\u20134 Cr",
+    "fee_mid_lakhs": 325.0,
+    "related": [
+      {
+        "slug": "book-kareena-kapoor",
+        "name": "Kareena Kapoor Khan",
+        "tier": "A-List",
+        "fee_text": "\u20b92.5\u20133.5 Cr",
+        "url": "/book-kareena-kapoor/",
+        "image": "/actresses/kareena-kapoor.png",
+        "reason": "same-tier"
+      },
+      {
+        "slug": "book-anushka-sharma",
+        "name": "Anushka Sharma",
+        "tier": "A-List",
+        "fee_text": "\u20b92\u20133 Cr",
+        "url": "/book-anushka-sharma/",
+        "image": "/actresses/anushka-sharma.png",
+        "reason": "same-tier"
+      },
+      {
+        "slug": "book-deepika-padukone",
+        "name": "Deepika Padukone",
+        "tier": "A-List",
+        "fee_text": "\u20b92\u20133 Cr",
+        "url": "/book-deepika-padukone/",
+        "image": "/actresses/deepika-padukone.png",
+        "reason": "same-tier"
+      },
+      {
+        "slug": "book-tamannaah-bhatia",
+        "name": "Tamannaah Bhatia",
+        "tier": "Top",
+        "fee_text": "\u20b91.5\u20132 Cr",
+        "url": "/book-tamannaah-bhatia/",
+        "image": "/actresses/tamanna-bhatia.png",
+        "reason": "cross-tier-popular"
+      }
+    ]
+  },
+  "book-rakul-preet": {
+    "name": "Rakul Preet",
+    "tier": "Icon",
+    "fee_text": "\u20b940\u201370 L",
+    "fee_mid_lakhs": 55.0,
+    "related": [
+      {
+        "slug": "book-shehnaaz-gill",
+        "name": "Shehnaaz Gill",
+        "tier": "Icon",
+        "fee_text": "\u20b940\u201370 L",
+        "url": "/book-shehnaaz-gill/",
+        "image": "/actresses/shehnaz-gill.png",
+        "reason": "same-tier"
+      },
+      {
+        "slug": "book-shruti-haasan",
+        "name": "Shruti Haasan",
+        "tier": "Icon",
+        "fee_text": "\u20b940\u201370 L",
+        "url": "/book-shruti-haasan/",
+        "image": "/actresses/shruti-haasan.png",
+        "reason": "same-tier"
+      },
+      {
+        "slug": "book-sonakshi-sinha",
+        "name": "Sonakshi Sinha",
+        "tier": "Icon",
+        "fee_text": "\u20b940\u201370 L",
+        "url": "/book-sonakshi-sinha/",
+        "image": "/actresses/sonakshi-sinha.png",
+        "reason": "same-tier"
+      },
+      {
+        "slug": "book-tamannaah-bhatia",
+        "name": "Tamannaah Bhatia",
+        "tier": "Top",
+        "fee_text": "\u20b91.5\u20132 Cr",
+        "url": "/book-tamannaah-bhatia/",
+        "image": "/actresses/tamanna-bhatia.png",
+        "reason": "cross-tier-popular"
+      }
+    ]
+  },
+  "book-rani-mukerji": {
+    "name": "Rani Mukerji",
+    "tier": "Top",
+    "fee_text": "\u20b91\u20131.5 Cr",
+    "fee_mid_lakhs": 125.0,
+    "related": [
+      {
+        "slug": "book-kajol",
+        "name": "Kajol",
+        "tier": "Top",
+        "fee_text": "\u20b91\u20131.5 Cr",
+        "url": "/book-kajol/",
+        "image": "/actresses/kajol.png",
+        "reason": "same-tier"
+      },
+      {
+        "slug": "book-taapsee-pannu",
+        "name": "Taapsee Pannu",
+        "tier": "Top",
+        "fee_text": "\u20b91\u20131.5 Cr",
+        "url": "/book-taapsee-pannu/",
+        "image": "/actresses/taapsee-pannu.png",
+        "reason": "same-tier"
+      },
+      {
+        "slug": "book-kriti-sanon",
+        "name": "Kriti Sanon",
+        "tier": "Top",
+        "fee_text": "\u20b91\u20131.75 Cr",
+        "url": "/book-kriti-sanon/",
+        "image": "/actresses/kirti-sanan.png",
+        "reason": "same-tier"
+      },
+      {
+        "slug": "book-priyanka-chopra",
+        "name": "Priyanka Chopra Jonas",
+        "tier": "A-List",
+        "fee_text": "\u20b92.5\u20134 Cr",
+        "url": "/book-priyanka-chopra/",
+        "image": "/actresses/priyanka-chopra.png",
+        "reason": "cross-tier-popular"
+      }
+    ]
+  },
+  "book-rashmika-mandanna": {
+    "name": "Rashmika Mandanna",
+    "tier": "Top",
+    "fee_text": "\u20b975 L\u20131.5 Cr",
+    "fee_mid_lakhs": 112.5,
+    "related": [
+      {
+        "slug": "book-nora-fatehi",
+        "name": "Nora Fatehi",
+        "tier": "Top",
+        "fee_text": "\u20b90.75\u20131.5 Cr",
+        "url": "/book-nora-fatehi/",
+        "image": "/actresses/nora-fatehi.png",
+        "reason": "same-tier"
+      },
+      {
+        "slug": "book-shraddha-kapoor",
+        "name": "Shraddha Kapoor",
+        "tier": "Top",
+        "fee_text": "\u20b91\u20131.2 Cr",
+        "url": "/book-shraddha-kapoor/",
+        "image": "/actresses/shraddha-kapoor.png",
+        "reason": "same-tier"
+      },
+      {
+        "slug": "book-kajol",
+        "name": "Kajol",
+        "tier": "Top",
+        "fee_text": "\u20b91\u20131.5 Cr",
+        "url": "/book-kajol/",
+        "image": "/actresses/kajol.png",
+        "reason": "same-tier"
+      },
+      {
+        "slug": "book-priyanka-chopra",
+        "name": "Priyanka Chopra Jonas",
+        "tier": "A-List",
+        "fee_text": "\u20b92.5\u20134 Cr",
+        "url": "/book-priyanka-chopra/",
+        "image": "/actresses/priyanka-chopra.png",
+        "reason": "cross-tier-popular"
+      }
+    ]
+  },
+  "book-rhea-chakraborty": {
+    "name": "Rhea Chakraborty",
+    "tier": "Mid-Tier",
+    "fee_text": "\u20b915\u201325 L",
+    "fee_mid_lakhs": 20.0,
+    "related": [
+      {
+        "slug": "book-adah-sharma",
+        "name": "Adah Sharma",
+        "tier": "Mid-Tier",
+        "fee_text": "\u20b915\u201325 L",
+        "url": "/book-adah-sharma/",
+        "image": "/actresses/adah-sharma.png",
+        "reason": "same-tier"
+      },
+      {
+        "slug": "book-karishma-tanna",
+        "name": "Karishma Tanna",
+        "tier": "Mid-Tier",
+        "fee_text": "\u20b915\u201325 L",
+        "url": "/book-karishma-tanna/",
+        "image": "/actresses/karishma-tanna.png",
+        "reason": "same-tier"
+      },
+      {
+        "slug": "book-mandira-bedi",
+        "name": "Mandira Bedi",
+        "tier": "Mid-Tier",
+        "fee_text": "\u20b915\u201325 L",
+        "url": "/book-mandira-bedi/",
+        "image": "/actresses/mandira-bedi.png",
+        "reason": "same-tier"
+      },
+      {
+        "slug": "book-pooja-hegde",
+        "name": "Pooja Hegde",
+        "tier": "Icon",
+        "fee_text": "\u20b960\u201390 L",
+        "url": "/book-pooja-hegde/",
+        "image": "/actresses/pooja-hegde.png",
+        "reason": "cross-tier-popular"
+      }
+    ]
+  },
+  "book-sanya-malhotra": {
+    "name": "Sanya Malhotra",
+    "tier": "Icon",
+    "fee_text": "\u20b950\u201375 L",
+    "fee_mid_lakhs": 62.5,
+    "related": [
+      {
+        "slug": "book-disha-patani",
+        "name": "Disha Patani",
+        "tier": "Icon",
+        "fee_text": "\u20b950\u201375 L",
+        "url": "/book-disha-patani/",
+        "image": "/actresses/disha-patani.png",
+        "reason": "same-tier"
+      },
+      {
+        "slug": "book-sunny-leone",
+        "name": "Sunny Leone",
+        "tier": "Icon",
+        "fee_text": "\u20b90.4\u20130.8 Cr",
+        "url": "/book-sunny-leone/",
+        "image": "/actresses/sunny-leone.png",
+        "reason": "same-tier"
+      },
+      {
+        "slug": "book-esha-gupta",
+        "name": "Esha Gupta",
+        "tier": "Icon",
+        "fee_text": "\u20b90.4\u20130.75 Cr",
+        "url": "/book-esha-gupta/",
+        "image": "/actresses/esha-gupta.png",
+        "reason": "same-tier"
+      },
+      {
+        "slug": "book-tamannaah-bhatia",
+        "name": "Tamannaah Bhatia",
+        "tier": "Top",
+        "fee_text": "\u20b91.5\u20132 Cr",
+        "url": "/book-tamannaah-bhatia/",
+        "image": "/actresses/tamanna-bhatia.png",
+        "reason": "cross-tier-popular"
+      }
+    ]
+  },
+  "book-sara-ali-khan": {
+    "name": "Sara Ali Khan",
+    "tier": "Icon",
+    "fee_text": "\u20b960\u201380 L",
+    "fee_mid_lakhs": 70.0,
+    "related": [
+      {
+        "slug": "book-janhvi-kapoor",
+        "name": "Janhvi Kapoor",
+        "tier": "Icon",
+        "fee_text": "\u20b960\u201380 L",
+        "url": "/book-janhvi-kapoor/",
+        "image": "/actresses/janhvi-kapoor.png",
+        "reason": "same-tier"
+      },
+      {
+        "slug": "book-pooja-hegde",
+        "name": "Pooja Hegde",
+        "tier": "Icon",
+        "fee_text": "\u20b960\u201390 L",
+        "url": "/book-pooja-hegde/",
+        "image": "/actresses/pooja-hegde.png",
+        "reason": "same-tier"
+      },
+      {
+        "slug": "book-disha-patani",
+        "name": "Disha Patani",
+        "tier": "Icon",
+        "fee_text": "\u20b950\u201375 L",
+        "url": "/book-disha-patani/",
+        "image": "/actresses/disha-patani.png",
+        "reason": "same-tier"
+      },
+      {
+        "slug": "book-tamannaah-bhatia",
+        "name": "Tamannaah Bhatia",
+        "tier": "Top",
+        "fee_text": "\u20b91.5\u20132 Cr",
+        "url": "/book-tamannaah-bhatia/",
+        "image": "/actresses/tamanna-bhatia.png",
+        "reason": "cross-tier-popular"
+      }
+    ]
+  },
+  "book-saumya-tandon": {
+    "name": "Saumya Tandon",
+    "tier": "Rising",
+    "fee_text": "\u20b98\u201310 L",
+    "fee_mid_lakhs": 9.0,
+    "related": [
+      {
+        "slug": "book-shweta-tiwari",
+        "name": "Shweta Tiwari",
+        "tier": "Rising",
+        "fee_text": "\u20b910\u201312 L",
+        "url": "/book-shweta-tiwari/",
+        "image": "/actresses/shweta-tiwari.png",
+        "reason": "same-tier"
+      },
+      {
+        "slug": "book-nikita-dutta",
+        "name": "Nikita Dutta",
+        "tier": "Rising",
+        "fee_text": "\u20b95\u20137 L",
+        "url": "/book-nikita-dutta/",
+        "image": "/actresses/nikita-dutta.png",
+        "reason": "same-tier"
+      },
+      {
+        "slug": "book-palak-tiwari",
+        "name": "Palak Tiwari",
+        "tier": "Rising",
+        "fee_text": "\u20b914\u201320 L",
+        "url": "/book-palak-tiwari/",
+        "image": "/actresses/palak-tiwari.png",
+        "reason": "same-tier"
+      },
+      {
+        "slug": "book-aditi-rao-hydari",
+        "name": "Aditi Rao Hydari",
+        "tier": "Mid-Tier",
+        "fee_text": "\u20b925\u201345 L",
+        "url": "/book-aditi-rao-hydari/",
+        "image": "/actresses/aditi-rao-hydari.png",
+        "reason": "cross-tier-popular"
+      }
+    ]
+  },
+  "book-shanaya-kapoor": {
+    "name": "Shanaya Kapoor",
+    "tier": "Mid-Tier",
+    "fee_text": "\u20b925\u201330 L",
+    "fee_mid_lakhs": 27.5,
+    "related": [
+      {
+        "slug": "book-dia-mirza",
+        "name": "Dia Mirza",
+        "tier": "Mid-Tier",
+        "fee_text": "\u20b920\u201335 L",
+        "url": "/book-dia-mirza/",
+        "image": "/actresses/dia-mirza.png",
+        "reason": "same-tier"
+      },
+      {
+        "slug": "book-konkona-sen-sharma",
+        "name": "Konkona Sen Sharma",
+        "tier": "Mid-Tier",
+        "fee_text": "\u20b920\u201335 L",
+        "url": "/book-konkona-sen-sharma/",
+        "image": "/actresses/konkona-sen-sharma.png",
+        "reason": "same-tier"
+      },
+      {
+        "slug": "book-lara-dutta",
+        "name": "Lara Dutta",
+        "tier": "Mid-Tier",
+        "fee_text": "\u20b920\u201335 L",
+        "url": "/book-lara-dutta/",
+        "image": "/actresses/lara-dutta.png",
+        "reason": "same-tier"
+      },
+      {
+        "slug": "book-pooja-hegde",
+        "name": "Pooja Hegde",
+        "tier": "Icon",
+        "fee_text": "\u20b960\u201390 L",
+        "url": "/book-pooja-hegde/",
+        "image": "/actresses/pooja-hegde.png",
+        "reason": "cross-tier-popular"
+      }
+    ]
+  },
+  "book-sharvari-wagh": {
+    "name": "Sharvari Wagh",
+    "tier": "Icon",
+    "fee_text": "\u20b940\u201360 L",
+    "fee_mid_lakhs": 50.0,
+    "related": [
+      {
+        "slug": "book-sonam-bajwa",
+        "name": "Sonam Bajwa",
+        "tier": "Icon",
+        "fee_text": "\u20b940\u201360 L",
+        "url": "/book-sonam-bajwa/",
+        "image": "/actresses/sonam-bajwa.png",
+        "reason": "same-tier"
+      },
+      {
+        "slug": "book-rakul-preet",
+        "name": "Rakul Preet",
+        "tier": "Icon",
+        "fee_text": "\u20b940\u201370 L",
+        "url": "/book-rakul-preet/",
+        "image": "/actresses/rakul-preet.png",
+        "reason": "same-tier"
+      },
+      {
+        "slug": "book-shehnaaz-gill",
+        "name": "Shehnaaz Gill",
+        "tier": "Icon",
+        "fee_text": "\u20b940\u201370 L",
+        "url": "/book-shehnaaz-gill/",
+        "image": "/actresses/shehnaz-gill.png",
+        "reason": "same-tier"
+      },
+      {
+        "slug": "book-tamannaah-bhatia",
+        "name": "Tamannaah Bhatia",
+        "tier": "Top",
+        "fee_text": "\u20b91.5\u20132 Cr",
+        "url": "/book-tamannaah-bhatia/",
+        "image": "/actresses/tamanna-bhatia.png",
+        "reason": "cross-tier-popular"
+      }
+    ]
+  },
+  "book-shehnaaz-gill": {
+    "name": "Shehnaaz Gill",
+    "tier": "Icon",
+    "fee_text": "\u20b940\u201370 L",
+    "fee_mid_lakhs": 55.0,
+    "related": [
+      {
+        "slug": "book-rakul-preet",
+        "name": "Rakul Preet",
+        "tier": "Icon",
+        "fee_text": "\u20b940\u201370 L",
+        "url": "/book-rakul-preet/",
+        "image": "/actresses/rakul-preet.png",
+        "reason": "same-tier"
+      },
+      {
+        "slug": "book-shruti-haasan",
+        "name": "Shruti Haasan",
+        "tier": "Icon",
+        "fee_text": "\u20b940\u201370 L",
+        "url": "/book-shruti-haasan/",
+        "image": "/actresses/shruti-haasan.png",
+        "reason": "same-tier"
+      },
+      {
+        "slug": "book-sonakshi-sinha",
+        "name": "Sonakshi Sinha",
+        "tier": "Icon",
+        "fee_text": "\u20b940\u201370 L",
+        "url": "/book-sonakshi-sinha/",
+        "image": "/actresses/sonakshi-sinha.png",
+        "reason": "same-tier"
+      },
+      {
+        "slug": "book-tamannaah-bhatia",
+        "name": "Tamannaah Bhatia",
+        "tier": "Top",
+        "fee_text": "\u20b91.5\u20132 Cr",
+        "url": "/book-tamannaah-bhatia/",
+        "image": "/actresses/tamanna-bhatia.png",
+        "reason": "cross-tier-popular"
+      }
+    ]
+  },
+  "book-shilpa-shetty": {
+    "name": "Shilpa Shetty",
+    "tier": "Top",
+    "fee_text": "\u20b975 L\u20131 Cr",
+    "fee_mid_lakhs": 87.5,
+    "related": [
+      {
+        "slug": "book-ananya-panday",
+        "name": "Ananya Panday",
+        "tier": "Top",
+        "fee_text": "\u20b990 L\u20131 Cr",
+        "url": "/book-ananya-panday/",
+        "image": "/actresses/ananya-panday.png",
+        "reason": "same-tier"
+      },
+      {
+        "slug": "book-vaani-kapoor",
+        "name": "Vaani Kapoor",
+        "tier": "Top",
+        "fee_text": "\u20b90.6\u20131 Cr",
+        "url": "/book-vaani-kapoor/",
+        "image": "/actresses/vaani-kapoor.png",
+        "reason": "same-tier"
+      },
+      {
+        "slug": "book-vidya-balan",
+        "name": "Vidya Balan",
+        "tier": "Top",
+        "fee_text": "\u20b975 L\u20131.25 Cr",
+        "url": "/book-vidya-balan/",
+        "image": "/actresses/vidya-balan.png",
+        "reason": "same-tier"
+      },
+      {
+        "slug": "book-priyanka-chopra",
+        "name": "Priyanka Chopra Jonas",
+        "tier": "A-List",
+        "fee_text": "\u20b92.5\u20134 Cr",
+        "url": "/book-priyanka-chopra/",
+        "image": "/actresses/priyanka-chopra.png",
+        "reason": "cross-tier-popular"
+      }
+    ]
+  },
+  "book-shraddha-kapoor": {
+    "name": "Shraddha Kapoor",
+    "tier": "Top",
+    "fee_text": "\u20b91\u20131.2 Cr",
+    "fee_mid_lakhs": 110.0,
+    "related": [
+      {
+        "slug": "book-nora-fatehi",
+        "name": "Nora Fatehi",
+        "tier": "Top",
+        "fee_text": "\u20b90.75\u20131.5 Cr",
+        "url": "/book-nora-fatehi/",
+        "image": "/actresses/nora-fatehi.png",
+        "reason": "same-tier"
+      },
+      {
+        "slug": "book-rashmika-mandanna",
+        "name": "Rashmika Mandanna",
+        "tier": "Top",
+        "fee_text": "\u20b975 L\u20131.5 Cr",
+        "url": "/book-rashmika-mandanna/",
+        "image": "/actresses/rashmika-mandanna.png",
+        "reason": "same-tier"
+      },
+      {
+        "slug": "book-vidya-balan",
+        "name": "Vidya Balan",
+        "tier": "Top",
+        "fee_text": "\u20b975 L\u20131.25 Cr",
+        "url": "/book-vidya-balan/",
+        "image": "/actresses/vidya-balan.png",
+        "reason": "same-tier"
+      },
+      {
+        "slug": "book-priyanka-chopra",
+        "name": "Priyanka Chopra Jonas",
+        "tier": "A-List",
+        "fee_text": "\u20b92.5\u20134 Cr",
+        "url": "/book-priyanka-chopra/",
+        "image": "/actresses/priyanka-chopra.png",
+        "reason": "cross-tier-popular"
+      }
+    ]
+  },
+  "book-shruti-haasan": {
+    "name": "Shruti Haasan",
+    "tier": "Icon",
+    "fee_text": "\u20b940\u201370 L",
+    "fee_mid_lakhs": 55.0,
+    "related": [
+      {
+        "slug": "book-rakul-preet",
+        "name": "Rakul Preet",
+        "tier": "Icon",
+        "fee_text": "\u20b940\u201370 L",
+        "url": "/book-rakul-preet/",
+        "image": "/actresses/rakul-preet.png",
+        "reason": "same-tier"
+      },
+      {
+        "slug": "book-shehnaaz-gill",
+        "name": "Shehnaaz Gill",
+        "tier": "Icon",
+        "fee_text": "\u20b940\u201370 L",
+        "url": "/book-shehnaaz-gill/",
+        "image": "/actresses/shehnaz-gill.png",
+        "reason": "same-tier"
+      },
+      {
+        "slug": "book-sonakshi-sinha",
+        "name": "Sonakshi Sinha",
+        "tier": "Icon",
+        "fee_text": "\u20b940\u201370 L",
+        "url": "/book-sonakshi-sinha/",
+        "image": "/actresses/sonakshi-sinha.png",
+        "reason": "same-tier"
+      },
+      {
+        "slug": "book-tamannaah-bhatia",
+        "name": "Tamannaah Bhatia",
+        "tier": "Top",
+        "fee_text": "\u20b91.5\u20132 Cr",
+        "url": "/book-tamannaah-bhatia/",
+        "image": "/actresses/tamanna-bhatia.png",
+        "reason": "cross-tier-popular"
+      }
+    ]
+  },
+  "book-shweta-tiwari": {
+    "name": "Shweta Tiwari",
+    "tier": "Rising",
+    "fee_text": "\u20b910\u201312 L",
+    "fee_mid_lakhs": 11.0,
+    "related": [
+      {
+        "slug": "book-saumya-tandon",
+        "name": "Saumya Tandon",
+        "tier": "Rising",
+        "fee_text": "\u20b98\u201310 L",
+        "url": "/book-saumya-tandon/",
+        "image": "/actresses/saumya-tandon.png",
+        "reason": "same-tier"
+      },
+      {
+        "slug": "book-nikita-dutta",
+        "name": "Nikita Dutta",
+        "tier": "Rising",
+        "fee_text": "\u20b95\u20137 L",
+        "url": "/book-nikita-dutta/",
+        "image": "/actresses/nikita-dutta.png",
+        "reason": "same-tier"
+      },
+      {
+        "slug": "book-palak-tiwari",
+        "name": "Palak Tiwari",
+        "tier": "Rising",
+        "fee_text": "\u20b914\u201320 L",
+        "url": "/book-palak-tiwari/",
+        "image": "/actresses/palak-tiwari.png",
+        "reason": "same-tier"
+      },
+      {
+        "slug": "book-aditi-rao-hydari",
+        "name": "Aditi Rao Hydari",
+        "tier": "Mid-Tier",
+        "fee_text": "\u20b925\u201345 L",
+        "url": "/book-aditi-rao-hydari/",
+        "image": "/actresses/aditi-rao-hydari.png",
+        "reason": "cross-tier-popular"
+      }
+    ]
+  },
+  "book-sonakshi-sinha": {
+    "name": "Sonakshi Sinha",
+    "tier": "Icon",
+    "fee_text": "\u20b940\u201370 L",
+    "fee_mid_lakhs": 55.0,
+    "related": [
+      {
+        "slug": "book-rakul-preet",
+        "name": "Rakul Preet",
+        "tier": "Icon",
+        "fee_text": "\u20b940\u201370 L",
+        "url": "/book-rakul-preet/",
+        "image": "/actresses/rakul-preet.png",
+        "reason": "same-tier"
+      },
+      {
+        "slug": "book-shehnaaz-gill",
+        "name": "Shehnaaz Gill",
+        "tier": "Icon",
+        "fee_text": "\u20b940\u201370 L",
+        "url": "/book-shehnaaz-gill/",
+        "image": "/actresses/shehnaz-gill.png",
+        "reason": "same-tier"
+      },
+      {
+        "slug": "book-shruti-haasan",
+        "name": "Shruti Haasan",
+        "tier": "Icon",
+        "fee_text": "\u20b940\u201370 L",
+        "url": "/book-shruti-haasan/",
+        "image": "/actresses/shruti-haasan.png",
+        "reason": "same-tier"
+      },
+      {
+        "slug": "book-tamannaah-bhatia",
+        "name": "Tamannaah Bhatia",
+        "tier": "Top",
+        "fee_text": "\u20b91.5\u20132 Cr",
+        "url": "/book-tamannaah-bhatia/",
+        "image": "/actresses/tamanna-bhatia.png",
+        "reason": "cross-tier-popular"
+      }
+    ]
+  },
+  "book-sonam-bajwa": {
+    "name": "Sonam Bajwa",
+    "tier": "Icon",
+    "fee_text": "\u20b940\u201360 L",
+    "fee_mid_lakhs": 50.0,
+    "related": [
+      {
+        "slug": "book-sharvari-wagh",
+        "name": "Sharvari Wagh",
+        "tier": "Icon",
+        "fee_text": "\u20b940\u201360 L",
+        "url": "/book-sharvari-wagh/",
+        "image": "/actresses/sharvari-wagh.png",
+        "reason": "same-tier"
+      },
+      {
+        "slug": "book-rakul-preet",
+        "name": "Rakul Preet",
+        "tier": "Icon",
+        "fee_text": "\u20b940\u201370 L",
+        "url": "/book-rakul-preet/",
+        "image": "/actresses/rakul-preet.png",
+        "reason": "same-tier"
+      },
+      {
+        "slug": "book-shehnaaz-gill",
+        "name": "Shehnaaz Gill",
+        "tier": "Icon",
+        "fee_text": "\u20b940\u201370 L",
+        "url": "/book-shehnaaz-gill/",
+        "image": "/actresses/shehnaz-gill.png",
+        "reason": "same-tier"
+      },
+      {
+        "slug": "book-tamannaah-bhatia",
+        "name": "Tamannaah Bhatia",
+        "tier": "Top",
+        "fee_text": "\u20b91.5\u20132 Cr",
+        "url": "/book-tamannaah-bhatia/",
+        "image": "/actresses/tamanna-bhatia.png",
+        "reason": "cross-tier-popular"
+      }
+    ]
+  },
+  "book-sreeleela": {
+    "name": "Sreeleela",
+    "tier": "Mid-Tier",
+    "fee_text": "\u20b920\u201330 L",
+    "fee_mid_lakhs": 25.0,
+    "related": [
+      {
+        "slug": "book-dia-mirza",
+        "name": "Dia Mirza",
+        "tier": "Mid-Tier",
+        "fee_text": "\u20b920\u201335 L",
+        "url": "/book-dia-mirza/",
+        "image": "/actresses/dia-mirza.png",
+        "reason": "same-tier"
+      },
+      {
+        "slug": "book-konkona-sen-sharma",
+        "name": "Konkona Sen Sharma",
+        "tier": "Mid-Tier",
+        "fee_text": "\u20b920\u201335 L",
+        "url": "/book-konkona-sen-sharma/",
+        "image": "/actresses/konkona-sen-sharma.png",
+        "reason": "same-tier"
+      },
+      {
+        "slug": "book-lara-dutta",
+        "name": "Lara Dutta",
+        "tier": "Mid-Tier",
+        "fee_text": "\u20b920\u201335 L",
+        "url": "/book-lara-dutta/",
+        "image": "/actresses/lara-dutta.png",
+        "reason": "same-tier"
+      },
+      {
+        "slug": "book-pooja-hegde",
+        "name": "Pooja Hegde",
+        "tier": "Icon",
+        "fee_text": "\u20b960\u201390 L",
+        "url": "/book-pooja-hegde/",
+        "image": "/actresses/pooja-hegde.png",
+        "reason": "cross-tier-popular"
+      }
+    ]
+  },
+  "book-sunny-leone": {
+    "name": "Sunny Leone",
+    "tier": "Icon",
+    "fee_text": "\u20b90.4\u20130.8 Cr",
+    "fee_mid_lakhs": 60.0,
+    "related": [
+      {
+        "slug": "book-disha-patani",
+        "name": "Disha Patani",
+        "tier": "Icon",
+        "fee_text": "\u20b950\u201375 L",
+        "url": "/book-disha-patani/",
+        "image": "/actresses/disha-patani.png",
+        "reason": "same-tier"
+      },
+      {
+        "slug": "book-sanya-malhotra",
+        "name": "Sanya Malhotra",
+        "tier": "Icon",
+        "fee_text": "\u20b950\u201375 L",
+        "url": "/book-sanya-malhotra/",
+        "image": "/actresses/sanya-malhotra.png",
+        "reason": "same-tier"
+      },
+      {
+        "slug": "book-esha-gupta",
+        "name": "Esha Gupta",
+        "tier": "Icon",
+        "fee_text": "\u20b90.4\u20130.75 Cr",
+        "url": "/book-esha-gupta/",
+        "image": "/actresses/esha-gupta.png",
+        "reason": "same-tier"
+      },
+      {
+        "slug": "book-tamannaah-bhatia",
+        "name": "Tamannaah Bhatia",
+        "tier": "Top",
+        "fee_text": "\u20b91.5\u20132 Cr",
+        "url": "/book-tamannaah-bhatia/",
+        "image": "/actresses/tamanna-bhatia.png",
+        "reason": "cross-tier-popular"
+      }
+    ]
+  },
+  "book-taapsee-pannu": {
+    "name": "Taapsee Pannu",
+    "tier": "Top",
+    "fee_text": "\u20b91\u20131.5 Cr",
+    "fee_mid_lakhs": 125.0,
+    "related": [
+      {
+        "slug": "book-kajol",
+        "name": "Kajol",
+        "tier": "Top",
+        "fee_text": "\u20b91\u20131.5 Cr",
+        "url": "/book-kajol/",
+        "image": "/actresses/kajol.png",
+        "reason": "same-tier"
+      },
+      {
+        "slug": "book-rani-mukerji",
+        "name": "Rani Mukerji",
+        "tier": "Top",
+        "fee_text": "\u20b91\u20131.5 Cr",
+        "url": "/book-rani-mukerji/",
+        "image": "/actresses/rani-mukerji.png",
+        "reason": "same-tier"
+      },
+      {
+        "slug": "book-kriti-sanon",
+        "name": "Kriti Sanon",
+        "tier": "Top",
+        "fee_text": "\u20b91\u20131.75 Cr",
+        "url": "/book-kriti-sanon/",
+        "image": "/actresses/kirti-sanan.png",
+        "reason": "same-tier"
+      },
+      {
+        "slug": "book-priyanka-chopra",
+        "name": "Priyanka Chopra Jonas",
+        "tier": "A-List",
+        "fee_text": "\u20b92.5\u20134 Cr",
+        "url": "/book-priyanka-chopra/",
+        "image": "/actresses/priyanka-chopra.png",
+        "reason": "cross-tier-popular"
+      }
+    ]
+  },
+  "book-tamannaah-bhatia": {
+    "name": "Tamannaah Bhatia",
+    "tier": "Top",
+    "fee_text": "\u20b91.5\u20132 Cr",
+    "fee_mid_lakhs": 175.0,
+    "related": [
+      {
+        "slug": "book-jacqueline-fernandez",
+        "name": "Jacqueline Fernandez",
+        "tier": "Top",
+        "fee_text": "\u20b91.25\u20132 Cr",
+        "url": "/book-jacqueline-fernandez/",
+        "image": "/actresses/jacqueline-fern-ndez.png",
+        "reason": "same-tier"
+      },
+      {
+        "slug": "book-kriti-sanon",
+        "name": "Kriti Sanon",
+        "tier": "Top",
+        "fee_text": "\u20b91\u20131.75 Cr",
+        "url": "/book-kriti-sanon/",
+        "image": "/actresses/kirti-sanan.png",
+        "reason": "same-tier"
+      },
+      {
+        "slug": "book-kajol",
+        "name": "Kajol",
+        "tier": "Top",
+        "fee_text": "\u20b91\u20131.5 Cr",
+        "url": "/book-kajol/",
+        "image": "/actresses/kajol.png",
+        "reason": "same-tier"
+      },
+      {
+        "slug": "book-priyanka-chopra",
+        "name": "Priyanka Chopra Jonas",
+        "tier": "A-List",
+        "fee_text": "\u20b92.5\u20134 Cr",
+        "url": "/book-priyanka-chopra/",
+        "image": "/actresses/priyanka-chopra.png",
+        "reason": "cross-tier-popular"
+      }
+    ]
+  },
+  "book-tara-sutaria": {
+    "name": "Tara Sutaria",
+    "tier": "Icon",
+    "fee_text": "\u20b930\u201350 L",
+    "fee_mid_lakhs": 40.0,
+    "related": [
+      {
+        "slug": "book-huma-qureshi",
+        "name": "Huma Qureshi",
+        "tier": "Icon",
+        "fee_text": "\u20b930\u201350 L",
+        "url": "/book-huma-qureshi/",
+        "image": "/actresses/huma-qureshi.png",
+        "reason": "same-tier"
+      },
+      {
+        "slug": "book-yami-gautam",
+        "name": "Yami Gautam",
+        "tier": "Icon",
+        "fee_text": "\u20b930\u201360 L",
+        "url": "/book-yami-gautam/",
+        "image": "/actresses/yami-gautam.png",
+        "reason": "same-tier"
+      },
+      {
+        "slug": "book-sharvari-wagh",
+        "name": "Sharvari Wagh",
+        "tier": "Icon",
+        "fee_text": "\u20b940\u201360 L",
+        "url": "/book-sharvari-wagh/",
+        "image": "/actresses/sharvari-wagh.png",
+        "reason": "same-tier"
+      },
+      {
+        "slug": "book-tamannaah-bhatia",
+        "name": "Tamannaah Bhatia",
+        "tier": "Top",
+        "fee_text": "\u20b91.5\u20132 Cr",
+        "url": "/book-tamannaah-bhatia/",
+        "image": "/actresses/tamanna-bhatia.png",
+        "reason": "cross-tier-popular"
+      }
+    ]
+  },
+  "book-urvashi-rautela": {
+    "name": "Urvashi Rautela",
+    "tier": "Icon",
+    "fee_text": "\u20b940\u201370 L",
+    "fee_mid_lakhs": 55.0,
+    "related": [
+      {
+        "slug": "book-rakul-preet",
+        "name": "Rakul Preet",
+        "tier": "Icon",
+        "fee_text": "\u20b940\u201370 L",
+        "url": "/book-rakul-preet/",
+        "image": "/actresses/rakul-preet.png",
+        "reason": "same-tier"
+      },
+      {
+        "slug": "book-shehnaaz-gill",
+        "name": "Shehnaaz Gill",
+        "tier": "Icon",
+        "fee_text": "\u20b940\u201370 L",
+        "url": "/book-shehnaaz-gill/",
+        "image": "/actresses/shehnaz-gill.png",
+        "reason": "same-tier"
+      },
+      {
+        "slug": "book-shruti-haasan",
+        "name": "Shruti Haasan",
+        "tier": "Icon",
+        "fee_text": "\u20b940\u201370 L",
+        "url": "/book-shruti-haasan/",
+        "image": "/actresses/shruti-haasan.png",
+        "reason": "same-tier"
+      },
+      {
+        "slug": "book-tamannaah-bhatia",
+        "name": "Tamannaah Bhatia",
+        "tier": "Top",
+        "fee_text": "\u20b91.5\u20132 Cr",
+        "url": "/book-tamannaah-bhatia/",
+        "image": "/actresses/tamanna-bhatia.png",
+        "reason": "cross-tier-popular"
+      }
+    ]
+  },
+  "book-vaani-kapoor": {
+    "name": "Vaani Kapoor",
+    "tier": "Top",
+    "fee_text": "\u20b90.6\u20131 Cr",
+    "fee_mid_lakhs": 80.0,
+    "related": [
+      {
+        "slug": "book-shilpa-shetty",
+        "name": "Shilpa Shetty",
+        "tier": "Top",
+        "fee_text": "\u20b975 L\u20131 Cr",
+        "url": "/book-shilpa-shetty/",
+        "image": "/actresses/shilpa-shetty.png",
+        "reason": "same-tier"
+      },
+      {
+        "slug": "book-ananya-panday",
+        "name": "Ananya Panday",
+        "tier": "Top",
+        "fee_text": "\u20b990 L\u20131 Cr",
+        "url": "/book-ananya-panday/",
+        "image": "/actresses/ananya-panday.png",
+        "reason": "same-tier"
+      },
+      {
+        "slug": "book-vidya-balan",
+        "name": "Vidya Balan",
+        "tier": "Top",
+        "fee_text": "\u20b975 L\u20131.25 Cr",
+        "url": "/book-vidya-balan/",
+        "image": "/actresses/vidya-balan.png",
+        "reason": "same-tier"
+      },
+      {
+        "slug": "book-priyanka-chopra",
+        "name": "Priyanka Chopra Jonas",
+        "tier": "A-List",
+        "fee_text": "\u20b92.5\u20134 Cr",
+        "url": "/book-priyanka-chopra/",
+        "image": "/actresses/priyanka-chopra.png",
+        "reason": "cross-tier-popular"
+      }
+    ]
+  },
+  "book-vidya-balan": {
+    "name": "Vidya Balan",
+    "tier": "Top",
+    "fee_text": "\u20b975 L\u20131.25 Cr",
+    "fee_mid_lakhs": 100.0,
+    "related": [
+      {
+        "slug": "book-ananya-panday",
+        "name": "Ananya Panday",
+        "tier": "Top",
+        "fee_text": "\u20b990 L\u20131 Cr",
+        "url": "/book-ananya-panday/",
+        "image": "/actresses/ananya-panday.png",
+        "reason": "same-tier"
+      },
+      {
+        "slug": "book-shraddha-kapoor",
+        "name": "Shraddha Kapoor",
+        "tier": "Top",
+        "fee_text": "\u20b91\u20131.2 Cr",
+        "url": "/book-shraddha-kapoor/",
+        "image": "/actresses/shraddha-kapoor.png",
+        "reason": "same-tier"
+      },
+      {
+        "slug": "book-nora-fatehi",
+        "name": "Nora Fatehi",
+        "tier": "Top",
+        "fee_text": "\u20b90.75\u20131.5 Cr",
+        "url": "/book-nora-fatehi/",
+        "image": "/actresses/nora-fatehi.png",
+        "reason": "same-tier"
+      },
+      {
+        "slug": "book-priyanka-chopra",
+        "name": "Priyanka Chopra Jonas",
+        "tier": "A-List",
+        "fee_text": "\u20b92.5\u20134 Cr",
+        "url": "/book-priyanka-chopra/",
+        "image": "/actresses/priyanka-chopra.png",
+        "reason": "cross-tier-popular"
+      }
+    ]
+  },
+  "book-wamiqa-gabbi": {
+    "name": "Wamiqa Gabbi",
+    "tier": "Mid-Tier",
+    "fee_text": "\u20b915\u201330 L",
+    "fee_mid_lakhs": 22.5,
+    "related": [
+      {
+        "slug": "book-sreeleela",
+        "name": "Sreeleela",
+        "tier": "Mid-Tier",
+        "fee_text": "\u20b920\u201330 L",
+        "url": "/book-sreeleela/",
+        "image": "/actresses/sreeleela.png",
+        "reason": "same-tier"
+      },
+      {
+        "slug": "book-adah-sharma",
+        "name": "Adah Sharma",
+        "tier": "Mid-Tier",
+        "fee_text": "\u20b915\u201325 L",
+        "url": "/book-adah-sharma/",
+        "image": "/actresses/adah-sharma.png",
+        "reason": "same-tier"
+      },
+      {
+        "slug": "book-karishma-tanna",
+        "name": "Karishma Tanna",
+        "tier": "Mid-Tier",
+        "fee_text": "\u20b915\u201325 L",
+        "url": "/book-karishma-tanna/",
+        "image": "/actresses/karishma-tanna.png",
+        "reason": "same-tier"
+      },
+      {
+        "slug": "book-pooja-hegde",
+        "name": "Pooja Hegde",
+        "tier": "Icon",
+        "fee_text": "\u20b960\u201390 L",
+        "url": "/book-pooja-hegde/",
+        "image": "/actresses/pooja-hegde.png",
+        "reason": "cross-tier-popular"
+      }
+    ]
+  },
+  "book-yami-gautam": {
+    "name": "Yami Gautam",
+    "tier": "Icon",
+    "fee_text": "\u20b930\u201360 L",
+    "fee_mid_lakhs": 45.0,
+    "related": [
+      {
+        "slug": "book-sharvari-wagh",
+        "name": "Sharvari Wagh",
+        "tier": "Icon",
+        "fee_text": "\u20b940\u201360 L",
+        "url": "/book-sharvari-wagh/",
+        "image": "/actresses/sharvari-wagh.png",
+        "reason": "same-tier"
+      },
+      {
+        "slug": "book-sonam-bajwa",
+        "name": "Sonam Bajwa",
+        "tier": "Icon",
+        "fee_text": "\u20b940\u201360 L",
+        "url": "/book-sonam-bajwa/",
+        "image": "/actresses/sonam-bajwa.png",
+        "reason": "same-tier"
+      },
+      {
+        "slug": "book-huma-qureshi",
+        "name": "Huma Qureshi",
+        "tier": "Icon",
+        "fee_text": "\u20b930\u201350 L",
+        "url": "/book-huma-qureshi/",
+        "image": "/actresses/huma-qureshi.png",
+        "reason": "same-tier"
+      },
+      {
+        "slug": "book-tamannaah-bhatia",
+        "name": "Tamannaah Bhatia",
+        "tier": "Top",
+        "fee_text": "\u20b91.5\u20132 Cr",
+        "url": "/book-tamannaah-bhatia/",
+        "image": "/actresses/tamanna-bhatia.png",
+        "reason": "cross-tier-popular"
+      }
+    ]
+  }
+}
