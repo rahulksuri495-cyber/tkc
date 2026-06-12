@@ -156,6 +156,15 @@
     });
   }
 
+  // Some static exports accidentally persisted a dynamically injected actress
+  // submenu as a direct child of <nav>. It has no owning <li>, can become
+  // visible on mobile, and appears as a black block over the header.
+  function removeOrphanNavMenus(){
+    document.querySelectorAll('nav > ul').forEach(function(ul){
+      if(ul.querySelector('a[href^="/book-"]')) ul.remove();
+    });
+  }
+
   function bgOf(el){
     var n=el;
     while(n && n!==document.body){
@@ -226,6 +235,7 @@
   }
 
   function scan(){
+    removeOrphanNavMenus();
     ensureSingerSubmenus();
     ensureActressSubmenus();
     linkActressCards();
