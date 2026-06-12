@@ -1,5 +1,63 @@
 (function(){
   var MARK='data-tkc-singers-enhanced';
+
+  // ===== Image visibility safety net =====
+  // Static export sometimes ships <img class="... opacity-0"> expecting React
+  // to flip it on load. On the deployed static HTML that handler never runs,
+  // so we force-paint every <img> as visible regardless of load events.
+  function forceImgVisible(img){
+    try{
+      img.classList.remove('opacity-0');
+      img.style.opacity='1';
+      img.style.visibility='visible';
+    }catch(e){}
+  }
+  function sweepImages(root){
+    (root||document).querySelectorAll('img').forEach(forceImgVisible);
+  }
+  document.addEventListener('load',function(e){
+    if(e.target && e.target.tagName==='IMG') forceImgVisible(e.target);
+  },true);
+  document.addEventListener('error',function(e){
+    if(e.target && e.target.tagName==='IMG') forceImgVisible(e.target);
+  },true);
+
+  // ===== Nested submenu reachability =====
+  // The right-side flyouts use `left-full ml-1`, which (a) leaves a 4px hover
+  // gap that drops the menu on mouse-out and (b) overflows the viewport on
+  // narrower screens. Add an invisible hover bridge and flip to the left side
+  // when there isn't room on the right.
+  function fixSubmenu(ul){
+    if(ul.__tkcSubFixed) return;
+    ul.__tkcSubFixed=true;
+    var li=ul.parentElement;
+    if(!li) return;
+    // close the hover gap so the cursor never crosses dead space
+    ul.classList.remove('ml-1');
+    ul.style.marginLeft='0';
+    ul.style.paddingLeft='4px';
+    // make sure it scrolls within the viewport on every screen
+    ul.style.maxHeight='min(75vh, calc(100vh - 96px))';
+    ul.style.overflowY='auto';
+    ul.style.overscrollBehavior='contain';
+    // flip to the opposite side if it would overflow the viewport
+    function reposition(){
+      ul.classList.remove('left-full','right-full');
+      ul.style.left=''; ul.style.right='';
+      var probeLeft=true;
+      var r=li.getBoundingClientRect();
+      var w=ul.offsetWidth||260;
+      if(r.right+w+8 > window.innerWidth && r.left-w-8 > 0) probeLeft=false;
+      if(probeLeft){ ul.classList.add('left-full'); }
+      else { ul.classList.add('right-full'); ul.style.paddingLeft='0'; ul.style.paddingRight='4px'; }
+    }
+    li.addEventListener('mouseenter',reposition);
+    li.addEventListener('focusin',reposition);
+  }
+  function fixAllSubmenus(){
+    document.querySelectorAll('li.group\\/sub > ul').forEach(fixSubmenu);
+  }
+
   var singers=[
     ['Book Altaf Raja','/book-altaf-raja/'],['Book A.R. Rahman','/book-ar-rahman/'],['Book Arijit Singh','/book-arijit-singh/'],['Book Armaan Malik','/book-armaan-malik/'],['Book Asees Kaur','/book-asees-kaur/'],['Book B Praak','/book-b-praak/'],['Book Badshah','/book-badshah/'],['Book Darshan Raval','/book-darshan-raval/'],['Book Diljit Dosanjh','/book-diljit-dosanjh/'],['Book Guru Randhawa','/book-guru-randhawa/'],['Book Hanumankind','/book-hanumankind/'],['Book Jasmine Sandlas','/book-jasmine-sandlas/'],['Book Jonita Gandhi','/book-jonita-gandhi/'],['Book Jubin Nautiyal','/book-jubin-nautiyal/'],['Book Kanika Kapoor','/book-kanika-kapoor/'],['Book Kumar Sanu','/book-kumar-sanu/'],['Book Lucky Ali','/book-lucky-ali/'],['Book Meet Bros','/book-meet-bros/'],['Book Mohit Chauhan','/book-mohit-chauhan/'],['Book Neha Bhasin','/book-neha-bhasin/'],['Book Neha Kakkar','/book-neha-kakkar/'],['Book Palak Muchhal','/book-palak-muchhal/'],['Book Pritam','/book-pritam/'],['Book Sachet-Parampara','/book-sachet-parampara/'],['Book Sachin-Jigar','/book-sachin-jigar/'],['Book Salim-Sulaiman','/book-salim-sulaiman/'],['Book Sara Gurpal','/book-sara-gurpal/'],['Book Shamsher Lehri','/book-shamsher-lehri/'],['Book Shankar Mahadevan','/book-shankar-mahadevan/'],['Book Shreya Ghoshal','/book-shreya-ghoshal/'],['Book Sonu Nigam','/book-sonu-nigam/'],['Book Sunanda Sharma','/book-sunanda-sharma/'],['Book Sunidhi Chauhan','/book-sunidhi-chauhan/'],['Book Tanishk Bagchi','/book-tanishk-bagchi/'],['Book Vishal-Shekhar','/book-vishal-shekhar/']
   ];
@@ -169,6 +227,8 @@
     ensureSingerSubmenus();
     ensureActressSubmenus();
     linkActressCards();
+    fixAllSubmenus();
+    sweepImages();
     document.querySelectorAll('ul').forEach(function(ul){
       if(ul.hasAttribute(MARK)) return;
       if(ul.children.length<15) return;
