@@ -161,7 +161,12 @@
   // visible on mobile, and appears as a black block over the header.
   function removeOrphanNavMenus(){
     document.querySelectorAll('nav > ul').forEach(function(ul){
-      if(ul.querySelector('a[href^="/book-"]')) ul.remove();
+      // The legitimate desktop navigation is also a direct child of <nav> and
+      // contains deeply nested artist links. Only remove a direct artist list;
+      // never remove the primary menu that contains top-level site sections.
+      var directArtistLinks=ul.querySelectorAll(':scope > li > a[href^="/book-"]');
+      var hasPrimaryLinks=ul.querySelector(':scope > li > a[href="/"], :scope > li > a[href="/celebrity-booking-india/"]');
+      if(directArtistLinks.length>=15 && !hasPrimaryLinks) ul.remove();
     });
   }
 
