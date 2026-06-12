@@ -14,8 +14,12 @@ from __future__ import annotations
 import re, sys, pathlib
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
-CATEGORY = ROOT / "bollywood-actress-booking" / "index.html"
 NAV = ROOT / "assets" / "nav-enhance.js"
+# An actress page is any book-<slug>/index.html whose BreadcrumbList points
+# back to /bollywood-actress-booking/. This is the authoritative signal —
+# the category page HTML also cross-links singers/comedians and can't be
+# trusted as a slug source.
+BREADCRUMB_RE = re.compile(r'"item"\s*:\s*"https://tkctalent\.com/bollywood-actress-booking/"')
 
 def fail(msg: str) -> None:
     print(f"[verify-actress-dropdown] FAIL: {msg}", file=sys.stderr)
@@ -25,11 +29,15 @@ def main() -> int:
     if not CATEGORY.exists(): fail(f"missing {CATEGORY}")
     if not NAV.exists(): fail(f"missing {NAV}")
 
-    cat_html = CATEGORY.read_text(encoding="utf-8")
-    # Slugs in the category page nav dropdown (static SSR HTML)
-    cat_slugs = set(re.findall(r'href="/book-([a-z0-9-]+)/"', cat_html))
-    if not cat_slugs:
-        fail("no /book-*/ links found in category page; selector may have changed")
+    expected = set()
+    for p in sorted(ROOT.glob("book-*/index.html")):
+        try:
+            if BREADCRUMB_RE.search(p.read_text(encoding="utf-8", errors="ignore")):
+                expected.add(p.parent.name[len("book-"):])
+        except OSError:
+            pass
+    if not expected:
+        fail("no actress book-*/index.html pages found via breadcrumb signal")
 
     nav_js = NAV.read_text(encoding="utf-8")
     # actresses = [[label, href], ...]
@@ -42,10 +50,10 @@ def main() -> int:
     map_slugs = set(re.findall(r'/book-([a-z0-9-]+)/', m2.group(1)))
 
     errors = []
-    missing_desktop = cat_slugs - desktop_slugs
-    missing_map     = cat_slugs - map_slugs
-    extra_desktop   = desktop_slugs - cat_slugs
-    extra_map       = map_slugs - cat_slugs
+    missing_desktop = expected - desktop_slugs
+    missing_map     = expected - map_slugs
+    extra_desktop   = desktop_slugs - expected
+    extra_map       = map_slugs - expected
 
     if missing_desktop:
         errors.append(f"missing from desktop `actresses` array ({len(missing_desktop)}): "
@@ -54,16 +62,11 @@ def main() -> int:
         errors.append(f"missing from `actressNameMap` ({len(missing_map)}): "
                       + ", ".join(sorted(missing_map)))
     if extra_desktop:
-        errors.append(f"extra in desktop array (no matching category link) ({len(extra_desktop)}): "
+        errors.append(f"extra in desktop array (no matching actress page) ({len(extra_desktop)}): "
                       + ", ".join(sorted(extra_desktop)))
     if extra_map:
-        errors.append(f"extra in name map (no matching category link) ({len(extra_map)}): "
+        errors.append(f"extra in name map (no matching actress page) ({len(extra_map)}): "
                       + ", ".join(sorted(extra_map)))
-
-    # Also confirm each slug corresponds to an actual book-<slug>/index.html file
-    missing_files = [s for s in cat_slugs if not (ROOT / f"book-{s}" / "index.html").exists()]
-    if missing_files:
-        errors.append(f"category links missing book-*/index.html files: " + ", ".join(sorted(missing_files)))
 
     # The desktop dropdown drives the mobile drawer (same `actresses` array is
     # injected by ensureActressSubmenus for both), so verifying the desktop
@@ -75,7 +78,7 @@ def main() -> int:
         for e in errors: print("  - " + e, file=sys.stderr)
         fail(f"{len(errors)} issue(s) found; dropdown is out of sync with actress pages")
 
-    print(f"[verify-actress-dropdown] OK: {len(cat_slugs)} actress slugs present in "
+    print(f"[verify-actress-dropdown] OK: {len(expected)} actress slugs present in "
           f"desktop dropdown, mobile drawer, and name map.")
     return 0
 
