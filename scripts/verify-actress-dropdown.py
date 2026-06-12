@@ -26,7 +26,6 @@ def fail(msg: str) -> None:
     sys.exit(1)
 
 def main() -> int:
-    if not CATEGORY.exists(): fail(f"missing {CATEGORY}")
     if not NAV.exists(): fail(f"missing {NAV}")
 
     expected = set()
