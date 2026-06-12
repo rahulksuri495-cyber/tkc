@@ -5,6 +5,38 @@
   var STORAGE_KEY = 'tkc-install-dismissed-v1';
   var deferredPrompt = null;
 
+  // --- Service worker registration (guarded for Lovable preview) ---
+  (function registerSW() {
+    if (!('serviceWorker' in navigator)) return;
+    try {
+      var host = location.hostname;
+      var search = location.search || '';
+      var inIframe = window.top !== window.self;
+      var isPreviewHost =
+        host.startsWith('id-preview--') ||
+        host.startsWith('preview--') ||
+        host === 'lovableproject.com' || host.endsWith('.lovableproject.com') ||
+        host === 'lovableproject-dev.com' || host.endsWith('.lovableproject-dev.com') ||
+        host === 'beta.lovable.dev' || host.endsWith('.beta.lovable.dev');
+      var killSwitch = search.indexOf('sw=off') !== -1;
+
+      if (inIframe || isPreviewHost || killSwitch) {
+        navigator.serviceWorker.getRegistrations().then(function (regs) {
+          regs.forEach(function (r) {
+            if (r.active && r.active.scriptURL && r.active.scriptURL.indexOf('/sw.js') !== -1) {
+              r.unregister();
+            }
+          });
+        }).catch(function () {});
+        return;
+      }
+
+      window.addEventListener('load', function () {
+        navigator.serviceWorker.register('/sw.js', { scope: '/' }).catch(function () {});
+      });
+    } catch (_) {}
+  })();
+
   function isStandalone() {
     return (
       window.matchMedia('(display-mode: standalone)').matches ||
