@@ -98,19 +98,32 @@ def runtime_check(url: str) -> None:
                   const sec = document.querySelector('section[aria-labelledby="actress-coverflow-heading"]');
                   if (!sec) return { error: 'carousel section not found' };
                   const imgs = Array.from(sec.querySelectorAll('img'));
+                  const isValidSrc = (s) => !!s && !s.startsWith('data:image/svg') && !/placeholder|undefined|null/i.test(s);
+                  const visibleArr = imgs.filter(img => {
+                    const cs = getComputedStyle(img);
+                    const r = img.getBoundingClientRect();
+                    return parseFloat(cs.opacity) > 0.05 && cs.visibility !== 'hidden' && r.width > 0 && r.height > 0;
+                  });
+                  const loadedArr = imgs.filter(img => img.complete && img.naturalWidth > 0);
+                  const invalidSrc = imgs
+                    .filter(img => !isValidSrc(img.getAttribute('src')))
+                    .map(img => img.getAttribute('src'))
+                    .slice(0, 5);
                   return {
                     total: imgs.length,
-                    visible: imgs.filter(img => {
-                      const cs = getComputedStyle(img);
-                      const r = img.getBoundingClientRect();
-                      return parseFloat(cs.opacity) > 0.05 && cs.visibility !== 'hidden' && r.width > 0 && r.height > 0;
-                    }).length,
+                    visible: visibleArr.length,
+                    loaded: loadedArr.length,
+                    invalidSrc,
                     hidden: imgs
                       .filter(img => {
                         const cs = getComputedStyle(img);
                         return parseFloat(cs.opacity) <= 0.05 || cs.visibility === 'hidden';
                       })
                       .map(img => ({ src: img.getAttribute('src'), opacity: getComputedStyle(img).opacity }))
+                      .slice(0, 5),
+                    notLoaded: imgs
+                      .filter(img => !(img.complete && img.naturalWidth > 0))
+                      .map(img => ({ src: img.getAttribute('src'), complete: img.complete, naturalWidth: img.naturalWidth }))
                       .slice(0, 5),
                   };
                 }"""
@@ -122,6 +135,8 @@ def runtime_check(url: str) -> None:
         sys.exit(f"FAIL runtime: {results['error']}")
     total = results.get("total", 0)
     visible = results.get("visible", 0)
+    loaded = results.get("loaded", 0)
+    invalid = results.get("invalidSrc", [])
     if total == 0:
         sys.exit("FAIL runtime: no <img> elements found inside the roster section.")
     if visible == 0:
@@ -129,7 +144,27 @@ def runtime_check(url: str) -> None:
             "FAIL runtime: every actress image hydrated hidden (opacity≈0). "
             f"Sample: {results.get('hidden')!r}"
         )
+    if invalid:
+        sys.exit(
+            "FAIL runtime: actress images have invalid/placeholder src attributes. "
+            f"Sample: {invalid!r}"
+        )
+    if loaded == 0:
+        sys.exit(
+            "FAIL runtime: no actress images reported a successful load "
+            "(complete && naturalWidth > 0). Sample not-loaded: "
+            f"{results.get('notLoaded')!r}"
+        )
+    # Require at least 60% of images to have actually decoded — guards
+    # against hydration where <img> tags exist but never fetch a real bitmap.
+    if loaded < max(1, int(total * 0.6)):
+        sys.exit(
+            f"FAIL runtime: only {loaded}/{total} actress images decoded "
+            f"(naturalWidth > 0). Sample not-loaded: {results.get('notLoaded')!r}"
+        )
     print(f"OK runtime: {visible}/{total} actress images visible after hydration.")
+    print(f"OK runtime: {loaded}/{total} actress images decoded (naturalWidth > 0).")
+    print("OK runtime: all actress image src attributes look valid.")
 
 
 def main() -> None:
