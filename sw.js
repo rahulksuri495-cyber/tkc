@@ -1,18 +1,21 @@
 /* TKC Talent service worker — offline app shell */
-const VERSION = 'tkc-v1';
+const VERSION = 'tkc-v2';
 const STATIC_CACHE = `${VERSION}-static`;
 const RUNTIME_CACHE = `${VERSION}-runtime`;
 const OFFLINE_URL = '/offline.html';
 
 const PRECACHE = [
-  '/',
-  '/index.html',
   '/offline.html',
   '/manifest.webmanifest',
   '/apple-touch-icon.png',
   '/icon-192.png',
   '/icon-512.png',
 ];
+
+function isCacheableResponse(response) {
+  if (!response || !response.ok || response.status !== 200) return false;
+  return response.type === 'basic' || response.type === 'cors';
+}
 
 self.addEventListener('install', (event) => {
   event.waitUntil(
@@ -52,13 +55,20 @@ self.addEventListener('fetch', (event) => {
       (async () => {
         try {
           const fresh = await fetch(req);
-          const cache = await caches.open(RUNTIME_CACHE);
-          cache.put(req, fresh.clone());
+          // Never persist temporary firewall/challenge responses. A cached 403
+          // can otherwise leave this route blank even after the challenge passes.
+          if (isCacheableResponse(fresh)) {
+            const contentType = fresh.headers.get('content-type') || '';
+            if (contentType.includes('text/html')) {
+              const cache = await caches.open(RUNTIME_CACHE);
+              await cache.put(req, fresh.clone());
+            }
+          }
           return fresh;
         } catch (_) {
           const cached = await caches.match(req);
           if (cached) return cached;
-          const home = await caches.match('/index.html');
+          const home = await caches.match('/');
           if (home) return home;
           return caches.match(OFFLINE_URL);
         }
@@ -73,8 +83,10 @@ self.addEventListener('fetch', (event) => {
       caches.match(req).then((hit) =>
         hit ||
         fetch(req).then((res) => {
-          const copy = res.clone();
-          caches.open(STATIC_CACHE).then((c) => c.put(req, copy));
+          if (isCacheableResponse(res)) {
+            const copy = res.clone();
+            caches.open(STATIC_CACHE).then((c) => c.put(req, copy));
+          }
           return res;
         })
       )
@@ -88,8 +100,10 @@ self.addEventListener('fetch', (event) => {
       caches.match(req).then((cached) => {
         const network = fetch(req)
           .then((res) => {
-            const copy = res.clone();
-            caches.open(RUNTIME_CACHE).then((c) => c.put(req, copy));
+              if (isCacheableResponse(res)) {
+                const copy = res.clone();
+                caches.open(RUNTIME_CACHE).then((c) => c.put(req, copy));
+              }
             return res;
           })
           .catch(() => cached);

@@ -66,6 +66,11 @@ ErrorDocument 404 /404.html
   <FilesMatch "\.html$">
     Header set Cache-Control "no-cache"
   </FilesMatch>
+  # Service workers must revalidate so cache fixes reach installed visitors.
+  <Files "sw.js">
+    Header set Cache-Control "no-cache, no-store, must-revalidate"
+    Header set Service-Worker-Allowed "/"
+  </Files>
 </IfModule>
 
 # Gzip / Brotli where available.
