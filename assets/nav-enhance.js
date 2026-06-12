@@ -227,6 +227,8 @@
     ensureSingerSubmenus();
     ensureActressSubmenus();
     linkActressCards();
+    fixAllSubmenus();
+    sweepImages();
     document.querySelectorAll('ul').forEach(function(ul){
       if(ul.hasAttribute(MARK)) return;
       if(ul.children.length<15) return;
