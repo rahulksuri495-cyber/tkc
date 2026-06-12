@@ -2,3 +2,8 @@
 
 .max-h-\[75vh\]{max-height:75vh}
 .overscroll-contain{overscroll-behavior:contain}
+
+/* TKC static-export safety overrides */
+img{opacity:1 !important}
+[style*="tkc-shimmer"]{opacity:0 !important;animation:none !important;pointer-events:none}
+nav ul ul[class*="left-full"]{max-height:calc(100vh - 120px) !important}
