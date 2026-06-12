@@ -169,6 +169,7 @@
     ensureSingerSubmenus();
     ensureActressSubmenus();
     linkActressCards();
+    fixHiddenImages();
     document.querySelectorAll('ul').forEach(function(ul){
       if(ul.hasAttribute(MARK)) return;
       if(ul.children.length<15) return;
@@ -178,6 +179,40 @@
       enhance(ul);
     });
   }
+
+  // ===== Image visibility failsafe =====
+  // SSR output renders <img> with opacity-0 (shimmer placeholder) and relies on
+  // React hydration to reveal it. If hydration is slow, fails, or the image is
+  // served from cache (no onLoad), images stay invisible. This guarantees any
+  // fully-loaded image becomes visible regardless of framework state.
+  function revealImg(img){
+    if(img.classList.contains('opacity-0')){
+      img.classList.remove('opacity-0');
+      img.classList.add('opacity-100');
+    }
+    var prev=img.previousElementSibling;
+    if(prev && prev.getAttribute('aria-hidden')==='true' && prev.style && prev.style.animation){
+      prev.style.opacity='0';
+      prev.style.animation='none';
+    }
+  }
+  function fixHiddenImages(){
+    document.querySelectorAll('img.opacity-0').forEach(function(img){
+      if(img.complete && img.naturalWidth>0){ revealImg(img); return; }
+      if(!img.hasAttribute('data-tkc-img-watch')){
+        img.setAttribute('data-tkc-img-watch','1');
+        img.addEventListener('load',function(){ revealImg(img); },{once:true});
+        img.addEventListener('error',function(){
+          // keep shimmer off for broken images so layout stays clean
+          var prev=img.previousElementSibling;
+          if(prev && prev.getAttribute('aria-hidden')==='true'){ prev.style.animation='none'; }
+        },{once:true});
+      }
+    });
+  }
+  // re-check shortly after load in case hydration re-applied opacity-0
+  setTimeout(fixHiddenImages,1500);
+  setTimeout(fixHiddenImages,4000);
 
   var mo=new MutationObserver(function(){ scan(); });
   function start(){
