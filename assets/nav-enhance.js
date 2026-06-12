@@ -136,13 +136,15 @@
       if(!href) return;
       var card=h.closest('li, article, div');
       if(!card) return;
-      if(card.querySelector('a[data-tkc-card-link]')) return;
       // Find the outer card container (first ancestor that looks like a card)
       var outer=card;
       while(outer && outer.parentElement && !(outer.className||'').toString().match(/rounded-2xl|rounded-xl/)){
         outer=outer.parentElement;
         if(outer===document.body) return;
       }
+      // Guard on the element we actually append to — checking only the inner
+      // card caused an infinite append loop via the MutationObserver.
+      if(!outer || outer.querySelector('a[data-tkc-card-link]')) return;
       var a=document.createElement('a');
       a.href=href; a.setAttribute('data-tkc-card-link','1');
       a.setAttribute('aria-label','Book '+name);
@@ -239,10 +241,25 @@
     });
   }
 
-  var mo=new MutationObserver(function(){ scan(); });
+  // Debounce + re-entrancy guard so our own DOM writes never re-trigger an
+  // immediate synchronous re-scan (previously caused an infinite loop).
+  var scanScheduled=false, scanning=false;
+  function safeScan(){
+    if(scanning) return;
+    scanning=true;
+    try{ scan(); } finally { scanning=false; }
+  }
+  var mo=new MutationObserver(function(){
+    if(scanScheduled||scanning) return;
+    scanScheduled=true;
+    requestAnimationFrame(function(){
+      scanScheduled=false;
+      safeScan();
+    });
+  });
   function start(){
     mo.observe(document.body,{childList:true,subtree:true});
-    scan();
+    safeScan();
   }
   if(document.readyState==='loading'){
     document.addEventListener('DOMContentLoaded',start);
