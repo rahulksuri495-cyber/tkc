@@ -14,7 +14,7 @@ from __future__ import annotations
 import re, sys, pathlib
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
-NAV = ROOT / "assets" / "nav-enhance-v2.js"
+NAV = ROOT / "assets" / "nav-enhance-v3.js"
 # An actress page is any book-<slug>/index.html whose BreadcrumbList points
 # back to /bollywood-actress-booking/. This is the authoritative signal —
 # the category page HTML also cross-links singers/comedians and can't be
@@ -41,11 +41,11 @@ def main() -> int:
     nav_js = NAV.read_text(encoding="utf-8")
     # actresses = [[label, href], ...]
     m = re.search(r"var\s+actresses\s*=\s*(\[[\s\S]*?\]);", nav_js)
-    if not m: fail("could not locate `var actresses = [...]` in nav-enhance-v2.js")
+    if not m: fail("could not locate `var actresses = [...]` in nav-enhance-v3.js")
     desktop_slugs = set(re.findall(r'/book-([a-z0-9-]+)/', m.group(1)))
 
     m2 = re.search(r"var\s+actressNameMap\s*=\s*(\{[\s\S]*?\});", nav_js)
-    if not m2: fail("could not locate `var actressNameMap = {...}` in nav-enhance-v2.js")
+    if not m2: fail("could not locate `var actressNameMap = {...}` in nav-enhance-v3.js")
     map_slugs = set(re.findall(r'/book-([a-z0-9-]+)/', m2.group(1)))
 
     errors = []
@@ -71,7 +71,7 @@ def main() -> int:
     # injected by ensureActressSubmenus for both), so verifying the desktop
     # array also covers the mobile drawer. Sanity check the function uses it:
     if "ensureActressSubmenus" not in nav_js or "mobile-nav-drawer" not in nav_js:
-        errors.append("ensureActressSubmenus / mobile-nav-drawer hook missing in nav-enhance-v2.js")
+        errors.append("ensureActressSubmenus / mobile-nav-drawer hook missing in nav-enhance-v3.js")
 
     if errors:
         for e in errors: print("  - " + e, file=sys.stderr)
