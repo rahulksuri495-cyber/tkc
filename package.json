@@ -6,7 +6,8 @@
     "dev": "vite --port 8080 --host",
     "build": "echo 'static site, nothing to build'",
     "preview": "vite preview --port 8080 --host",
-    "verify:actress-dropdown": "python3 scripts/verify-actress-dropdown.py"
+    "verify:actress-dropdown": "python3 scripts/verify-actress-dropdown.py",
+    "verify:actress-images": "python3 scripts/verify-actress-images.py"
   },
   "devDependencies": {
     "vite": "^5.4.10"
