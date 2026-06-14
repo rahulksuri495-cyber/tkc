@@ -301,6 +301,9 @@ def main() -> None:
     performance = Counter()
     for path in public_pages():
         source = path.read_text(encoding="utf-8", errors="ignore")
+        if path.relative_to(ROOT).as_posix() == "book-tamannaah-bhatia/index.html":
+            for old_cdn, public_url in TAMANNAH_CDN_TO_PUBLIC.items():
+                source = source.replace(old_cdn, public_url)
         source, page_errors, page_performance = optimize_image_markup(source, path)
         lint_errors.extend(page_errors)
         performance.update(page_performance)
