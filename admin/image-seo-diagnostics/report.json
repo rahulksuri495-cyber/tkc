@@ -1,0 +1,439 @@
+{
+  "generated_at": "2026-06-14T12:58:51+00:00",
+  "summary": {
+    "pages_scanned": 125,
+    "gallery_pages": 105,
+    "image_tags_scanned": 866,
+    "images_indexed": 235,
+    "excluded_decorative_or_missing_alt": 184,
+    "errors": 0
+  },
+  "checks": {
+    "json_ld_parseable": true,
+    "schema_sitemap_urls_match": true,
+    "robots_exposes_image_sitemap": true
+  },
+  "errors": [],
+  "pages": [
+    {
+      "route": "/bollywood-actress-booking/",
+      "image_count": 60
+    },
+    {
+      "route": "/bollywood-celebrity-charges/",
+      "image_count": 37
+    },
+    {
+      "route": "/book-adah-sharma/",
+      "image_count": 5
+    },
+    {
+      "route": "/book-aditi-rao-hydari/",
+      "image_count": 5
+    },
+    {
+      "route": "/book-akanksha-puri/",
+      "image_count": 1
+    },
+    {
+      "route": "/book-alia-bhatt/",
+      "image_count": 14
+    },
+    {
+      "route": "/book-altaf-raja/",
+      "image_count": 4
+    },
+    {
+      "route": "/book-ananya-panday/",
+      "image_count": 5
+    },
+    {
+      "route": "/book-aneet-padda/",
+      "image_count": 5
+    },
+    {
+      "route": "/book-anushka-sharma/",
+      "image_count": 5
+    },
+    {
+      "route": "/book-ar-rahman/",
+      "image_count": 4
+    },
+    {
+      "route": "/book-arijit-singh/",
+      "image_count": 4
+    },
+    {
+      "route": "/book-armaan-malik/",
+      "image_count": 4
+    },
+    {
+      "route": "/book-asees-kaur/",
+      "image_count": 4
+    },
+    {
+      "route": "/book-b-praak/",
+      "image_count": 4
+    },
+    {
+      "route": "/book-badshah/",
+      "image_count": 4
+    },
+    {
+      "route": "/book-chitrangada-singh/",
+      "image_count": 5
+    },
+    {
+      "route": "/book-darshan-raval/",
+      "image_count": 4
+    },
+    {
+      "route": "/book-deepika-padukone/",
+      "image_count": 5
+    },
+    {
+      "route": "/book-dia-mirza/",
+      "image_count": 5
+    },
+    {
+      "route": "/book-diljit-dosanjh/",
+      "image_count": 4
+    },
+    {
+      "route": "/book-disha-patani/",
+      "image_count": 5
+    },
+    {
+      "route": "/book-esha-gupta/",
+      "image_count": 5
+    },
+    {
+      "route": "/book-fatima-sana-shaikh/",
+      "image_count": 5
+    },
+    {
+      "route": "/book-guru-randhawa/",
+      "image_count": 4
+    },
+    {
+      "route": "/book-hanumankind/",
+      "image_count": 5
+    },
+    {
+      "route": "/book-huma-qureshi/",
+      "image_count": 5
+    },
+    {
+      "route": "/book-jacqueline-fernandez/",
+      "image_count": 5
+    },
+    {
+      "route": "/book-janhvi-kapoor/",
+      "image_count": 5
+    },
+    {
+      "route": "/book-jasmine-sandlas/",
+      "image_count": 4
+    },
+    {
+      "route": "/book-jennifer-winget/",
+      "image_count": 5
+    },
+    {
+      "route": "/book-jonita-gandhi/",
+      "image_count": 4
+    },
+    {
+      "route": "/book-jubin-nautiyal/",
+      "image_count": 4
+    },
+    {
+      "route": "/book-kajol/",
+      "image_count": 5
+    },
+    {
+      "route": "/book-kangana-ranaut/",
+      "image_count": 5
+    },
+    {
+      "route": "/book-kanika-kapoor/",
+      "image_count": 4
+    },
+    {
+      "route": "/book-kareena-kapoor/",
+      "image_count": 15
+    },
+    {
+      "route": "/book-karishma-tanna/",
+      "image_count": 5
+    },
+    {
+      "route": "/book-katrina-kaif/",
+      "image_count": 5
+    },
+    {
+      "route": "/book-kiara-advani/",
+      "image_count": 5
+    },
+    {
+      "route": "/book-konkona-sen-sharma/",
+      "image_count": 5
+    },
+    {
+      "route": "/book-kriti-sanon/",
+      "image_count": 5
+    },
+    {
+      "route": "/book-kumar-sanu/",
+      "image_count": 4
+    },
+    {
+      "route": "/book-lara-dutta/",
+      "image_count": 5
+    },
+    {
+      "route": "/book-lucky-ali/",
+      "image_count": 4
+    },
+    {
+      "route": "/book-mandira-bedi/",
+      "image_count": 5
+    },
+    {
+      "route": "/book-meet-bros/",
+      "image_count": 4
+    },
+    {
+      "route": "/book-mohit-chauhan/",
+      "image_count": 4
+    },
+    {
+      "route": "/book-mrunal-thakur/",
+      "image_count": 5
+    },
+    {
+      "route": "/book-neha-bhasin/",
+      "image_count": 4
+    },
+    {
+      "route": "/book-neha-kakkar/",
+      "image_count": 4
+    },
+    {
+      "route": "/book-nikita-dutta/",
+      "image_count": 5
+    },
+    {
+      "route": "/book-nimrat-kaur/",
+      "image_count": 5
+    },
+    {
+      "route": "/book-nora-fatehi/",
+      "image_count": 5
+    },
+    {
+      "route": "/book-nushrratt-bharuccha/",
+      "image_count": 5
+    },
+    {
+      "route": "/book-palak-muchhal/",
+      "image_count": 4
+    },
+    {
+      "route": "/book-palak-tiwari/",
+      "image_count": 5
+    },
+    {
+      "route": "/book-pooja-hegde/",
+      "image_count": 5
+    },
+    {
+      "route": "/book-pritam/",
+      "image_count": 4
+    },
+    {
+      "route": "/book-priyanka-chopra/",
+      "image_count": 5
+    },
+    {
+      "route": "/book-rakul-preet/",
+      "image_count": 5
+    },
+    {
+      "route": "/book-rani-mukerji/",
+      "image_count": 5
+    },
+    {
+      "route": "/book-rashmika-mandanna/",
+      "image_count": 5
+    },
+    {
+      "route": "/book-rhea-chakraborty/",
+      "image_count": 5
+    },
+    {
+      "route": "/book-sachet-parampara/",
+      "image_count": 4
+    },
+    {
+      "route": "/book-sachin-jigar/",
+      "image_count": 4
+    },
+    {
+      "route": "/book-salim-sulaiman/",
+      "image_count": 4
+    },
+    {
+      "route": "/book-sanya-malhotra/",
+      "image_count": 5
+    },
+    {
+      "route": "/book-sara-ali-khan/",
+      "image_count": 5
+    },
+    {
+      "route": "/book-sara-gurpal/",
+      "image_count": 4
+    },
+    {
+      "route": "/book-saumya-tandon/",
+      "image_count": 5
+    },
+    {
+      "route": "/book-shah-rukh-khan/",
+      "image_count": 14
+    },
+    {
+      "route": "/book-shamsher-lehri/",
+      "image_count": 4
+    },
+    {
+      "route": "/book-shanaya-kapoor/",
+      "image_count": 5
+    },
+    {
+      "route": "/book-shankar-mahadevan/",
+      "image_count": 4
+    },
+    {
+      "route": "/book-sharvari-wagh/",
+      "image_count": 5
+    },
+    {
+      "route": "/book-shehnaaz-gill/",
+      "image_count": 5
+    },
+    {
+      "route": "/book-shilpa-shetty/",
+      "image_count": 5
+    },
+    {
+      "route": "/book-shraddha-kapoor/",
+      "image_count": 5
+    },
+    {
+      "route": "/book-shreya-ghoshal/",
+      "image_count": 4
+    },
+    {
+      "route": "/book-shruti-haasan/",
+      "image_count": 5
+    },
+    {
+      "route": "/book-shweta-tiwari/",
+      "image_count": 5
+    },
+    {
+      "route": "/book-sonakshi-sinha/",
+      "image_count": 5
+    },
+    {
+      "route": "/book-sonam-bajwa/",
+      "image_count": 5
+    },
+    {
+      "route": "/book-sonu-nigam/",
+      "image_count": 4
+    },
+    {
+      "route": "/book-sreeleela/",
+      "image_count": 5
+    },
+    {
+      "route": "/book-sunanda-sharma/",
+      "image_count": 4
+    },
+    {
+      "route": "/book-sunidhi-chauhan/",
+      "image_count": 4
+    },
+    {
+      "route": "/book-sunil-grover/",
+      "image_count": 13
+    },
+    {
+      "route": "/book-sunny-leone/",
+      "image_count": 5
+    },
+    {
+      "route": "/book-taapsee-pannu/",
+      "image_count": 5
+    },
+    {
+      "route": "/book-tamannaah-bhatia/",
+      "image_count": 8
+    },
+    {
+      "route": "/book-tanishk-bagchi/",
+      "image_count": 4
+    },
+    {
+      "route": "/book-tara-sutaria/",
+      "image_count": 5
+    },
+    {
+      "route": "/book-urvashi-rautela/",
+      "image_count": 5
+    },
+    {
+      "route": "/book-vaani-kapoor/",
+      "image_count": 5
+    },
+    {
+      "route": "/book-vidya-balan/",
+      "image_count": 5
+    },
+    {
+      "route": "/book-vishal-shekhar/",
+      "image_count": 4
+    },
+    {
+      "route": "/book-wamiqa-gabbi/",
+      "image_count": 5
+    },
+    {
+      "route": "/book-yami-gautam/",
+      "image_count": 5
+    },
+    {
+      "route": "/celebrity-booking-india/",
+      "image_count": 3
+    },
+    {
+      "route": "/",
+      "image_count": 26
+    },
+    {
+      "route": "/newsroom/",
+      "image_count": 27
+    },
+    {
+      "route": "/ourservice/",
+      "image_count": 3
+    },
+    {
+      "route": "/singer-booking-india/",
+      "image_count": 35
+    }
+  ]
+}
