@@ -20,11 +20,17 @@ DIAGNOSTICS_ROUTE = "admin/image-seo-diagnostics/index.html"
 SKIP_PARTS = {"dist", "node_modules", ".git"}
 REDIRECTS_START = "# BEGIN GENERATED GALLERY IMAGE REDIRECTS"
 REDIRECTS_END = "# END GENERATED GALLERY IMAGE REDIRECTS"
+TAMANNAH_CDN_TO_PUBLIC = {
+    "/__l5e/assets-v1/cf3a5940-3650-43ab-a59e-f720f4eaf4df/tamannaah-dark-dress.jpg": "/gallery/tamannaah-dark-dress.jpg",
+    "/__l5e/assets-v1/645735a0-2137-46b9-851d-4af80ce6323c/tamannaah-gold-yacht.jpg": "/gallery/tamannaah-gold-yacht.jpg",
+    "/__l5e/assets-v1/8f1b69ac-d744-472f-aca6-b5051aa6d9a1/tamannaah-red-portrait.jpg": "/gallery/tamannaah-red-portrait.jpg",
+    "/__l5e/assets-v1/fbd466b2-69d4-42c6-ba75-ccdab5828ec2/tamannaah-tkctalent.jpg": "/gallery/tamannaah-tkctalent.jpg",
+}
 KNOWN_DIMENSIONS = {
-    "/__l5e/assets-v1/cf3a5940-3650-43ab-a59e-f720f4eaf4df/tamannaah-dark-dress.jpg": (1080, 1920),
-    "/__l5e/assets-v1/645735a0-2137-46b9-851d-4af80ce6323c/tamannaah-gold-yacht.jpg": (588, 1056),
-    "/__l5e/assets-v1/8f1b69ac-d744-472f-aca6-b5051aa6d9a1/tamannaah-red-portrait.jpg": (923, 1920),
-    "/__l5e/assets-v1/fbd466b2-69d4-42c6-ba75-ccdab5828ec2/tamannaah-tkctalent.jpg": (736, 1308),
+    "/gallery/tamannaah-dark-dress.jpg": (1080, 1920),
+    "/gallery/tamannaah-gold-yacht.jpg": (588, 1056),
+    "/gallery/tamannaah-red-portrait.jpg": (923, 1920),
+    "/gallery/tamannaah-tkctalent.jpg": (736, 1308),
 }
 
 
@@ -150,16 +156,16 @@ def optimize_image_markup(source: str, path: Path) -> tuple[str, list[str], dict
                 return tag
             else:
                 return tag
-        is_tamannaah_cdn_image = (
+        is_tamannaah_gallery_image = (
             path.relative_to(ROOT).as_posix() == "book-tamannaah-bhatia/index.html"
-            and src.startswith("/__l5e/assets-v1/")
+            and src.startswith("/gallery/tamannaah-")
         )
-        priority = "eager" if eligible_index == 0 or is_tamannaah_cdn_image else "lazy"
+        priority = "eager" if eligible_index == 0 or is_tamannaah_gallery_image else "lazy"
         tag = set_attribute(tag, "loading", priority)
         tag = set_attribute(
             tag,
             "fetchpriority",
-            "high" if eligible_index == 0 or is_tamannaah_cdn_image else "auto",
+            "high" if eligible_index == 0 or is_tamannaah_gallery_image else "auto",
         )
         dimensions = image_dimensions(src)
         if dimensions:
@@ -210,9 +216,10 @@ def generated_redirects() -> list[dict[str, str]]:
     redirects = []
     for pointer in sorted((ROOT / "assets" / "tamannaah").glob("*.asset.json")):
         payload = json.loads(pointer.read_text())
-        canonical = payload["url"]
+        old_cdn = payload["url"]
         filename = payload["original_filename"]
-        for old in (f"/assets/tamannaah/{filename}", f"/gallery/{filename}", f"/images/{filename}"):
+        canonical = f"/gallery/{filename}"
+        for old in (old_cdn, f"/assets/tamannaah/{filename}", f"/images/{filename}"):
             redirects.append({"old": old, "canonical": canonical, "status": 301})
     safe_existing_aliases = {
         "/actresses/sonakshi-singha.png": "/actresses/sonakshi-sinha.png",
@@ -294,6 +301,9 @@ def main() -> None:
     performance = Counter()
     for path in public_pages():
         source = path.read_text(encoding="utf-8", errors="ignore")
+        if path.relative_to(ROOT).as_posix() == "book-tamannaah-bhatia/index.html":
+            for old_cdn, public_url in TAMANNAH_CDN_TO_PUBLIC.items():
+                source = source.replace(old_cdn, public_url)
         source, page_errors, page_performance = optimize_image_markup(source, path)
         lint_errors.extend(page_errors)
         performance.update(page_performance)
