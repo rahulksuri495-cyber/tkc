@@ -12,7 +12,7 @@ from collections import Counter
 from datetime import datetime, timezone
 from html.parser import HTMLParser
 from pathlib import Path
-from urllib.parse import urljoin
+from urllib.parse import urljoin, urlparse
 
 ROOT = Path(__file__).resolve().parent.parent
 BASE_URL = "https://tkctalent.com"
@@ -78,6 +78,8 @@ def eligible_images(parser: PageParser) -> list[dict[str, str]]:
 
 
 def image_dimensions(src: str) -> tuple[int, int] | None:
+    if src.startswith(("http://", "https://")):
+        src = urlparse(src).path
     if src in KNOWN_DIMENSIONS:
         return KNOWN_DIMENSIONS[src]
     path = ROOT / src.split("?", 1)[0].lstrip("/")
