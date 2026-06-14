@@ -206,6 +206,12 @@ def generated_redirects() -> list[dict[str, str]]:
         filename = payload["original_filename"]
         for old in (f"/assets/tamannaah/{filename}", f"/gallery/{filename}", f"/images/{filename}"):
             redirects.append({"old": old, "canonical": canonical, "status": 301})
+    safe_existing_aliases = {
+        "/actresses/sonakshi-singha.png": "/actresses/sonakshi-sinha.png",
+    }
+    for old, canonical in safe_existing_aliases.items():
+        if (ROOT / old.lstrip("/")).is_file() and (ROOT / canonical.lstrip("/")).is_file():
+            redirects.append({"old": old, "canonical": canonical, "status": 301})
     return redirects
 
 
