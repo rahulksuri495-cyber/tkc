@@ -6,6 +6,8 @@ from __future__ import annotations
 import html
 import json
 import re
+import struct
+import argparse
 from collections import Counter
 from datetime import datetime, timezone
 from html.parser import HTMLParser
@@ -16,6 +18,14 @@ ROOT = Path(__file__).resolve().parent.parent
 BASE_URL = "https://tkctalent.com"
 DIAGNOSTICS_ROUTE = "admin/image-seo-diagnostics/index.html"
 SKIP_PARTS = {"dist", "node_modules", ".git"}
+REDIRECTS_START = "# BEGIN GENERATED GALLERY IMAGE REDIRECTS"
+REDIRECTS_END = "# END GENERATED GALLERY IMAGE REDIRECTS"
+KNOWN_DIMENSIONS = {
+    "/__l5e/assets-v1/cf3a5940-3650-43ab-a59e-f720f4eaf4df/tamannaah-dark-dress.jpg": (1080, 1920),
+    "/__l5e/assets-v1/645735a0-2137-46b9-851d-4af80ce6323c/tamannaah-gold-yacht.jpg": (588, 1056),
+    "/__l5e/assets-v1/8f1b69ac-d744-472f-aca6-b5051aa6d9a1/tamannaah-red-portrait.jpg": (923, 1920),
+    "/__l5e/assets-v1/fbd466b2-69d4-42c6-ba75-ccdab5828ec2/tamannaah-tkctalent.jpg": (736, 1308),
+}
 
 
 class PageParser(HTMLParser):
@@ -63,6 +73,85 @@ def eligible_images(parser: PageParser) -> list[dict[str, str]]:
         absolute = urljoin(f"{BASE_URL}/", src)
         unique.setdefault(absolute, {"url": absolute, "caption": alt})
     return list(unique.values())
+
+
+def image_dimensions(src: str) -> tuple[int, int] | None:
+    if src in KNOWN_DIMENSIONS:
+        return KNOWN_DIMENSIONS[src]
+    path = ROOT / src.split("?", 1)[0].lstrip("/")
+    if not path.is_file():
+        return None
+    data = path.read_bytes()
+    try:
+        if data.startswith(b"\x89PNG\r\n\x1a\n"):
+            return struct.unpack(">II", data[16:24])
+        if data.startswith((b"GIF87a", b"GIF89a")):
+            return struct.unpack("<HH", data[6:10])
+        if data.startswith(b"RIFF") and data[8:12] == b"WEBP":
+            if data[12:16] == b"VP8X":
+                return (1 + int.from_bytes(data[24:27], "little"), 1 + int.from_bytes(data[27:30], "little"))
+            if data[12:16] == b"VP8 ":
+                marker = data.find(b"\x9d\x01\x2a")
+                if marker >= 0:
+                    return struct.unpack("<HH", data[marker + 3:marker + 7])
+            if data[12:16] == b"VP8L":
+                bits = int.from_bytes(data[21:25], "little")
+                return ((bits & 0x3FFF) + 1, ((bits >> 14) & 0x3FFF) + 1)
+        if data.startswith(b"\xff\xd8"):
+            index = 2
+            while index + 9 < len(data):
+                if data[index] != 0xFF:
+                    index += 1
+                    continue
+                marker = data[index + 1]
+                length = int.from_bytes(data[index + 2:index + 4], "big")
+                if marker in {0xC0, 0xC1, 0xC2, 0xC3, 0xC5, 0xC6, 0xC7, 0xC9, 0xCA, 0xCB, 0xCD, 0xCE, 0xCF}:
+                    return (int.from_bytes(data[index + 7:index + 9], "big"), int.from_bytes(data[index + 5:index + 7], "big"))
+                index += 2 + length
+    except (IndexError, struct.error):
+        return None
+    return None
+
+
+def set_attribute(tag: str, name: str, value: str) -> str:
+    pattern = rf"\s{name}(?:=\"[^\"]*\"|='[^']*'|=[^\s>]+)?"
+    tag = re.sub(pattern, "", tag, flags=re.IGNORECASE)
+    return tag[:-2] + f' {name}="{html.escape(value, quote=True)}"/>' if tag.endswith("/>") else tag[:-1] + f' {name}="{html.escape(value, quote=True)}">'
+
+
+def optimize_image_markup(source: str, path: Path) -> tuple[str, list[str], dict[str, int]]:
+    errors: list[str] = []
+    eligible_index = 0
+    counts = {"eager": 0, "lazy": 0, "dimensioned": 0}
+
+    def replace(match: re.Match[str]) -> str:
+        nonlocal eligible_index
+        tag = match.group(0)
+        attrs = dict(re.findall(r"([:\w-]+)\s*=\s*[\"']([^\"']*)[\"']", tag))
+        src = attrs.get("src", "").strip()
+        decorative = attrs.get("aria-hidden") == "true"
+        if not src or src.startswith("data:") or decorative:
+            return tag
+        alt = re.sub(r"\s+", " ", attrs.get("alt", "")).strip()
+        if not alt:
+            if path.parent.name.startswith("book-"):
+                errors.append(f"{path.relative_to(ROOT)}: gallery image {src} is missing alt text")
+            return tag
+        priority = "eager" if eligible_index == 0 else "lazy"
+        tag = set_attribute(tag, "loading", priority)
+        tag = set_attribute(tag, "fetchpriority", "high" if eligible_index == 0 else "auto")
+        dimensions = image_dimensions(src)
+        if dimensions:
+            tag = set_attribute(tag, "width", str(dimensions[0]))
+            tag = set_attribute(tag, "height", str(dimensions[1]))
+            counts["dimensioned"] += 1
+        elif not attrs.get("width") or not attrs.get("height"):
+            errors.append(f"{path.relative_to(ROOT)}: gallery image {src} has no resolvable width/height")
+        counts[priority] += 1
+        eligible_index += 1
+        return tag
+
+    return re.sub(r"<img\b[^>]*>", replace, source, flags=re.IGNORECASE), errors, counts
 
 
 def route_for(path: Path) -> str:
