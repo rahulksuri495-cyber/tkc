@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "vite --port 8080 --host",
     "build": "node -e \"const fs=require('fs'),p=require('path');fs.rmSync('dist',{recursive:true,force:true});fs.mkdirSync('dist');const skip=new Set(['dist','node_modules','.git','.lovable','.agents','.claude','.workspace','scripts']);for(const e of fs.readdirSync('.')){if(skip.has(e))continue;fs.cpSync(e,p.join('dist',e),{recursive:true})}\"",
+    "build:dev": "bun run build",
     "preview": "vite preview --port 8080 --host",
     "verify:actress-dropdown": "python3 scripts/verify-actress-dropdown.py",
     "verify:actress-images": "python3 scripts/verify-actress-images.py"
