@@ -30,3 +30,4 @@ User-agent: ClaudeBot
 Allow: /
 
 Sitemap: https://tkctalent.com/sitemap.xml
+Sitemap: https://tkctalent.com/image-sitemap.xml
