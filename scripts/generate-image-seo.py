@@ -71,7 +71,9 @@ def eligible_images(parser: PageParser) -> list[dict[str, str]]:
         if not src or not alt or image.get("aria-hidden") == "true" or src.startswith("data:"):
             continue
         absolute = urljoin(f"{BASE_URL}/", src)
-        unique.setdefault(absolute, {"url": absolute, "caption": alt})
+        dimensions = image_dimensions(src)
+        if dimensions:
+            unique.setdefault(absolute, {"url": absolute, "caption": alt, "width": dimensions[0], "height": dimensions[1]})
     return list(unique.values())
 
 
@@ -257,11 +259,19 @@ def render_diagnostics(report: dict) -> str:
 
 
 def main() -> None:
+    parser_args = argparse.ArgumentParser()
+    parser_args.add_argument("--check", action="store_true", help="Validate without rewriting generated files")
+    args = parser_args.parse_args()
     records = []
     total_img_tags = 0
     excluded_reasons: Counter[str] = Counter()
+    lint_errors: list[str] = []
+    performance = Counter()
     for path in public_pages():
         source = path.read_text(encoding="utf-8", errors="ignore")
+        source, page_errors, page_performance = optimize_image_markup(source, path)
+        lint_errors.extend(page_errors)
+        performance.update(page_performance)
         parser = PageParser()
         parser.feed(source)
         total_img_tags += len(parser.images)
@@ -273,15 +283,20 @@ def main() -> None:
         page_url = parser.canonical or f"{BASE_URL}{route}"
         title = html.unescape(parser.title).strip() or route.strip("/").replace("-", " ").title() or "TKC Talent"
         schema = schema_for(page_url, title, images)
-        path.write_text(install_schema(source, schema), encoding="utf-8")
+        rendered = install_schema(source, schema)
+        if not args.check:
+            path.write_text(rendered, encoding="utf-8")
         records.append({"route": route, "page_url": page_url, "images": images, "schema": schema})
 
     sitemap = render_sitemap(records)
-    (ROOT / "image-sitemap.xml").write_text(sitemap, encoding="utf-8")
+    redirects = generated_redirects()
+    if not args.check:
+        (ROOT / "image-sitemap.xml").write_text(sitemap, encoding="utf-8")
+        install_redirects(redirects)
 
     schema_urls = {media["contentUrl"] for record in records for media in record["schema"]["associatedMedia"]}
     sitemap_urls = {image["url"] for record in records for image in record["images"]}
-    errors = []
+    errors = lint_errors
     if schema_urls != sitemap_urls:
         errors.append("Structured-data and sitemap image URL sets differ")
     if "Sitemap: https://tkctalent.com/image-sitemap.xml" not in (ROOT / "robots.txt").read_text():
@@ -295,20 +310,39 @@ def main() -> None:
             "image_tags_scanned": total_img_tags,
             "images_indexed": len(sitemap_urls),
             "excluded_decorative_or_missing_alt": excluded_reasons["decorative_or_missing_alt"],
+            "eager_images": performance["eager"],
+            "lazy_images": performance["lazy"],
+            "dimensioned_images": performance["dimensioned"],
+            "redirects_validated": len(redirects),
             "errors": len(errors),
         },
         "checks": {
             "json_ld_parseable": True,
             "schema_sitemap_urls_match": schema_urls == sitemap_urls,
             "robots_exposes_image_sitemap": not any("robots.txt" in error for error in errors),
+            "loading_priorities_valid": performance["eager"] == len(records),
+            "intrinsic_dimensions_valid": not any("width/height" in error for error in errors),
+            "legacy_redirects_valid": all(row["status"] == 301 and row["old"] != row["canonical"] for row in redirects),
         },
+        "core_web_vitals": {
+            "status": "pass" if performance["eager"] == len(records) and not any("width/height" in error for error in errors) else "fail",
+            "lcp_safeguard": "One eager, high-priority eligible image per gallery page",
+            "cls_safeguard": "Intrinsic width and height emitted for every indexed image instance",
+            "field_data_note": "Build diagnostics validate implementation safeguards; field CWV requires production traffic data.",
+        },
+        "redirects": redirects,
         "errors": errors,
         "pages": [{"route": record["route"], "image_count": len(record["images"])} for record in records],
     }
     diagnostics = ROOT / DIAGNOSTICS_ROUTE
-    diagnostics.parent.mkdir(parents=True, exist_ok=True)
-    diagnostics.write_text(render_diagnostics(report), encoding="utf-8")
-    (diagnostics.parent / "report.json").write_text(json.dumps(report, indent=2), encoding="utf-8")
+    if not args.check:
+        diagnostics.parent.mkdir(parents=True, exist_ok=True)
+        report_json = json.dumps(report, indent=2)
+        report_html = render_diagnostics(report)
+        diagnostics.write_text(report_html, encoding="utf-8")
+        (diagnostics.parent / "report.json").write_text(report_json, encoding="utf-8")
+        (diagnostics.parent / "validation-report.json").write_text(report_json, encoding="utf-8")
+        (diagnostics.parent / "validation-report.html").write_text(report_html, encoding="utf-8")
     if errors:
         raise SystemExit("Validation failed: " + "; ".join(errors))
     print(json.dumps(report["summary"], indent=2))
