@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Billing Support | TKC Talent</title>
+  <meta name="description" content="Contact TKC Talent about a charge, refund, receipt, or other billing issue.">
+  <meta name="robots" content="noindex,follow">
+  <link rel="stylesheet" href="/assets/styles-B3eDpzGa.css">
+  <style>
+    :root{color-scheme:dark}*{box-sizing:border-box}body{margin:0;background:#0a0a0a;color:#f5f1e8;font:15px/1.55 Inter,system-ui,sans-serif}.shell{max-width:860px;margin:auto;padding:28px 20px 72px}.back{color:#c9a84c;text-decoration:none;font-weight:600}.eyebrow{margin:58px 0 8px;color:#c9a84c;font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase}h1{max-width:700px;margin:0;font:700 clamp(2.4rem,8vw,5rem)/.95 "Space Grotesk",system-ui,sans-serif;letter-spacing:-.04em}.intro{max-width:620px;margin:22px 0 36px;color:#b9b5ac;font-size:17px}.panel{border:1px solid #34322d;background:#141412;padding:clamp(20px,5vw,40px)}.templates{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:8px 0 28px}.template{min-height:76px;border:1px solid #3c3932;border-radius:12px;background:#1a1916;color:#f5f1e8;padding:14px;text-align:left;font:600 14px/1.3 inherit;cursor:pointer}.template:hover,.template[aria-pressed="true"]{border-color:#c9a84c;background:#252116}.template span{display:block;margin-top:5px;color:#99948b;font-size:12px;font-weight:400}label{display:block;margin:18px 0 7px;font-weight:600}.required{color:#c9a84c}input,textarea,select{width:100%;border:1px solid #3c3932;border-radius:10px;background:#0d0d0c;color:#f5f1e8;padding:13px 14px;font:inherit}input:focus,textarea:focus,select:focus{outline:2px solid #c9a84c;outline-offset:2px}textarea{min-height:150px;resize:vertical}.two{display:grid;grid-template-columns:1fr 1fr;gap:16px}.hint{margin:8px 0 0;color:#918c83;font-size:12px}.actions{display:flex;align-items:center;gap:14px;margin-top:26px}.submit{border:0;border-radius:999px;background:#f5f1e8;color:#0a0a0a;padding:14px 22px;font-weight:700;cursor:pointer}.status{color:#b9b5ac;font-size:13px}.privacy{margin-top:22px;color:#817d75;font-size:12px}.direct{margin-top:26px;padding-top:22px;border-top:1px solid #34322d;color:#aaa49b}.direct a{color:#f6c453}@media(max-width:620px){.templates,.two{grid-template-columns:1fr}.eyebrow{margin-top:42px}.panel{margin-inline:-4px}.actions{align-items:flex-start;flex-direction:column}.submit{width:100%}}
+  </style>
+</head>
+<body>
+  <main class="shell">
+    <a class="back" href="/">← Back to TKC Talent</a>
+    <p class="eyebrow">Priority support</p>
+    <h1>Let’s sort out your charge.</h1>
+    <p class="intro">Choose the issue that best matches yours. We’ll prepare a complete billing ticket so our team can investigate without unnecessary back-and-forth.</p>
+    <form class="panel" id="billing-form">
+      <h2>What can we help with?</h2>
+      <div class="templates" id="templates">
+        <button class="template" type="button" data-type="Charged twice" aria-pressed="false">Charged twice<span>Duplicate or repeated payment</span></button>
+        <button class="template" type="button" data-type="Charge not recognized" aria-pressed="false">Charge not recognized<span>You don’t recognize a TKC charge</span></button>
+        <button class="template" type="button" data-type="Refund request" aria-pressed="false">Request a refund<span>Ask us to review a completed payment</span></button>
+        <button class="template" type="button" data-type="Invoice or receipt" aria-pressed="false">Invoice or receipt<span>Need a billing document or correction</span></button>
+        <button class="template" type="button" data-type="Wrong amount charged" aria-pressed="false">Wrong amount<span>The total differs from your agreement</span></button>
+        <button class="template" type="button" data-type="Other billing issue" aria-pressed="false">Something else<span>Any other payment concern</span></button>
+      </div>
+      <input id="issue" name="issue" type="hidden" required>
+      <div class="two">
+        <div><label for="name">Your name <span class="required">*</span></label><input id="name" name="name" maxlength="100" autocomplete="name" required></div>
+        <div><label for="email">Email used for payment <span class="required">*</span></label><input id="email" name="email" type="email" maxlength="254" autocomplete="email" required></div>
+      </div>
+      <div class="two">
+        <div><label for="amount">Amount charged</label><input id="amount" name="amount" maxlength="30" placeholder="e.g. ₹25,000"></div>
+        <div><label for="date">Charge date</label><input id="date" name="date" type="date"></div>
+      </div>
+      <label for="reference">Invoice / payment reference</label>
+      <input id="reference" name="reference" maxlength="100" placeholder="Do not enter a full card number">
+      <p class="hint">For safety, only include the last four card digits if relevant.</p>
+      <label for="details">What happened? <span class="required">*</span></label>
+      <textarea id="details" name="details" maxlength="2000" placeholder="Tell us what you expected and what happened instead…" required></textarea>
+      <div class="actions"><button class="submit" type="submit">Create billing ticket</button><span class="status" id="status" aria-live="polite">Opens a pre-filled email for secure sending.</span></div>
+      <p class="privacy">Never share passwords, OTPs, CVV, or full card details. This form prepares an email to TKC’s billing inbox; no information is stored on this page.</p>
+      <p class="direct">Prefer to write directly? <a href="mailto:Thekabircompany@gmail.com?subject=Billing%20support">Thekabircompany@gmail.com</a></p>
+    </form>
+  </main>
+  <script>
+  (function(){
+    var form=document.getElementById('billing-form'), issue=document.getElementById('issue'), status=document.getElementById('status');
+    document.querySelectorAll('.template').forEach(function(button){button.addEventListener('click',function(){document.querySelectorAll('.template').forEach(function(item){item.setAttribute('aria-pressed','false')});button.setAttribute('aria-pressed','true');issue.value=button.dataset.type;status.textContent='Selected: '+button.dataset.type;});});
+    form.addEventListener('submit',function(event){
+      event.preventDefault();
+      if(!issue.value){status.textContent='Please choose a billing issue first.';document.getElementById('templates').scrollIntoView({behavior:'smooth',block:'center'});return;}
+      if(!form.reportValidity())return;
+      var ticket='TKC-'+Date.now().toString(36).toUpperCase();
+      var value=function(id){return document.getElementById(id).value.trim()||'Not provided'};
+      var subject='[Billing '+ticket+'] '+issue.value;
+      var body=['Billing support ticket: '+ticket,'Issue: '+issue.value,'Name: '+value('name'),'Reply email: '+value('email'),'Amount: '+value('amount'),'Charge date: '+value('date'),'Reference / last 4: '+value('reference'),'','Details:',value('details'),'','Page: '+location.href];
+      status.textContent='Ticket '+ticket+' prepared. Opening your email app…';
+      location.href='mailto:Thekabircompany@gmail.com?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(body.join('\n'));
+    });
+  })();
+  </script>
+</body>
+</html>
