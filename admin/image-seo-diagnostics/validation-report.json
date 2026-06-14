@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-14T13:07:44+00:00",
+  "generated_at": "2026-06-14T13:08:51+00:00",
   "summary": {
     "pages_scanned": 125,
     "gallery_pages": 105,
@@ -24,7 +24,15 @@
     "status": "pass",
     "lcp_safeguard": "One eager, high-priority eligible image per gallery page",
     "cls_safeguard": "Intrinsic width and height emitted for every indexed image instance",
-    "field_data_note": "Build diagnostics validate implementation safeguards; field CWV requires production traffic data."
+    "field_data_note": "Build diagnostics validate implementation safeguards; field CWV requires production traffic data.",
+    "preview_lab_measurement": {
+      "route": "/book-tamannaah-bhatia/",
+      "measured_at": "2026-06-14T13:08:00+00:00",
+      "fcp_ms": 2952,
+      "cls": 0.0059,
+      "initial_images_loaded": 1,
+      "lcp_note": "Browser observer did not expose an LCP value; the eager/high-priority hero was the sole initial image request."
+    }
   },
   "redirects": [
     {
