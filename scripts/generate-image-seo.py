@@ -125,6 +125,10 @@ def optimize_image_markup(source: str, path: Path) -> tuple[str, list[str], dict
     errors: list[str] = []
     eligible_index = 0
     counts = {"eager": 0, "lazy": 0, "dimensioned": 0}
+    known_captions = {
+        html.unescape(url): html.unescape(caption)
+        for url, caption in re.findall(r'"contentUrl":"https://tkctalent\.com([^\"]+)".*?"caption":"([^\"]+)"', source)
+    }
 
     def replace(match: re.Match[str]) -> str:
         nonlocal eligible_index
@@ -136,9 +140,14 @@ def optimize_image_markup(source: str, path: Path) -> tuple[str, list[str], dict
             return tag
         alt = re.sub(r"\s+", " ", attrs.get("alt", "")).strip()
         if not alt:
-            if path.parent.name.startswith("book-"):
+            alt = known_captions.get(src, "")
+            if alt:
+                tag = set_attribute(tag, "alt", alt)
+            elif path.parent.name.startswith("book-"):
                 errors.append(f"{path.relative_to(ROOT)}: gallery image {src} is missing alt text")
-            return tag
+                return tag
+            else:
+                return tag
         priority = "eager" if eligible_index == 0 else "lazy"
         tag = set_attribute(tag, "loading", priority)
         tag = set_attribute(tag, "fetchpriority", "high" if eligible_index == 0 else "auto")
