@@ -1,4 +1,7 @@
 import { defineConfig } from "@playwright/test";
+import { existsSync } from "node:fs";
+
+const sandboxChromium = "/bin/chromium";
 
 export default defineConfig({
   testDir: "./tests",
@@ -12,6 +15,7 @@ export default defineConfig({
     serviceWorkers: "block",
     trace: "retain-on-failure",
     screenshot: "only-on-failure",
+    launchOptions: existsSync(sandboxChromium) ? { executablePath: sandboxChromium } : undefined,
   },
   webServer: process.env.GALLERY_TEST_URL
     ? undefined
