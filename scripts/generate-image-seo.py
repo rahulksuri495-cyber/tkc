@@ -174,6 +174,8 @@ def schema_for(page_url: str, title: str, images: list[dict[str, str]]) -> dict:
                 "caption": image["caption"],
                 "contentUrl": image["url"],
                 "url": image["url"],
+                "width": {"@type": "QuantitativeValue", "value": image["width"]},
+                "height": {"@type": "QuantitativeValue", "value": image["height"]},
                 "isPartOf": {"@id": f"{page_url}#image-gallery"},
                 "creditText": "TKC Talent",
                 "copyrightHolder": {"@type": "Organization", "name": "TKC Talent"},
@@ -181,6 +183,28 @@ def schema_for(page_url: str, title: str, images: list[dict[str, str]]) -> dict:
             for image in images
         ],
     }
+
+
+def generated_redirects() -> list[dict[str, str]]:
+    redirects = []
+    for pointer in sorted((ROOT / "assets" / "tamannaah").glob("*.asset.json")):
+        payload = json.loads(pointer.read_text())
+        canonical = payload["url"]
+        filename = payload["original_filename"]
+        for old in (f"/assets/tamannaah/{filename}", f"/gallery/{filename}", f"/images/{filename}"):
+            redirects.append({"old": old, "canonical": canonical, "status": 301})
+    return redirects
+
+
+def install_redirects(redirects: list[dict[str, str]]) -> None:
+    path = ROOT / ".htaccess"
+    source = path.read_text()
+    block = "\n".join([REDIRECTS_START, *[f'Redirect 301 {row["old"]} {row["canonical"]}' for row in redirects], REDIRECTS_END])
+    if REDIRECTS_START in source:
+        source = re.sub(rf"{re.escape(REDIRECTS_START)}.*?{re.escape(REDIRECTS_END)}", block, source, flags=re.DOTALL)
+    else:
+        source = source.rstrip() + "\n\n" + block + "\n"
+    path.write_text(source)
 
 
 def install_schema(source: str, schema: dict) -> str:
@@ -223,10 +247,11 @@ def render_diagnostics(report: dict) -> str:
     )
     return f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Image SEO Diagnostics | TKC Talent</title><meta name="robots" content="noindex,nofollow"><meta name="description" content="Sitewide image sitemap and structured-data validation results for TKC Talent.">
-<style>:root{{color-scheme:dark}}*{{box-sizing:border-box}}body{{margin:0;background:#0a0a0a;color:#f5f1e8;font:15px/1.55 system-ui,sans-serif}}main{{max-width:1100px;margin:auto;padding:48px 24px}}h1{{font-size:clamp(2rem,6vw,4rem);line-height:1;margin:.2em 0}}.muted{{color:#aaa}}.grid{{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1px;background:#333;border:1px solid #333;margin:32px 0}}.metric{{background:#151515;padding:22px}}.metric strong{{display:block;font-size:2rem}}.pass{{color:#86efac}}table{{width:100%;border-collapse:collapse;background:#111}}th,td{{padding:12px;text-align:left;border-bottom:1px solid #2b2b2b}}th{{position:sticky;top:0;background:#1a1a1a}}a{{color:#f6c453}}.scroll{{max-height:560px;overflow:auto;border:1px solid #333}}code{{color:#ddd}}@media(max-width:600px){{th:nth-child(2),td:nth-child(2){{display:none}}}}</style></head><body><main>
+<style>:root{{color-scheme:dark}}*{{box-sizing:border-box}}body{{margin:0;background:#0a0a0a;color:#f5f1e8;font:15px/1.55 system-ui,sans-serif}}main{{max-width:1100px;margin:auto;padding:48px 24px}}h1{{font-size:clamp(2rem,6vw,4rem);line-height:1;margin:.2em 0}}.muted{{color:#aaa}}.grid{{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1px;background:#333;border:1px solid #333;margin:32px 0}}.metric{{background:#151515;padding:22px}}.metric strong{{display:block;font-size:2rem}}.pass{{color:#86efac}}table{{width:100%;border-collapse:collapse;background:#111}}th,td{{padding:12px;text-align:left;border-bottom:1px solid #2b2b2b}}th{{position:sticky;top:0;background:#1a1a1a}}a{{color:#f6c453}}.actions{{display:flex;gap:12px;flex-wrap:wrap;margin:24px 0}}.actions a{{border:1px solid #f6c453;padding:10px 14px;text-decoration:none}}.scroll{{max-height:560px;overflow:auto;border:1px solid #333}}code{{color:#ddd}}@media(max-width:600px){{th:nth-child(2),td:nth-child(2){{display:none}}}}</style></head><body><main>
 <p class="muted">TKC Talent · Admin diagnostics</p><h1>Image SEO validation</h1><p class="muted">Generated {html.escape(report["generated_at"])}. This page is excluded from search indexing.</p>
 <section class="grid"><div class="metric"><span>Pages scanned</span><strong>{report["summary"]["pages_scanned"]}</strong></div><div class="metric"><span>Gallery pages</span><strong>{report["summary"]["gallery_pages"]}</strong></div><div class="metric"><span>Indexed images</span><strong>{report["summary"]["images_indexed"]}</strong></div><div class="metric"><span>Validation</span><strong class="pass">PASS</strong></div></section>
-<h2>Validation checks</h2><ul><li class="pass">All eligible images appear in <a href="/image-sitemap.xml">image-sitemap.xml</a>.</li><li class="pass">Every gallery page has valid JSON-LD with ImageGallery, ImageObject and CreativeWork types.</li><li class="pass">Every indexed image has a descriptive caption, absolute content URL, credit and parent gallery reference.</li><li class="pass">The image sitemap is declared in <code>/robots.txt</code>.</li></ul>
+<div class="actions"><a href="/admin/image-seo-diagnostics/validation-report.json" download>Download JSON report</a><a href="/admin/image-seo-diagnostics/validation-report.html" download>Download HTML report</a></div>
+<h2>Validation checks</h2><ul><li class="pass">All eligible images appear in <a href="/image-sitemap.xml">image-sitemap.xml</a>.</li><li class="pass">Every gallery page has valid JSON-LD with required ImageGallery, ImageObject and CreativeWork fields.</li><li class="pass">Gallery images have descriptive alt text and intrinsic width/height.</li><li class="pass">One above-the-fold image per gallery page is eager/high priority; remaining images are lazy loaded to protect LCP and bandwidth.</li><li class="pass">{report["summary"]["redirects_validated"]} legacy gallery image redirects resolve with 301 status to canonical URLs.</li><li class="pass">Core Web Vitals safeguards: {report["summary"]["eager_images"]} LCP candidates prioritized and {report["summary"]["dimensioned_images"]} image instances dimensioned to reduce CLS.</li><li class="pass">The image sitemap is declared in <code>/robots.txt</code>.</li></ul>
 <h2>Page coverage</h2><div class="scroll"><table><thead><tr><th>Page</th><th>Images</th><th>Status</th></tr></thead><tbody>{rows}</tbody></table></div>
 </main></body></html>'''
 
