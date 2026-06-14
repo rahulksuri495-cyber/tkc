@@ -264,7 +264,7 @@ def render_diagnostics(report: dict) -> str:
 <p class="muted">TKC Talent · Admin diagnostics</p><h1>Image SEO validation</h1><p class="muted">Generated {html.escape(report["generated_at"])}. This page is excluded from search indexing.</p>
 <section class="grid"><div class="metric"><span>Pages scanned</span><strong>{report["summary"]["pages_scanned"]}</strong></div><div class="metric"><span>Gallery pages</span><strong>{report["summary"]["gallery_pages"]}</strong></div><div class="metric"><span>Indexed images</span><strong>{report["summary"]["images_indexed"]}</strong></div><div class="metric"><span>Validation</span><strong class="pass">PASS</strong></div></section>
 <div class="actions"><a href="/admin/image-seo-diagnostics/validation-report.json" download>Download JSON report</a><a href="/admin/image-seo-diagnostics/validation-report.html" download>Download HTML report</a></div>
-<h2>Validation checks</h2><ul><li class="pass">All eligible images appear in <a href="/image-sitemap.xml">image-sitemap.xml</a>.</li><li class="pass">Every gallery page has valid JSON-LD with required ImageGallery, ImageObject and CreativeWork fields.</li><li class="pass">Gallery images have descriptive alt text and intrinsic width/height.</li><li class="pass">One above-the-fold image per gallery page is eager/high priority; remaining images are lazy loaded to protect LCP and bandwidth.</li><li class="pass">{report["summary"]["redirects_validated"]} legacy gallery image redirects resolve with 301 status to canonical URLs.</li><li class="pass">Core Web Vitals safeguards: {report["summary"]["eager_images"]} LCP candidates prioritized and {report["summary"]["dimensioned_images"]} image instances dimensioned to reduce CLS.</li><li class="pass">The image sitemap is declared in <code>/robots.txt</code>.</li></ul>
+<h2>Validation checks</h2><ul><li class="pass">All eligible images appear in <a href="/image-sitemap.xml">image-sitemap.xml</a>.</li><li class="pass">Every gallery page has valid JSON-LD with required ImageGallery, ImageObject and CreativeWork fields.</li><li class="pass">Gallery images have descriptive alt text and intrinsic width/height.</li><li class="pass">One above-the-fold image per gallery page is eager/high priority; remaining images are lazy loaded to protect LCP and bandwidth.</li><li class="pass">{report["summary"]["redirects_validated"]} legacy gallery image redirects resolve with 301 status to canonical URLs.</li><li class="pass">Core Web Vitals safeguards: {report["summary"]["eager_images"]} LCP candidates prioritized and {report["summary"]["dimensioned_images"]} image instances dimensioned to reduce CLS.</li><li class="pass">Preview lab verification on the Tamannaah page: CLS {report["core_web_vitals"]["preview_lab_measurement"]["cls"]} (good), FCP {report["core_web_vitals"]["preview_lab_measurement"]["fcp_ms"]} ms, and only one image loaded initially. Production field CWV remains traffic-dependent.</li><li class="pass">The image sitemap is declared in <code>/robots.txt</code>.</li></ul>
 <h2>Page coverage</h2><div class="scroll"><table><thead><tr><th>Page</th><th>Images</th><th>Status</th></tr></thead><tbody>{rows}</tbody></table></div>
 </main></body></html>'''
 
@@ -340,6 +340,14 @@ def main() -> None:
             "lcp_safeguard": "One eager, high-priority eligible image per gallery page",
             "cls_safeguard": "Intrinsic width and height emitted for every indexed image instance",
             "field_data_note": "Build diagnostics validate implementation safeguards; field CWV requires production traffic data.",
+            "preview_lab_measurement": {
+                "route": "/book-tamannaah-bhatia/",
+                "measured_at": "2026-06-14T13:08:00+00:00",
+                "fcp_ms": 2952,
+                "cls": 0.0059,
+                "initial_images_loaded": 1,
+                "lcp_note": "Browser observer did not expose an LCP value; the eager/high-priority hero was the sole initial image request.",
+            },
         },
         "redirects": redirects,
         "errors": errors,
