@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-06-14T13:09:17+00:00",
+  "generated_at": "2026-06-14T14:57:38+00:00",
   "summary": {
     "pages_scanned": 125,
     "gallery_pages": 105,
     "image_tags_scanned": 866,
     "images_indexed": 234,
     "excluded_decorative_or_missing_alt": 185,
-    "eager_images": 105,
-    "lazy_images": 698,
+    "eager_images": 109,
+    "lazy_images": 694,
     "dimensioned_images": 802,
     "redirects_validated": 13,
     "errors": 0
@@ -16,12 +16,12 @@
     "json_ld_parseable": true,
     "schema_sitemap_urls_match": true,
     "robots_exposes_image_sitemap": true,
-    "loading_priorities_valid": true,
+    "loading_priorities_valid": false,
     "intrinsic_dimensions_valid": true,
     "legacy_redirects_valid": true
   },
   "core_web_vitals": {
-    "status": "pass",
+    "status": "fail",
     "lcp_safeguard": "One eager, high-priority eligible image per gallery page",
     "cls_safeguard": "Intrinsic width and height emitted for every indexed image instance",
     "field_data_note": "Build diagnostics validate implementation safeguards; field CWV requires production traffic data.",

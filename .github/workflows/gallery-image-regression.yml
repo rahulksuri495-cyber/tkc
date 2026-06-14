@@ -1,0 +1,19 @@
+name: Gallery image regression
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  gallery-images:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: oven-sh/setup-bun@v2
+      - run: bun install --frozen-lockfile
+      - run: bunx playwright install --with-deps chromium
+      - run: bun run test:gallery-images
+        env:
+          GALLERY_TEST_URL: https://id-preview--3f7e0d1a-b93b-42c8-818b-b0e3add9408e.lovable.app

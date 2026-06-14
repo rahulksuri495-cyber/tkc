@@ -10,9 +10,11 @@
     "generate:image-seo": "python3 scripts/generate-image-seo.py",
     "lint:image-seo": "python3 scripts/generate-image-seo.py --check",
     "verify:actress-dropdown": "python3 scripts/verify-actress-dropdown.py",
-    "verify:actress-images": "python3 scripts/verify-actress-images.py"
+    "verify:actress-images": "python3 scripts/verify-actress-images.py",
+    "test:gallery-images": "playwright test tests/gallery-images.spec.ts"
   },
   "devDependencies": {
+    "@playwright/test": "^1.60.0",
     "vite": "^5.4.10"
   }
 }
