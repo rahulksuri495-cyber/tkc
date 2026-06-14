@@ -45,7 +45,7 @@ for (const viewport of breakpoints) {
           failedResponses.push(`${response.status()} ${response.url()}`);
         }
       });
-      const response = await page.goto("/bollywood-actress-booking/", { waitUntil: "networkidle" });
+      const response = await page.goto("/bollywood-actress-booking/", { waitUntil: "domcontentloaded" });
       expect(response?.status()).toBe(200);
       const selector = 'section[aria-labelledby="actress-coverflow-heading"] img[src*="/actresses/"]';
       await expect(page.locator(selector)).toHaveCount(13);
@@ -60,7 +60,7 @@ for (const viewport of breakpoints) {
         const file = tamannaahGalleryFiles.find((name) => response.url().includes(name));
         if (file) statuses.set(file, response.status());
       });
-      const response = await page.goto("/book-tamannaah-bhatia/", { waitUntil: "networkidle" });
+      const response = await page.goto("/book-tamannaah-bhatia/", { waitUntil: "domcontentloaded" });
       expect(response?.status()).toBe(200);
       for (const file of tamannaahGalleryFiles) {
         const selector = `figure img[src*="${file}"]`;
