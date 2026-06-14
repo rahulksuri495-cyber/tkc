@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-14T13:08:51+00:00",
+  "generated_at": "2026-06-14T13:09:17+00:00",
   "summary": {
     "pages_scanned": 125,
     "gallery_pages": 105,
@@ -9,7 +9,7 @@
     "eager_images": 105,
     "lazy_images": 698,
     "dimensioned_images": 802,
-    "redirects_validated": 12,
+    "redirects_validated": 13,
     "errors": 0
   },
   "checks": {
@@ -93,6 +93,11 @@
     {
       "old": "/images/tamannaah-tkctalent.jpg",
       "canonical": "/__l5e/assets-v1/fbd466b2-69d4-42c6-ba75-ccdab5828ec2/tamannaah-tkctalent.jpg",
+      "status": 301
+    },
+    {
+      "old": "/actresses/sonakshi-singha.png",
+      "canonical": "/actresses/sonakshi-sinha.png",
       "status": 301
     }
   ],
