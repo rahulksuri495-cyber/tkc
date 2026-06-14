@@ -1,27 +1,27 @@
 {
-  "generated_at": "2026-06-14T13:07:33+00:00",
+  "generated_at": "2026-06-14T13:07:44+00:00",
   "summary": {
     "pages_scanned": 125,
     "gallery_pages": 105,
     "image_tags_scanned": 866,
     "images_indexed": 234,
-    "excluded_decorative_or_missing_alt": 230,
+    "excluded_decorative_or_missing_alt": 185,
     "eager_images": 105,
     "lazy_images": 698,
-    "dimensioned_images": 757,
+    "dimensioned_images": 802,
     "redirects_validated": 12,
-    "errors": 45
+    "errors": 0
   },
   "checks": {
     "json_ld_parseable": true,
     "schema_sitemap_urls_match": true,
     "robots_exposes_image_sitemap": true,
     "loading_priorities_valid": true,
-    "intrinsic_dimensions_valid": false,
+    "intrinsic_dimensions_valid": true,
     "legacy_redirects_valid": true
   },
   "core_web_vitals": {
-    "status": "fail",
+    "status": "pass",
     "lcp_safeguard": "One eager, high-priority eligible image per gallery page",
     "cls_safeguard": "Intrinsic width and height emitted for every indexed image instance",
     "field_data_note": "Build diagnostics validate implementation safeguards; field CWV requires production traffic data."
@@ -88,53 +88,7 @@
       "status": 301
     }
   ],
-  "errors": [
-    "book-adah-sharma/index.html: gallery image https://tkctalent.com/actresses/adah-sharma.png has no resolvable width/height",
-    "book-aditi-rao-hydari/index.html: gallery image https://tkctalent.com/actresses/aditi-rao-hydari.png has no resolvable width/height",
-    "book-ananya-panday/index.html: gallery image https://tkctalent.com/actresses/ananya-panday.png has no resolvable width/height",
-    "book-aneet-padda/index.html: gallery image https://tkctalent.com/actresses/aneet-padda.png has no resolvable width/height",
-    "book-chitrangada-singh/index.html: gallery image https://tkctalent.com/actresses/chitrangada-singh.png has no resolvable width/height",
-    "book-dia-mirza/index.html: gallery image https://tkctalent.com/actresses/dia-mirza.png has no resolvable width/height",
-    "book-disha-patani/index.html: gallery image https://tkctalent.com/actresses/disha-patani.png has no resolvable width/height",
-    "book-fatima-sana-shaikh/index.html: gallery image https://tkctalent.com/actresses/fatima-sana-shaikh.png has no resolvable width/height",
-    "book-huma-qureshi/index.html: gallery image https://tkctalent.com/actresses/huma-qureshi.png has no resolvable width/height",
-    "book-janhvi-kapoor/index.html: gallery image https://tkctalent.com/actresses/janhvi-kapoor.png has no resolvable width/height",
-    "book-jennifer-winget/index.html: gallery image https://tkctalent.com/actresses/jennifer-winget.png has no resolvable width/height",
-    "book-kajol/index.html: gallery image https://tkctalent.com/actresses/kajol.png has no resolvable width/height",
-    "book-karishma-tanna/index.html: gallery image https://tkctalent.com/actresses/karishma-tanna.png has no resolvable width/height",
-    "book-katrina-kaif/index.html: gallery image https://tkctalent.com/actresses/katrina-kaif.png has no resolvable width/height",
-    "book-konkona-sen-sharma/index.html: gallery image https://tkctalent.com/actresses/konkona-sen-sharma.png has no resolvable width/height",
-    "book-lara-dutta/index.html: gallery image https://tkctalent.com/actresses/lara-dutta.png has no resolvable width/height",
-    "book-mandira-bedi/index.html: gallery image https://tkctalent.com/actresses/mandira-bedi.png has no resolvable width/height",
-    "book-mrunal-thakur/index.html: gallery image https://tkctalent.com/actresses/mrinal-thakur.png has no resolvable width/height",
-    "book-nikita-dutta/index.html: gallery image https://tkctalent.com/actresses/nikita-dutta.png has no resolvable width/height",
-    "book-nimrat-kaur/index.html: gallery image https://tkctalent.com/actresses/nimrat-kaur.png has no resolvable width/height",
-    "book-nushrratt-bharuccha/index.html: gallery image https://tkctalent.com/actresses/nushrratt-bharuccha.png has no resolvable width/height",
-    "book-palak-tiwari/index.html: gallery image https://tkctalent.com/actresses/palak-tiwari.png has no resolvable width/height",
-    "book-pooja-hegde/index.html: gallery image https://tkctalent.com/actresses/pooja-hegde.png has no resolvable width/height",
-    "book-rakul-preet/index.html: gallery image https://tkctalent.com/actresses/rakul-preet.png has no resolvable width/height",
-    "book-rani-mukerji/index.html: gallery image https://tkctalent.com/actresses/rani-mukerji.png has no resolvable width/height",
-    "book-rashmika-mandanna/index.html: gallery image https://tkctalent.com/actresses/rashmika-mandanna.png has no resolvable width/height",
-    "book-rhea-chakraborty/index.html: gallery image https://tkctalent.com/actresses/rhea-chakraborty.png has no resolvable width/height",
-    "book-sanya-malhotra/index.html: gallery image https://tkctalent.com/actresses/sanya-malhotra.png has no resolvable width/height",
-    "book-sara-ali-khan/index.html: gallery image https://tkctalent.com/actresses/sara-ali-khan.png has no resolvable width/height",
-    "book-saumya-tandon/index.html: gallery image https://tkctalent.com/actresses/saumya-tandon.png has no resolvable width/height",
-    "book-shanaya-kapoor/index.html: gallery image https://tkctalent.com/actresses/shanaya-kapoor.png has no resolvable width/height",
-    "book-sharvari-wagh/index.html: gallery image https://tkctalent.com/actresses/sharvari-wagh.png has no resolvable width/height",
-    "book-shehnaaz-gill/index.html: gallery image https://tkctalent.com/actresses/shehnaz-gill.png has no resolvable width/height",
-    "book-shilpa-shetty/index.html: gallery image https://tkctalent.com/actresses/shilpa-shetty.png has no resolvable width/height",
-    "book-shraddha-kapoor/index.html: gallery image https://tkctalent.com/actresses/shraddha-kapoor.png has no resolvable width/height",
-    "book-shruti-haasan/index.html: gallery image https://tkctalent.com/actresses/shruti-haasan.png has no resolvable width/height",
-    "book-shweta-tiwari/index.html: gallery image https://tkctalent.com/actresses/shweta-tiwari.png has no resolvable width/height",
-    "book-sonakshi-sinha/index.html: gallery image https://tkctalent.com/actresses/sonakshi-sinha.png has no resolvable width/height",
-    "book-sonam-bajwa/index.html: gallery image https://tkctalent.com/actresses/sonam-bajwa.png has no resolvable width/height",
-    "book-sreeleela/index.html: gallery image https://tkctalent.com/actresses/sreeleela.png has no resolvable width/height",
-    "book-tara-sutaria/index.html: gallery image https://tkctalent.com/actresses/tara-sutaria.png has no resolvable width/height",
-    "book-urvashi-rautela/index.html: gallery image https://tkctalent.com/actresses/urvashi-rautela.png has no resolvable width/height",
-    "book-vidya-balan/index.html: gallery image https://tkctalent.com/actresses/vidya-balan.png has no resolvable width/height",
-    "book-wamiqa-gabbi/index.html: gallery image https://tkctalent.com/actresses/wamiqa-gabbi.png has no resolvable width/height",
-    "book-yami-gautam/index.html: gallery image https://tkctalent.com/actresses/yami-gautam.png has no resolvable width/height"
-  ],
+  "errors": [],
   "pages": [
     {
       "route": "/bollywood-actress-booking/",
@@ -146,11 +100,11 @@
     },
     {
       "route": "/book-adah-sharma/",
-      "image_count": 4
+      "image_count": 5
     },
     {
       "route": "/book-aditi-rao-hydari/",
-      "image_count": 4
+      "image_count": 5
     },
     {
       "route": "/book-akanksha-puri/",
@@ -166,11 +120,11 @@
     },
     {
       "route": "/book-ananya-panday/",
-      "image_count": 4
+      "image_count": 5
     },
     {
       "route": "/book-aneet-padda/",
-      "image_count": 4
+      "image_count": 5
     },
     {
       "route": "/book-anushka-sharma/",
@@ -202,7 +156,7 @@
     },
     {
       "route": "/book-chitrangada-singh/",
-      "image_count": 4
+      "image_count": 5
     },
     {
       "route": "/book-darshan-raval/",
@@ -214,7 +168,7 @@
     },
     {
       "route": "/book-dia-mirza/",
-      "image_count": 4
+      "image_count": 5
     },
     {
       "route": "/book-diljit-dosanjh/",
@@ -222,7 +176,7 @@
     },
     {
       "route": "/book-disha-patani/",
-      "image_count": 4
+      "image_count": 5
     },
     {
       "route": "/book-esha-gupta/",
@@ -230,7 +184,7 @@
     },
     {
       "route": "/book-fatima-sana-shaikh/",
-      "image_count": 4
+      "image_count": 5
     },
     {
       "route": "/book-guru-randhawa/",
@@ -242,7 +196,7 @@
     },
     {
       "route": "/book-huma-qureshi/",
-      "image_count": 4
+      "image_count": 5
     },
     {
       "route": "/book-jacqueline-fernandez/",
@@ -250,7 +204,7 @@
     },
     {
       "route": "/book-janhvi-kapoor/",
-      "image_count": 4
+      "image_count": 5
     },
     {
       "route": "/book-jasmine-sandlas/",
@@ -258,7 +212,7 @@
     },
     {
       "route": "/book-jennifer-winget/",
-      "image_count": 4
+      "image_count": 5
     },
     {
       "route": "/book-jonita-gandhi/",
@@ -270,7 +224,7 @@
     },
     {
       "route": "/book-kajol/",
-      "image_count": 4
+      "image_count": 5
     },
     {
       "route": "/book-kangana-ranaut/",
@@ -286,11 +240,11 @@
     },
     {
       "route": "/book-karishma-tanna/",
-      "image_count": 4
+      "image_count": 5
     },
     {
       "route": "/book-katrina-kaif/",
-      "image_count": 4
+      "image_count": 5
     },
     {
       "route": "/book-kiara-advani/",
@@ -298,7 +252,7 @@
     },
     {
       "route": "/book-konkona-sen-sharma/",
-      "image_count": 4
+      "image_count": 5
     },
     {
       "route": "/book-kriti-sanon/",
@@ -310,7 +264,7 @@
     },
     {
       "route": "/book-lara-dutta/",
-      "image_count": 4
+      "image_count": 5
     },
     {
       "route": "/book-lucky-ali/",
@@ -318,7 +272,7 @@
     },
     {
       "route": "/book-mandira-bedi/",
-      "image_count": 4
+      "image_count": 5
     },
     {
       "route": "/book-meet-bros/",
@@ -330,7 +284,7 @@
     },
     {
       "route": "/book-mrunal-thakur/",
-      "image_count": 4
+      "image_count": 5
     },
     {
       "route": "/book-neha-bhasin/",
@@ -342,11 +296,11 @@
     },
     {
       "route": "/book-nikita-dutta/",
-      "image_count": 4
+      "image_count": 5
     },
     {
       "route": "/book-nimrat-kaur/",
-      "image_count": 4
+      "image_count": 5
     },
     {
       "route": "/book-nora-fatehi/",
@@ -354,7 +308,7 @@
     },
     {
       "route": "/book-nushrratt-bharuccha/",
-      "image_count": 4
+      "image_count": 5
     },
     {
       "route": "/book-palak-muchhal/",
@@ -362,11 +316,11 @@
     },
     {
       "route": "/book-palak-tiwari/",
-      "image_count": 4
+      "image_count": 5
     },
     {
       "route": "/book-pooja-hegde/",
-      "image_count": 4
+      "image_count": 5
     },
     {
       "route": "/book-pritam/",
@@ -378,19 +332,19 @@
     },
     {
       "route": "/book-rakul-preet/",
-      "image_count": 4
+      "image_count": 5
     },
     {
       "route": "/book-rani-mukerji/",
-      "image_count": 4
+      "image_count": 5
     },
     {
       "route": "/book-rashmika-mandanna/",
-      "image_count": 4
+      "image_count": 5
     },
     {
       "route": "/book-rhea-chakraborty/",
-      "image_count": 4
+      "image_count": 5
     },
     {
       "route": "/book-sachet-parampara/",
@@ -406,11 +360,11 @@
     },
     {
       "route": "/book-sanya-malhotra/",
-      "image_count": 4
+      "image_count": 5
     },
     {
       "route": "/book-sara-ali-khan/",
-      "image_count": 4
+      "image_count": 5
     },
     {
       "route": "/book-sara-gurpal/",
@@ -418,7 +372,7 @@
     },
     {
       "route": "/book-saumya-tandon/",
-      "image_count": 4
+      "image_count": 5
     },
     {
       "route": "/book-shah-rukh-khan/",
@@ -430,7 +384,7 @@
     },
     {
       "route": "/book-shanaya-kapoor/",
-      "image_count": 4
+      "image_count": 5
     },
     {
       "route": "/book-shankar-mahadevan/",
@@ -438,19 +392,19 @@
     },
     {
       "route": "/book-sharvari-wagh/",
-      "image_count": 4
+      "image_count": 5
     },
     {
       "route": "/book-shehnaaz-gill/",
-      "image_count": 4
+      "image_count": 5
     },
     {
       "route": "/book-shilpa-shetty/",
-      "image_count": 4
+      "image_count": 5
     },
     {
       "route": "/book-shraddha-kapoor/",
-      "image_count": 4
+      "image_count": 5
     },
     {
       "route": "/book-shreya-ghoshal/",
@@ -458,19 +412,19 @@
     },
     {
       "route": "/book-shruti-haasan/",
-      "image_count": 4
+      "image_count": 5
     },
     {
       "route": "/book-shweta-tiwari/",
-      "image_count": 4
+      "image_count": 5
     },
     {
       "route": "/book-sonakshi-sinha/",
-      "image_count": 4
+      "image_count": 5
     },
     {
       "route": "/book-sonam-bajwa/",
-      "image_count": 4
+      "image_count": 5
     },
     {
       "route": "/book-sonu-nigam/",
@@ -478,7 +432,7 @@
     },
     {
       "route": "/book-sreeleela/",
-      "image_count": 4
+      "image_count": 5
     },
     {
       "route": "/book-sunanda-sharma/",
@@ -510,11 +464,11 @@
     },
     {
       "route": "/book-tara-sutaria/",
-      "image_count": 4
+      "image_count": 5
     },
     {
       "route": "/book-urvashi-rautela/",
-      "image_count": 4
+      "image_count": 5
     },
     {
       "route": "/book-vaani-kapoor/",
@@ -522,7 +476,7 @@
     },
     {
       "route": "/book-vidya-balan/",
-      "image_count": 4
+      "image_count": 5
     },
     {
       "route": "/book-vishal-shekhar/",
@@ -530,11 +484,11 @@
     },
     {
       "route": "/book-wamiqa-gabbi/",
-      "image_count": 4
+      "image_count": 5
     },
     {
       "route": "/book-yami-gautam/",
-      "image_count": 4
+      "image_count": 5
     },
     {
       "route": "/celebrity-booking-india/",
