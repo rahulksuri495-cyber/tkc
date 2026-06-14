@@ -150,9 +150,17 @@ def optimize_image_markup(source: str, path: Path) -> tuple[str, list[str], dict
                 return tag
             else:
                 return tag
-        priority = "eager" if eligible_index == 0 else "lazy"
+        is_tamannaah_cdn_image = (
+            path.relative_to(ROOT).as_posix() == "book-tamannaah-bhatia/index.html"
+            and src.startswith("/__l5e/assets-v1/")
+        )
+        priority = "eager" if eligible_index == 0 or is_tamannaah_cdn_image else "lazy"
         tag = set_attribute(tag, "loading", priority)
-        tag = set_attribute(tag, "fetchpriority", "high" if eligible_index == 0 else "auto")
+        tag = set_attribute(
+            tag,
+            "fetchpriority",
+            "high" if eligible_index == 0 or is_tamannaah_cdn_image else "auto",
+        )
         dimensions = image_dimensions(src)
         if dimensions:
             tag = set_attribute(tag, "width", str(dimensions[0]))
