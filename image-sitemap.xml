@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://tkctalent.com/book-tamannaah-bhatia/</loc>
+    <image:image>
+      <image:loc>https://tkctalent.com/__l5e/assets-v1/cf3a5940-3650-43ab-a59e-f720f4eaf4df/tamannaah-dark-dress.jpg</image:loc>
+      <image:title>Tamannaah Bhatia in dark emerald couture</image:title>
+      <image:caption>Tamannaah Bhatia in couture for premium event appearances</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://tkctalent.com/__l5e/assets-v1/645735a0-2137-46b9-851d-4af80ce6323c/tamannaah-gold-yacht.jpg</image:loc>
+      <image:title>Tamannaah Bhatia aboard a luxury yacht</image:title>
+      <image:caption>Tamannaah Bhatia for luxury destination events</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://tkctalent.com/__l5e/assets-v1/8f1b69ac-d744-472f-aca6-b5051aa6d9a1/tamannaah-red-portrait.jpg</image:loc>
+      <image:title>Tamannaah Bhatia editorial portrait</image:title>
+      <image:caption>Tamannaah Bhatia editorial portrait for brand campaigns</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://tkctalent.com/__l5e/assets-v1/fbd466b2-69d4-42c6-ba75-ccdab5828ec2/tamannaah-tkctalent.jpg</image:loc>
+      <image:title>Tamannaah Bhatia exclusive TKC Talent feature</image:title>
+      <image:caption>Tamannaah Bhatia featured exclusively by TKC Talent for celebrity appearances, luxury events and brand campaigns</image:caption>
+    </image:image>
+  </url>
+</urlset>
