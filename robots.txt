@@ -29,5 +29,18 @@ Allow: /
 User-agent: ClaudeBot
 Allow: /
 
+# Explicitly welcome Bing / Microsoft crawlers (search + Copilot answer engine).
+User-agent: Bingbot
+Allow: /
+
+User-agent: msnbot
+Allow: /
+
+User-agent: BingPreview
+Allow: /
+
+User-agent: adidxbot
+Allow: /
+
 Sitemap: https://tkctalent.com/sitemap.xml
 Sitemap: https://tkctalent.com/image-sitemap.xml
