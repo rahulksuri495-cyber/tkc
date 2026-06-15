@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-14T17:22:54+00:00",
+  "generated_at": "2026-06-15T03:07:00+00:00",
   "summary": {
     "pages_scanned": 126,
     "gallery_pages": 105,
@@ -15,6 +15,7 @@
   "checks": {
     "json_ld_parseable": true,
     "schema_sitemap_urls_match": true,
+    "canonical_image_urls_valid": true,
     "robots_exposes_image_sitemap": true,
     "loading_priorities_valid": false,
     "intrinsic_dimensions_valid": true,

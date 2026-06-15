@@ -76,9 +76,11 @@ def eligible_images(parser: PageParser) -> list[dict[str, str]]:
         alt = re.sub(r"\s+", " ", image.get("alt", "")).strip()
         if not src or not alt or image.get("aria-hidden") == "true" or src.startswith("data:"):
             continue
-        absolute = urljoin(f"{BASE_URL}/", src)
-        dimensions = image_dimensions(src)
+        parsed = urlparse(urljoin(f"{BASE_URL}/", src))
+        canonical_path = parsed.path
+        dimensions = image_dimensions(canonical_path)
         if dimensions:
+            absolute = f"{BASE_URL}{canonical_path}"
             unique.setdefault(absolute, {"url": absolute, "caption": alt, "width": dimensions[0], "height": dimensions[1]})
     return list(unique.values())
 
@@ -205,7 +207,9 @@ def schema_for(page_url: str, title: str, images: list[dict[str, str]]) -> dict:
                 "height": {"@type": "QuantitativeValue", "value": image["height"]},
                 "isPartOf": {"@id": f"{page_url}#image-gallery"},
                 "creditText": "TKC Talent",
+                "creator": {"@type": "Organization", "name": "TKC Talent", "url": BASE_URL},
                 "copyrightHolder": {"@type": "Organization", "name": "TKC Talent"},
+                "copyrightNotice": "Copyright The Kabir Company / TKC Talent. All rights reserved.",
             }
             for image in images
         ],
@@ -332,8 +336,18 @@ def main() -> None:
     schema_urls = {media["contentUrl"] for record in records for media in record["schema"]["associatedMedia"]}
     sitemap_urls = {image["url"] for record in records for image in record["images"]}
     errors = lint_errors
+    noncanonical_urls = sorted(
+        url for url in schema_urls | sitemap_urls
+        if not url.startswith(f"{BASE_URL}/")
+        or "/__l5e/" in url
+        or "?" in url
+        or "#" in url
+        or not (ROOT / url.removeprefix(f"{BASE_URL}/")).is_file()
+    )
     if schema_urls != sitemap_urls:
         errors.append("Structured-data and sitemap image URL sets differ")
+    if noncanonical_urls:
+        errors.append("Non-canonical or missing image URLs: " + ", ".join(noncanonical_urls))
     if "Sitemap: https://tkctalent.com/image-sitemap.xml" not in (ROOT / "robots.txt").read_text():
         errors.append("robots.txt does not expose the image sitemap")
 
@@ -354,6 +368,7 @@ def main() -> None:
         "checks": {
             "json_ld_parseable": True,
             "schema_sitemap_urls_match": schema_urls == sitemap_urls,
+            "canonical_image_urls_valid": not noncanonical_urls,
             "robots_exposes_image_sitemap": not any("robots.txt" in error for error in errors),
             "loading_priorities_valid": performance["eager"] == len(records),
             "intrinsic_dimensions_valid": not any("width/height" in error for error in errors),
