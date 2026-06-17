@@ -29,16 +29,28 @@ jobs:
           for endpoint in \
             "https://api.indexnow.org/IndexNow" \
             "https://www.bing.com/indexnow"; do
-            echo "Pinging ${endpoint}"
-            status=$(curl -sS -o /tmp/body.txt -w "%{http_code}" -G "${endpoint}" \
-              --data-urlencode "url=${URL}" \
-              --data-urlencode "key=${KEY}" \
-              --data-urlencode "keyLocation=${KEY_LOCATION}")
-            echo "  -> HTTP ${status}"
-            cat /tmp/body.txt || true
-            echo
-            if [ "${status}" != "202" ]; then
-              echo "::error::Expected HTTP 202 from ${endpoint}, got ${status}"
+            success=0
+            for attempt in 1 2 3 4 5; do
+              echo "Pinging ${endpoint} (attempt ${attempt}/5)"
+              status=$(curl -sS -o /tmp/body.txt -w "%{http_code}" -G "${endpoint}" \
+                --data-urlencode "url=${URL}" \
+                --data-urlencode "key=${KEY}" \
+                --data-urlencode "keyLocation=${KEY_LOCATION}")
+              echo "  -> HTTP ${status}"
+              cat /tmp/body.txt || true
+              echo
+              if [ "${status}" == "202" ]; then
+                success=1
+                break
+              fi
+              if [ "${attempt}" -lt 5 ]; then
+                delay=$(( 2 ** (attempt - 1) ))
+                echo "  Retrying in ${delay}s..."
+                sleep "${delay}"
+              fi
+            done
+            if [ "${success}" -ne 1 ]; then
+              echo "::error::Expected HTTP 202 from ${endpoint}, never received after 5 attempts"
               fail=1
             fi
           done
