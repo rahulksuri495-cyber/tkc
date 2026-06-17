@@ -100,7 +100,7 @@
     el.setAttribute('aria-label','TKC and IITEO legacy');
     el.innerHTML = ''+
       '<span class="tkc-sticky-label">TKC Legacy</span>'+
-      '<div class="tkc-wrap"><div class="tk,grid">'+
+      '<div class="tkc-wrap"><div class="tkc-grid">'+
         '<div>'+
           '<span class="tkc-eyebrow tkc-reveal">Two-Decade Legacy \u00B7 TKC \u00D7 IITEO</span>'+
           '<h2 class="tkc-reveal" data-delay="1">A <span class="accent">live-events operations DNA</span> behind every booking.</h2>'+
