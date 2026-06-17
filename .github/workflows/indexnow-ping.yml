@@ -1,0 +1,45 @@
+name: IndexNow Ping
+
+# Re-submits the site root to IndexNow after every push to the default
+# branch (i.e. immediately after deployment of the static export), and
+# can also be triggered manually. Confirms each endpoint returns HTTP 202.
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+    inputs:
+      url:
+        description: "URL to submit"
+        required: false
+        default: "https://tkctalent.com/"
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Submit URL to IndexNow and verify HTTP 202
+        env:
+          KEY: 377abe1193244f129029210522605df7
+          URL: ${{ github.event.inputs.url || 'https://tkctalent.com/' }}
+        run: |
+          set -euo pipefail
+          KEY_LOCATION="https://tkctalent.com/${KEY}.txt"
+          fail=0
+          for endpoint in \
+            "https://api.indexnow.org/IndexNow" \
+            "https://www.bing.com/indexnow"; do
+            echo "Pinging ${endpoint}"
+            status=$(curl -sS -o /tmp/body.txt -w "%{http_code}" -G "${endpoint}" \
+              --data-urlencode "url=${URL}" \
+              --data-urlencode "key=${KEY}" \
+              --data-urlencode "keyLocation=${KEY_LOCATION}")
+            echo "  -> HTTP ${status}"
+            cat /tmp/body.txt || true
+            echo
+            if [ "${status}" != "202" ]; then
+              echo "::error::Expected HTTP 202 from ${endpoint}, got ${status}"
+              fail=1
+            fi
+          done
+          exit "${fail}"
