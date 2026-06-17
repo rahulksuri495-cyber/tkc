@@ -37,7 +37,7 @@
   },
   "redirects": [
     {
-      "old": "/__l5e/assets-v1/cf3a5940-3650-43ab-a59e-f720f4eaf4df/tamannaah-dark-dress.jpg",
+      "old": "/assets/tamannaah/tamannaah-dark-dress.jpg",
       "canonical": "/gallery/tamannaah-dark-dress.jpg",
       "status": 301
     },
@@ -52,7 +52,7 @@
       "status": 301
     },
     {
-      "old": "/__l5e/assets-v1/645735a0-2137-46b9-851d-4af80ce6323c/tamannaah-gold-yacht.jpg",
+      "old": "/assets/tamannaah/tamannaah-gold-yacht.jpg",
       "canonical": "/gallery/tamannaah-gold-yacht.jpg",
       "status": 301
     },
@@ -67,7 +67,7 @@
       "status": 301
     },
     {
-      "old": "/__l5e/assets-v1/8f1b69ac-d744-472f-aca6-b5051aa6d9a1/tamannaah-red-portrait.jpg",
+      "old": "/assets/tamannaah/tamannaah-red-portrait.jpg",
       "canonical": "/gallery/tamannaah-red-portrait.jpg",
       "status": 301
     },
@@ -82,7 +82,7 @@
       "status": 301
     },
     {
-      "old": "/__l5e/assets-v1/fbd466b2-69d4-42c6-ba75-ccdab5828ec2/tamannaah-tkctalent.jpg",
+      "old": "/assets/tamannaah/tamannaah-tkctalent.jpg",
       "canonical": "/gallery/tamannaah-tkctalent.jpg",
       "status": 301
     },
