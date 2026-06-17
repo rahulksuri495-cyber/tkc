@@ -11,13 +11,17 @@
     s.id = STYLE_ID;
     s.textContent = [
       /* Shared */
-      '.tkc-block{position:relative;overflow:hidden;padding:72px 22px;font-family:Inter,system-ui,sans-serif}',
+      '.tkc-block{position:relative;padding:72px 22px;font-family:Inter,system-ui,sans-serif}',
       '.tkc-block .tkc-wrap{max-width:1180px;margin:0 auto;position:relative;z-index:2}',
       '.tkc-block .tkc-eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:11px;letter-spacing:.22em;text-transform:uppercase;font-weight:700;margin-bottom:18px;padding:7px 14px;border-radius:999px}',
       '.tkc-block h2{font-family:"Space Grotesk",Inter,sans-serif;font-weight:700;font-size:clamp(26px,4.2vw,44px);line-height:1.1;letter-spacing:-.02em;margin:0 0 18px}',
       '.tkc-block p{font-size:16px;line-height:1.65;margin:0 0 14px;max-width:780px}',
       '.tkc-block .tkc-cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}',
       '.tkc-block .tkc-cta{position:relative;display:inline-flex;align-items:center;gap:10px;padding:14px 24px;border-radius:12px;font-weight:600;font-size:15px;text-decoration:none;transition:transform .2s ease,box-shadow .2s ease;will-change:transform}',
+      /* Sticky label tabs */
+      '.tkc-sticky-label{position:sticky;top:0;display:inline-flex;align-items:center;gap:8px;padding:8px 18px;font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;border-radius:0 0 14px 0;z-index:100;backdrop-filter:blur(8px);margin-bottom:-34px}',
+      '.tkc-ai .tkc-sticky-label{background:rgba(99,102,241,.92);color:#fff;border-right:1px solid rgba(255,255,255,.2);border-bottom:1px solid rgba(255,255,255,.2)}',
+      '.tkc-legacy .tkc-sticky-label{background:rgba(201,168,76,.95);color:#1a1407;border-right:1px solid rgba(26,20,7,.15);border-bottom:1px solid rgba(26,20,7,.15)}',
       /* AI hero — clean dark with vivid blue accent */
       '.tkc-ai{color:#e8efff;background:#0b1020;background:linear-gradient(180deg,#0b1020 0%,#0e1530 100%)}',
       '.tkc-ai:before{content:"";position:absolute;inset:0;background:radial-gradient(900px 500px at 85% 10%,rgba(99,102,241,.28),transparent 60%),radial-gradient(700px 400px at 10% 100%,rgba(56,189,248,.18),transparent 60%);z-index:0}',
@@ -46,14 +50,15 @@
       '.tkc-legacy .tkc-grid{display:grid;grid-template-columns:1.5fr 1fr;gap:44px;align-items:center}',
       '@media (max-width:900px){.tkc-legacy .tkc-grid{grid-template-columns:1fr}}',
       '.tkc-legacy .tkc-pillars{display:grid;grid-template-columns:1fr;gap:12px}',
-      '.tkc-legacy .tkc-pillar{display:flex;align-items:baseline;gap:16px;padding:18px 22px;border-left:3px solid #c9a84c;background:#fff;border-radius:0 12px 12px 0;box-shadow:0 4px 18px -10px rgba(26,20,7,.25);transition:transform .25s ease,box-shadow .25s ease}',
+      '.tkc-legacy .tkc-pillar{display:flex;align-items:baseline;gap:16px;padding:18px 22px;border-left:3px solid #c9a84c;background:#fff;border-radius:0 12px 12px 0;box-shadow:0 4px 18px -10px rgba(26,20,7,.25);transition:transform .15s ease,box-shadow .15s ease}',
       '.tkc-legacy .tkc-pillar:hover{transform:translateX(6px);box-shadow:0 10px 30px -12px rgba(26,20,7,.35)}',
       '.tkc-legacy .tkc-pillar .k{font-family:"Space Grotesk",sans-serif;font-size:22px;font-weight:700;color:#1a1407;min-width:100px}',
       '.tkc-legacy .tkc-pillar .v{font-size:14px;color:#5a4d34;letter-spacing:.02em;line-height:1.5}',
-      /* Reveal anim */
-      '.tkc-reveal{opacity:0;transform:translateY(20px);transition:opacity .8s cubic-bezier(.2,.8,.2,1),transform .8s cubic-bezier(.2,.8,.2,1)}',
+      /* Reveal anim — snappier, earlier trigger */
+      '.tkc-reveal{opacity:0;transform:translateY(12px);transition:opacity .5s ease-out,transform .5s ease-out}',
       '.tkc-reveal.in{opacity:1;transform:none}',
-      '.tkc-reveal[data-delay="1"]{transition-delay:.08s}.tkc-reveal[data-delay="2"]{transition-delay:.16s}.tkc-reveal[data-delay="3"]{transition-delay:.24s}.tkc-reveal[data-delay="4"]{transition-delay:.32s}',
+      '.tkc-legacy .tkc-reveal{transition-duration:.35s;transform:translateY(8px)}',
+      '.tkc-reveal[data-delay="1"]{transition-delay:.06s}.tkc-reveal[data-delay="2"]{transition-delay:.12s}.tkc-reveal[data-delay="3"]{transition-delay:.18s}.tkc-reveal[data-delay="4"]{transition-delay:.24s}',
       '@media (prefers-reduced-motion:reduce){.tkc-reveal{opacity:1;transform:none;transition:none}}'
     ].join('');
     document.head.appendChild(s);
@@ -66,6 +71,7 @@
     el.setAttribute('aria-label','AI-first celebrity booking platform');
     el.innerHTML = ''+
       '<div class="tkc-glow g1"></div><div class="tkc-glow g2"></div>'+
+      '<span class="tkc-sticky-label">AI-Powered Booking</span>'+
       '<div class="tkc-wrap"><div class="tkc-grid">'+
         '<div>'+
           '<span class="tkc-eyebrow tkc-reveal">India\u2019s First AI-First Booking Platform</span>'+
@@ -93,7 +99,8 @@
     el.id = 'tkc-legacy';
     el.setAttribute('aria-label','TKC and IITEO legacy');
     el.innerHTML = ''+
-      '<div class="tkc-wrap"><div class="tkc-grid">'+
+      '<span class="tkc-sticky-label">TKC Legacy</span>'+
+      '<div class="tkc-wrap"><div class="tk,grid">'+
         '<div>'+
           '<span class="tkc-eyebrow tkc-reveal">Two-Decade Legacy \u00B7 TKC \u00D7 IITEO</span>'+
           '<h2 class="tkc-reveal" data-delay="1">A <span class="accent">live-events operations DNA</span> behind every booking.</h2>'+
@@ -149,7 +156,7 @@
           io.unobserve(e.target);
         }
       });
-    }, {threshold:0.18});
+    }, {threshold:0.05, rootMargin:'0px 0px 60px 0px'});
     scope.querySelectorAll('.tkc-reveal').forEach(function(n){io.observe(n);});
 
     // Magnetic CTA
