@@ -21,10 +21,10 @@ SKIP_PARTS = {"dist", "node_modules", ".git"}
 REDIRECTS_START = "# BEGIN GENERATED GALLERY IMAGE REDIRECTS"
 REDIRECTS_END = "# END GENERATED GALLERY IMAGE REDIRECTS"
 TAMANNAH_CDN_TO_PUBLIC = {
-    "/__l5e/assets-v1/cf3a5940-3650-43ab-a59e-f720f4eaf4df/tamannaah-dark-dress.jpg": "/gallery/tamannaah-dark-dress.jpg",
-    "/__l5e/assets-v1/645735a0-2137-46b9-851d-4af80ce6323c/tamannaah-gold-yacht.jpg": "/gallery/tamannaah-gold-yacht.jpg",
-    "/__l5e/assets-v1/8f1b69ac-d744-472f-aca6-b5051aa6d9a1/tamannaah-red-portrait.jpg": "/gallery/tamannaah-red-portrait.jpg",
-    "/__l5e/assets-v1/fbd466b2-69d4-42c6-ba75-ccdab5828ec2/tamannaah-tkctalent.jpg": "/gallery/tamannaah-tkctalent.jpg",
+    "/assets/tamannaah/tamannaah-dark-dress.jpg": "/gallery/tamannaah-dark-dress.jpg",
+    "/assets/tamannaah/tamannaah-gold-yacht.jpg": "/gallery/tamannaah-gold-yacht.jpg",
+    "/assets/tamannaah/tamannaah-red-portrait.jpg": "/gallery/tamannaah-red-portrait.jpg",
+    "/assets/tamannaah/tamannaah-tkctalent.jpg": "/gallery/tamannaah-tkctalent.jpg",
 }
 KNOWN_DIMENSIONS = {
     "/gallery/tamannaah-dark-dress.jpg": (1080, 1920),
