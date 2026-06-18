@@ -1,5 +1,5 @@
 /* TKC Talent service worker — offline app shell */
-const VERSION = 'tkc-v6';
+const VERSION = 'tkc-v7';
 const STATIC_CACHE = `${VERSION}-static`;
 const RUNTIME_CACHE = `${VERSION}-runtime`;
 const OFFLINE_URL = '/offline.html';
