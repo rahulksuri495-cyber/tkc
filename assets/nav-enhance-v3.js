@@ -1,6 +1,35 @@
 (function(){
   var MARK='data-tkc-singers-enhanced';
 
+  // ===== Responsive header breakpoint shim =====
+  // The header desktop nav is gated on Tailwind's `md` breakpoint (768px),
+  // but between 768–1023px the nav links collide with the logo and the
+  // "Book Now" pill wraps onto two lines — the perceived result is that the
+  // navigation disappears or looks broken. Shift the breakpoint to `lg`
+  // (1024px) via a single injected stylesheet so the mobile drawer covers
+  // the tablet range cleanly.
+  try{
+    if(!document.getElementById('tkc-nav-breakpoint-shim')){
+      var s=document.createElement('style');
+      s.id='tkc-nav-breakpoint-shim';
+      s.textContent=[
+        '@media (max-width:1023.98px){',
+        '  header nav > ul.md\\:flex,',
+        '  header nav > a.hidden.md\\:inline-flex,',
+        '  header nav > .hidden.md\\:flex,',
+        '  header nav > .hidden.md\\:inline-flex{display:none !important;}',
+        '  button[aria-controls="mobile-nav-drawer"]{display:inline-flex !important;}',
+        '  #mobile-nav-drawer,',
+        '  #mobile-nav-drawer + *,',
+        '  [aria-controls="mobile-nav-drawer"] ~ #mobile-nav-drawer,',
+        '  [aria-controls="mobile-nav-drawer"] ~ div[aria-hidden][class*="backdrop-blur"]{display:flex !important;}',
+        '  div[aria-hidden="true"][class*="backdrop-blur-sm"].md\\:hidden{display:block !important;}',
+        '}'
+      ].join('');
+      (document.head||document.documentElement).appendChild(s);
+    }
+  }catch(e){}
+
   // ===== Image visibility safety net =====
   // Static export sometimes ships <img class="... opacity-0"> expecting React
   // to flip it on load. On the deployed static HTML that handler never runs,
