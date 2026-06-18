@@ -13,7 +13,7 @@
       var s=document.createElement('style');
       s.id='tkc-nav-breakpoint-shim';
       s.textContent=[
-        '@media (max-width:1023.98px){',
+        '@media (max-width:1279.98px){',
         '  nav > ul.md\\:flex{display:none !important;}',
         '  nav > a.md\\:inline-flex,',
         '  nav > .md\\:inline-flex,',
