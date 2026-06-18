@@ -388,7 +388,7 @@
 
   // ===== Home submenu (IITEO under Home) =====
   function ensureHomeSubmenu(){
-    document.querySelectorAll('nav a[href="/"]').forEach(function(a){
+    navLinks().forEach(function(a){
       var txt=(a.textContent||'').trim();
       if(txt!=='Home') return;
       var li=a.parentElement;
@@ -496,6 +496,7 @@
   function scan(){
     removeOrphanNavMenus();
     ensureHomeSubmenu();
+    ensureCelebrityBookingMenu();
     ensureSingerSubmenus();
     ensureActressSubmenus();
     ensureActorSubmenus();
