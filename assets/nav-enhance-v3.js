@@ -277,20 +277,14 @@
 
   function scan(){
     removeOrphanNavMenus();
+    ensureHomeSubmenu();
     ensureSingerSubmenus();
     ensureActressSubmenus();
     linkActressCards();
     fixAllSubmenus();
     sweepImages();
     ensureBillingSupportLink();
-    document.querySelectorAll('ul').forEach(function(ul){
-      if(ul.hasAttribute(MARK)) return;
-      if(ul.children.length<15) return;
-      if(!ul.querySelector('a[href*="/book-"]')) return;
-      // confirm this is the singers list (has at least one well-known singer slug)
-      if(!ul.querySelector('a[href*="/book-arijit-singh"], a[href*="/book-badshah"], a[href*="/book-shreya-ghoshal"]')) return;
-      enhance(ul);
-    });
+    ensureGlobalSearch();
   }
 
   // Debounce + re-entrancy guard so our own DOM writes never re-trigger an
