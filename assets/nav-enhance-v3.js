@@ -275,22 +275,123 @@
     ul.appendChild(empty);
   }
 
+  // ===== Home submenu (IITEO under Home) =====
+  function ensureHomeSubmenu(){
+    document.querySelectorAll('nav a[href="/"]').forEach(function(a){
+      var txt=(a.textContent||'').trim();
+      if(txt!=='Home') return;
+      var li=a.parentElement;
+      if(!li || li.tagName!=='LI') return;
+      var inDrawer=!!a.closest('#mobile-nav-drawer');
+      if(li.querySelector(':scope > ul a[href="/iiteo/"]')) return;
+      if(inDrawer){
+        li.insertAdjacentHTML('beforeend','<ul class="ml-3 mt-1 flex flex-col gap-1 border-l border-foreground/10 pl-3"><li><a href="/iiteo/" class="flex min-h-9 items-center rounded-lg px-3 py-2 text-xs text-foreground/80 transition hover:bg-foreground/5">IITEO Legacy</a></li></ul>');
+      } else {
+        li.classList.add('relative','group/sub');
+        a.classList.remove('block');
+        a.classList.add('flex','items-center','justify-between','gap-2','group-hover/sub:bg-foreground','group-hover/sub:text-background');
+        if(!a.querySelector('svg')) a.insertAdjacentHTML('beforeend',chevronRight());
+        a.insertAdjacentHTML('afterend','<ul class="invisible absolute left-full top-0 z-50 ml-1 min-w-56 rounded-xl border border-foreground/10 bg-background p-2 text-foreground opacity-0 shadow-2xl ring-1 ring-foreground/5 transition-all duration-150 group-hover/sub:visible group-hover/sub:opacity-100 group-focus-within/sub:visible group-focus-within/sub:opacity-100"><li><a href="/iiteo/" class="block rounded-md px-3 py-2 text-sm font-medium text-foreground/80 transition-colors hover:bg-foreground hover:text-background">IITEO Legacy</a></li></ul>');
+      }
+    });
+  }
+
+  // ===== Global page search (floating) =====
+  var SEARCH_INDEX=null;
+  function buildSearchIndex(){
+    if(SEARCH_INDEX) return SEARCH_INDEX;
+    var sections=[
+      ['Home','/'],
+      ['IITEO Legacy','/iiteo/'],
+      ['Our Services','/ourservice/'],
+      ['Celebrity Booking India','/celebrity-booking-india/'],
+      ['Pan India Celebrity Booking','/pan-india-celebrity-booking/'],
+      ['Bollywood Celebrity Booking','/bollywood-celebrity-booking/'],
+      ['Bollywood Actress Booking','/bollywood-actress-booking/'],
+      ['Singer Booking India','/singer-booking-india/'],
+      ['Comedian Booking India','/comedian-booking-india/'],
+      ['Celebrity DJ Booking','/celebrity-dj-booking/'],
+      ['Influencer Booking India','/influencer-booking-india/'],
+      ['Billing Support','/support/billing/']
+    ];
+    var extras=[
+      ['Book Aakash Gupta','/book-aakash-gupta/'],['Book Abish Mathew','/book-abish-mathew/'],['Book Anubhav Singh Bassi','/book-anubhav-singh-bassi/'],['Book Biswa Kalyan Rath','/book-biswa-kalyan-rath/'],['Book Bharti Singh','/book-bharti-singh/'],['Book Gaurav Kapoor','/book-gaurav-kapoor/'],['Book Kanan Gill','/book-kanan-gill/'],['Book Kapil Sharma','/book-kapil-sharma/'],['Book Kenny Sebastian','/book-kenny-sebastian/'],['Book Krushna Abhishek','/book-krushna-abhishek/'],['Book Munawar Faruqui','/book-munawar-faruqui/'],['Book Nishant Tanwar','/book-nishant-tanwar/'],['Book Rahul Subramanian','/book-rahul-subramanian/'],['Book Samay Raina','/book-samay-raina/'],['Book Zakir Khan','/book-zakir-khan/']
+    ];
+    SEARCH_INDEX=sections.concat(singers).concat(actresses).concat(extras);
+    // de-dup by url
+    var seen={}, out=[];
+    SEARCH_INDEX.forEach(function(it){ if(seen[it[1]]) return; seen[it[1]]=1; out.push(it); });
+    SEARCH_INDEX=out;
+    return SEARCH_INDEX;
+  }
+
+  function ensureGlobalSearch(){
+    if(document.getElementById('tkc-global-search')) return;
+    var wrap=document.createElement('div');
+    wrap.id='tkc-global-search';
+    wrap.style.cssText='position:fixed;left:50%;bottom:18px;transform:translateX(-50%);z-index:9998;width:min(420px,calc(100vw - 96px));font-family:Inter,system-ui,sans-serif;';
+    wrap.innerHTML=''
+      +'<div style="position:relative;">'
+      +'  <input id="tkc-gs-input" type="search" placeholder="Search any page…" aria-label="Search the site" autocomplete="off" '
+      +'    style="width:100%;height:46px;padding:0 44px 0 18px;border-radius:999px;border:1px solid rgba(255,255,255,.18);'
+      +'    background:rgba(15,15,15,.85);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);color:#fff;'
+      +'    font:500 14px/1 Inter,system-ui,sans-serif;outline:none;box-shadow:0 14px 36px rgba(0,0,0,.4);" />'
+      +'  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" '
+      +'    style="position:absolute;right:16px;top:14px;color:rgba(255,255,255,.6);pointer-events:none;"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>'
+      +'  <ul id="tkc-gs-results" role="listbox" '
+      +'    style="display:none;list-style:none;margin:8px 0 0;padding:6px;max-height:50vh;overflow-y:auto;overscroll-behavior:contain;'
+      +'    border-radius:14px;border:1px solid rgba(255,255,255,.12);background:rgba(15,15,15,.95);backdrop-filter:blur(10px);'
+      +'    -webkit-backdrop-filter:blur(10px);box-shadow:0 18px 40px rgba(0,0,0,.45);"></ul>'
+      +'</div>';
+    document.body.appendChild(wrap);
+
+    var input=wrap.querySelector('#tkc-gs-input');
+    var list=wrap.querySelector('#tkc-gs-results');
+
+    function render(items, q){
+      if(!items.length){
+        list.innerHTML='<li style="padding:10px 14px;font-size:13px;color:rgba(255,255,255,.6);">No pages match</li>';
+        list.style.display='block';
+        return;
+      }
+      list.innerHTML=items.slice(0,40).map(function(it){
+        return '<li><a href="'+it[1]+'" style="display:block;padding:9px 14px;border-radius:10px;color:#f5f1e8;text-decoration:none;font-size:13px;line-height:1.3;">'+it[0]+'<span style="display:block;font-size:11px;color:rgba(255,255,255,.45);margin-top:2px;">'+it[1]+'</span></a></li>';
+      }).join('');
+      list.style.display='block';
+    }
+
+    input.addEventListener('input',function(){
+      var q=input.value.trim().toLowerCase();
+      if(!q){ list.style.display='none'; list.innerHTML=''; return; }
+      var idx=buildSearchIndex();
+      var matches=idx.filter(function(it){ return it[0].toLowerCase().indexOf(q)!==-1 || it[1].toLowerCase().indexOf(q)!==-1; });
+      render(matches,q);
+    });
+    input.addEventListener('focus',buildSearchIndex);
+    list.addEventListener('mouseover',function(e){
+      var a=e.target.closest('a'); if(!a) return; a.style.background='rgba(255,255,255,.08)';
+    });
+    list.addEventListener('mouseout',function(e){
+      var a=e.target.closest('a'); if(!a) return; a.style.background='';
+    });
+    document.addEventListener('click',function(e){
+      if(!wrap.contains(e.target)){ list.style.display='none'; }
+    });
+    input.addEventListener('keydown',function(e){
+      if(e.key==='Escape'){ input.value=''; list.style.display='none'; input.blur(); }
+    });
+  }
+
   function scan(){
     removeOrphanNavMenus();
+    ensureHomeSubmenu();
     ensureSingerSubmenus();
     ensureActressSubmenus();
     linkActressCards();
     fixAllSubmenus();
     sweepImages();
     ensureBillingSupportLink();
-    document.querySelectorAll('ul').forEach(function(ul){
-      if(ul.hasAttribute(MARK)) return;
-      if(ul.children.length<15) return;
-      if(!ul.querySelector('a[href*="/book-"]')) return;
-      // confirm this is the singers list (has at least one well-known singer slug)
-      if(!ul.querySelector('a[href*="/book-arijit-singh"], a[href*="/book-badshah"], a[href*="/book-shreya-ghoshal"]')) return;
-      enhance(ul);
-    });
+    ensureGlobalSearch();
   }
 
   // Debounce + re-entrancy guard so our own DOM writes never re-trigger an
