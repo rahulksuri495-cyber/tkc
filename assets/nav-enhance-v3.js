@@ -21,6 +21,14 @@
         '  button[aria-controls="mobile-nav-drawer"].md\\:hidden{display:inline-flex !important;}',
         '  aside#mobile-nav-drawer.md\\:hidden{display:flex !important;}',
         '  div[aria-hidden="true"].md\\:hidden[class*="backdrop-blur"]{display:block !important;}',
+        '  /* Always show the Home > IITEO submenu inline on small screens, since',
+        '     the hover flyout that desktop uses is unreachable on touch. */',
+        '  ul[data-tkc-home-sub]{position:static !important;visibility:visible !important;',
+        '    opacity:1 !important;display:block !important;box-shadow:none !important;',
+        '    border:0 !important;background:transparent !important;color:inherit !important;',
+        '    margin:4px 0 0 12px !important;padding:0 !important;max-height:none !important;',
+        '    min-width:0 !important;ring-width:0 !important;}',
+        '  ul[data-tkc-home-sub] a{padding-left:0 !important;}',
         '}'
       ].join('');
       (document.head||document.documentElement).appendChild(s);
@@ -291,7 +299,7 @@
         a.classList.remove('block');
         a.classList.add('flex','items-center','justify-between','gap-2','group-hover/sub:bg-foreground','group-hover/sub:text-background');
         if(!a.querySelector('svg')) a.insertAdjacentHTML('beforeend',chevronRight());
-        a.insertAdjacentHTML('afterend','<ul class="invisible absolute left-full top-0 z-50 ml-1 min-w-56 rounded-xl border border-foreground/10 bg-background p-2 text-foreground opacity-0 shadow-2xl ring-1 ring-foreground/5 transition-all duration-150 group-hover/sub:visible group-hover/sub:opacity-100 group-focus-within/sub:visible group-focus-within/sub:opacity-100"><li><a href="/iiteo/" class="block rounded-md px-3 py-2 text-sm font-medium text-foreground/80 transition-colors hover:bg-foreground hover:text-background">IITEO Legacy</a></li></ul>');
+        a.insertAdjacentHTML('afterend','<ul data-tkc-home-sub="1" class="invisible absolute left-full top-0 z-50 ml-1 min-w-56 rounded-xl border border-foreground/10 bg-background p-2 text-foreground opacity-0 shadow-2xl ring-1 ring-foreground/5 transition-all duration-150 group-hover/sub:visible group-hover/sub:opacity-100 group-focus-within/sub:visible group-focus-within/sub:opacity-100"><li><a href="/iiteo/" class="block rounded-md px-3 py-2 text-sm font-medium text-foreground/80 transition-colors hover:bg-foreground hover:text-background">IITEO Legacy</a></li></ul>');
       }
     });
   }
