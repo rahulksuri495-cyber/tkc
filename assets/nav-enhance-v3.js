@@ -14,16 +14,13 @@
       s.id='tkc-nav-breakpoint-shim';
       s.textContent=[
         '@media (max-width:1023.98px){',
-        '  header nav > ul.md\\:flex,',
-        '  header nav > a.hidden.md\\:inline-flex,',
-        '  header nav > .hidden.md\\:flex,',
-        '  header nav > .hidden.md\\:inline-flex{display:none !important;}',
-        '  button[aria-controls="mobile-nav-drawer"]{display:inline-flex !important;}',
-        '  #mobile-nav-drawer,',
-        '  #mobile-nav-drawer + *,',
-        '  [aria-controls="mobile-nav-drawer"] ~ #mobile-nav-drawer,',
-        '  [aria-controls="mobile-nav-drawer"] ~ div[aria-hidden][class*="backdrop-blur"]{display:flex !important;}',
-        '  div[aria-hidden="true"][class*="backdrop-blur-sm"].md\\:hidden{display:block !important;}',
+        '  nav > ul.md\\:flex{display:none !important;}',
+        '  nav > a.md\\:inline-flex,',
+        '  nav > .md\\:inline-flex,',
+        '  nav > .md\\:flex:not(ul){display:none !important;}',
+        '  button[aria-controls="mobile-nav-drawer"].md\\:hidden{display:inline-flex !important;}',
+        '  aside#mobile-nav-drawer.md\\:hidden{display:flex !important;}',
+        '  div[aria-hidden="true"].md\\:hidden[class*="backdrop-blur"]{display:block !important;}',
         '}'
       ].join('');
       (document.head||document.documentElement).appendChild(s);
