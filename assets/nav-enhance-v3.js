@@ -278,7 +278,6 @@
   function scan(){
     removeOrphanNavMenus();
     ensureHomeSubmenu();
-    ensureHomeSubmenu();
     ensureSingerSubmenus();
     ensureActressSubmenus();
     linkActressCards();
