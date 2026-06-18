@@ -173,6 +173,42 @@
     });
   }
 
+  // ===== Actors enhancement (Bollywood Actor dropdown) =====
+  var actors=[["Book Aamir Khan","/book-aamir-khan/"],["Book Aditya Roy Kapur","/book-aditya-roy-kapur/"],["Book Ajay Devgn","/book-ajay-devgn/"],["Book Akshay Kumar","/book-akshay-kumar/"],["Book Anil Kapoor","/book-anil-kapoor/"],["Book Arjun Kapoor","/book-arjun-kapoor/"],["Book Ayushmann Khurrana","/book-ayushmann-khurrana/"],["Book Bobby Deol","/book-bobby-deol/"],["Book Hrithik Roshan","/book-hrithik-roshan/"],["Book Kartik Aaryan","/book-kartik-aaryan/"],["Book Manoj Bajpayee","/book-manoj-bajpayee/"],["Book Nawazuddin Siddiqui","/book-nawazuddin-siddiqui/"],["Book Pankaj Tripathi","/book-pankaj-tripathi/"],["Book Rajkummar Rao","/book-rajkummar-rao/"],["Book Ranbir Kapoor","/book-ranbir-kapoor/"],["Book Ranveer Singh","/book-ranveer-singh/"],["Book Salman Khan","/book-salman-khan/"],["Book Shah Rukh Khan","/book-shah-rukh-khan/"],["Book Shahid Kapoor","/book-shahid-kapoor/"],["Book Sidharth Malhotra","/book-sidharth-malhotra/"],["Book Sunny Deol","/book-sunny-deol/"],["Book Tiger Shroff","/book-tiger-shroff/"],["Book Varun Dhawan","/book-varun-dhawan/"],["Book Vicky Kaushal","/book-vicky-kaushal/"],["Book Vijay Varma","/book-vijay-varma/"]];
+
+  function actorItemHtml(item, cls){
+    return '<li><a href="'+item[1]+'" class="'+cls+'">'+item[0]+'</a></li>';
+  }
+
+  function ensureActorSubmenus(){
+    document.querySelectorAll('nav a[href="/bollywood-celebrity-booking/"]').forEach(function(a){
+      var txt=(a.textContent||'').toLowerCase();
+      // Match "Actor" / "Bollywood Actor" labels but NOT "Actress".
+      if(txt.indexOf('actor')===-1 && txt.indexOf('bollywood')===-1) return;
+      if(txt.indexOf('actress')!==-1) return;
+      if(a.closest('#mobile-nav-drawer')) return;
+      var li=a.parentElement;
+      if(!li || li.tagName!=='LI') return;
+      if(li.querySelector('ul a[href="/book-salman-khan/"]')) return;
+      li.classList.add('relative','group/sub');
+      a.classList.remove('block');
+      a.classList.add('flex','items-center','justify-between','gap-2','group-hover/sub:bg-foreground','group-hover/sub:text-background');
+      if(!a.querySelector('svg')) a.insertAdjacentHTML('beforeend',chevronRight());
+      a.insertAdjacentHTML('afterend','<ul style="max-height:calc(100vh - 120px)" class="invisible absolute left-full top-0 z-50 ml-0 pl-3 -ml-2 min-w-60 overflow-y-auto overscroll-contain rounded-xl border border-foreground/10 bg-background p-2 text-foreground opacity-0 shadow-2xl ring-1 ring-foreground/5 transition-all duration-150 group-hover/sub:visible group-hover/sub:opacity-100 group-focus-within/sub:visible group-focus-within/sub:opacity-100">'+actors.map(function(item){return actorItemHtml(item,'block rounded-md px-3 py-2 text-sm font-medium text-foreground/80 transition-colors hover:bg-foreground hover:text-background');}).join('')+'</ul>');
+    });
+
+    var drawer=document.getElementById('mobile-nav-drawer');
+    if(!drawer) return;
+    drawer.querySelectorAll('a[href="/bollywood-celebrity-booking/"]').forEach(function(a){
+      var txt=(a.textContent||'').toLowerCase();
+      if(txt.indexOf('actor')===-1 && txt.indexOf('bollywood')===-1) return;
+      if(txt.indexOf('actress')!==-1) return;
+      var li=a.parentElement;
+      if(!li || li.tagName!=='LI' || li.querySelector('ul a[href="/book-salman-khan/"]')) return;
+      li.insertAdjacentHTML('beforeend','<ul class="ml-3 mt-1 flex max-h-64 flex-col gap-1 overflow-y-auto overscroll-contain border-l border-foreground/10 pl-3">'+actors.map(function(item){return actorItemHtml(item,'flex min-h-9 items-center rounded-lg px-3 py-2 text-xs text-foreground/80 transition hover:bg-foreground/5');}).join('')+'</ul>');
+    });
+  }
+
   function linkActressCards(){
     if(location.pathname.replace(/\/$/,'')!=='/bollywood-actress-booking') return;
     document.querySelectorAll('h3').forEach(function(h){
@@ -326,7 +362,7 @@
     var extras=[
       ['Book Aakash Gupta','/book-aakash-gupta/'],['Book Abish Mathew','/book-abish-mathew/'],['Book Anubhav Singh Bassi','/book-anubhav-singh-bassi/'],['Book Biswa Kalyan Rath','/book-biswa-kalyan-rath/'],['Book Bharti Singh','/book-bharti-singh/'],['Book Gaurav Kapoor','/book-gaurav-kapoor/'],['Book Kanan Gill','/book-kanan-gill/'],['Book Kapil Sharma','/book-kapil-sharma/'],['Book Kenny Sebastian','/book-kenny-sebastian/'],['Book Krushna Abhishek','/book-krushna-abhishek/'],['Book Munawar Faruqui','/book-munawar-faruqui/'],['Book Nishant Tanwar','/book-nishant-tanwar/'],['Book Rahul Subramanian','/book-rahul-subramanian/'],['Book Samay Raina','/book-samay-raina/'],['Book Zakir Khan','/book-zakir-khan/']
     ];
-    SEARCH_INDEX=sections.concat(singers).concat(actresses).concat(extras);
+    SEARCH_INDEX=sections.concat(singers).concat(actresses).concat(actors).concat(extras);
     // de-dup by url
     var seen={}, out=[];
     SEARCH_INDEX.forEach(function(it){ if(seen[it[1]]) return; seen[it[1]]=1; out.push(it); });
@@ -396,6 +432,7 @@
     ensureHomeSubmenu();
     ensureSingerSubmenus();
     ensureActressSubmenus();
+    ensureActorSubmenus();
     linkActressCards();
     fixAllSubmenus();
     sweepImages();
