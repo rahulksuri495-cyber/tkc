@@ -362,7 +362,7 @@
     var extras=[
       ['Book Aakash Gupta','/book-aakash-gupta/'],['Book Abish Mathew','/book-abish-mathew/'],['Book Anubhav Singh Bassi','/book-anubhav-singh-bassi/'],['Book Biswa Kalyan Rath','/book-biswa-kalyan-rath/'],['Book Bharti Singh','/book-bharti-singh/'],['Book Gaurav Kapoor','/book-gaurav-kapoor/'],['Book Kanan Gill','/book-kanan-gill/'],['Book Kapil Sharma','/book-kapil-sharma/'],['Book Kenny Sebastian','/book-kenny-sebastian/'],['Book Krushna Abhishek','/book-krushna-abhishek/'],['Book Munawar Faruqui','/book-munawar-faruqui/'],['Book Nishant Tanwar','/book-nishant-tanwar/'],['Book Rahul Subramanian','/book-rahul-subramanian/'],['Book Samay Raina','/book-samay-raina/'],['Book Zakir Khan','/book-zakir-khan/']
     ];
-    SEARCH_INDEX=sections.concat(singers).concat(actresses).concat(extras);
+    SEARCH_INDEX=sections.concat(singers).concat(actresses).concat(actors).concat(extras);
     // de-dup by url
     var seen={}, out=[];
     SEARCH_INDEX.forEach(function(it){ if(seen[it[1]]) return; seen[it[1]]=1; out.push(it); });
@@ -432,6 +432,7 @@
     ensureHomeSubmenu();
     ensureSingerSubmenus();
     ensureActressSubmenus();
+    ensureActorSubmenus();
     linkActressCards();
     fixAllSubmenus();
     sweepImages();
