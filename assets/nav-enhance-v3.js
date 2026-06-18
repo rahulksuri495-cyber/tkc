@@ -216,8 +216,8 @@
   }
 
   function ensureActressSubmenus(){
-    document.querySelectorAll('nav a[href="/bollywood-actress-booking/"]').forEach(function(a){
-      if((a.textContent||'').toLowerCase().indexOf('actress')===-1) return;
+    navLinks().forEach(function(a){
+      if(!samePath(a,'/bollywood-actress-booking/') && !textHas(a,['actress'])) return;
       if(a.closest('#mobile-nav-drawer')) return;
       var li=a.parentElement;
       if(!li || li.tagName!=='LI') return;
@@ -231,8 +231,8 @@
 
     var drawer=document.getElementById('mobile-nav-drawer');
     if(!drawer) return;
-    drawer.querySelectorAll('a[href="/bollywood-actress-booking/"]').forEach(function(a){
-      if((a.textContent||'').toLowerCase().indexOf('actress')===-1) return;
+    Array.prototype.slice.call(drawer.querySelectorAll('a')).forEach(function(a){
+      if(!samePath(a,'/bollywood-actress-booking/') && !textHas(a,['actress'])) return;
       var li=a.parentElement;
       if(!li || li.tagName!=='LI' || li.querySelector('ul a[href="/book-alia-bhatt/"]')) return;
       li.insertAdjacentHTML('beforeend','<ul class="ml-3 mt-1 flex max-h-64 flex-col gap-1 overflow-y-auto overscroll-contain border-l border-foreground/10 pl-3">'+actresses.map(function(item){return actressItemHtml(item,'flex min-h-9 items-center rounded-lg px-3 py-2 text-xs text-foreground/80 transition hover:bg-foreground/5');}).join('')+'</ul>');
@@ -247,10 +247,10 @@
   }
 
   function ensureActorSubmenus(){
-    document.querySelectorAll('nav a[href="/bollywood-celebrity-booking/"]').forEach(function(a){
+    navLinks().forEach(function(a){
       var txt=(a.textContent||'').toLowerCase();
       // Match "Actor" / "Bollywood Actor" labels but NOT "Actress".
-      if(txt.indexOf('actor')===-1 && txt.indexOf('bollywood')===-1) return;
+      if(!samePath(a,'/bollywood-celebrity-booking/') && txt.indexOf('actor')===-1 && txt.indexOf('bollywood')===-1) return;
       if(txt.indexOf('actress')!==-1) return;
       if(a.closest('#mobile-nav-drawer')) return;
       var li=a.parentElement;
@@ -265,9 +265,9 @@
 
     var drawer=document.getElementById('mobile-nav-drawer');
     if(!drawer) return;
-    drawer.querySelectorAll('a[href="/bollywood-celebrity-booking/"]').forEach(function(a){
+    Array.prototype.slice.call(drawer.querySelectorAll('a')).forEach(function(a){
       var txt=(a.textContent||'').toLowerCase();
-      if(txt.indexOf('actor')===-1 && txt.indexOf('bollywood')===-1) return;
+      if(!samePath(a,'/bollywood-celebrity-booking/') && txt.indexOf('actor')===-1 && txt.indexOf('bollywood')===-1) return;
       if(txt.indexOf('actress')!==-1) return;
       var li=a.parentElement;
       if(!li || li.tagName!=='LI' || li.querySelector('ul a[href="/book-salman-khan/"]')) return;
