@@ -1,23 +1,32 @@
-# Add 3 singers to Singer Booking India page
 
-Add Altaf Raja, Sara Gurpal, and Sunanda Sharma to the singer roster with prices and photos.
+## Goal
+Produce a single downloadable SEO & schema validation report for `/iiteo/` that confirms metadata is stable across refreshes and recommends high-volume keywords around event organisers / top event companies.
 
-## Singer entries
+## What the report will contain
 
-| Name | Tier | Fee | Events |
-|---|---|---|---|
-| Altaf Raja | Mid Tier | ₹5 L – ₹7 L | Weddings, sangeet nights, retro nights |
-| Sara Gurpal | Emerging | ₹5 L | Sangeet, Punjabi weddings, corporate |
-| Sunanda Sharma | Mid Tier | On Demand | Weddings, sangeet, Punjabi events |
+1. **Metadata validation (static HTML inspection)**
+   - Title (length, keyword presence), meta description (length), canonical, hreflang
+   - OpenGraph + Twitter card tags (presence, image dimensions, alt text)
+   - Robots / geo tags
+   - H1 uniqueness, heading hierarchy
+   - Verdict: PASS/WARN/FAIL per check
 
-## Steps
+2. **Refresh stability check**
+   - Confirm all SEO tags are baked into static HTML (not JS-injected), so they render identically on initial load, hard refresh, and back/forward navigation. Diff two fetches of `/iiteo/` to prove byte-identical `<head>`.
 
-1. **Source photos via Google Images** — fetch one clean portrait per artist (Wikipedia/press photo preferred for licensing). Save as `singers/altaf-raja.jpeg`, `singers/sara-gurpal.jpeg`, `singers/sunanda-sharma.jpeg`.
-2. **Update roster data** in bundled `assets/main-CQYOkFRR.js` — append 3 objects to the singers roster array (`{name, tier, fee, events, slug, image}`) matching existing schema.
-3. **Update static `singer-booking-india/index.html`** — append 3 roster cards mirroring existing Jasmine Sandlas / Neha Bhasin card markup, and append 3 entries to the `BreadcrumbList` JSON-LD (positions 33–35).
-4. **Update `sitemap.xml`** to include the new `/book-altaf-raja`, `/book-sara-gurpal`, `/book-sunanda-sharma` URLs (no detail HTML pages will be created — same as other singers in roster which only link to slugs).
-5. **Verify** in the preview at `/singer-booking-india` that the 3 new cards render with images, names, tier badges, and fees.
+3. **JSON-LD schema validation**
+   - Parse the inline `application/ld+json` block
+   - Validate each @graph node (Article, Organization/LocalBusiness, FAQPage, BreadcrumbList) against schema.org required fields
+   - Flag missing recommended properties (e.g. Article.datePublished, Article.image)
 
-## Notes
-- No individual `book-*` detail pages exist for any singer in this roster, so we won't create new ones — slugs link to placeholder paths matching the existing pattern.
-- If a clean Google image cannot be fetched, fallback to an AI-generated placeholder portrait.
+4. **Keyword research via Semrush (India database)**
+   - Run `semrush--keyword_research` and `semrush--keyword_compare` on seeds: "event management company", "top event companies in india", "event organisers delhi", "exhibition organisers india", "celebrity event management", "best event planners delhi ncr", "corporate event company india"
+   - For each: monthly volume, difficulty, CPC, intent band, recommendation (target / support / skip)
+   - Map top candidates to where they should appear on `/iiteo/` (title, H2, body, FAQ)
+
+5. **Recommendations**
+   - Concrete edits to title/description/H2s/FAQ to capture the chosen high-volume terms without disrupting the existing IITEO legacy narrative
+   - Any missing schema fields to add
+
+## Deliverable
+`/mnt/documents/iiteo-seo-report.html` (styled, printable) + a `<presentation-artifact>` link in the chat reply. No code changes to the site in this pass — recommendations only. If you want, I can apply the recommended on-page edits as a follow-up.
