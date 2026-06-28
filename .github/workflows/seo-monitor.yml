@@ -1,0 +1,72 @@
+name: seo-monitor
+
+# Automated alerts: runs the SEO compliance audit on every push to main and
+# daily at 06:00 UTC. If any major page (homepage, services, locations,
+# actor pages) starts failing JSON-LD parsing, canonical, robots, or
+# og:image checks, the workflow exits non-zero and opens a GitHub issue so
+# the regression is noticed within hours instead of weeks.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "**/index.html"
+      - "sitemap.xml"
+      - "image-sitemap.xml"
+      - "robots.txt"
+      - "scripts/seo-monitor.py"
+      - ".github/workflows/seo-monitor.yml"
+  pull_request:
+    paths:
+      - "**/index.html"
+      - "scripts/seo-monitor.py"
+  schedule:
+    - cron: "0 6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Run SEO compliance audit
+        id: audit
+        run: |
+          python3 scripts/seo-monitor.py | tee summary.json
+      - name: Upload report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: seo-monitor-report
+          path: admin/seo-monitor/
+      - name: Open alert issue on failure
+        if: failure()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const report = JSON.parse(fs.readFileSync('admin/seo-monitor/report.json','utf8'));
+            const failing = report.pages.filter(p => p.status === 'fail');
+            const body = [
+              `Automated SEO monitor detected ${failing.length} failing page(s) at ${report.generated_at}.`,
+              '',
+              '| Route | Errors |',
+              '|-------|--------|',
+              ...failing.map(p => `| \`${p.route}\` | ${p.errors.join('; ')} |`),
+              '',
+              `Full dashboard artifact: see workflow run.`,
+            ].join('\n');
+            await github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: `🚨 SEO monitor: ${failing.length} failing page(s)`,
+              body,
+              labels: ['seo','automated-alert'],
+            });
