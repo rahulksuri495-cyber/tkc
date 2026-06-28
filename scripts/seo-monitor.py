@@ -107,8 +107,9 @@ def audit_page(p: Path, sitemap_urls: set[str]):
         warnings.append("no JSON-LD blocks")
 
     # Canonical
+    noindex = "noindex" in (page.robots or "").lower()
     if not page.canonical:
-        errors.append("missing canonical link")
+        (warnings if noindex else errors).append("missing canonical link")
     elif not page.canonical.startswith(BASE):
         errors.append(f"canonical not on {BASE}: {page.canonical}")
 
@@ -120,9 +121,9 @@ def audit_page(p: Path, sitemap_urls: set[str]):
 
     # OG image
     if not page.og_image:
-        errors.append("missing og:image")
+        (warnings if noindex else errors).append("missing og:image")
     elif not page.og_image.startswith(BASE):
-        errors.append(f"og:image not absolute: {page.og_image}")
+        errors.append(f"og:image not on {BASE}: {page.og_image}")
     if page.og_w != "1200" or page.og_h != "630":
         warnings.append(f"og:image dimensions not 1200x630 (got {page.og_w}x{page.og_h})")
 
