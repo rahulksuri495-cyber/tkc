@@ -4,11 +4,13 @@
   "private": true,
   "scripts": {
     "dev": "vite --port 8080 --host",
-    "build": "bun run generate:image-seo && bun run lint:image-seo && node -e \"const fs=require('fs'),p=require('path');fs.rmSync('dist',{recursive:true,force:true});fs.mkdirSync('dist');const skip=new Set(['dist','node_modules','.git','.lovable','.agents','.claude','.workspace','scripts']);for(const e of fs.readdirSync('.')){if(skip.has(e))continue;fs.cpSync(e,p.join('dist',e),{recursive:true})}\"",
+    "build": "bun run generate:image-seo && bun run lint:image-seo && bun run verify:blog-og && node -e \"const fs=require('fs'),p=require('path');fs.rmSync('dist',{recursive:true,force:true});fs.mkdirSync('dist');const skip=new Set(['dist','node_modules','.git','.lovable','.agents','.claude','.workspace','scripts']);for(const e of fs.readdirSync('.')){if(skip.has(e))continue;fs.cpSync(e,p.join('dist',e),{recursive:true})}\"",
     "build:dev": "bun run build",
     "preview": "vite preview --port 8080 --host",
     "generate:image-seo": "python3 scripts/generate-image-seo.py",
     "lint:image-seo": "python3 scripts/generate-image-seo.py --check",
+    "verify:blog-og": "python3 scripts/verify-blog-og.py --check",
+    "fix:blog-og": "python3 scripts/verify-blog-og.py",
     "verify:actress-dropdown": "python3 scripts/verify-actress-dropdown.py",
     "verify:actress-images": "python3 scripts/verify-actress-images.py",
     "test:gallery-images": "playwright test tests/gallery-images.spec.ts"
