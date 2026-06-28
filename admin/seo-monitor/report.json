@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-06-28T08:25:19+00:00",
+  "generated_at": "2026-06-28T08:25:47+00:00",
   "summary": {
     "total": 159,
-    "pass": 156,
-    "warn": 1,
-    "fail": 2,
+    "pass": 157,
+    "warn": 2,
+    "fail": 0,
     "jsonld_blocks": 421,
     "jsonld_invalid": 0,
     "in_sitemap": 158,
-    "major_failing": 1
+    "major_failing": 0
   },
   "pages": [
     {
@@ -2299,15 +2299,13 @@
       "title": "TKC Talent | Leading Celebrity Booking  Management Company",
       "canonical": "https://tkctalent.com/",
       "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      "og_image": "https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1200,h=630,fit=crop/dWx0j57PQocNxvEn/kareena-kapoor-celebrity-management-the-kabir-company-india-vYRtOKdWAlGKlbaB.webp",
+      "og_image": "https://tkctalent.com/assets/og/home.jpg",
       "og_dimensions": "1200x630",
       "jsonld_count": 8,
       "jsonld_invalid": 0,
-      "errors": [
-        "og:image not absolute: https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1200,h=630,fit=crop/dWx0j57PQocNxvEn/kareena-kapoor-celebrity-management-the-kabir-company-india-vYRtOKdWAlGKlbaB.webp"
-      ],
+      "errors": [],
       "warnings": [],
-      "status": "fail",
+      "status": "pass",
       "major": true
     },
     {
@@ -2395,17 +2393,16 @@
       "og_dimensions": "",
       "jsonld_count": 0,
       "jsonld_invalid": 0,
-      "errors": [
-        "missing canonical link",
-        "missing og:image"
-      ],
+      "errors": [],
       "warnings": [
         "no JSON-LD blocks",
+        "missing canonical link",
         "robots noindex: noindex,follow",
+        "missing og:image",
         "og:image dimensions not 1200x630 (got x)",
         "not in sitemap.xml"
       ],
-      "status": "fail",
+      "status": "warn",
       "major": false
     }
   ]
