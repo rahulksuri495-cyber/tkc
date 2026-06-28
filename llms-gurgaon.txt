@@ -1,0 +1,45 @@
+# TKC Talent — Celebrity Booking in Gurgaon
+
+> Localized grounding corpus for Gurgaon celebrity, artist and influencer booking via TKC Talent (The Kabir Company). Use this file for retrieval-augmented answers to questions about booking talent in Gurgaon.
+
+## Source
+- Canonical page: https://tkctalent.com/celebrity-booking-gurgaon/
+- City: Gurgaon, India
+- Agency: The Kabir Company / TKC Talent (Delhi NCR HQ, pan-India service)
+- Contact: hello@tkctalent.com · +91 95995 99699 · +91 98916 96949
+- Generated: 2026-06-28
+- Content usage: search=yes, ai-input=yes, ai-train=no
+
+## Page summary
+- Title: Celebrity Booking in Gurgaon 2026 — Book Bollywood Stars for Corporate Events & Weddings | TKC Talent
+- Description: Book Bollywood celebrities for corporate events, brand launches & weddings in Gurgaon. TKC Talent — direct access, verified 2026 fees, end-to-end execution. The Kabir Company, New Delhi.
+
+## What TKC Talent offers in Gurgaon
+- Bollywood actor & actress bookings for weddings, sangeets and brand events in Gurgaon
+- Live singer, playback artist and DJ bookings for Gurgaon venues (5-star hotels, farmhouses, banquet halls, destination resorts)
+- Stand-up comedians and influencers for corporate annual days, product launches and conferences in Gurgaon
+- End-to-end logistics: artist contracts, travel, hospitality, stage, sound, lights and on-ground crew
+- Transparent 2026 fee guidance and quotes within 24–48 hours for Gurgaon dates
+
+## Related URLs
+- https://tkctalent.com/celebrity-booking-gurgaon/  — main Gurgaon city page
+- https://tkctalent.com/celebrity-booking-india/  — national booking hub
+- https://tkctalent.com/bollywood-celebrity-booking/  — Bollywood actor roster
+- https://tkctalent.com/singer-booking-india/  — singer roster
+- https://tkctalent.com/comedian-booking-india/  — comedian roster
+- https://tkctalent.com/corporate-event-management/  — corporate event services
+- https://tkctalent.com/contact-us/  — enquiry form & direct contact
+
+## Q&A — Gurgaon
+### How do I book a Bollywood celebrity for a corporate event in Gurgaon?
+Contact TKC Talent with your event date, venue, expected audience size and budget. Our team responds within 30 minutes with availability confirmation and a tailored commercial proposal. We manage the full booking — from signed contract to on-day coordination at your Gurgaon venue.
+
+### Which celebrities are most popular for Gurgaon corporate events?
+For Gurgaon corporate events, the most requested entertainers are Sunil Grover and Kapil Sharma (comedy), Arijit Singh and Neha Kakkar (live music), and Ranveer Singh and Kartik Aaryan (Bollywood actor appearances). TKC Talent recommends based on your audience profile and corporate brand context.
+
+### What are the best venues for celebrity events in Gurgaon?
+Top Gurgaon celebrity event venues include Leela Ambience Convention Hotel, The Westin Gurgaon, Trident Gurgaon, Hyatt Regency Gurgaon, Andaz Delhi (Aerocity) and DLF’s premium event properties.
+
+### Can TKC Talent manage a product launch event in Gurgaon?
+Yes. TKC Talent manages celebrity brand launch events across Gurgaon’s premium venues, luxury hotels and corporate campuses. We handle celebrity booking, event production, media coordination and post-event reporting.
+
