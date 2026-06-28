@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-28T08:25:47+00:00",
+  "generated_at": "2026-06-28T19:11:08+00:00",
   "summary": {
     "total": 159,
     "pass": 157,
@@ -8,7 +8,10 @@
     "jsonld_blocks": 421,
     "jsonld_invalid": 0,
     "in_sitemap": 158,
-    "major_failing": 0
+    "major_failing": 0,
+    "ai_parse_ok": 158,
+    "ai_parse_failing_major": 0,
+    "robots_status": "warn"
   },
   "pages": [
     {
@@ -24,7 +27,14 @@
       "errors": [],
       "warnings": [],
       "status": "pass",
-      "major": false
+      "major": false,
+      "ai_declaration": "human-authored, expert-reviewed",
+      "content_usage": "ai-input=yes, search=yes",
+      "llms_links": [
+        "https://tkctalent.com/llms.txt"
+      ],
+      "ai_parse_ok": true,
+      "ai_notes": []
     },
     {
       "route": "/bollywood-celebrity-booking/",
@@ -39,7 +49,14 @@
       "errors": [],
       "warnings": [],
       "status": "pass",
-      "major": false
+      "major": false,
+      "ai_declaration": "human-authored, expert-reviewed",
+      "content_usage": "ai-input=yes, search=yes",
+      "llms_links": [
+        "https://tkctalent.com/llms.txt"
+      ],
+      "ai_parse_ok": true,
+      "ai_notes": []
     },
     {
       "route": "/bollywood-celebrity-charges/",
@@ -54,7 +71,14 @@
       "errors": [],
       "warnings": [],
       "status": "pass",
-      "major": false
+      "major": false,
+      "ai_declaration": "human-authored, expert-reviewed",
+      "content_usage": "ai-input=yes, search=yes",
+      "llms_links": [
+        "https://tkctalent.com/llms.txt"
+      ],
+      "ai_parse_ok": true,
+      "ai_notes": []
     },
     {
       "route": "/book-aakash-gupta/",
@@ -69,7 +93,14 @@
       "errors": [],
       "warnings": [],
       "status": "pass",
-      "major": true
+      "major": true,
+      "ai_declaration": "human-authored, expert-reviewed",
+      "content_usage": "ai-input=yes, search=yes",
+      "llms_links": [
+        "https://tkctalent.com/llms.txt"
+      ],
+      "ai_parse_ok": true,
+      "ai_notes": []
     },
     {
       "route": "/book-aamir-khan/",
@@ -84,7 +115,14 @@
       "errors": [],
       "warnings": [],
       "status": "pass",
-      "major": true
+      "major": true,
+      "ai_declaration": "human-authored, expert-reviewed",
+      "content_usage": "ai-input=yes, search=yes",
+      "llms_links": [
+        "https://tkctalent.com/llms.txt"
+      ],
+      "ai_parse_ok": true,
+      "ai_notes": []
     },
     {
       "route": "/book-abish-mathew/",
@@ -99,7 +137,14 @@
       "errors": [],
       "warnings": [],
       "status": "pass",
-      "major": true
+      "major": true,
+      "ai_declaration": "human-authored, expert-reviewed",
+      "content_usage": "ai-input=yes, search=yes",
+      "llms_links": [
+        "https://tkctalent.com/llms.txt"
+      ],
+      "ai_parse_ok": true,
+      "ai_notes": []
     },
     {
       "route": "/book-adah-sharma/",
@@ -114,7 +159,14 @@
       "errors": [],
       "warnings": [],
       "status": "pass",
-      "major": true
+      "major": true,
+      "ai_declaration": "human-authored, expert-reviewed",
+      "content_usage": "ai-input=yes, search=yes",
+      "llms_links": [
+        "https://tkctalent.com/llms.txt"
+      ],
+      "ai_parse_ok": true,
+      "ai_notes": []
     },
     {
       "route": "/book-aditi-rao-hydari/",
@@ -129,7 +181,14 @@
       "errors": [],
       "warnings": [],
       "status": "pass",
-      "major": true
+      "major": true,
+      "ai_declaration": "human-authored, expert-reviewed",
+      "content_usage": "ai-input=yes, search=yes",
+      "llms_links": [
+        "https://tkctalent.com/llms.txt"
+      ],
+      "ai_parse_ok": true,
+      "ai_notes": []
     },
     {
       "route": "/book-aditya-roy-kapur/",
@@ -144,7 +203,14 @@
       "errors": [],
       "warnings": [],
       "status": "pass",
-      "major": true
+      "major": true,
+      "ai_declaration": "human-authored, expert-reviewed",
+      "content_usage": "ai-input=yes, search=yes",
+      "llms_links": [
+        "https://tkctalent.com/llms.txt"
+      ],
+      "ai_parse_ok": true,
+      "ai_notes": []
     },
     {
       "route": "/book-ajay-devgn/",
@@ -159,7 +225,14 @@
       "errors": [],
       "warnings": [],
       "status": "pass",
-      "major": true
+      "major": true,
+      "ai_declaration": "human-authored, expert-reviewed",
+      "content_usage": "ai-input=yes, search=yes",
+      "llms_links": [
+        "https://tkctalent.com/llms.txt"
+      ],
+      "ai_parse_ok": true,
+      "ai_notes": []
     },
     {
       "route": "/book-akanksha-puri/",
@@ -174,7 +247,14 @@
       "errors": [],
       "warnings": [],
       "status": "pass",
-      "major": true
+      "major": true,
+      "ai_declaration": "human-authored, expert-reviewed",
+      "content_usage": "ai-input=yes, search=yes",
+      "llms_links": [
+        "https://tkctalent.com/llms.txt"
+      ],
+      "ai_parse_ok": true,
+      "ai_notes": []
     },
     {
       "route": "/book-akshay-kumar/",
@@ -189,7 +269,14 @@
       "errors": [],
       "warnings": [],
       "status": "pass",
-      "major": true
+      "major": true,
+      "ai_declaration": "human-authored, expert-reviewed",
+      "content_usage": "ai-input=yes, search=yes",
+      "llms_links": [
+        "https://tkctalent.com/llms.txt"
+      ],
+      "ai_parse_ok": true,
+      "ai_notes": []
     },
     {
       "route": "/book-alia-bhatt/",
@@ -204,7 +291,14 @@
       "errors": [],
       "warnings": [],
       "status": "pass",
-      "major": true
+      "major": true,
+      "ai_declaration": "human-authored, expert-reviewed",
+      "content_usage": "ai-input=yes, search=yes",
+      "llms_links": [
+        "https://tkctalent.com/llms.txt"
+      ],
+      "ai_parse_ok": true,
+      "ai_notes": []
     },
     {
       "route": "/book-altaf-raja/",
@@ -219,7 +313,14 @@
       "errors": [],
       "warnings": [],
       "status": "pass",
-      "major": true
+      "major": true,
+      "ai_declaration": "human-authored, expert-reviewed",
+      "content_usage": "ai-input=yes, search=yes",
+      "llms_links": [
+        "https://tkctalent.com/llms.txt"
+      ],
+      "ai_parse_ok": true,
+      "ai_notes": []
     },
     {
       "route": "/book-ananya-panday/",
@@ -234,7 +335,14 @@
       "errors": [],
       "warnings": [],
       "status": "pass",
-      "major": true
+      "major": true,
+      "ai_declaration": "human-authored, expert-reviewed",
+      "content_usage": "ai-input=yes, search=yes",
+      "llms_links": [
+        "https://tkctalent.com/llms.txt"
+      ],
+      "ai_parse_ok": true,
+      "ai_notes": []
     },
     {
       "route": "/book-aneet-padda/",
@@ -249,7 +357,14 @@
       "errors": [],
       "warnings": [],
       "status": "pass",
-      "major": true
+      "major": true,
+      "ai_declaration": "human-authored, expert-reviewed",
+      "content_usage": "ai-input=yes, search=yes",
+      "llms_links": [
+        "https://tkctalent.com/llms.txt"
+      ],
+      "ai_parse_ok": true,
+      "ai_notes": []
     },
     {
       "route": "/book-anil-kapoor/",
@@ -264,7 +379,14 @@
       "errors": [],
       "warnings": [],
       "status": "pass",
-      "major": true
+      "major": true,
+      "ai_declaration": "human-authored, expert-reviewed",
+      "content_usage": "ai-input=yes, search=yes",
+      "llms_links": [
+        "https://tkctalent.com/llms.txt"
+      ],
+      "ai_parse_ok": true,
+      "ai_notes": []
     },
     {
       "route": "/book-anubhav-singh-bassi/",
@@ -279,7 +401,14 @@
       "errors": [],
       "warnings": [],
       "status": "pass",
-      "major": true
+      "major": true,
+      "ai_declaration": "human-authored, expert-reviewed",
+      "content_usage": "ai-input=yes, search=yes",
+      "llms_links": [
+        "https://tkctalent.com/llms.txt"
+      ],
+      "ai_parse_ok": true,
+      "ai_notes": []
     },
     {
       "route": "/book-anushka-sharma/",
@@ -294,7 +423,14 @@
       "errors": [],
       "warnings": [],
       "status": "pass",
-      "major": true
+      "major": true,
+      "ai_declaration": "human-authored, expert-reviewed",
+      "content_usage": "ai-input=yes, search=yes",
+      "llms_links": [
+        "https://tkctalent.com/llms.txt"
+      ],
+      "ai_parse_ok": true,
+      "ai_notes": []
     },
     {
       "route": "/book-ar-rahman/",
@@ -309,7 +445,14 @@
       "errors": [],
       "warnings": [],
       "status": "pass",
-      "major": true
+      "major": true,
+      "ai_declaration": "human-authored, expert-reviewed",
+      "content_usage": "ai-input=yes, search=yes",
+      "llms_links": [
+        "https://tkctalent.com/llms.txt"
+      ],
+      "ai_parse_ok": true,
+      "ai_notes": []
     },
     {
       "route": "/book-arijit-singh/",
@@ -324,7 +467,14 @@
       "errors": [],
       "warnings": [],
       "status": "pass",
-      "major": true
+      "major": true,
+      "ai_declaration": "human-authored, expert-reviewed",
+      "content_usage": "ai-input=yes, search=yes",
+      "llms_links": [
+        "https://tkctalent.com/llms.txt"
+      ],
+      "ai_parse_ok": true,
+      "ai_notes": []
     },
     {
       "route": "/book-arjun-kapoor/",
@@ -339,7 +489,14 @@
       "errors": [],
       "warnings": [],
       "status": "pass",
-      "major": true
+      "major": true,
+      "ai_declaration": "human-authored, expert-reviewed",
+      "content_usage": "ai-input=yes, search=yes",
+      "llms_links": [
+        "https://tkctalent.com/llms.txt"
+      ],
+      "ai_parse_ok": true,
+      "ai_notes": []
     },
     {
       "route": "/book-armaan-malik/",
@@ -354,7 +511,14 @@
       "errors": [],
       "warnings": [],
       "status": "pass",
-      "major": true
+      "major": true,
+      "ai_declaration": "human-authored, expert-reviewed",
+      "content_usage": "ai-input=yes, search=yes",
+      "llms_links": [
+        "https://tkctalent.com/llms.txt"
+      ],
+      "ai_parse_ok": true,
+      "ai_notes": []
     },
     {
       "route": "/book-asees-kaur/",
@@ -369,7 +533,14 @@
       "errors": [],
       "warnings": [],
       "status": "pass",
-      "major": true
+      "major": true,
+      "ai_declaration": "human-authored, expert-reviewed",
+      "content_usage": "ai-input=yes, search=yes",
+      "llms_links": [
+        "https://tkctalent.com/llms.txt"
+      ],
+      "ai_parse_ok": true,
+      "ai_notes": []
     },
     {
       "route": "/book-ayushmann-khurrana/",
@@ -384,7 +555,14 @@
       "errors": [],
       "warnings": [],
       "status": "pass",
-      "major": true
+      "major": true,
+      "ai_declaration": "human-authored, expert-reviewed",
+      "content_usage": "ai-input=yes, search=yes",
+      "llms_links": [
+        "https://tkctalent.com/llms.txt"
+      ],
+      "ai_parse_ok": true,
+      "ai_notes": []
     },
     {
       "route": "/book-b-praak/",
@@ -399,7 +577,14 @@
       "errors": [],
       "warnings": [],
       "status": "pass",
-      "major": true
+      "major": true,
+      "ai_declaration": "human-authored, expert-reviewed",
+      "content_usage": "ai-input=yes, search=yes",
+      "llms_links": [
+        "https://tkctalent.com/llms.txt"
+      ],
+      "ai_parse_ok": true,
+      "ai_notes": []
     },
     {
       "route": "/book-badshah/",
@@ -414,7 +599,14 @@
       "errors": [],
       "warnings": [],
       "status": "pass",
-      "major": true
+      "major": true,
+      "ai_declaration": "human-authored, expert-reviewed",
+      "content_usage": "ai-input=yes, search=yes",
+      "llms_links": [
+        "https://tkctalent.com/llms.txt"
+      ],
+      "ai_parse_ok": true,
+      "ai_notes": []
     },
     {
       "route": "/book-bharti-singh/",
@@ -429,7 +621,14 @@
       "errors": [],
       "warnings": [],
       "status": "pass",
-      "major": true
+      "major": true,
+      "ai_declaration": "human-authored, expert-reviewed",
+      "content_usage": "ai-input=yes, search=yes",
+      "llms_links": [
+        "https://tkctalent.com/llms.txt"
+      ],
+      "ai_parse_ok": true,
+      "ai_notes": []
     },
     {
       "route": "/book-biswa-kalyan-rath/",
@@ -444,7 +643,14 @@
       "errors": [],
       "warnings": [],
       "status": "pass",
-      "major": true
+      "major": true,
+      "ai_declaration": "human-authored, expert-reviewed",
+      "content_usage": "ai-input=yes, search=yes",
+      "llms_links": [
+        "https://tkctalent.com/llms.txt"
+      ],
+      "ai_parse_ok": true,
+      "ai_notes": []
     },
     {
       "route": "/book-bobby-deol/",
@@ -459,7 +665,14 @@
       "errors": [],
       "warnings": [],
       "status": "pass",
-      "major": true
+      "major": true,
+      "ai_declaration": "human-authored, expert-reviewed",
+      "content_usage": "ai-input=yes, search=yes",
+      "llms_links": [
+        "https://tkctalent.com/llms.txt"
+      ],
+      "ai_parse_ok": true,
+      "ai_notes": []
     },
     {
       "route": "/book-chitrangada-singh/",
@@ -474,7 +687,14 @@
       "errors": [],
       "warnings": [],
       "status": "pass",
-      "major": true
+      "major": true,
+      "ai_declaration": "human-authored, expert-reviewed",
+      "content_usage": "ai-input=yes, search=yes",
+      "llms_links": [
+        "https://tkctalent.com/llms.txt"
+      ],
+      "ai_parse_ok": true,
+      "ai_notes": []
     },
     {
       "route": "/book-darshan-raval/",
@@ -489,7 +709,14 @@
       "errors": [],
       "warnings": [],
       "status": "pass",
-      "major": true
+      "major": true,
+      "ai_declaration": "human-authored, expert-reviewed",
+      "content_usage": "ai-input=yes, search=yes",
+      "llms_links": [
+        "https://tkctalent.com/llms.txt"
+      ],
+      "ai_parse_ok": true,
+      "ai_notes": []
     },
     {
       "route": "/book-deepika-padukone/",
@@ -504,7 +731,14 @@
       "errors": [],
       "warnings": [],
       "status": "pass",
-      "major": true
+      "major": true,
+      "ai_declaration": "human-authored, expert-reviewed",
+      "content_usage": "ai-input=yes, search=yes",
+      "llms_links": [
+        "https://tkctalent.com/llms.txt"
+      ],
+      "ai_parse_ok": true,
+      "ai_notes": []
     },
     {
       "route": "/book-dia-mirza/",
@@ -519,7 +753,14 @@
       "errors": [],
       "warnings": [],
       "status": "pass",
-      "major": true
+      "major": true,
+      "ai_declaration": "human-authored, expert-reviewed",
+      "content_usage": "ai-input=yes, search=yes",
+      "llms_links": [
+        "https://tkctalent.com/llms.txt"
+      ],
+      "ai_parse_ok": true,
+      "ai_notes": []
     },
     {
       "route": "/book-diljit-dosanjh/",
@@ -534,7 +775,14 @@
       "errors": [],
       "warnings": [],
       "status": "pass",
-      "major": true
+      "major": true,
+      "ai_declaration": "human-authored, expert-reviewed",
+      "content_usage": "ai-input=yes, search=yes",
+      "llms_links": [
+        "https://tkctalent.com/llms.txt"
+      ],
+      "ai_parse_ok": true,
+      "ai_notes": []
     },
     {
       "route": "/book-disha-patani/",
@@ -549,7 +797,14 @@
       "errors": [],
       "warnings": [],
       "status": "pass",
-      "major": true
+      "major": true,
+      "ai_declaration": "human-authored, expert-reviewed",
+      "content_usage": "ai-input=yes, search=yes",
+      "llms_links": [
+        "https://tkctalent.com/llms.txt"
+      ],
+      "ai_parse_ok": true,
+      "ai_notes": []
     },
     {
       "route": "/book-esha-gupta/",
@@ -564,7 +819,14 @@
       "errors": [],
       "warnings": [],
       "status": "pass",
-      "major": true
+      "major": true,
+      "ai_declaration": "human-authored, expert-reviewed",
+      "content_usage": "ai-input=yes, search=yes",
+      "llms_links": [
+        "https://tkctalent.com/llms.txt"
+      ],
+      "ai_parse_ok": true,
+      "ai_notes": []
     },
     {
       "route": "/book-fatima-sana-shaikh/",
@@ -579,7 +841,14 @@
       "errors": [],
       "warnings": [],
       "status": "pass",
-      "major": true
+      "major": true,
+      "ai_declaration": "human-authored, expert-reviewed",
+      "content_usage": "ai-input=yes, search=yes",
+      "llms_links": [
+        "https://tkctalent.com/llms.txt"
+      ],
+      "ai_parse_ok": true,
+      "ai_notes": []
     },
     {
       "route": "/book-gaurav-kapoor/",
@@ -594,7 +863,14 @@
       "errors": [],
       "warnings": [],
       "status": "pass",
-      "major": true
+      "major": true,
+      "ai_declaration": "human-authored, expert-reviewed",
+      "content_usage": "ai-input=yes, search=yes",
+      "llms_links": [
+        "https://tkctalent.com/llms.txt"
+      ],
+      "ai_parse_ok": true,
+      "ai_notes": []
     },
     {
       "route": "/book-guru-randhawa/",
@@ -609,7 +885,14 @@
       "errors": [],
       "warnings": [],
       "status": "pass",
-      "major": true
+      "major": true,
+      "ai_declaration": "human-authored, expert-reviewed",
+      "content_usage": "ai-input=yes, search=yes",
+      "llms_links": [
+        "https://tkctalent.com/llms.txt"
+      ],
+      "ai_parse_ok": true,
+      "ai_notes": []
     },
     {
       "route": "/book-hanumankind/",
@@ -624,7 +907,14 @@
       "errors": [],
       "warnings": [],
       "status": "pass",
-      "major": true
+      "major": true,
+      "ai_declaration": "human-authored, expert-reviewed",
+      "content_usage": "ai-input=yes, search=yes",
+      "llms_links": [
+        "https://tkctalent.com/llms.txt"
+      ],
+      "ai_parse_ok": true,
+      "ai_notes": []
     },
     {
       "route": "/book-hrithik-roshan/",
@@ -639,7 +929,14 @@
       "errors": [],
       "warnings": [],
       "status": "pass",
-      "major": true
+      "major": true,
+      "ai_declaration": "human-authored, expert-reviewed",
+      "content_usage": "ai-input=yes, search=yes",
+      "llms_links": [
+        "https://tkctalent.com/llms.txt"
+      ],
+      "ai_parse_ok": true,
+      "ai_notes": []
     },
     {
       "route": "/book-huma-qureshi/",
@@ -654,7 +951,14 @@
       "errors": [],
       "warnings": [],
       "status": "pass",
-      "major": true
+      "major": true,
+      "ai_declaration": "human-authored, expert-reviewed",
+      "content_usage": "ai-input=yes, search=yes",
+      "llms_links": [
+        "https://tkctalent.com/llms.txt"
+      ],
+      "ai_parse_ok": true,
+      "ai_notes": []
     },
     {
       "route": "/book-jacqueline-fernandez/",
@@ -669,7 +973,14 @@
       "errors": [],
       "warnings": [],
       "status": "pass",
-      "major": true
+      "major": true,
+      "ai_declaration": "human-authored, expert-reviewed",
+      "content_usage": "ai-input=yes, search=yes",
+      "llms_links": [
+        "https://tkctalent.com/llms.txt"
+      ],
+      "ai_parse_ok": true,
+      "ai_notes": []
     },
     {
       "route": "/book-janhvi-kapoor/",
@@ -684,7 +995,14 @@
       "errors": [],
       "warnings": [],
       "status": "pass",
-      "major": true
+      "major": true,
+      "ai_declaration": "human-authored, expert-reviewed",
+      "content_usage": "ai-input=yes, search=yes",
+      "llms_links": [
+        "https://tkctalent.com/llms.txt"
+      ],
+      "ai_parse_ok": true,
+      "ai_notes": []
     },
     {
       "route": "/book-jasmine-sandlas/",
@@ -699,7 +1017,14 @@
       "errors": [],
       "warnings": [],
       "status": "pass",
-      "major": true
+      "major": true,
+      "ai_declaration": "human-authored, expert-reviewed",
+      "content_usage": "ai-input=yes, search=yes",
+      "llms_links": [
+        "https://tkctalent.com/llms.txt"
+      ],
+      "ai_parse_ok": true,
+      "ai_notes": []
     },
     {
       "route": "/book-jennifer-winget/",
@@ -714,7 +1039,14 @@
       "errors": [],
       "warnings": [],
       "status": "pass",
-      "major": true
+      "major": true,
+      "ai_declaration": "human-authored, expert-reviewed",
+      "content_usage": "ai-input=yes, search=yes",
+      "llms_links": [
+        "https://tkctalent.com/llms.txt"
+      ],
+      "ai_parse_ok": true,
+      "ai_notes": []
     },
     {
       "route": "/book-jonita-gandhi/",
@@ -729,7 +1061,14 @@
       "errors": [],
       "warnings": [],
       "status": "pass",
-      "major": true
+      "major": true,
+      "ai_declaration": "human-authored, expert-reviewed",
+      "content_usage": "ai-input=yes, search=yes",
+      "llms_links": [
+        "https://tkctalent.com/llms.txt"
+      ],
+      "ai_parse_ok": true,
+      "ai_notes": []
     },
     {
       "route": "/book-jubin-nautiyal/",
@@ -744,7 +1083,14 @@
       "errors": [],
       "warnings": [],
       "status": "pass",
-      "major": true
+      "major": true,
+      "ai_declaration": "human-authored, expert-reviewed",
+      "content_usage": "ai-input=yes, search=yes",
+      "llms_links": [
+        "https://tkctalent.com/llms.txt"
+      ],
+      "ai_parse_ok": true,
+      "ai_notes": []
     },
     {
       "route": "/book-kajol/",
@@ -759,7 +1105,14 @@
       "errors": [],
       "warnings": [],
       "status": "pass",
-      "major": true
+      "major": true,
+      "ai_declaration": "human-authored, expert-reviewed",
+      "content_usage": "ai-input=yes, search=yes",
+      "llms_links": [
+        "https://tkctalent.com/llms.txt"
+      ],
+      "ai_parse_ok": true,
+      "ai_notes": []
     },
     {
       "route": "/book-kanan-gill/",
@@ -774,7 +1127,14 @@
       "errors": [],
       "warnings": [],
       "status": "pass",
-      "major": true
+      "major": true,
+      "ai_declaration": "human-authored, expert-reviewed",
+      "content_usage": "ai-input=yes, search=yes",
+      "llms_links": [
+        "https://tkctalent.com/llms.txt"
+      ],
+      "ai_parse_ok": true,
+      "ai_notes": []
     },
     {
       "route": "/book-kangana-ranaut/",
@@ -789,7 +1149,14 @@
       "errors": [],
       "warnings": [],
       "status": "pass",
-      "major": true
+      "major": true,
+      "ai_declaration": "human-authored, expert-reviewed",
+      "content_usage": "ai-input=yes, search=yes",
+      "llms_links": [
+        "https://tkctalent.com/llms.txt"
+      ],
+      "ai_parse_ok": true,
+      "ai_notes": []
     },
     {
       "route": "/book-kanika-kapoor/",
@@ -804,7 +1171,14 @@
       "errors": [],
       "warnings": [],
       "status": "pass",
-      "major": true
+      "major": true,
+      "ai_declaration": "human-authored, expert-reviewed",
+      "content_usage": "ai-input=yes, search=yes",
+      "llms_links": [
+        "https://tkctalent.com/llms.txt"
+      ],
+      "ai_parse_ok": true,
+      "ai_notes": []
     },
     {
       "route": "/book-kapil-sharma/",
@@ -819,7 +1193,14 @@
       "errors": [],
       "warnings": [],
       "status": "pass",
-      "major": true
+      "major": true,
+      "ai_declaration": "human-authored, expert-reviewed",
+      "content_usage": "ai-input=yes, search=yes",
+      "llms_links": [
+        "https://tkctalent.com/llms.txt"
+      ],
+      "ai_parse_ok": true,
+      "ai_notes": []
     },
     {
       "route": "/book-kareena-kapoor/",
@@ -834,7 +1215,14 @@
       "errors": [],
       "warnings": [],
       "status": "pass",
-      "major": true
+      "major": true,
+      "ai_declaration": "human-authored, expert-reviewed",
+      "content_usage": "ai-input=yes, search=yes",
+      "llms_links": [
+        "https://tkctalent.com/llms.txt"
+      ],
+      "ai_parse_ok": true,
+      "ai_notes": []
     },
     {
       "route": "/book-karishma-tanna/",
@@ -849,7 +1237,14 @@
       "errors": [],
       "warnings": [],
       "status": "pass",
-      "major": true
+      "major": true,
+      "ai_declaration": "human-authored, expert-reviewed",
+      "content_usage": "ai-input=yes, search=yes",
+      "llms_links": [
+        "https://tkctalent.com/llms.txt"
+      ],
+      "ai_parse_ok": true,
+      "ai_notes": []
     },
     {
       "route": "/book-kartik-aaryan/",
@@ -864,7 +1259,14 @@
       "errors": [],
       "warnings": [],
       "status": "pass",
-      "major": true
+      "major": true,
+      "ai_declaration": "human-authored, expert-reviewed",
+      "content_usage": "ai-input=yes, search=yes",
+      "llms_links": [
+        "https://tkctalent.com/llms.txt"
+      ],
+      "ai_parse_ok": true,
+      "ai_notes": []
     },
     {
       "route": "/book-katrina-kaif/",
@@ -879,7 +1281,14 @@
       "errors": [],
       "warnings": [],
       "status": "pass",
-      "major": true
+      "major": true,
+      "ai_declaration": "human-authored, expert-reviewed",
+      "content_usage": "ai-input=yes, search=yes",
+      "llms_links": [
+        "https://tkctalent.com/llms.txt"
+      ],
+      "ai_parse_ok": true,
+      "ai_notes": []
     },
     {
       "route": "/book-kenny-sebastian/",
@@ -894,7 +1303,14 @@
       "errors": [],
       "warnings": [],
       "status": "pass",
-      "major": true
+      "major": true,
+      "ai_declaration": "human-authored, expert-reviewed",
+      "content_usage": "ai-input=yes, search=yes",
+      "llms_links": [
+        "https://tkctalent.com/llms.txt"
+      ],
+      "ai_parse_ok": true,
+      "ai_notes": []
     },
     {
       "route": "/book-kiara-advani/",
@@ -909,7 +1325,14 @@
       "errors": [],
       "warnings": [],
       "status": "pass",
-      "major": true
+      "major": true,
+      "ai_declaration": "human-authored, expert-reviewed",
+      "content_usage": "ai-input=yes, search=yes",
+      "llms_links": [
+        "https://tkctalent.com/llms.txt"
+      ],
+      "ai_parse_ok": true,
+      "ai_notes": []
     },
     {
       "route": "/book-konkona-sen-sharma/",
@@ -924,7 +1347,14 @@
       "errors": [],
       "warnings": [],
       "status": "pass",
-      "major": true
+      "major": true,
+      "ai_declaration": "human-authored, expert-reviewed",
+      "content_usage": "ai-input=yes, search=yes",
+      "llms_links": [
+        "https://tkctalent.com/llms.txt"
+      ],
+      "ai_parse_ok": true,
+      "ai_notes": []
     },
     {
       "route": "/book-kriti-sanon/",
@@ -939,7 +1369,14 @@
       "errors": [],
       "warnings": [],
       "status": "pass",
-      "major": true
+      "major": true,
+      "ai_declaration": "human-authored, expert-reviewed",
+      "content_usage": "ai-input=yes, search=yes",
+      "llms_links": [
+        "https://tkctalent.com/llms.txt"
+      ],
+      "ai_parse_ok": true,
+      "ai_notes": []
     },
     {
       "route": "/book-krushna-abhishek/",
@@ -954,7 +1391,14 @@
       "errors": [],
       "warnings": [],
       "status": "pass",
-      "major": true
+      "major": true,
+      "ai_declaration": "human-authored, expert-reviewed",
+      "content_usage": "ai-input=yes, search=yes",
+      "llms_links": [
+        "https://tkctalent.com/llms.txt"
+      ],
+      "ai_parse_ok": true,
+      "ai_notes": []
     },
     {
       "route": "/book-kumar-sanu/",
@@ -969,7 +1413,14 @@
       "errors": [],
       "warnings": [],
       "status": "pass",
-      "major": true
+      "major": true,
+      "ai_declaration": "human-authored, expert-reviewed",
+      "content_usage": "ai-input=yes, search=yes",
+      "llms_links": [
+        "https://tkctalent.com/llms.txt"
+      ],
+      "ai_parse_ok": true,
+      "ai_notes": []
     },
     {
       "route": "/book-lara-dutta/",
@@ -984,7 +1435,14 @@
       "errors": [],
       "warnings": [],
       "status": "pass",
-      "major": true
+      "major": true,
+      "ai_declaration": "human-authored, expert-reviewed",
+      "content_usage": "ai-input=yes, search=yes",
+      "llms_links": [
+        "https://tkctalent.com/llms.txt"
+      ],
+      "ai_parse_ok": true,
+      "ai_notes": []
     },
     {
       "route": "/book-lucky-ali/",
@@ -999,7 +1457,14 @@
       "errors": [],
       "warnings": [],
       "status": "pass",
-      "major": true
+      "major": true,
+      "ai_declaration": "human-authored, expert-reviewed",
+      "content_usage": "ai-input=yes, search=yes",
+      "llms_links": [
+        "https://tkctalent.com/llms.txt"
+      ],
+      "ai_parse_ok": true,
+      "ai_notes": []
     },
     {
       "route": "/book-mandira-bedi/",
@@ -1014,7 +1479,14 @@
       "errors": [],
       "warnings": [],
       "status": "pass",
-      "major": true
+      "major": true,
+      "ai_declaration": "human-authored, expert-reviewed",
+      "content_usage": "ai-input=yes, search=yes",
+      "llms_links": [
+        "https://tkctalent.com/llms.txt"
+      ],
+      "ai_parse_ok": true,
+      "ai_notes": []
     },
     {
       "route": "/book-manoj-bajpayee/",
@@ -1029,7 +1501,14 @@
       "errors": [],
       "warnings": [],
       "status": "pass",
-      "major": true
+      "major": true,
+      "ai_declaration": "human-authored, expert-reviewed",
+      "content_usage": "ai-input=yes, search=yes",
+      "llms_links": [
+        "https://tkctalent.com/llms.txt"
+      ],
+      "ai_parse_ok": true,
+      "ai_notes": []
     },
     {
       "route": "/book-meet-bros/",
@@ -1044,7 +1523,14 @@
       "errors": [],
       "warnings": [],
       "status": "pass",
-      "major": true
+      "major": true,
+      "ai_declaration": "human-authored, expert-reviewed",
+      "content_usage": "ai-input=yes, search=yes",
+      "llms_links": [
+        "https://tkctalent.com/llms.txt"
+      ],
+      "ai_parse_ok": true,
+      "ai_notes": []
     },
     {
       "route": "/book-mohit-chauhan/",
@@ -1059,7 +1545,14 @@
       "errors": [],
       "warnings": [],
       "status": "pass",
-      "major": true
+      "major": true,
+      "ai_declaration": "human-authored, expert-reviewed",
+      "content_usage": "ai-input=yes, search=yes",
+      "llms_links": [
+        "https://tkctalent.com/llms.txt"
+      ],
+      "ai_parse_ok": true,
+      "ai_notes": []
     },
     {
       "route": "/book-mrunal-thakur/",
@@ -1074,7 +1567,14 @@
       "errors": [],
       "warnings": [],
       "status": "pass",
-      "major": true
+      "major": true,
+      "ai_declaration": "human-authored, expert-reviewed",
+      "content_usage": "ai-input=yes, search=yes",
+      "llms_links": [
+        "https://tkctalent.com/llms.txt"
+      ],
+      "ai_parse_ok": true,
+      "ai_notes": []
     },
     {
       "route": "/book-munawar-faruqui/",
@@ -1089,7 +1589,14 @@
       "errors": [],
       "warnings": [],
       "status": "pass",
-      "major": true
+      "major": true,
+      "ai_declaration": "human-authored, expert-reviewed",
+      "content_usage": "ai-input=yes, search=yes",
+      "llms_links": [
+        "https://tkctalent.com/llms.txt"
+      ],
+      "ai_parse_ok": true,
+      "ai_notes": []
     },
     {
       "route": "/book-nawazuddin-siddiqui/",
@@ -1104,7 +1611,14 @@
       "errors": [],
       "warnings": [],
       "status": "pass",
-      "major": true
+      "major": true,
+      "ai_declaration": "human-authored, expert-reviewed",
+      "content_usage": "ai-input=yes, search=yes",
+      "llms_links": [
+        "https://tkctalent.com/llms.txt"
+      ],
+      "ai_parse_ok": true,
+      "ai_notes": []
     },
     {
       "route": "/book-neha-bhasin/",
@@ -1119,7 +1633,14 @@
       "errors": [],
       "warnings": [],
       "status": "pass",
-      "major": true
+      "major": true,
+      "ai_declaration": "human-authored, expert-reviewed",
+      "content_usage": "ai-input=yes, search=yes",
+      "llms_links": [
+        "https://tkctalent.com/llms.txt"
+      ],
+      "ai_parse_ok": true,
+      "ai_notes": []
     },
     {
       "route": "/book-neha-kakkar/",
@@ -1134,7 +1655,14 @@
       "errors": [],
       "warnings": [],
       "status": "pass",
-      "major": true
+      "major": true,
+      "ai_declaration": "human-authored, expert-reviewed",
+      "content_usage": "ai-input=yes, search=yes",
+      "llms_links": [
+        "https://tkctalent.com/llms.txt"
+      ],
+      "ai_parse_ok": true,
+      "ai_notes": []
     },
     {
       "route": "/book-nikita-dutta/",
@@ -1149,7 +1677,14 @@
       "errors": [],
       "warnings": [],
       "status": "pass",
-      "major": true
+      "major": true,
+      "ai_declaration": "human-authored, expert-reviewed",
+      "content_usage": "ai-input=yes, search=yes",
+      "llms_links": [
+        "https://tkctalent.com/llms.txt"
+      ],
+      "ai_parse_ok": true,
+      "ai_notes": []
     },
     {
       "route": "/book-nimrat-kaur/",
@@ -1164,7 +1699,14 @@
       "errors": [],
       "warnings": [],
       "status": "pass",
-      "major": true
+      "major": true,
+      "ai_declaration": "human-authored, expert-reviewed",
+      "content_usage": "ai-input=yes, search=yes",
+      "llms_links": [
+        "https://tkctalent.com/llms.txt"
+      ],
+      "ai_parse_ok": true,
+      "ai_notes": []
     },
     {
       "route": "/book-nishant-tanwar/",
@@ -1179,7 +1721,14 @@
       "errors": [],
       "warnings": [],
       "status": "pass",
-      "major": true
+      "major": true,
+      "ai_declaration": "human-authored, expert-reviewed",
+      "content_usage": "ai-input=yes, search=yes",
+      "llms_links": [
+        "https://tkctalent.com/llms.txt"
+      ],
+      "ai_parse_ok": true,
+      "ai_notes": []
     },
     {
       "route": "/book-nora-fatehi/",
@@ -1194,7 +1743,14 @@
       "errors": [],
       "warnings": [],
       "status": "pass",
-      "major": true
+      "major": true,
+      "ai_declaration": "human-authored, expert-reviewed",
+      "content_usage": "ai-input=yes, search=yes",
+      "llms_links": [
+        "https://tkctalent.com/llms.txt"
+      ],
+      "ai_parse_ok": true,
+      "ai_notes": []
     },
     {
       "route": "/book-nushrratt-bharuccha/",
@@ -1209,7 +1765,14 @@
       "errors": [],
       "warnings": [],
       "status": "pass",
-      "major": true
+      "major": true,
+      "ai_declaration": "human-authored, expert-reviewed",
+      "content_usage": "ai-input=yes, search=yes",
+      "llms_links": [
+        "https://tkctalent.com/llms.txt"
+      ],
+      "ai_parse_ok": true,
+      "ai_notes": []
     },
     {
       "route": "/book-palak-muchhal/",
@@ -1224,7 +1787,14 @@
       "errors": [],
       "warnings": [],
       "status": "pass",
-      "major": true
+      "major": true,
+      "ai_declaration": "human-authored, expert-reviewed",
+      "content_usage": "ai-input=yes, search=yes",
+      "llms_links": [
+        "https://tkctalent.com/llms.txt"
+      ],
+      "ai_parse_ok": true,
+      "ai_notes": []
     },
     {
       "route": "/book-palak-tiwari/",
@@ -1239,7 +1809,14 @@
       "errors": [],
       "warnings": [],
       "status": "pass",
-      "major": true
+      "major": true,
+      "ai_declaration": "human-authored, expert-reviewed",
+      "content_usage": "ai-input=yes, search=yes",
+      "llms_links": [
+        "https://tkctalent.com/llms.txt"
+      ],
+      "ai_parse_ok": true,
+      "ai_notes": []
     },
     {
       "route": "/book-pankaj-tripathi/",
@@ -1254,7 +1831,14 @@
       "errors": [],
       "warnings": [],
       "status": "pass",
-      "major": true
+      "major": true,
+      "ai_declaration": "human-authored, expert-reviewed",
+      "content_usage": "ai-input=yes, search=yes",
+      "llms_links": [
+        "https://tkctalent.com/llms.txt"
+      ],
+      "ai_parse_ok": true,
+      "ai_notes": []
     },
     {
       "route": "/book-pooja-hegde/",
@@ -1269,7 +1853,14 @@
       "errors": [],
       "warnings": [],
       "status": "pass",
-      "major": true
+      "major": true,
+      "ai_declaration": "human-authored, expert-reviewed",
+      "content_usage": "ai-input=yes, search=yes",
+      "llms_links": [
+        "https://tkctalent.com/llms.txt"
+      ],
+      "ai_parse_ok": true,
+      "ai_notes": []
     },
     {
       "route": "/book-pritam/",
@@ -1284,7 +1875,14 @@
       "errors": [],
       "warnings": [],
       "status": "pass",
-      "major": true
+      "major": true,
+      "ai_declaration": "human-authored, expert-reviewed",
+      "content_usage": "ai-input=yes, search=yes",
+      "llms_links": [
+        "https://tkctalent.com/llms.txt"
+      ],
+      "ai_parse_ok": true,
+      "ai_notes": []
     },
     {
       "route": "/book-priyanka-chopra/",
@@ -1299,7 +1897,14 @@
       "errors": [],
       "warnings": [],
       "status": "pass",
-      "major": true
+      "major": true,
+      "ai_declaration": "human-authored, expert-reviewed",
+      "content_usage": "ai-input=yes, search=yes",
+      "llms_links": [
+        "https://tkctalent.com/llms.txt"
+      ],
+      "ai_parse_ok": true,
+      "ai_notes": []
     },
     {
       "route": "/book-rahul-subramanian/",
@@ -1314,7 +1919,14 @@
       "errors": [],
       "warnings": [],
       "status": "pass",
-      "major": true
+      "major": true,
+      "ai_declaration": "human-authored, expert-reviewed",
+      "content_usage": "ai-input=yes, search=yes",
+      "llms_links": [
+        "https://tkctalent.com/llms.txt"
+      ],
+      "ai_parse_ok": true,
+      "ai_notes": []
     },
     {
       "route": "/book-rajkummar-rao/",
@@ -1329,7 +1941,14 @@
       "errors": [],
       "warnings": [],
       "status": "pass",
-      "major": true
+      "major": true,
+      "ai_declaration": "human-authored, expert-reviewed",
+      "content_usage": "ai-input=yes, search=yes",
+      "llms_links": [
+        "https://tkctalent.com/llms.txt"
+      ],
+      "ai_parse_ok": true,
+      "ai_notes": []
     },
     {
       "route": "/book-rakul-preet/",
@@ -1344,7 +1963,14 @@
       "errors": [],
       "warnings": [],
       "status": "pass",
-      "major": true
+      "major": true,
+      "ai_declaration": "human-authored, expert-reviewed",
+      "content_usage": "ai-input=yes, search=yes",
+      "llms_links": [
+        "https://tkctalent.com/llms.txt"
+      ],
+      "ai_parse_ok": true,
+      "ai_notes": []
     },
     {
       "route": "/book-ranbir-kapoor/",
@@ -1359,7 +1985,14 @@
       "errors": [],
       "warnings": [],
       "status": "pass",
-      "major": true
+      "major": true,
+      "ai_declaration": "human-authored, expert-reviewed",
+      "content_usage": "ai-input=yes, search=yes",
+      "llms_links": [
+        "https://tkctalent.com/llms.txt"
+      ],
+      "ai_parse_ok": true,
+      "ai_notes": []
     },
     {
       "route": "/book-rani-mukerji/",
@@ -1374,7 +2007,14 @@
       "errors": [],
       "warnings": [],
       "status": "pass",
-      "major": true
+      "major": true,
+      "ai_declaration": "human-authored, expert-reviewed",
+      "content_usage": "ai-input=yes, search=yes",
+      "llms_links": [
+        "https://tkctalent.com/llms.txt"
+      ],
+      "ai_parse_ok": true,
+      "ai_notes": []
     },
     {
       "route": "/book-ranveer-singh/",
@@ -1389,7 +2029,14 @@
       "errors": [],
       "warnings": [],
       "status": "pass",
-      "major": true
+      "major": true,
+      "ai_declaration": "human-authored, expert-reviewed",
+      "content_usage": "ai-input=yes, search=yes",
+      "llms_links": [
+        "https://tkctalent.com/llms.txt"
+      ],
+      "ai_parse_ok": true,
+      "ai_notes": []
     },
     {
       "route": "/book-rashmika-mandanna/",
@@ -1404,7 +2051,14 @@
       "errors": [],
       "warnings": [],
       "status": "pass",
-      "major": true
+      "major": true,
+      "ai_declaration": "human-authored, expert-reviewed",
+      "content_usage": "ai-input=yes, search=yes",
+      "llms_links": [
+        "https://tkctalent.com/llms.txt"
+      ],
+      "ai_parse_ok": true,
+      "ai_notes": []
     },
     {
       "route": "/book-rhea-chakraborty/",
@@ -1419,7 +2073,14 @@
       "errors": [],
       "warnings": [],
       "status": "pass",
-      "major": true
+      "major": true,
+      "ai_declaration": "human-authored, expert-reviewed",
+      "content_usage": "ai-input=yes, search=yes",
+      "llms_links": [
+        "https://tkctalent.com/llms.txt"
+      ],
+      "ai_parse_ok": true,
+      "ai_notes": []
     },
     {
       "route": "/book-sachet-parampara/",
@@ -1434,7 +2095,14 @@
       "errors": [],
       "warnings": [],
       "status": "pass",
-      "major": true
+      "major": true,
+      "ai_declaration": "human-authored, expert-reviewed",
+      "content_usage": "ai-input=yes, search=yes",
+      "llms_links": [
+        "https://tkctalent.com/llms.txt"
+      ],
+      "ai_parse_ok": true,
+      "ai_notes": []
     },
     {
       "route": "/book-sachin-jigar/",
@@ -1449,7 +2117,14 @@
       "errors": [],
       "warnings": [],
       "status": "pass",
-      "major": true
+      "major": true,
+      "ai_declaration": "human-authored, expert-reviewed",
+      "content_usage": "ai-input=yes, search=yes",
+      "llms_links": [
+        "https://tkctalent.com/llms.txt"
+      ],
+      "ai_parse_ok": true,
+      "ai_notes": []
     },
     {
       "route": "/book-salim-sulaiman/",
@@ -1464,7 +2139,14 @@
       "errors": [],
       "warnings": [],
       "status": "pass",
-      "major": true
+      "major": true,
+      "ai_declaration": "human-authored, expert-reviewed",
+      "content_usage": "ai-input=yes, search=yes",
+      "llms_links": [
+        "https://tkctalent.com/llms.txt"
+      ],
+      "ai_parse_ok": true,
+      "ai_notes": []
     },
     {
       "route": "/book-salman-khan/",
@@ -1479,7 +2161,14 @@
       "errors": [],
       "warnings": [],
       "status": "pass",
-      "major": true
+      "major": true,
+      "ai_declaration": "human-authored, expert-reviewed",
+      "content_usage": "ai-input=yes, search=yes",
+      "llms_links": [
+        "https://tkctalent.com/llms.txt"
+      ],
+      "ai_parse_ok": true,
+      "ai_notes": []
     },
     {
       "route": "/book-samay-raina/",
@@ -1494,7 +2183,14 @@
       "errors": [],
       "warnings": [],
       "status": "pass",
-      "major": true
+      "major": true,
+      "ai_declaration": "human-authored, expert-reviewed",
+      "content_usage": "ai-input=yes, search=yes",
+      "llms_links": [
+        "https://tkctalent.com/llms.txt"
+      ],
+      "ai_parse_ok": true,
+      "ai_notes": []
     },
     {
       "route": "/book-sanya-malhotra/",
@@ -1509,7 +2205,14 @@
       "errors": [],
       "warnings": [],
       "status": "pass",
-      "major": true
+      "major": true,
+      "ai_declaration": "human-authored, expert-reviewed",
+      "content_usage": "ai-input=yes, search=yes",
+      "llms_links": [
+        "https://tkctalent.com/llms.txt"
+      ],
+      "ai_parse_ok": true,
+      "ai_notes": []
     },
     {
       "route": "/book-sara-ali-khan/",
@@ -1524,7 +2227,14 @@
       "errors": [],
       "warnings": [],
       "status": "pass",
-      "major": true
+      "major": true,
+      "ai_declaration": "human-authored, expert-reviewed",
+      "content_usage": "ai-input=yes, search=yes",
+      "llms_links": [
+        "https://tkctalent.com/llms.txt"
+      ],
+      "ai_parse_ok": true,
+      "ai_notes": []
     },
     {
       "route": "/book-sara-gurpal/",
@@ -1539,7 +2249,14 @@
       "errors": [],
       "warnings": [],
       "status": "pass",
-      "major": true
+      "major": true,
+      "ai_declaration": "human-authored, expert-reviewed",
+      "content_usage": "ai-input=yes, search=yes",
+      "llms_links": [
+        "https://tkctalent.com/llms.txt"
+      ],
+      "ai_parse_ok": true,
+      "ai_notes": []
     },
     {
       "route": "/book-saumya-tandon/",
@@ -1554,7 +2271,14 @@
       "errors": [],
       "warnings": [],
       "status": "pass",
-      "major": true
+      "major": true,
+      "ai_declaration": "human-authored, expert-reviewed",
+      "content_usage": "ai-input=yes, search=yes",
+      "llms_links": [
+        "https://tkctalent.com/llms.txt"
+      ],
+      "ai_parse_ok": true,
+      "ai_notes": []
     },
     {
       "route": "/book-shah-rukh-khan/",
@@ -1569,7 +2293,14 @@
       "errors": [],
       "warnings": [],
       "status": "pass",
-      "major": true
+      "major": true,
+      "ai_declaration": "human-authored, expert-reviewed",
+      "content_usage": "ai-input=yes, search=yes",
+      "llms_links": [
+        "https://tkctalent.com/llms.txt"
+      ],
+      "ai_parse_ok": true,
+      "ai_notes": []
     },
     {
       "route": "/book-shahid-kapoor/",
@@ -1584,7 +2315,14 @@
       "errors": [],
       "warnings": [],
       "status": "pass",
-      "major": true
+      "major": true,
+      "ai_declaration": "human-authored, expert-reviewed",
+      "content_usage": "ai-input=yes, search=yes",
+      "llms_links": [
+        "https://tkctalent.com/llms.txt"
+      ],
+      "ai_parse_ok": true,
+      "ai_notes": []
     },
     {
       "route": "/book-shamsher-lehri/",
@@ -1599,7 +2337,14 @@
       "errors": [],
       "warnings": [],
       "status": "pass",
-      "major": true
+      "major": true,
+      "ai_declaration": "human-authored, expert-reviewed",
+      "content_usage": "ai-input=yes, search=yes",
+      "llms_links": [
+        "https://tkctalent.com/llms.txt"
+      ],
+      "ai_parse_ok": true,
+      "ai_notes": []
     },
     {
       "route": "/book-shanaya-kapoor/",
@@ -1614,7 +2359,14 @@
       "errors": [],
       "warnings": [],
       "status": "pass",
-      "major": true
+      "major": true,
+      "ai_declaration": "human-authored, expert-reviewed",
+      "content_usage": "ai-input=yes, search=yes",
+      "llms_links": [
+        "https://tkctalent.com/llms.txt"
+      ],
+      "ai_parse_ok": true,
+      "ai_notes": []
     },
     {
       "route": "/book-shankar-mahadevan/",
@@ -1629,7 +2381,14 @@
       "errors": [],
       "warnings": [],
       "status": "pass",
-      "major": true
+      "major": true,
+      "ai_declaration": "human-authored, expert-reviewed",
+      "content_usage": "ai-input=yes, search=yes",
+      "llms_links": [
+        "https://tkctalent.com/llms.txt"
+      ],
+      "ai_parse_ok": true,
+      "ai_notes": []
     },
     {
       "route": "/book-sharvari-wagh/",
@@ -1644,7 +2403,14 @@
       "errors": [],
       "warnings": [],
       "status": "pass",
-      "major": true
+      "major": true,
+      "ai_declaration": "human-authored, expert-reviewed",
+      "content_usage": "ai-input=yes, search=yes",
+      "llms_links": [
+        "https://tkctalent.com/llms.txt"
+      ],
+      "ai_parse_ok": true,
+      "ai_notes": []
     },
     {
       "route": "/book-shehnaaz-gill/",
@@ -1659,7 +2425,14 @@
       "errors": [],
       "warnings": [],
       "status": "pass",
-      "major": true
+      "major": true,
+      "ai_declaration": "human-authored, expert-reviewed",
+      "content_usage": "ai-input=yes, search=yes",
+      "llms_links": [
+        "https://tkctalent.com/llms.txt"
+      ],
+      "ai_parse_ok": true,
+      "ai_notes": []
     },
     {
       "route": "/book-shilpa-shetty/",
@@ -1674,7 +2447,14 @@
       "errors": [],
       "warnings": [],
       "status": "pass",
-      "major": true
+      "major": true,
+      "ai_declaration": "human-authored, expert-reviewed",
+      "content_usage": "ai-input=yes, search=yes",
+      "llms_links": [
+        "https://tkctalent.com/llms.txt"
+      ],
+      "ai_parse_ok": true,
+      "ai_notes": []
     },
     {
       "route": "/book-shraddha-kapoor/",
@@ -1689,7 +2469,14 @@
       "errors": [],
       "warnings": [],
       "status": "pass",
-      "major": true
+      "major": true,
+      "ai_declaration": "human-authored, expert-reviewed",
+      "content_usage": "ai-input=yes, search=yes",
+      "llms_links": [
+        "https://tkctalent.com/llms.txt"
+      ],
+      "ai_parse_ok": true,
+      "ai_notes": []
     },
     {
       "route": "/book-shreya-ghoshal/",
@@ -1704,7 +2491,14 @@
       "errors": [],
       "warnings": [],
       "status": "pass",
-      "major": true
+      "major": true,
+      "ai_declaration": "human-authored, expert-reviewed",
+      "content_usage": "ai-input=yes, search=yes",
+      "llms_links": [
+        "https://tkctalent.com/llms.txt"
+      ],
+      "ai_parse_ok": true,
+      "ai_notes": []
     },
     {
       "route": "/book-shruti-haasan/",
@@ -1719,7 +2513,14 @@
       "errors": [],
       "warnings": [],
       "status": "pass",
-      "major": true
+      "major": true,
+      "ai_declaration": "human-authored, expert-reviewed",
+      "content_usage": "ai-input=yes, search=yes",
+      "llms_links": [
+        "https://tkctalent.com/llms.txt"
+      ],
+      "ai_parse_ok": true,
+      "ai_notes": []
     },
     {
       "route": "/book-shweta-tiwari/",
@@ -1734,7 +2535,14 @@
       "errors": [],
       "warnings": [],
       "status": "pass",
-      "major": true
+      "major": true,
+      "ai_declaration": "human-authored, expert-reviewed",
+      "content_usage": "ai-input=yes, search=yes",
+      "llms_links": [
+        "https://tkctalent.com/llms.txt"
+      ],
+      "ai_parse_ok": true,
+      "ai_notes": []
     },
     {
       "route": "/book-sidharth-malhotra/",
@@ -1749,7 +2557,14 @@
       "errors": [],
       "warnings": [],
       "status": "pass",
-      "major": true
+      "major": true,
+      "ai_declaration": "human-authored, expert-reviewed",
+      "content_usage": "ai-input=yes, search=yes",
+      "llms_links": [
+        "https://tkctalent.com/llms.txt"
+      ],
+      "ai_parse_ok": true,
+      "ai_notes": []
     },
     {
       "route": "/book-sonakshi-sinha/",
@@ -1764,7 +2579,14 @@
       "errors": [],
       "warnings": [],
       "status": "pass",
-      "major": true
+      "major": true,
+      "ai_declaration": "human-authored, expert-reviewed",
+      "content_usage": "ai-input=yes, search=yes",
+      "llms_links": [
+        "https://tkctalent.com/llms.txt"
+      ],
+      "ai_parse_ok": true,
+      "ai_notes": []
     },
     {
       "route": "/book-sonam-bajwa/",
@@ -1779,7 +2601,14 @@
       "errors": [],
       "warnings": [],
       "status": "pass",
-      "major": true
+      "major": true,
+      "ai_declaration": "human-authored, expert-reviewed",
+      "content_usage": "ai-input=yes, search=yes",
+      "llms_links": [
+        "https://tkctalent.com/llms.txt"
+      ],
+      "ai_parse_ok": true,
+      "ai_notes": []
     },
     {
       "route": "/book-sonu-nigam/",
@@ -1794,7 +2623,14 @@
       "errors": [],
       "warnings": [],
       "status": "pass",
-      "major": true
+      "major": true,
+      "ai_declaration": "human-authored, expert-reviewed",
+      "content_usage": "ai-input=yes, search=yes",
+      "llms_links": [
+        "https://tkctalent.com/llms.txt"
+      ],
+      "ai_parse_ok": true,
+      "ai_notes": []
     },
     {
       "route": "/book-sreeleela/",
@@ -1809,7 +2645,14 @@
       "errors": [],
       "warnings": [],
       "status": "pass",
-      "major": true
+      "major": true,
+      "ai_declaration": "human-authored, expert-reviewed",
+      "content_usage": "ai-input=yes, search=yes",
+      "llms_links": [
+        "https://tkctalent.com/llms.txt"
+      ],
+      "ai_parse_ok": true,
+      "ai_notes": []
     },
     {
       "route": "/book-sunanda-sharma/",
@@ -1824,7 +2667,14 @@
       "errors": [],
       "warnings": [],
       "status": "pass",
-      "major": true
+      "major": true,
+      "ai_declaration": "human-authored, expert-reviewed",
+      "content_usage": "ai-input=yes, search=yes",
+      "llms_links": [
+        "https://tkctalent.com/llms.txt"
+      ],
+      "ai_parse_ok": true,
+      "ai_notes": []
     },
     {
       "route": "/book-sunidhi-chauhan/",
@@ -1839,7 +2689,14 @@
       "errors": [],
       "warnings": [],
       "status": "pass",
-      "major": true
+      "major": true,
+      "ai_declaration": "human-authored, expert-reviewed",
+      "content_usage": "ai-input=yes, search=yes",
+      "llms_links": [
+        "https://tkctalent.com/llms.txt"
+      ],
+      "ai_parse_ok": true,
+      "ai_notes": []
     },
     {
       "route": "/book-sunil-grover/",
@@ -1854,7 +2711,14 @@
       "errors": [],
       "warnings": [],
       "status": "pass",
-      "major": true
+      "major": true,
+      "ai_declaration": "human-authored, expert-reviewed",
+      "content_usage": "ai-input=yes, search=yes",
+      "llms_links": [
+        "https://tkctalent.com/llms.txt"
+      ],
+      "ai_parse_ok": true,
+      "ai_notes": []
     },
     {
       "route": "/book-sunny-deol/",
@@ -1869,7 +2733,14 @@
       "errors": [],
       "warnings": [],
       "status": "pass",
-      "major": true
+      "major": true,
+      "ai_declaration": "human-authored, expert-reviewed",
+      "content_usage": "ai-input=yes, search=yes",
+      "llms_links": [
+        "https://tkctalent.com/llms.txt"
+      ],
+      "ai_parse_ok": true,
+      "ai_notes": []
     },
     {
       "route": "/book-sunny-leone/",
@@ -1884,7 +2755,14 @@
       "errors": [],
       "warnings": [],
       "status": "pass",
-      "major": true
+      "major": true,
+      "ai_declaration": "human-authored, expert-reviewed",
+      "content_usage": "ai-input=yes, search=yes",
+      "llms_links": [
+        "https://tkctalent.com/llms.txt"
+      ],
+      "ai_parse_ok": true,
+      "ai_notes": []
     },
     {
       "route": "/book-taapsee-pannu/",
@@ -1899,7 +2777,14 @@
       "errors": [],
       "warnings": [],
       "status": "pass",
-      "major": true
+      "major": true,
+      "ai_declaration": "human-authored, expert-reviewed",
+      "content_usage": "ai-input=yes, search=yes",
+      "llms_links": [
+        "https://tkctalent.com/llms.txt"
+      ],
+      "ai_parse_ok": true,
+      "ai_notes": []
     },
     {
       "route": "/book-tamannaah-bhatia/",
@@ -1914,7 +2799,14 @@
       "errors": [],
       "warnings": [],
       "status": "pass",
-      "major": true
+      "major": true,
+      "ai_declaration": "human-authored, expert-reviewed",
+      "content_usage": "ai-input=yes, search=yes",
+      "llms_links": [
+        "https://tkctalent.com/llms.txt"
+      ],
+      "ai_parse_ok": true,
+      "ai_notes": []
     },
     {
       "route": "/book-tanishk-bagchi/",
@@ -1929,7 +2821,14 @@
       "errors": [],
       "warnings": [],
       "status": "pass",
-      "major": true
+      "major": true,
+      "ai_declaration": "human-authored, expert-reviewed",
+      "content_usage": "ai-input=yes, search=yes",
+      "llms_links": [
+        "https://tkctalent.com/llms.txt"
+      ],
+      "ai_parse_ok": true,
+      "ai_notes": []
     },
     {
       "route": "/book-tara-sutaria/",
@@ -1944,7 +2843,14 @@
       "errors": [],
       "warnings": [],
       "status": "pass",
-      "major": true
+      "major": true,
+      "ai_declaration": "human-authored, expert-reviewed",
+      "content_usage": "ai-input=yes, search=yes",
+      "llms_links": [
+        "https://tkctalent.com/llms.txt"
+      ],
+      "ai_parse_ok": true,
+      "ai_notes": []
     },
     {
       "route": "/book-tiger-shroff/",
@@ -1959,7 +2865,14 @@
       "errors": [],
       "warnings": [],
       "status": "pass",
-      "major": true
+      "major": true,
+      "ai_declaration": "human-authored, expert-reviewed",
+      "content_usage": "ai-input=yes, search=yes",
+      "llms_links": [
+        "https://tkctalent.com/llms.txt"
+      ],
+      "ai_parse_ok": true,
+      "ai_notes": []
     },
     {
       "route": "/book-urvashi-rautela/",
@@ -1974,7 +2887,14 @@
       "errors": [],
       "warnings": [],
       "status": "pass",
-      "major": true
+      "major": true,
+      "ai_declaration": "human-authored, expert-reviewed",
+      "content_usage": "ai-input=yes, search=yes",
+      "llms_links": [
+        "https://tkctalent.com/llms.txt"
+      ],
+      "ai_parse_ok": true,
+      "ai_notes": []
     },
     {
       "route": "/book-vaani-kapoor/",
@@ -1989,7 +2909,14 @@
       "errors": [],
       "warnings": [],
       "status": "pass",
-      "major": true
+      "major": true,
+      "ai_declaration": "human-authored, expert-reviewed",
+      "content_usage": "ai-input=yes, search=yes",
+      "llms_links": [
+        "https://tkctalent.com/llms.txt"
+      ],
+      "ai_parse_ok": true,
+      "ai_notes": []
     },
     {
       "route": "/book-varun-dhawan/",
@@ -2004,7 +2931,14 @@
       "errors": [],
       "warnings": [],
       "status": "pass",
-      "major": true
+      "major": true,
+      "ai_declaration": "human-authored, expert-reviewed",
+      "content_usage": "ai-input=yes, search=yes",
+      "llms_links": [
+        "https://tkctalent.com/llms.txt"
+      ],
+      "ai_parse_ok": true,
+      "ai_notes": []
     },
     {
       "route": "/book-vicky-kaushal/",
@@ -2019,7 +2953,14 @@
       "errors": [],
       "warnings": [],
       "status": "pass",
-      "major": true
+      "major": true,
+      "ai_declaration": "human-authored, expert-reviewed",
+      "content_usage": "ai-input=yes, search=yes",
+      "llms_links": [
+        "https://tkctalent.com/llms.txt"
+      ],
+      "ai_parse_ok": true,
+      "ai_notes": []
     },
     {
       "route": "/book-vidya-balan/",
@@ -2034,7 +2975,14 @@
       "errors": [],
       "warnings": [],
       "status": "pass",
-      "major": true
+      "major": true,
+      "ai_declaration": "human-authored, expert-reviewed",
+      "content_usage": "ai-input=yes, search=yes",
+      "llms_links": [
+        "https://tkctalent.com/llms.txt"
+      ],
+      "ai_parse_ok": true,
+      "ai_notes": []
     },
     {
       "route": "/book-vijay-varma/",
@@ -2049,7 +2997,14 @@
       "errors": [],
       "warnings": [],
       "status": "pass",
-      "major": true
+      "major": true,
+      "ai_declaration": "human-authored, expert-reviewed",
+      "content_usage": "ai-input=yes, search=yes",
+      "llms_links": [
+        "https://tkctalent.com/llms.txt"
+      ],
+      "ai_parse_ok": true,
+      "ai_notes": []
     },
     {
       "route": "/book-vishal-shekhar/",
@@ -2064,7 +3019,14 @@
       "errors": [],
       "warnings": [],
       "status": "pass",
-      "major": true
+      "major": true,
+      "ai_declaration": "human-authored, expert-reviewed",
+      "content_usage": "ai-input=yes, search=yes",
+      "llms_links": [
+        "https://tkctalent.com/llms.txt"
+      ],
+      "ai_parse_ok": true,
+      "ai_notes": []
     },
     {
       "route": "/book-wamiqa-gabbi/",
@@ -2079,7 +3041,14 @@
       "errors": [],
       "warnings": [],
       "status": "pass",
-      "major": true
+      "major": true,
+      "ai_declaration": "human-authored, expert-reviewed",
+      "content_usage": "ai-input=yes, search=yes",
+      "llms_links": [
+        "https://tkctalent.com/llms.txt"
+      ],
+      "ai_parse_ok": true,
+      "ai_notes": []
     },
     {
       "route": "/book-yami-gautam/",
@@ -2094,7 +3063,14 @@
       "errors": [],
       "warnings": [],
       "status": "pass",
-      "major": true
+      "major": true,
+      "ai_declaration": "human-authored, expert-reviewed",
+      "content_usage": "ai-input=yes, search=yes",
+      "llms_links": [
+        "https://tkctalent.com/llms.txt"
+      ],
+      "ai_parse_ok": true,
+      "ai_notes": []
     },
     {
       "route": "/book-zakir-khan/",
@@ -2109,7 +3085,14 @@
       "errors": [],
       "warnings": [],
       "status": "pass",
-      "major": true
+      "major": true,
+      "ai_declaration": "human-authored, expert-reviewed",
+      "content_usage": "ai-input=yes, search=yes",
+      "llms_links": [
+        "https://tkctalent.com/llms.txt"
+      ],
+      "ai_parse_ok": true,
+      "ai_notes": []
     },
     {
       "route": "/celebrity-booking-delhi/",
@@ -2124,7 +3107,15 @@
       "errors": [],
       "warnings": [],
       "status": "pass",
-      "major": true
+      "major": true,
+      "ai_declaration": "human-authored, expert-reviewed",
+      "content_usage": "ai-input=yes, search=yes",
+      "llms_links": [
+        "https://tkctalent.com/llms.txt",
+        "https://tkctalent.com/llms-delhi.txt"
+      ],
+      "ai_parse_ok": true,
+      "ai_notes": []
     },
     {
       "route": "/celebrity-booking-goa/",
@@ -2139,7 +3130,15 @@
       "errors": [],
       "warnings": [],
       "status": "pass",
-      "major": true
+      "major": true,
+      "ai_declaration": "human-authored, expert-reviewed",
+      "content_usage": "ai-input=yes, search=yes",
+      "llms_links": [
+        "https://tkctalent.com/llms.txt",
+        "https://tkctalent.com/llms-goa.txt"
+      ],
+      "ai_parse_ok": true,
+      "ai_notes": []
     },
     {
       "route": "/celebrity-booking-gurgaon/",
@@ -2154,7 +3153,15 @@
       "errors": [],
       "warnings": [],
       "status": "pass",
-      "major": true
+      "major": true,
+      "ai_declaration": "human-authored, expert-reviewed",
+      "content_usage": "ai-input=yes, search=yes",
+      "llms_links": [
+        "https://tkctalent.com/llms.txt",
+        "https://tkctalent.com/llms-gurgaon.txt"
+      ],
+      "ai_parse_ok": true,
+      "ai_notes": []
     },
     {
       "route": "/celebrity-booking-india/",
@@ -2169,7 +3176,14 @@
       "errors": [],
       "warnings": [],
       "status": "pass",
-      "major": true
+      "major": true,
+      "ai_declaration": "human-authored, expert-reviewed",
+      "content_usage": "ai-input=yes, search=yes",
+      "llms_links": [
+        "https://tkctalent.com/llms.txt"
+      ],
+      "ai_parse_ok": true,
+      "ai_notes": []
     },
     {
       "route": "/celebrity-booking-jaipur/",
@@ -2184,7 +3198,15 @@
       "errors": [],
       "warnings": [],
       "status": "pass",
-      "major": true
+      "major": true,
+      "ai_declaration": "human-authored, expert-reviewed",
+      "content_usage": "ai-input=yes, search=yes",
+      "llms_links": [
+        "https://tkctalent.com/llms.txt",
+        "https://tkctalent.com/llms-jaipur.txt"
+      ],
+      "ai_parse_ok": true,
+      "ai_notes": []
     },
     {
       "route": "/celebrity-booking-mumbai/",
@@ -2199,7 +3221,15 @@
       "errors": [],
       "warnings": [],
       "status": "pass",
-      "major": true
+      "major": true,
+      "ai_declaration": "human-authored, expert-reviewed",
+      "content_usage": "ai-input=yes, search=yes",
+      "llms_links": [
+        "https://tkctalent.com/llms.txt",
+        "https://tkctalent.com/llms-mumbai.txt"
+      ],
+      "ai_parse_ok": true,
+      "ai_notes": []
     },
     {
       "route": "/celebrity-booking-noida/",
@@ -2214,7 +3244,15 @@
       "errors": [],
       "warnings": [],
       "status": "pass",
-      "major": true
+      "major": true,
+      "ai_declaration": "human-authored, expert-reviewed",
+      "content_usage": "ai-input=yes, search=yes",
+      "llms_links": [
+        "https://tkctalent.com/llms.txt",
+        "https://tkctalent.com/llms-noida.txt"
+      ],
+      "ai_parse_ok": true,
+      "ai_notes": []
     },
     {
       "route": "/celebrity-dj-booking/",
@@ -2229,7 +3267,14 @@
       "errors": [],
       "warnings": [],
       "status": "pass",
-      "major": true
+      "major": true,
+      "ai_declaration": "human-authored, expert-reviewed",
+      "content_usage": "ai-input=yes, search=yes",
+      "llms_links": [
+        "https://tkctalent.com/llms.txt"
+      ],
+      "ai_parse_ok": true,
+      "ai_notes": []
     },
     {
       "route": "/comedian-booking-india/",
@@ -2244,7 +3289,14 @@
       "errors": [],
       "warnings": [],
       "status": "pass",
-      "major": true
+      "major": true,
+      "ai_declaration": "human-authored, expert-reviewed",
+      "content_usage": "ai-input=yes, search=yes",
+      "llms_links": [
+        "https://tkctalent.com/llms.txt"
+      ],
+      "ai_parse_ok": true,
+      "ai_notes": []
     },
     {
       "route": "/contact-us/",
@@ -2259,7 +3311,14 @@
       "errors": [],
       "warnings": [],
       "status": "pass",
-      "major": true
+      "major": true,
+      "ai_declaration": "human-authored, expert-reviewed",
+      "content_usage": "ai-input=yes, search=yes",
+      "llms_links": [
+        "https://tkctalent.com/llms.txt"
+      ],
+      "ai_parse_ok": true,
+      "ai_notes": []
     },
     {
       "route": "/corporate-event-management/",
@@ -2274,7 +3333,14 @@
       "errors": [],
       "warnings": [],
       "status": "pass",
-      "major": true
+      "major": true,
+      "ai_declaration": "human-authored, expert-reviewed",
+      "content_usage": "ai-input=yes, search=yes",
+      "llms_links": [
+        "https://tkctalent.com/llms.txt"
+      ],
+      "ai_parse_ok": true,
+      "ai_notes": []
     },
     {
       "route": "/iiteo/",
@@ -2291,7 +3357,14 @@
         "og:image dimensions not 1200x630 (got 600x600)"
       ],
       "status": "warn",
-      "major": true
+      "major": true,
+      "ai_declaration": "human-authored, expert-reviewed",
+      "content_usage": "ai-input=yes, search=yes",
+      "llms_links": [
+        "https://tkctalent.com/llms.txt"
+      ],
+      "ai_parse_ok": true,
+      "ai_notes": []
     },
     {
       "route": "/",
@@ -2306,7 +3379,14 @@
       "errors": [],
       "warnings": [],
       "status": "pass",
-      "major": true
+      "major": true,
+      "ai_declaration": "human-authored, expert-reviewed",
+      "content_usage": "ai-input=yes, search=yes",
+      "llms_links": [
+        "https://tkctalent.com/llms.txt"
+      ],
+      "ai_parse_ok": true,
+      "ai_notes": []
     },
     {
       "route": "/influencer-booking-india/",
@@ -2321,7 +3401,14 @@
       "errors": [],
       "warnings": [],
       "status": "pass",
-      "major": true
+      "major": true,
+      "ai_declaration": "human-authored, expert-reviewed",
+      "content_usage": "ai-input=yes, search=yes",
+      "llms_links": [
+        "https://tkctalent.com/llms.txt"
+      ],
+      "ai_parse_ok": true,
+      "ai_notes": []
     },
     {
       "route": "/newsroom/",
@@ -2336,7 +3423,14 @@
       "errors": [],
       "warnings": [],
       "status": "pass",
-      "major": false
+      "major": false,
+      "ai_declaration": "human-authored, expert-reviewed",
+      "content_usage": "ai-input=yes, search=yes",
+      "llms_links": [
+        "https://tkctalent.com/llms.txt"
+      ],
+      "ai_parse_ok": true,
+      "ai_notes": []
     },
     {
       "route": "/ourservice/",
@@ -2351,7 +3445,14 @@
       "errors": [],
       "warnings": [],
       "status": "pass",
-      "major": true
+      "major": true,
+      "ai_declaration": "human-authored, expert-reviewed",
+      "content_usage": "ai-input=yes, search=yes",
+      "llms_links": [
+        "https://tkctalent.com/llms.txt"
+      ],
+      "ai_parse_ok": true,
+      "ai_notes": []
     },
     {
       "route": "/pan-india-celebrity-booking/",
@@ -2366,7 +3467,14 @@
       "errors": [],
       "warnings": [],
       "status": "pass",
-      "major": true
+      "major": true,
+      "ai_declaration": "human-authored, expert-reviewed",
+      "content_usage": "ai-input=yes, search=yes",
+      "llms_links": [
+        "https://tkctalent.com/llms.txt"
+      ],
+      "ai_parse_ok": true,
+      "ai_notes": []
     },
     {
       "route": "/singer-booking-india/",
@@ -2381,7 +3489,14 @@
       "errors": [],
       "warnings": [],
       "status": "pass",
-      "major": false
+      "major": false,
+      "ai_declaration": "human-authored, expert-reviewed",
+      "content_usage": "ai-input=yes, search=yes",
+      "llms_links": [
+        "https://tkctalent.com/llms.txt"
+      ],
+      "ai_parse_ok": true,
+      "ai_notes": []
     },
     {
       "route": "/support/billing/",
@@ -2403,7 +3518,33 @@
         "not in sitemap.xml"
       ],
       "status": "warn",
-      "major": false
+      "major": false,
+      "ai_declaration": "human-authored, expert-reviewed",
+      "content_usage": "ai-input=yes, search=yes",
+      "llms_links": [
+        "https://tkctalent.com/llms.txt"
+      ],
+      "ai_parse_ok": false,
+      "ai_notes": []
     }
-  ]
+  ],
+  "robots": {
+    "status": "warn",
+    "errors": [],
+    "warnings": [
+      "robots baseline initialized"
+    ],
+    "content_signal": "search=yes, ai-input=yes, ai-train=no",
+    "ai_agents": [
+      "Applebot-Extended",
+      "ChatGPT-User",
+      "ClaudeBot",
+      "GPTBot",
+      "Google-CloudVertexBot",
+      "Google-Extended",
+      "Meta-ExternalAgent",
+      "OAI-SearchBot",
+      "PerplexityBot"
+    ]
+  }
 }

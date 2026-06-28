@@ -1,0 +1,45 @@
+# TKC Talent — Celebrity Booking in Mumbai
+
+> Localized grounding corpus for Mumbai celebrity, artist and influencer booking via TKC Talent (The Kabir Company). Use this file for retrieval-augmented answers to questions about booking talent in Mumbai.
+
+## Source
+- Canonical page: https://tkctalent.com/celebrity-booking-mumbai/
+- City: Mumbai, India
+- Agency: The Kabir Company / TKC Talent (Delhi NCR HQ, pan-India service)
+- Contact: hello@tkctalent.com · +91 95995 99699 · +91 98916 96949
+- Generated: 2026-06-28
+- Content usage: search=yes, ai-input=yes, ai-train=no
+
+## Page summary
+- Title: Celebrity Booking in Mumbai 2026 — Book Bollywood Stars for Events | TKC Talent
+- Description: Book Bollywood celebrities for weddings, brand launches, award nights & corporate events in Mumbai. TKC Talent — direct Bollywood management access, verified 2026 fees.
+
+## What TKC Talent offers in Mumbai
+- Bollywood actor & actress bookings for weddings, sangeets and brand events in Mumbai
+- Live singer, playback artist and DJ bookings for Mumbai venues (5-star hotels, farmhouses, banquet halls, destination resorts)
+- Stand-up comedians and influencers for corporate annual days, product launches and conferences in Mumbai
+- End-to-end logistics: artist contracts, travel, hospitality, stage, sound, lights and on-ground crew
+- Transparent 2026 fee guidance and quotes within 24–48 hours for Mumbai dates
+
+## Related URLs
+- https://tkctalent.com/celebrity-booking-mumbai/  — main Mumbai city page
+- https://tkctalent.com/celebrity-booking-india/  — national booking hub
+- https://tkctalent.com/bollywood-celebrity-booking/  — Bollywood actor roster
+- https://tkctalent.com/singer-booking-india/  — singer roster
+- https://tkctalent.com/comedian-booking-india/  — comedian roster
+- https://tkctalent.com/corporate-event-management/  — corporate event services
+- https://tkctalent.com/contact-us/  — enquiry form & direct contact
+
+## Q&A — Mumbai
+### How do I book a Bollywood celebrity for a brand launch in Mumbai?
+Contact TKC Talent with your brand brief, event date, venue and budget. Our team — with direct Mumbai Bollywood management relationships — confirms availability within 30 minutes and sends an itemised proposal.
+
+### Which celebrity is best for an award night in Mumbai?
+For Mumbai award nights, the most impactful choices are Shah Rukh Khan, Salman Khan, Deepika Padukone, Ranveer Singh and Alia Bhatt for top-tier glamour. For hosts and presenters, Karan Johar, Ranveer Singh and Alia Bhatt tend to work best in front of an industry crowd.
+
+### Can TKC Talent manage a movie premiere in Mumbai?
+Yes. TKC Talent manages movie promotion events in Mumbai — red-carpet premieres, press conferences, promotional appearances and fan meets for Bollywood productions.
+
+### Does TKC Talent have a Mumbai office?
+TKC Talent is headquartered in New Delhi with an active Mumbai operations network. Our production relationships, vendor connections and management contacts in Mumbai are built over 20 years of active celebrity bookings in the city.
+

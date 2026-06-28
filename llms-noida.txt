@@ -1,0 +1,45 @@
+# TKC Talent — Celebrity Booking in Noida
+
+> Localized grounding corpus for Noida celebrity, artist and influencer booking via TKC Talent (The Kabir Company). Use this file for retrieval-augmented answers to questions about booking talent in Noida.
+
+## Source
+- Canonical page: https://tkctalent.com/celebrity-booking-noida/
+- City: Noida, India
+- Agency: The Kabir Company / TKC Talent (Delhi NCR HQ, pan-India service)
+- Contact: hello@tkctalent.com · +91 95995 99699 · +91 98916 96949
+- Generated: 2026-06-28
+- Content usage: search=yes, ai-input=yes, ai-train=no
+
+## Page summary
+- Title: Celebrity Booking in Noida 2026 — Book Bollywood Stars for Corporate Events & Weddings | TKC Talent
+- Description: Book Bollywood celebrities for corporate events, influencer campaigns & weddings in Noida. TKC Talent — direct access, verified 2026 fees, end-to-end execution.
+
+## What TKC Talent offers in Noida
+- Bollywood actor & actress bookings for weddings, sangeets and brand events in Noida
+- Live singer, playback artist and DJ bookings for Noida venues (5-star hotels, farmhouses, banquet halls, destination resorts)
+- Stand-up comedians and influencers for corporate annual days, product launches and conferences in Noida
+- End-to-end logistics: artist contracts, travel, hospitality, stage, sound, lights and on-ground crew
+- Transparent 2026 fee guidance and quotes within 24–48 hours for Noida dates
+
+## Related URLs
+- https://tkctalent.com/celebrity-booking-noida/  — main Noida city page
+- https://tkctalent.com/celebrity-booking-india/  — national booking hub
+- https://tkctalent.com/bollywood-celebrity-booking/  — Bollywood actor roster
+- https://tkctalent.com/singer-booking-india/  — singer roster
+- https://tkctalent.com/comedian-booking-india/  — comedian roster
+- https://tkctalent.com/corporate-event-management/  — corporate event services
+- https://tkctalent.com/contact-us/  — enquiry form & direct contact
+
+## Q&A — Noida
+### How do I book a celebrity for a corporate event in Noida?
+Contact TKC Talent with your Noida event details — date, venue, audience size and budget. Our Delhi-headquartered team responds within 30 minutes and can be on-site in Noida within the hour.
+
+### Can TKC Talent manage influencer bookings for a brand launch in Noida?
+Yes. TKC Talent manages digital creator and influencer bookings for brand launches in Noida alongside our traditional celebrity booking services.
+
+### Does TKC Talent manage events related to Noida Film City productions?
+Yes. TKC Talent has managed celebrity appearances and event productions connected to Noida’s media and production industry. Our Bollywood management relationships are directly relevant to Film City-adjacent events, OTT premieres and brand film celebrity appearances.
+
+### What are the best venues for celebrity events in Noida?
+Top Noida celebrity event venues include Radisson Blu, The Grand Noida, Crowne Plaza Noida, Ramada Plaza and the premium banquet spaces in Noida’s Expressway residential corridor.
+

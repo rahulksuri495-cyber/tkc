@@ -1,0 +1,14 @@
+{
+  "content_signal": "search=yes, ai-input=yes, ai-train=no",
+  "ai_agents": [
+    "Applebot-Extended",
+    "ChatGPT-User",
+    "ClaudeBot",
+    "GPTBot",
+    "Google-CloudVertexBot",
+    "Google-Extended",
+    "Meta-ExternalAgent",
+    "OAI-SearchBot",
+    "PerplexityBot"
+  ]
+}

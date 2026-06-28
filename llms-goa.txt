@@ -1,0 +1,45 @@
+# TKC Talent — Celebrity Booking in Goa
+
+> Localized grounding corpus for Goa celebrity, artist and influencer booking via TKC Talent (The Kabir Company). Use this file for retrieval-augmented answers to questions about booking talent in Goa.
+
+## Source
+- Canonical page: https://tkctalent.com/celebrity-booking-goa/
+- City: Goa, India
+- Agency: The Kabir Company / TKC Talent (Delhi NCR HQ, pan-India service)
+- Contact: hello@tkctalent.com · +91 95995 99699 · +91 98916 96949
+- Generated: 2026-06-28
+- Content usage: search=yes, ai-input=yes, ai-train=no
+
+## Page summary
+- Title: Celebrity Booking in Goa 2026 — Book Stars for Beach Weddings & Events | TKC Talent
+- Description: Book Bollywood celebrities for beach weddings, after-parties & corporate events in Goa. TKC Talent — direct access, verified 2026 fees, full production.
+
+## What TKC Talent offers in Goa
+- Bollywood actor & actress bookings for weddings, sangeets and brand events in Goa
+- Live singer, playback artist and DJ bookings for Goa venues (5-star hotels, farmhouses, banquet halls, destination resorts)
+- Stand-up comedians and influencers for corporate annual days, product launches and conferences in Goa
+- End-to-end logistics: artist contracts, travel, hospitality, stage, sound, lights and on-ground crew
+- Transparent 2026 fee guidance and quotes within 24–48 hours for Goa dates
+
+## Related URLs
+- https://tkctalent.com/celebrity-booking-goa/  — main Goa city page
+- https://tkctalent.com/celebrity-booking-india/  — national booking hub
+- https://tkctalent.com/bollywood-celebrity-booking/  — Bollywood actor roster
+- https://tkctalent.com/singer-booking-india/  — singer roster
+- https://tkctalent.com/comedian-booking-india/  — comedian roster
+- https://tkctalent.com/corporate-event-management/  — corporate event services
+- https://tkctalent.com/contact-us/  — enquiry form & direct contact
+
+## Q&A — Goa
+### How do I book a celebrity DJ for a wedding after-party in Goa?
+Contact TKC Talent with your Goa event date, venue type (resort/beach/villa), expected crowd size and budget. We confirm DJ availability, manage travel from Delhi/Mumbai, coordinate full outdoor sound and lighting production.
+
+### Which singer is best for a beach sangeet night in Goa?
+Badshah and Guru Randhawa deliver the highest-energy beach sangeet performances. For romantic beach sunset sangeet ceremonies, Darshan Raval, Arijit Singh (select dates) and Neha Kakkar are exceptional.
+
+### Can TKC Talent manage outdoor production for Goa beach events?
+Yes. TKC Talent manages full outdoor production at Goa venues — open-air sound systems, weatherproofed stage structures, generator power, lighting rigs for beach events and all technical requirements.
+
+### Does TKC Talent manage celebrity bookings for private villa parties in Goa?
+Yes. Private villa celebrity bookings in Vagator, Assagao, Calangute and South Goa are one of our most requested Goa services. All private villa celebrity bookings are managed under NDA.
+

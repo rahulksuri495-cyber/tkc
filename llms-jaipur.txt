@@ -1,0 +1,45 @@
+# TKC Talent — Celebrity Booking in Jaipur
+
+> Localized grounding corpus for Jaipur celebrity, artist and influencer booking via TKC Talent (The Kabir Company). Use this file for retrieval-augmented answers to questions about booking talent in Jaipur.
+
+## Source
+- Canonical page: https://tkctalent.com/celebrity-booking-jaipur/
+- City: Jaipur, India
+- Agency: The Kabir Company / TKC Talent (Delhi NCR HQ, pan-India service)
+- Contact: hello@tkctalent.com · +91 95995 99699 · +91 98916 96949
+- Generated: 2026-06-28
+- Content usage: search=yes, ai-input=yes, ai-train=no
+
+## Page summary
+- Title: Celebrity Booking in Jaipur 2026 — Book Stars for Destination Weddings & Events | TKC Talent
+- Description: Book Bollywood celebrities for destination weddings & events in Jaipur. Umaid Bhawan, Rambagh Palace, Samode Palace & more. TKC Talent — verified 2026 fees.
+
+## What TKC Talent offers in Jaipur
+- Bollywood actor & actress bookings for weddings, sangeets and brand events in Jaipur
+- Live singer, playback artist and DJ bookings for Jaipur venues (5-star hotels, farmhouses, banquet halls, destination resorts)
+- Stand-up comedians and influencers for corporate annual days, product launches and conferences in Jaipur
+- End-to-end logistics: artist contracts, travel, hospitality, stage, sound, lights and on-ground crew
+- Transparent 2026 fee guidance and quotes within 24–48 hours for Jaipur dates
+
+## Related URLs
+- https://tkctalent.com/celebrity-booking-jaipur/  — main Jaipur city page
+- https://tkctalent.com/celebrity-booking-india/  — national booking hub
+- https://tkctalent.com/bollywood-celebrity-booking/  — Bollywood actor roster
+- https://tkctalent.com/singer-booking-india/  — singer roster
+- https://tkctalent.com/comedian-booking-india/  — comedian roster
+- https://tkctalent.com/corporate-event-management/  — corporate event services
+- https://tkctalent.com/contact-us/  — enquiry form & direct contact
+
+## Q&A — Jaipur
+### How do I book a celebrity singer for a destination wedding in Jaipur?
+Contact TKC Talent with your Jaipur wedding dates, venue, sangeet programme requirements and budget. We confirm availability, manage travel from Mumbai/Delhi, handle palace venue technical logistics and provide a dedicated on-ground coordinator.
+
+### Which singer is best for a sangeet night at a Jaipur palace venue?
+Arijit Singh, Badshah, Guru Randhawa and Jubin Nautiyal are the most requested sangeet artists for Jaipur palace weddings. B Praak delivers particularly emotional sangeet moments at intimate palace settings.
+
+### Does TKC Talent manage the production at palace venues in Jaipur?
+Yes. TKC Talent manages the full production stack at Jaipur palace venues — stage engineering, sound, lighting, power management and on-day coordination.
+
+### Can I book a Bollywood actor for a wedding reception in Jaipur?
+Yes. Bollywood actor and actress appearances at Jaipur palace wedding receptions are among our most memorable bookings. All palace wedding celebrity appearances are managed under signed NDA.
+
