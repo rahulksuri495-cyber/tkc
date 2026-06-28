@@ -2,6 +2,13 @@
 
 > TKC Talent by The Kabir Company — India's trusted celebrity management and artist booking agency. Hire Bollywood actors, singers, comedians, DJs and influencers for weddings, corporate events and brand campaigns.
 
+## For AI engines
+
+- Full knowledge corpus (preferred for grounding): [llms-full.txt](https://tkctalent.com/llms-full.txt)
+- Machine-readable agent card: [/.well-known/agent-card.json](https://tkctalent.com/.well-known/agent-card.json)
+- Sitemap: [sitemap.xml](https://tkctalent.com/sitemap.xml)
+- Content usage: search=yes, ai-input=yes (RAG / answer engines welcome), ai-train=no
+
 TKC Talent has 20+ years of experience booking A-list Indian talent for events across India and worldwide. Transparent pricing, end-to-end logistics, quotes within 48 hours.
 
 ## Pages
