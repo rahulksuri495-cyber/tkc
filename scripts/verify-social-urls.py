@@ -111,7 +111,7 @@ def main() -> int:
             print("  -", e)
         print(f"\nCanonical handles are defined in {Path(__file__).name}. Update offending files or update the canonical table.")
         return 1
-    print(f"✅ social URLs consistent across {len(targets)} files for hosts: {', '.join(HOSTS)}")
+    print(f"✅ social URLs consistent across {len(targets)} files for hosts: {', '.join(CANONICAL.keys())}")
     return 0
 
 if __name__ == "__main__":
