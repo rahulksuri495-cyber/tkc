@@ -1,0 +1,38 @@
+name: social-url-check
+
+# Build-time guard: every footer link and JSON-LD sameAs URL that
+# references a TKC-owned profile (Facebook, X, Instagram, YouTube,
+# Pinterest, IMDb) must match the canonical handle table in
+# scripts/verify-social-urls.py. Catches regressions like the old
+# `facebook.com/thekabirco` handle or unofficial `x.com/tkctalent`
+# being reintroduced by a future edit.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "**/*.html"
+      - "**/*.txt"
+      - "**/*.json"
+      - "assets/**/*.js"
+      - "scripts/verify-social-urls.py"
+      - ".github/workflows/social-url-check.yml"
+  pull_request:
+    paths:
+      - "**/*.html"
+      - "scripts/verify-social-urls.py"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Verify social profile URL consistency
+        run: python3 scripts/verify-social-urls.py
