@@ -37,6 +37,11 @@ OG_URL_RE = re.compile(
 ROBOTS_RE = re.compile(
     r'<meta[^>]+name=["\']robots["\'][^>]+content=["\']([^"\']+)["\']', re.I)
 
+CANON_FULL_RE = re.compile(
+    r'<link[^>]+rel=["\']canonical["\'][^>]*>', re.I)
+OG_URL_FULL_RE = re.compile(
+    r'<meta[^>]+property=["\']og:url["\'][^>]*>', re.I)
+
 
 def expected_url(path: Path) -> str:
     rel = path.parent.relative_to(ROOT).as_posix()
@@ -84,9 +89,46 @@ def audit(path: Path) -> list[str]:
     return errs
 
 
+def fix(path: Path) -> bool:
+    """Rewrite canonical + og:url to the expected self-referential URL."""
+    html = path.read_text(encoding="utf-8")
+    rel = path.relative_to(ROOT).as_posix()
+    robots = (ROBOTS_RE.search(html).group(1).lower()
+              if ROBOTS_RE.search(html) else "")
+    if "noindex" in robots:
+        return False
+    want = expected_url(path)
+    changed = False
+    new_canon = f'<link rel="canonical" href="{want}"/>'
+    new_og = f'<meta property="og:url" content="{want}"/>'
+    if CANON_FULL_RE.search(html):
+        new_html = CANON_FULL_RE.sub(new_canon, html, count=1)
+        if new_html != html:
+            html = new_html
+            changed = True
+    else:
+        html = html.replace("</head>", new_canon + "\n</head>", 1)
+        changed = True
+    if OG_URL_FULL_RE.search(html):
+        new_html = OG_URL_FULL_RE.sub(new_og, html, count=1)
+        if new_html != html:
+            html = new_html
+            changed = True
+    else:
+        html = html.replace("</head>", new_og + "\n</head>", 1)
+        changed = True
+    if changed:
+        path.write_text(html, encoding="utf-8")
+    return changed
+
+
 def main() -> int:
+    do_fix = "--fix" in sys.argv
     pages = [p for p in sorted(ROOT.glob("**/index.html"))
              if not SKIP_PARTS.intersection(p.parts)]
+    if do_fix:
+        fixed = [p for p in pages if fix(p)]
+        print(f"canonical/og:url fix: rewrote {len(fixed)} page(s)")
     all_errs: list[str] = []
     for p in pages:
         all_errs.extend(audit(p))
