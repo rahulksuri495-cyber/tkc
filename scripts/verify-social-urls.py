@@ -15,20 +15,25 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 
-# Canonical handles — single source of truth. Update here, run the check,
-# and any HTML / JSON-LD that drifts will be reported.
+# Canonical brand handles — single source of truth. We ONLY audit URLs
+# that clearly belong to TKC / The Kabir Company (path matches one of
+# the BRAND_TOKENS below). Third-party social links on actor / celebrity
+# pages are intentionally ignored — they legitimately point elsewhere.
 CANONICAL = {
     "facebook.com":  "https://www.facebook.com/thekabircompany",
     "x.com":         "https://x.com/thekabircompany",
-    "twitter.com":   "https://x.com/thekabircompany",  # legacy → migrate
+    "twitter.com":   "https://x.com/thekabircompany",       # legacy host
     "instagram.com": "https://www.instagram.com/thekabircompany/",
     "youtube.com":   "https://www.youtube.com/@TheKabirCompany",
     "pinterest.com": "https://in.pinterest.com/thekabircompany/",
     "imdb.com":      "https://www.imdb.com/title/tt35350271/",
 }
 
-# Hosts we audit (suffix match on the URL hostname)
-HOSTS = tuple(CANONICAL.keys())
+BRAND_TOKENS = ("thekabirco", "thekabircompany", "tkctalent", "tt35350271")
+
+def is_brand_url(url: str) -> bool:
+    low = url.lower()
+    return any(tok in low for tok in BRAND_TOKENS)
 
 URL_RE = re.compile(r'https?://[^\s"\'<>)]+', re.IGNORECASE)
 JSONLD_RE = re.compile(
@@ -53,6 +58,8 @@ def scan_file(path: Path) -> list[str]:
     # 1) Raw URLs in HTML (footer links, anchor hrefs, meta tags)
     for m in URL_RE.finditer(text):
         url = m.group(0).rstrip('.,;)')
+        if not is_brand_url(url):
+            continue
         target = canonical_for(url)
         if target and url != target:
             errors.append(f"{path}: {url} → expected {target}")
@@ -64,6 +71,8 @@ def scan_file(path: Path) -> list[str]:
         except json.JSONDecodeError:
             continue
         for url in _collect_sameas(data):
+            if not is_brand_url(url):
+                continue
             target = canonical_for(url)
             if target and url != target:
                 errors.append(f"{path} [JSON-LD sameAs]: {url} → expected {target}")
