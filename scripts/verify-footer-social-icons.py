@@ -63,7 +63,9 @@ def audit(path: Path) -> list[str]:
     #    Footer bundle must literally embed the canonical URL.
     is_enhancer = path.name == "footer-social-icons.js"
     for host in REQUIRED_HOSTS:
-        needle = host if is_enhancer else CANONICAL[host]
+        # The enhancer matches hosts with substrings like "pinterest."
+        # so check for the platform keyword (host minus the TLD).
+        needle = host.split(".")[0] if is_enhancer else CANONICAL[host]
         if needle not in text:
             errors.append(f"{path}: missing required platform {host} ({needle!r} not found)")
     return errors
