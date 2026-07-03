@@ -25,6 +25,14 @@ DirectoryIndex index.html
   # 301 redirect: old /celebrity-charges URL → new /bollywood-celebrity-charges
   RewriteRule ^celebrity-charges/?$ /bollywood-celebrity-charges [R=301,L]
 
+  # 301 redirects for GSC-flagged 404s (missing rosters / dated slug).
+  # These URLs were indexed / linked externally but never had matching pages;
+  # send visitors to the closest live hub instead of returning a soft 404.
+  RewriteRule ^book-jr-ntr/?$          /celebrity-booking-india [R=301,L]
+  RewriteRule ^book-tovino-thomas/?$   /celebrity-booking-india [R=301,L]
+  RewriteRule ^book-vijay-sethupathi/?$ /celebrity-booking-india [R=301,L]
+  RewriteRule ^celebrity-charges-2026/?$ /bollywood-celebrity-charges [R=301,L]
+
   # Canonical URL form: always use a trailing slash for directory routes.
   # If the request maps to an existing directory but is missing the trailing
   # slash (e.g. /book-vaani-kapoor), 301 redirect to the slashed form.
