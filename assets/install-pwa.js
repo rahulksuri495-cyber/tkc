@@ -4,6 +4,30 @@
 
   var STORAGE_KEY = 'tkc-install-dismissed-v2';
   var deferredPrompt = null;
+  var bannerImpressionSent = false;
+  var pillImpressionSent = false;
+
+  // --- Analytics (GA4 + dataLayer, safe if absent) ---
+  function track(eventName, params) {
+    try {
+      var payload = Object.assign({
+        event_category: 'pwa_install',
+        page_path: location.pathname + location.search,
+        page_location: location.href,
+        prompt_available: !!deferredPrompt,
+        platform: isIOS() ? 'ios' : (isAndroid() ? 'android' : 'desktop')
+      }, params || {});
+      if (typeof window.gtag === 'function') {
+        window.gtag('event', eventName, payload);
+      }
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push(Object.assign({ event: eventName }, payload));
+    } catch (_) {}
+  }
+
+  function isAndroid() {
+    return /android/i.test(window.navigator.userAgent);
+  }
 
   // --- Service worker registration (guarded for Lovable preview) ---
   (function registerSW() {
