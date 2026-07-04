@@ -2,7 +2,7 @@
   if (window.__tkcInstallInit) return;
   window.__tkcInstallInit = true;
 
-  var STORAGE_KEY = 'tkc-install-dismissed-v1';
+  var STORAGE_KEY = 'tkc-install-dismissed-v2';
   var deferredPrompt = null;
 
   // --- Service worker registration (guarded for Lovable preview) ---
@@ -53,20 +53,35 @@
     var s = document.createElement('style');
     s.id = 'tkc-install-styles';
     s.textContent = [
-      '.tkc-install-btn{position:fixed;right:16px;bottom:16px;z-index:9999;',
-      'display:inline-flex;align-items:center;gap:8px;padding:12px 18px;',
-      'border-radius:999px;border:1px solid rgba(255,255,255,.15);',
-      'background:linear-gradient(135deg,#c9a14a,#e8c87b);color:#0a0a0a;',
+      '.tkc-install-banner{position:fixed;left:0;right:0;top:0;z-index:10000;',
+      'display:flex;align-items:center;justify-content:center;gap:14px;',
+      'padding:10px 56px 10px 16px;',
+      'background:linear-gradient(90deg,#0a0a0a 0%,#1a1a1a 50%,#0a0a0a 100%);',
+      'border-bottom:1px solid rgba(201,161,74,.35);',
       'font-family:"Space Grotesk",ui-sans-serif,system-ui,sans-serif;',
-      'font-weight:700;font-size:14px;letter-spacing:.01em;cursor:pointer;',
-      'box-shadow:0 10px 30px rgba(0,0,0,.35);transition:transform .15s ease,opacity .2s ease;',
-      'opacity:0;transform:translateY(8px);pointer-events:none}',
-      '.tkc-install-btn.is-visible{opacity:1;transform:none;pointer-events:auto}',
-      '.tkc-install-btn:hover{transform:translateY(-1px) scale(1.02)}',
-      '.tkc-install-btn svg{width:18px;height:18px}',
-      '.tkc-install-close{margin-left:4px;background:transparent;border:0;color:#0a0a0a;',
-      'font-size:18px;line-height:1;cursor:pointer;padding:0 2px;opacity:.7}',
-      '.tkc-install-close:hover{opacity:1}',
+      'color:#fff;box-shadow:0 4px 20px rgba(0,0,0,.4);',
+      'transform:translateY(-100%);transition:transform .35s ease}',
+      '.tkc-install-banner.is-visible{transform:none}',
+      '.tkc-install-banner .tkc-ib-text{font-size:14px;font-weight:500;letter-spacing:.01em;',
+      'display:flex;align-items:center;gap:10px;flex-wrap:wrap;justify-content:center;text-align:center}',
+      '.tkc-install-banner .tkc-ib-text strong{color:#e8c87b;font-weight:700}',
+      '.tkc-install-banner .tkc-ib-cta{display:inline-flex;align-items:center;gap:6px;',
+      'padding:8px 18px;border-radius:999px;border:0;',
+      'background:linear-gradient(135deg,#c9a14a,#e8c87b);color:#0a0a0a;',
+      'font-family:inherit;font-weight:700;font-size:13px;letter-spacing:.02em;',
+      'cursor:pointer;text-transform:uppercase;box-shadow:0 4px 14px rgba(201,161,74,.4);',
+      'transition:transform .15s ease}',
+      '.tkc-install-banner .tkc-ib-cta:hover{transform:scale(1.04)}',
+      '.tkc-install-banner .tkc-ib-cta svg{width:14px;height:14px}',
+      '.tkc-install-banner .tkc-ib-close{position:absolute;right:10px;top:50%;',
+      'transform:translateY(-50%);background:transparent;border:0;color:#fff;',
+      'font-size:22px;line-height:1;cursor:pointer;opacity:.6;padding:4px 8px}',
+      '.tkc-install-banner .tkc-ib-close:hover{opacity:1}',
+      '@media (max-width:640px){.tkc-install-banner{padding:10px 44px 10px 12px;gap:8px}',
+      '.tkc-install-banner .tkc-ib-text{font-size:12px;gap:6px}',
+      '.tkc-install-banner .tkc-ib-cta{padding:7px 14px;font-size:12px}}',
+      'body.tkc-has-install-banner{padding-top:56px}',
+      '@media (max-width:640px){body.tkc-has-install-banner{padding-top:76px}}',
       '.tkc-ios-hint{position:fixed;left:12px;right:12px;bottom:12px;z-index:9999;',
       'background:#0a0a0a;color:#fff;border:1px solid rgba(201,161,74,.4);',
       'border-radius:14px;padding:14px 16px;font-family:Inter,system-ui,sans-serif;',
@@ -80,31 +95,55 @@
   }
 
   function createButton() {
-    var btn = document.createElement('button');
-    btn.type = 'button';
-    btn.className = 'tkc-install-btn';
-    btn.setAttribute('aria-label', 'Install TKC Talent app');
-    btn.innerHTML =
-      '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M5 21h14"/></svg>' +
-      '<span>Install App</span>' +
-      '<span class="tkc-install-close" aria-label="Dismiss">×</span>';
-    document.body.appendChild(btn);
+    if (document.querySelector('.tkc-install-banner')) return null;
+    var bar = document.createElement('div');
+    bar.className = 'tkc-install-banner';
+    bar.setAttribute('role', 'region');
+    bar.setAttribute('aria-label', 'Install TKC Talent app');
+    bar.innerHTML =
+      '<div class="tkc-ib-text">' +
+        '<span>📱 Get the <strong>TKC Talent</strong> app — faster booking, offline access</span>' +
+      '</div>' +
+      '<button type="button" class="tkc-ib-cta" aria-label="Install TKC Talent app">' +
+        '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M5 21h14"/></svg>' +
+        '<span>Install App</span>' +
+      '</button>' +
+      '<button type="button" class="tkc-ib-close" aria-label="Dismiss">×</button>';
+    document.body.appendChild(bar);
+    document.body.classList.add('tkc-has-install-banner');
 
-    btn.addEventListener('click', function (e) {
-      if (e.target && e.target.classList && e.target.classList.contains('tkc-install-close')) {
-        e.stopPropagation();
-        try { localStorage.setItem(STORAGE_KEY, String(Date.now())); } catch (_) {}
-        btn.remove();
-        return;
-      }
-      if (!deferredPrompt) return;
-      deferredPrompt.prompt();
-      deferredPrompt.userChoice.then(function () {
-        deferredPrompt = null;
-        btn.remove();
-      });
+    bar.querySelector('.tkc-ib-close').addEventListener('click', function () {
+      try { localStorage.setItem(STORAGE_KEY, String(Date.now())); } catch (_) {}
+      bar.remove();
+      document.body.classList.remove('tkc-has-install-banner');
     });
-    return btn;
+
+    bar.querySelector('.tkc-ib-cta').addEventListener('click', function () {
+      if (deferredPrompt) {
+        deferredPrompt.prompt();
+        deferredPrompt.userChoice.then(function () {
+          deferredPrompt = null;
+          bar.remove();
+          document.body.classList.remove('tkc-has-install-banner');
+        });
+      } else if (isIOS()) {
+        showIOSHint();
+      } else {
+        showManualHint();
+      }
+    });
+    return bar;
+  }
+
+  function showManualHint() {
+    if (document.querySelector('.tkc-ios-hint')) return;
+    var hint = document.createElement('div');
+    hint.className = 'tkc-ios-hint';
+    hint.innerHTML =
+      '<div><strong>Install TKC Talent</strong>Open your browser menu (⋮) and tap “Install app” or “Add to Home screen”.</div>' +
+      '<button type="button" aria-label="Dismiss">×</button>';
+    document.body.appendChild(hint);
+    hint.querySelector('button').addEventListener('click', function () { hint.remove(); });
   }
 
   function showIOSHint() {
@@ -136,19 +175,20 @@
     window.addEventListener('beforeinstallprompt', function (e) {
       e.preventDefault();
       deferredPrompt = e;
-      var btn = createButton();
-      requestAnimationFrame(function () { btn.classList.add('is-visible'); });
     });
 
     window.addEventListener('appinstalled', function () {
       deferredPrompt = null;
-      var b = document.querySelector('.tkc-install-btn');
+      var b = document.querySelector('.tkc-install-banner');
       if (b) b.remove();
+      document.body.classList.remove('tkc-has-install-banner');
     });
 
-    if (isIOS()) {
-      setTimeout(showIOSHint, 2500);
-    }
+    // Show a prominent install banner on every fresh visit so users can't miss it.
+    setTimeout(function () {
+      var bar = createButton();
+      if (bar) requestAnimationFrame(function () { bar.classList.add('is-visible'); });
+    }, 600);
   }
 
   if (document.readyState === 'loading') {
