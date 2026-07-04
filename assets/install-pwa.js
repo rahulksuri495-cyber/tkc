@@ -106,6 +106,19 @@
       '.tkc-install-banner .tkc-ib-cta{padding:7px 14px;font-size:12px}}',
       'body.tkc-has-install-banner{padding-top:56px}',
       '@media (max-width:640px){body.tkc-has-install-banner{padding-top:76px}}',
+      /* Persistent floating pill (always visible until installed) */
+      '.tkc-install-pill{position:fixed;right:18px;bottom:18px;z-index:9998;',
+      'display:inline-flex;align-items:center;gap:8px;padding:11px 18px;',
+      'border-radius:999px;border:1px solid rgba(255,255,255,.12);',
+      'background:linear-gradient(135deg,#c9a14a,#e8c87b);color:#0a0a0a;',
+      'font-family:"Space Grotesk",ui-sans-serif,system-ui,sans-serif;',
+      'font-weight:700;font-size:13px;letter-spacing:.03em;text-transform:uppercase;',
+      'cursor:pointer;box-shadow:0 8px 24px rgba(0,0,0,.35),0 2px 8px rgba(201,161,74,.35);',
+      'transition:transform .15s ease,box-shadow .2s ease;opacity:0;transform:translateY(12px)}',
+      '.tkc-install-pill.is-visible{opacity:1;transform:none}',
+      '.tkc-install-pill:hover{transform:translateY(-2px) scale(1.03);box-shadow:0 12px 30px rgba(201,161,74,.5)}',
+      '.tkc-install-pill svg{width:16px;height:16px}',
+      '@media (max-width:640px){.tkc-install-pill{right:12px;bottom:12px;padding:10px 14px;font-size:12px}}',
       '.tkc-ios-hint{position:fixed;left:12px;right:12px;bottom:12px;z-index:9999;',
       'background:#0a0a0a;color:#fff;border:1px solid rgba(201,161,74,.4);',
       'border-radius:14px;padding:14px 16px;font-family:Inter,system-ui,sans-serif;',
@@ -140,23 +153,35 @@
       try { localStorage.setItem(STORAGE_KEY, String(Date.now())); } catch (_) {}
       bar.remove();
       document.body.classList.remove('tkc-has-install-banner');
+      track('pwa_banner_dismiss', { source: 'banner' });
     });
 
     bar.querySelector('.tkc-ib-cta').addEventListener('click', function () {
+      track('pwa_install_click', { source: 'banner' });
+      handleInstallClick('banner', function () {
+        bar.remove();
+        document.body.classList.remove('tkc-has-install-banner');
+      });
+    });
+    return bar;
+  }
+
+  function handleInstallClick(source, onAccepted) {
       if (deferredPrompt) {
         deferredPrompt.prompt();
         deferredPrompt.userChoice.then(function () {
+          var outcome = arguments[0] && arguments[0].outcome ? arguments[0].outcome : 'unknown';
+          track('pwa_install_prompt_result', { source: source, outcome: outcome });
           deferredPrompt = null;
-          bar.remove();
-          document.body.classList.remove('tkc-has-install-banner');
+          if (typeof onAccepted === 'function') onAccepted();
         });
       } else if (isIOS()) {
+        track('pwa_install_fallback', { source: source, fallback: 'ios_hint' });
         showIOSHint();
       } else {
+        track('pwa_install_fallback', { source: source, fallback: 'manual_hint' });
         showManualHint();
       }
-    });
-    return bar;
   }
 
   function showManualHint() {
@@ -199,20 +224,57 @@
     window.addEventListener('beforeinstallprompt', function (e) {
       e.preventDefault();
       deferredPrompt = e;
+      track('pwa_prompt_available');
     });
 
     window.addEventListener('appinstalled', function () {
+      track('pwa_app_installed');
       deferredPrompt = null;
       var b = document.querySelector('.tkc-install-banner');
       if (b) b.remove();
+      var p = document.querySelector('.tkc-install-pill');
+      if (p) p.remove();
       document.body.classList.remove('tkc-has-install-banner');
     });
 
-    // Show a prominent install banner on every fresh visit so users can't miss it.
+    // Persistent floating pill — always available even after banner dismiss.
+    createPill();
+
+    // Prominent top banner on fresh visits (respects 7-day dismiss).
     setTimeout(function () {
       var bar = createButton();
-      if (bar) requestAnimationFrame(function () { bar.classList.add('is-visible'); });
+      if (bar) {
+        requestAnimationFrame(function () { bar.classList.add('is-visible'); });
+        if (!bannerImpressionSent) {
+          bannerImpressionSent = true;
+          track('pwa_banner_impression', { source: 'banner' });
+        }
+      }
     }, 600);
+  }
+
+  function createPill() {
+    if (document.querySelector('.tkc-install-pill')) return null;
+    var pill = document.createElement('button');
+    pill.type = 'button';
+    pill.className = 'tkc-install-pill';
+    pill.setAttribute('aria-label', 'Install TKC Talent app');
+    pill.innerHTML =
+      '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M5 21h14"/></svg>' +
+      '<span>Install App</span>';
+    document.body.appendChild(pill);
+    requestAnimationFrame(function () { pill.classList.add('is-visible'); });
+
+    if (!pillImpressionSent) {
+      pillImpressionSent = true;
+      track('pwa_pill_impression', { source: 'pill' });
+    }
+
+    pill.addEventListener('click', function () {
+      track('pwa_install_click', { source: 'pill' });
+      handleInstallClick('pill', function () { pill.remove(); });
+    });
+    return pill;
   }
 
   if (document.readyState === 'loading') {
