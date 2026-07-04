@@ -3,15 +3,35 @@
   window.__tkcInstallInit = true;
 
   var STORAGE_KEY = 'tkc-install-dismissed-v2';
+  var SESSION_KEY = 'tkc-install-session-id';
   var deferredPrompt = null;
   var bannerImpressionSent = false;
   var pillImpressionSent = false;
+
+  // --- Session id (correlates all PWA events for a single user journey) ---
+  function getSessionId() {
+    try {
+      var id = localStorage.getItem(SESSION_KEY);
+      if (id) return id;
+      var rand = (typeof crypto !== 'undefined' && crypto.getRandomValues)
+        ? Array.from(crypto.getRandomValues(new Uint8Array(8))).map(function (b) {
+            return b.toString(16).padStart(2, '0');
+          }).join('')
+        : Math.random().toString(16).slice(2) + Math.random().toString(16).slice(2);
+      id = 'pwa_' + Date.now().toString(36) + '_' + rand;
+      localStorage.setItem(SESSION_KEY, id);
+      return id;
+    } catch (_) {
+      return 'pwa_ephemeral_' + Date.now().toString(36);
+    }
+  }
 
   // --- Analytics (GA4 + dataLayer, safe if absent) ---
   function track(eventName, params) {
     try {
       var payload = Object.assign({
         event_category: 'pwa_install',
+        install_session_id: getSessionId(),
         page_path: location.pathname + location.search,
         page_location: location.href,
         prompt_available: !!deferredPrompt,
