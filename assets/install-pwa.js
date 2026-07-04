@@ -169,8 +169,8 @@
   function handleInstallClick(source, onAccepted) {
       if (deferredPrompt) {
         deferredPrompt.prompt();
-        deferredPrompt.userChoice.then(function () {
-          var outcome = arguments[0] && arguments[0].outcome ? arguments[0].outcome : 'unknown';
+        deferredPrompt.userChoice.then(function (choice) {
+          var outcome = (choice && choice.outcome) ? choice.outcome : 'unknown';
           track('pwa_install_prompt_result', { source: source, outcome: outcome });
           deferredPrompt = null;
           if (typeof onAccepted === 'function') onAccepted();
@@ -218,7 +218,7 @@
   }
 
   function init() {
-    if (isStandalone() || wasDismissedRecently()) return;
+    if (isStandalone()) return;
     injectStyles();
 
     window.addEventListener('beforeinstallprompt', function (e) {
@@ -241,6 +241,7 @@
     createPill();
 
     // Prominent top banner on fresh visits (respects 7-day dismiss).
+    if (wasDismissedRecently()) return;
     setTimeout(function () {
       var bar = createButton();
       if (bar) {
