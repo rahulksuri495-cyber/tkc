@@ -63,10 +63,11 @@ for slug in TIER1:
     google_canonical = idx.get("googleCanonical")
     submitted = "URL is on Google" in coverage or verdict == "PASS"
 
+    is_unknown = "unknown to google" in (coverage or "").lower()
     p = prev.get(slug, {})
-    # first_discovered: sticky — earliest time we saw the URL surface in GSC at all
+    # first_discovered: sticky — first time GSC surfaced the URL (any state other than Unknown)
     first_discovered = p.get("first_discovered")
-    if coverage and coverage != "Unknown" and not first_discovered:
+    if coverage and not is_unknown and not first_discovered:
         first_discovered = today.isoformat()
     first_indexed = p.get("first_indexed")
     if submitted and not first_indexed:
@@ -85,6 +86,7 @@ for slug in TIER1:
         "days_since_discovery": days_between(first_discovered, today),
         "days_since_last_crawl": days_between(last_crawl, today),
         "is_indexed": submitted,
+        "is_unknown": is_unknown,
     })
 
 out = {
@@ -95,7 +97,7 @@ out = {
         "total": len(out_pages),
         "indexed": sum(1 for p in out_pages if p["is_indexed"]),
         "discovered_not_indexed": sum(1 for p in out_pages if p["first_discovered"] and not p["is_indexed"]),
-        "unknown": sum(1 for p in out_pages if p["coverage_state"] == "Unknown"),
+        "unknown": sum(1 for p in out_pages if p.get("is_unknown")),
     },
 }
 STATE_FILE.parent.mkdir(parents=True, exist_ok=True)
