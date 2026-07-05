@@ -139,6 +139,15 @@
       '.tkc-install-pill:hover{transform:translateY(-2px) scale(1.03);box-shadow:0 12px 30px rgba(201,161,74,.5)}',
       '.tkc-install-pill svg{width:16px;height:16px}',
       '@media (max-width:640px){.tkc-install-pill{right:12px;bottom:12px;padding:10px 14px;font-size:12px}}',
+      '.tkc-install-pill-close{position:fixed;right:8px;bottom:44px;z-index:9999;',
+      'width:22px;height:22px;border-radius:999px;border:1px solid rgba(0,0,0,.15);',
+      'background:#0a0a0a;color:#e8c87b;font-family:"Space Grotesk",system-ui,sans-serif;',
+      'font-size:14px;line-height:1;cursor:pointer;padding:0;',
+      'display:none;align-items:center;justify-content:center;',
+      'box-shadow:0 4px 12px rgba(0,0,0,.35)}',
+      '.tkc-install-pill-close.is-visible{display:inline-flex}',
+      '.tkc-install-pill-close:hover{background:#1a1a1a}',
+      '@media (max-width:640px){.tkc-install-pill-close{right:4px;bottom:38px}}',
       '.tkc-ios-hint{position:fixed;left:12px;right:12px;bottom:12px;z-index:9999;',
       'background:#0a0a0a;color:#fff;border:1px solid rgba(201,161,74,.4);',
       'border-radius:14px;padding:14px 16px;font-family:Inter,system-ui,sans-serif;',
@@ -284,7 +293,26 @@
       '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M5 21h14"/></svg>' +
       '<span>Install App</span>';
     document.body.appendChild(pill);
-    requestAnimationFrame(function () { pill.classList.add('is-visible'); });
+
+    var closeBtn = document.createElement('button');
+    closeBtn.type = 'button';
+    closeBtn.className = 'tkc-install-pill-close';
+    closeBtn.setAttribute('aria-label', 'Dismiss install app');
+    closeBtn.textContent = '×';
+    document.body.appendChild(closeBtn);
+
+    requestAnimationFrame(function () {
+      pill.classList.add('is-visible');
+      closeBtn.classList.add('is-visible');
+    });
+
+    closeBtn.addEventListener('click', function (e) {
+      e.stopPropagation();
+      try { localStorage.setItem(STORAGE_KEY, String(Date.now())); } catch (_) {}
+      pill.remove();
+      closeBtn.remove();
+      track('pwa_banner_dismiss', { source: 'pill' });
+    });
 
     if (!pillImpressionSent) {
       pillImpressionSent = true;
@@ -293,7 +321,10 @@
 
     pill.addEventListener('click', function () {
       track('pwa_install_click', { source: 'pill' });
-      handleInstallClick('pill', function () { pill.remove(); });
+      handleInstallClick('pill', function () {
+        pill.remove();
+        closeBtn.remove();
+      });
     });
     return pill;
   }
