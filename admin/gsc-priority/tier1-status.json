@@ -1,0 +1,87 @@
+{
+  "generated_at": "2026-07-05T14:19:46+00:00",
+  "site": "https://tkctalent.com/",
+  "pages": [
+    {
+      "slug": "celebrity-management-company",
+      "url": "https://tkctalent.com/celebrity-management-company/",
+      "verdict": "NEUTRAL",
+      "coverage_state": "URL is unknown to Google",
+      "indexing_state": "INDEXING_STATE_UNSPECIFIED",
+      "last_crawl_time": null,
+      "google_canonical": null,
+      "first_discovered": null,
+      "first_indexed": null,
+      "days_since_discovery": null,
+      "days_since_last_crawl": null,
+      "is_indexed": false,
+      "is_unknown": true
+    },
+    {
+      "slug": "artist-management-india",
+      "url": "https://tkctalent.com/artist-management-india/",
+      "verdict": "NEUTRAL",
+      "coverage_state": "Discovered - currently not indexed",
+      "indexing_state": "INDEXING_STATE_UNSPECIFIED",
+      "last_crawl_time": null,
+      "google_canonical": null,
+      "first_discovered": "2026-07-05",
+      "first_indexed": null,
+      "days_since_discovery": 0,
+      "days_since_last_crawl": null,
+      "is_indexed": false,
+      "is_unknown": false
+    },
+    {
+      "slug": "event-management-mumbai",
+      "url": "https://tkctalent.com/event-management-mumbai/",
+      "verdict": "NEUTRAL",
+      "coverage_state": "URL is unknown to Google",
+      "indexing_state": "INDEXING_STATE_UNSPECIFIED",
+      "last_crawl_time": null,
+      "google_canonical": null,
+      "first_discovered": null,
+      "first_indexed": null,
+      "days_since_discovery": null,
+      "days_since_last_crawl": null,
+      "is_indexed": false,
+      "is_unknown": true
+    },
+    {
+      "slug": "event-management-delhi",
+      "url": "https://tkctalent.com/event-management-delhi/",
+      "verdict": "NEUTRAL",
+      "coverage_state": "Discovered - currently not indexed",
+      "indexing_state": "INDEXING_STATE_UNSPECIFIED",
+      "last_crawl_time": null,
+      "google_canonical": null,
+      "first_discovered": "2026-07-05",
+      "first_indexed": null,
+      "days_since_discovery": 0,
+      "days_since_last_crawl": null,
+      "is_indexed": false,
+      "is_unknown": false
+    },
+    {
+      "slug": "celebrity-brand-ambassador",
+      "url": "https://tkctalent.com/celebrity-brand-ambassador/",
+      "verdict": "NEUTRAL",
+      "coverage_state": "Discovered - currently not indexed",
+      "indexing_state": "INDEXING_STATE_UNSPECIFIED",
+      "last_crawl_time": null,
+      "google_canonical": null,
+      "first_discovered": "2026-07-05",
+      "first_indexed": null,
+      "days_since_discovery": 0,
+      "days_since_last_crawl": null,
+      "is_indexed": false,
+      "is_unknown": false
+    }
+  ],
+  "summary": {
+    "total": 5,
+    "indexed": 0,
+    "discovered_not_indexed": 3,
+    "unknown": 2
+  }
+}

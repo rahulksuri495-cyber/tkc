@@ -45,7 +45,56 @@
   <h1>GSC Priority Pages Dashboard</h1>
   <p id="meta">Loading…</p>
 </header>
+<section id="tier1-panel" class="page" style="margin:24px 32px 0;">
+  <h2>Tier 1 Crawl Status
+    <a id="tier1-meta" href="#" style="pointer-events:none;">—</a>
+  </h2>
+  <div class="stats" id="tier1-stats"></div>
+  <table id="tier1-table">
+    <thead><tr>
+      <th>URL</th><th>Coverage</th><th class="num">Discovered</th>
+      <th class="num">Days since discovery</th><th class="num">Last crawl</th><th class="num">Indexed</th>
+    </tr></thead>
+    <tbody></tbody>
+  </table>
+</section>
 <main id="root"></main>
+<script>
+(function(){
+  const badge = (label, tone) => {
+    const c = tone==='ok' ? '#0a7d2f' : tone==='warn' ? '#b26a00' : tone==='bad' ? '#d32f2f' : '#666';
+    return `<span style="display:inline-block;padding:2px 8px;border:1px solid ${c};color:${c};font-size:11px;font-weight:600;letter-spacing:0.04em;text-transform:uppercase;">${label}</span>`;
+  };
+  const toneFor = p => p.is_indexed ? 'ok' : p.is_unknown ? 'bad' : p.first_discovered ? 'warn' : 'muted';
+  const daysStr = d => d==null ? '—' : d===0 ? 'today' : d+'d';
+  fetch('./tier1-status.json?ts='+Date.now()).then(r=>r.json()).then(data => {
+    document.getElementById('tier1-meta').textContent = 'Generated ' + data.generated_at;
+    const s = data.summary;
+    document.getElementById('tier1-stats').innerHTML = `
+      <div class="stat"><div class="k">Total Tier 1</div><div class="v">${s.total}</div></div>
+      <div class="stat"><div class="k">Indexed</div><div class="v" style="color:#0a7d2f;">${s.indexed}</div></div>
+      <div class="stat"><div class="k">Discovered · not indexed</div><div class="v" style="color:#b26a00;">${s.discovered_not_indexed}</div></div>
+      <div class="stat"><div class="k">Unknown to Google</div><div class="v" style="color:#d32f2f;">${s.unknown}</div></div>`;
+    const tbody = document.querySelector('#tier1-table tbody');
+    tbody.innerHTML = data.pages.map(p => {
+      const path = new URL(p.url).pathname;
+      const lastCrawl = p.last_crawl_time
+        ? `${p.last_crawl_time.slice(0,10)} <span class="flat">(${daysStr(p.days_since_last_crawl)})</span>`
+        : '—';
+      return `<tr>
+        <td><a href="${p.url}" target="_blank" rel="noopener" style="color:#0a0a0a;">${path}</a></td>
+        <td>${badge(p.coverage_state, toneFor(p))}</td>
+        <td class="num">${p.first_discovered || '—'}</td>
+        <td class="num">${daysStr(p.days_since_discovery)}</td>
+        <td class="num">${lastCrawl}</td>
+        <td class="num">${p.is_indexed ? '✓' : '·'}</td>
+      </tr>`;
+    }).join('');
+  }).catch(e => {
+    document.getElementById('tier1-meta').textContent = 'Failed to load tier1-status.json: '+e;
+  });
+})();
+</script>
 <script>
 const fmtPct = v => (v*100).toFixed(2)+'%';
 const fmtPos = v => v ? v.toFixed(1) : '—';
