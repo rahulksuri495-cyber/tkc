@@ -293,7 +293,26 @@
       '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M5 21h14"/></svg>' +
       '<span>Install App</span>';
     document.body.appendChild(pill);
-    requestAnimationFrame(function () { pill.classList.add('is-visible'); });
+
+    var closeBtn = document.createElement('button');
+    closeBtn.type = 'button';
+    closeBtn.className = 'tkc-install-pill-close';
+    closeBtn.setAttribute('aria-label', 'Dismiss install app');
+    closeBtn.textContent = '×';
+    document.body.appendChild(closeBtn);
+
+    requestAnimationFrame(function () {
+      pill.classList.add('is-visible');
+      closeBtn.classList.add('is-visible');
+    });
+
+    closeBtn.addEventListener('click', function (e) {
+      e.stopPropagation();
+      try { localStorage.setItem(STORAGE_KEY, String(Date.now())); } catch (_) {}
+      pill.remove();
+      closeBtn.remove();
+      track('pwa_banner_dismiss', { source: 'pill' });
+    });
 
     if (!pillImpressionSent) {
       pillImpressionSent = true;
@@ -302,7 +321,10 @@
 
     pill.addEventListener('click', function () {
       track('pwa_install_click', { source: 'pill' });
-      handleInstallClick('pill', function () { pill.remove(); });
+      handleInstallClick('pill', function () {
+        pill.remove();
+        closeBtn.remove();
+      });
     });
     return pill;
   }
