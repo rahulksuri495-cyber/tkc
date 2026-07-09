@@ -1,84 +1,65 @@
-## Blog launch — `/blog/` magazine-grid hub + 4 SEO articles
+## Goal
 
-Brand-consistent blog matching the site's existing aesthetic (Inter + Space Grotesk, dark `#0a0a0a` foreground, brand accent, newsroom-style typography). Same static HTML pattern as `/book-{name}/` and `/iiteo/`, so it ranks like the rest of the site and is easy to extend.
+Add a dedicated "IITEO Legacy" section to the homepage that summarizes the `/iiteo/` page and shows the dignitary/leader photos already used there. This strengthens E-E-A-T by surfacing real, verifiable event heritage (Presidents, PM, CMs, Governors hosted by TKC / The Kabir Company) directly on the homepage, with a clear internal link to the full `/iiteo/` article.
 
-### URL structure
-```text
-/blog/                                                    → magazine index
-/blog/event-management-company-india/                     → article 1
-/blog/celebrity-booking-agency-india/                     → article 2
-/blog/artist-booking-agency-india/                        → article 3
-/blog/corporate-event-management-india/                   → article 4
-```
+The current homepage already has a text-only `tkc-legacy` band (injected by `assets/tkc-homepage-blocks.js`). We will keep it and add a NEW, richer IITEO Legacy section *below* it — different purpose (people + proof), different visuals, so no duplication.
 
-### Keyword targeting (one primary per article)
-1. **Event management company in India** (~22k/mo) — pillar guide, links to `/ourservice/` + city pages
-2. **Celebrity booking agency India** — transactional, links to `/celebrity-booking-india/` + actor pages
-3. **Artist booking agency India** — links to `/singer-booking-india/`, `/comedian-booking-india/`, `/celebrity-dj-booking/`
-4. **Corporate event management India** — links to `/corporate-event-management/` + Delhi/Mumbai/Gurgaon city pages
+## What to build
 
-Each article: 1,400–1,700 words, H1/H2/H3 hierarchy, TL;DR + Key Details block, 6-Q FAQ, long-tail variants woven in (e.g. "how to book Bollywood celebrity for corporate event", "event management company in Faridabad / Delhi NCR").
+A new client-side injector script `assets/tkc-iiteo-legacy.js` that:
 
-### Design — magazine grid (matches `/newsroom` editorial style, no new colors/fonts)
-```text
-/blog/ layout
-┌─────────────────────────────────────────────────────────┐
-│  ★ Insights                                              │
-│  The TKC                                                 │
-│  Journal.                  ← big display H1, brand accent│
-│  Field notes on celebrity booking & event craft         │
-├─────────────────────────────────────────────────────────┤
-│  FEATURED                                                │
-│  ┌──────────────────────┐  ┌──────────────────────┐    │
-│  │  Hero image          │  │ CATEGORY · 8 MIN     │    │
-│  │  (16:9)              │  │ Event Management     │    │
-│  │                      │  │ Company in India:    │    │
-│  │                      │  │ 2026 Buyer's Guide   │    │
-│  │                      │  │ Excerpt 2 lines…     │    │
-│  │                      │  │ Read story →         │    │
-│  └──────────────────────┘  └──────────────────────┘    │
-├─────────────────────────────────────────────────────────┤
-│  ALL ARTICLES        [All] [Booking] [Events] [Guides]  │
-│  ┌─────────┐  ┌─────────┐  ┌─────────┐                  │
-│  │ img 4:3 │  │ img 4:3 │  │ img 4:3 │                  │
-│  │ chip    │  │ chip    │  │ chip    │                  │
-│  │ Title   │  │ Title   │  │ Title   │                  │
-│  │ excerpt │  │ excerpt │  │ excerpt │                  │
-│  └─────────┘  └─────────┘  └─────────┘                  │
-└─────────────────────────────────────────────────────────┘
-```
-Visual rules: existing nav + footer untouched; brand accent only on hover/eyebrow; numbered section labels ("(01)") like newsroom; category chips use 1px border + uppercase tracking; no purple gradients, no new fonts, no new colors.
+1. Runs only on `/` (homepage).
+2. Injects a `<section id="tkc-iiteo-legacy">` right after the existing `#tkc-legacy` block (or, if not found, before the roster/pricing area — same anchor logic already used in `tkc-homepage-blocks.js`).
+3. Adds its own scoped CSS (dark premium band, gold accent to match brand — matches the existing legacy band styling language).
 
-### Article page template
-- Eyebrow (category) → H1 → meta row (date · reading time · author "TKC Editorial") → 16:9 hero image
-- TL;DR box + Key Details bullets (matches existing service/location pages)
-- Body H2/H3 sections, pull-quotes, in-content internal links with keyword anchors
-- 6-question FAQ (FAQPage JSON-LD)
-- "Related reading" card row → 3 related articles + relevant service/booking page
-- Sticky bottom CTA → `/contact-us/` with phone + WhatsApp
+### Section content
 
-### SEO/AEO/GEO per article
-- Unique title (<60c) + meta description (<160c) with primary keyword
-- Canonical, `og:image` (custom 1200×630 generated per article), `twitter:card`
-- JSON-LD: `Article` + `BreadcrumbList` + `FAQPage` + `Organization` ref + `SpeakableSpecification`
-- City variants ("Delhi NCR", "Faridabad", "Mumbai", "Gurgaon") woven naturally
-- Added to `sitemap.xml`, `llms-full.txt`, and city `llms-{city}.txt` where relevant
-- `og/` per-article cards via existing `scripts/generate-og-images.py` pipeline
+- **Eyebrow:** "IITEO × The Kabir Company — Two-Decade Event Legacy"
+- **H2:** "From India's biggest trade fairs to the country's most-booked stage."
+- **Lead paragraphs (~120–140 words, SEO-tuned around: IITEO, India International Trade Event Organisation, The Kabir Company, event management Delhi NCR, exhibitions, concerts, celebrity bookings)** — condensed summary of `/iiteo/`:
+  - Origins in India's trade-fair and exhibition ecosystem via IITEO (India International Trade Event Organisation).
+  - Evolution into concerts, corporate events, luxury weddings, celebrity bookings.
+  - HQ New Delhi; pan-India delivery; hosted by top political and cultural leadership across two decades.
+- **Proof gallery — 10 dignitaries** (already in `assets/iiteo-leaders/`):
+  - Pranab Mukherjee — 13th President of India
+  - Pratibha Patil — 12th President of India
+  - Narendra Modi — Prime Minister of India
+  - Rajnath Singh — Defence Minister
+  - Sheila Dikshit — CM Delhi
+  - Bhupinder Singh Hooda — CM Haryana
+  - Akhilesh Yadav — CM Uttar Pradesh
+  - Omar Abdullah — CM Jammu & Kashmir
+  - Arjun Munda — CM Jharkhand
+  - Ramesh Pokhriyal — CM Uttarakhand
+  - (+ Jagannath Pahadia, Syed Ahmed — Governors, as overflow)
+  - Rendered as a responsive grid of portrait cards: circular/rounded photo, name, role caption. Descriptive `alt` text for SEO/a11y (e.g. "Shri Pranab Mukherjee, 13th President of India, hosted by The Kabir Company / TKC Talent leadership").
+  - `loading="lazy"` and `decoding="async"` on every `<img>`.
+- **Stat row (3 KPIs):** "20+ Yrs Legacy", "10+ Heads of State & CMs Hosted", "500+ Talents · Pan-India".
+- **CTA row:** primary button "Read the full IITEO legacy →" linking to `/iiteo/` (internal link — real SEO juice), secondary WhatsApp/contact link.
 
-### Navigation
-Add "Blog" as a top-level nav item placed before "Contact" across the 30+ core HTML pages using the same Python patcher used for previous nav updates. Bump SW to `tkc-v24`.
+### Styling
 
-### Review-before-publish flow
-Per your "show me before publishing" requirement, I will build everything **set to `<meta name="robots" content="noindex, follow">`** and **excluded from `sitemap.xml`** on first pass. You'll get:
-1. Preview URLs for `/blog/` and all 4 articles
-2. A short visual review note
-Once you approve, I flip robots to `index, follow`, add entries to `sitemap.xml` + `llms.txt`, regenerate OG images, ping IndexNow, and bump the SW.
+- Dark premium background to visually separate from the light cream `tkc-legacy` band above it.
+- Gold accent (#c9a84c) on eyebrow and H2 highlight — brand-consistent.
+- Portrait cards: rounded top, subtle gold hairline border, name in Space Grotesk bold + role caption in Inter.
+- Reveal-on-scroll animation (reuse the same `.tkc-reveal` IntersectionObserver pattern from `tkc-homepage-blocks.js`).
+- Respects `prefers-reduced-motion`.
 
-### Build steps (in order)
-1. Generate 4 hero images (1600×900) + 4 OG cards (1200×630) into `assets/blog/`
-2. Create `/blog/index.html` (magazine grid, featured + 3 cards, category filter via simple anchor chips)
-3. Create 4 article HTML files with full template above
-4. Run `scripts/seo-monitor.py` to validate JSON-LD/canonical/OG on all 5 new pages
-5. Patch navigation across core pages to add "Blog"
-6. Hold publish (noindex) → await your approval
-7. On approval: flip robots, update sitemap + llms files, IndexNow ping, SW bump
+### SEO / structured data
+
+Append a JSON-LD `<script type="application/ld+json">` inside the injected section with an `ItemList` of the dignitaries as `Person` entries (name + jobTitle) — extends `/iiteo/`'s existing schema onto the homepage. Does not conflict with the existing homepage JSON-LD graph.
+
+### Wiring
+
+- Add `<script src="/assets/tkc-iiteo-legacy.js" defer></script>` to the homepage shell. The React app hydrates the DOM; the existing `tkc-homepage-blocks.js` and `tkc-clients-scroller.js` are already loaded the same way — locate where they're registered (likely `_shell.html` or `index.html`) and add the new one alongside them.
+
+## Files touched
+
+- **Create** `assets/tkc-iiteo-legacy.js` — the injector (styles + DOM + reveal + JSON-LD).
+- **Edit** `_shell.html` (or wherever the sibling `tkc-homepage-blocks.js` / `tkc-clients-scroller.js` are registered) — add one `<script defer>` tag.
+
+No changes to the React bundle, no changes to `/iiteo/` itself, no new image assets (reuse `assets/iiteo-leaders/*`).
+
+## Verification
+
+Playwright headless: load `http://localhost:8080/`, screenshot the new section, confirm all 10 leader images load (status 200), confirm the internal `/iiteo/` link is present, confirm the section does not appear on non-home routes.
