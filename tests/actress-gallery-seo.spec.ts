@@ -54,10 +54,12 @@ test.describe("bollywood-actress-booking gallery SEO", () => {
     expect(data).toHaveLength(ROSTER.length);
 
     for (const item of data) {
+      const alt = item.alt.toLowerCase();
       // Alt text: descriptive, not just the filename or the bare name.
       expect(item.alt.length, `alt too short for ${item.src}`).toBeGreaterThanOrEqual(60);
-      expect(item.alt.toLowerCase()).toContain("bollywood");
-      expect(item.alt.toLowerCase()).toContain("tkc talent");
+      expect(alt, `alt missing TKC Talent attribution for ${item.src}`).toContain("tkc talent");
+      expect(alt, `alt missing booking context for ${item.src}`).toMatch(/book|booking|hire/);
+      expect(alt, `alt missing event context for ${item.src}`).toMatch(/bollywood|event|brand|wedding/);
       // Async decoding on every image.
       expect(item.decoding).toBe("async");
     }
