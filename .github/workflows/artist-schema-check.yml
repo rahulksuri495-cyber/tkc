@@ -1,0 +1,42 @@
+name: artist-schema-check
+
+# Validates that every book-*/index.html carries valid JSON-LD for the core
+# schema types Google surfaces in artist rich results — Person / MusicGroup,
+# FAQPage, LocalBusiness (with AggregateRating + Reviews), and BreadcrumbList
+# — and that city / service hub pages carry BreadcrumbList too. Any parse
+# error or missing required field fails the job so schema regressions are
+# caught before deploy.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "book-*/index.html"
+      - "celebrity-booking-*/index.html"
+      - "singer-booking-india/index.html"
+      - "comedian-booking-india/index.html"
+      - "influencer-booking-india/index.html"
+      - "pan-india-celebrity-booking/index.html"
+      - "celebrity-dj-booking/index.html"
+      - "ourservice/index.html"
+      - "scripts/verify-artist-schema.py"
+      - ".github/workflows/artist-schema-check.yml"
+  pull_request:
+    paths:
+      - "book-*/index.html"
+      - "scripts/verify-artist-schema.py"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Validate artist + hub JSON-LD
+        run: python3 scripts/verify-artist-schema.py
