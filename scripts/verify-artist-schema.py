@@ -39,7 +39,8 @@ JSONLD_RE = re.compile(
 )
 
 # Artist-page requirements
-ARTIST_REQUIRED_TYPES = {"Person", "FAQPage", "LocalBusiness", "BreadcrumbList"}
+ARTIST_REQUIRED_TYPES = {"FAQPage", "LocalBusiness", "BreadcrumbList"}
+ARTIST_PRIMARY_TYPES = {"Person", "MusicGroup", "PerformingGroup"}
 PERSON_REQUIRED = {"name", "image", "jobTitle"}
 LOCALBUSINESS_REQUIRED = {"name", "address", "telephone"}
 FAQ_MIN_QUESTIONS = 4
@@ -91,19 +92,20 @@ def validate_artist(path: Path) -> list[str]:
     for req in ARTIST_REQUIRED_TYPES:
         if req not in present_types:
             errors.append(f"{path}: missing {req} JSON-LD")
+    if not (present_types & ARTIST_PRIMARY_TYPES):
+        errors.append(f"{path}: missing primary artist type (Person/MusicGroup)")
 
-    # Only validate the primary Person (the one bound to the page via
-    # mainEntityOfPage), not shallow Person refs inside `mentions` arrays.
-    people = collect_by_type(all_nodes, "Person")
-    primary = next((p for p in people if p.get("mainEntityOfPage")), None) \
-        or next((p for p in people if p.get("jobTitle")), None) \
-        or (people[0] if people else None)
-    if primary is None:
-        errors.append(f"{path}: no primary Person node")
-    else:
-        missing = [f for f in PERSON_REQUIRED if not primary.get(f)]
+    # Primary artist entity: a Person or MusicGroup bound to the page. Skip
+    # shallow Person refs in `mentions`.
+    candidates = [n for n in all_nodes if types_of(n) & ARTIST_PRIMARY_TYPES]
+    primary = next((n for n in candidates if n.get("mainEntityOfPage")), None) \
+        or next((n for n in candidates if n.get("description") or n.get("jobTitle")), None) \
+        or (candidates[0] if candidates else None)
+    if primary is not None:
+        required = {"name", "image"} if "MusicGroup" in types_of(primary) else PERSON_REQUIRED
+        missing = [f for f in required if not primary.get(f)]
         if missing:
-            errors.append(f"{path}: primary Person missing fields: {', '.join(missing)}")
+            errors.append(f"{path}: primary artist missing fields: {', '.join(missing)}")
 
     for lb in collect_by_type(all_nodes, "LocalBusiness"):
         missing = [f for f in LOCALBUSINESS_REQUIRED if not lb.get(f)]
