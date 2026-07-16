@@ -92,10 +92,18 @@ def validate_artist(path: Path) -> list[str]:
         if req not in present_types:
             errors.append(f"{path}: missing {req} JSON-LD")
 
-    for person in collect_by_type(all_nodes, "Person"):
-        missing = [f for f in PERSON_REQUIRED if not person.get(f)]
+    # Only validate the primary Person (the one bound to the page via
+    # mainEntityOfPage), not shallow Person refs inside `mentions` arrays.
+    people = collect_by_type(all_nodes, "Person")
+    primary = next((p for p in people if p.get("mainEntityOfPage")), None) \
+        or next((p for p in people if p.get("jobTitle")), None) \
+        or (people[0] if people else None)
+    if primary is None:
+        errors.append(f"{path}: no primary Person node")
+    else:
+        missing = [f for f in PERSON_REQUIRED if not primary.get(f)]
         if missing:
-            errors.append(f"{path}: Person missing fields: {', '.join(missing)}")
+            errors.append(f"{path}: primary Person missing fields: {', '.join(missing)}")
 
     for lb in collect_by_type(all_nodes, "LocalBusiness"):
         missing = [f for f in LOCALBUSINESS_REQUIRED if not lb.get(f)]
