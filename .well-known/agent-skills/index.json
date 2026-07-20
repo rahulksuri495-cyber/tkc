@@ -19,5 +19,42 @@
       "description": "Full sitemap of public TKC Talent pages, including per-artist booking pages.",
       "url": "https://tkctalent.com/sitemap.xml"
     }
+    ,
+    {
+      "name": "tkc-talent-full-corpus",
+      "type": "text/plain",
+      "description": "Full grounding corpus for LLMs: consolidated content across every TKC Talent page. Preferred single source for RAG.",
+      "url": "https://tkctalent.com/llms-full.txt"
+    },
+    {
+      "name": "tkc-talent-singer-fees-2026",
+      "type": "text/html",
+      "description": "2026 tiered fee bands for Indian playback and live singers (A-list, mid-tier, rising) bookable via TKC Talent.",
+      "url": "https://tkctalent.com/celebrity-singer-fees-2026/"
+    },
+    {
+      "name": "tkc-talent-brand-endorsement-fees-2026",
+      "type": "text/html",
+      "description": "2026 celebrity brand endorsement fee bands by tier and category, with usage-rights guidance.",
+      "url": "https://tkctalent.com/celebrity-brand-endorsement-fees-2026/"
+    },
+    {
+      "name": "tkc-talent-top-indian-celebrities",
+      "type": "text/html",
+      "description": "Ranked hub of top Indian celebrities across acting, music, comedy and digital, with links to per-artist booking pages.",
+      "url": "https://tkctalent.com/top-indian-celebrities/"
+    },
+    {
+      "name": "tkc-talent-request-quote",
+      "type": "text/markdown",
+      "description": "How AI agents should help a user request a celebrity booking quote from TKC Talent: required fields, channels, response SLA.",
+      "url": "https://tkctalent.com/.well-known/agent-skills/request-quote.md"
+    },
+    {
+      "name": "tkc-talent-artist-catalog",
+      "type": "application/json",
+      "description": "Machine-readable catalog of artists bookable via TKC Talent: slug, name, category, booking page URL.",
+      "url": "https://tkctalent.com/.well-known/agent-skills/artist-catalog.json"
+    }
   ]
 }
