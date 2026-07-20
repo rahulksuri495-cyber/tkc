@@ -36,5 +36,21 @@
       "name": "Look up indicative celebrity fees",
       "description": "Read transparent 2026 indicative fee ranges for individual celebrities and categories on /bollywood-celebrity-charges and the per-artist /book-<artist> pages."
     }
+    ,
+    {
+      "id": "artist-catalog",
+      "name": "Machine-readable artist catalog",
+      "description": "Structured JSON list of every artist bookable via TKC Talent (slug, name, category, booking URL) at /.well-known/agent-skills/artist-catalog.json."
+    },
+    {
+      "id": "singer-fee-bands-2026",
+      "name": "Singer fee bands 2026",
+      "description": "Tiered 2026 fee bands for Indian playback and live singers on /celebrity-singer-fees-2026/."
+    },
+    {
+      "id": "brand-endorsement-fees-2026",
+      "name": "Brand endorsement fees 2026",
+      "description": "2026 celebrity brand endorsement fee bands by tier and category on /celebrity-brand-endorsement-fees-2026/."
+    }
   ]
 }

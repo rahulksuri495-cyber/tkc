@@ -29,6 +29,13 @@
           "type": "application/json",
           "title": "TKC Talent MCP server card"
         }
+      ],
+      "https://agentskills.io/rel/skills-index": [
+        {
+          "href": "https://tkctalent.com/.well-known/agent-skills/index.json",
+          "type": "application/json",
+          "title": "TKC Talent agent skills index"
+        }
       ]
     }
   ]

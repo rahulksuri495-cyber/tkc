@@ -26,6 +26,26 @@
       "uri": "https://tkctalent.com/.well-known/api-catalog",
       "name": "API catalog (RFC 9727)",
       "mimeType": "application/linkset+json"
+    },
+    {
+      "uri": "https://tkctalent.com/llms-full.txt",
+      "name": "Full grounding corpus",
+      "mimeType": "text/plain"
+    },
+    {
+      "uri": "https://tkctalent.com/.well-known/agent-skills/index.json",
+      "name": "Agent skills index",
+      "mimeType": "application/json"
+    },
+    {
+      "uri": "https://tkctalent.com/.well-known/agent-skills/artist-catalog.json",
+      "name": "Artist catalog (machine-readable roster)",
+      "mimeType": "application/json"
+    },
+    {
+      "uri": "https://tkctalent.com/.well-known/agent-skills/request-quote.md",
+      "name": "Quote-request skill",
+      "mimeType": "text/markdown"
     }
   ]
 }
