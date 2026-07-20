@@ -1,0 +1,829 @@
+{
+  "generatedAt": "2026-07-18",
+  "source": "https://tkctalent.com/sitemap.xml",
+  "count": 137,
+  "artists": [
+    {
+      "slug": "aamir-khan",
+      "name": "Aamir Khan",
+      "category": "actor",
+      "url": "https://tkctalent.com/book-aamir-khan/"
+    },
+    {
+      "slug": "aditya-roy-kapur",
+      "name": "Aditya Roy Kapur",
+      "category": "actor",
+      "url": "https://tkctalent.com/book-aditya-roy-kapur/"
+    },
+    {
+      "slug": "ajay-devgn",
+      "name": "Ajay Devgn",
+      "category": "actor",
+      "url": "https://tkctalent.com/book-ajay-devgn/"
+    },
+    {
+      "slug": "akshay-kumar",
+      "name": "Akshay Kumar",
+      "category": "actor",
+      "url": "https://tkctalent.com/book-akshay-kumar/"
+    },
+    {
+      "slug": "anil-kapoor",
+      "name": "Anil Kapoor",
+      "category": "actor",
+      "url": "https://tkctalent.com/book-anil-kapoor/"
+    },
+    {
+      "slug": "arjun-kapoor",
+      "name": "Arjun Kapoor",
+      "category": "actor",
+      "url": "https://tkctalent.com/book-arjun-kapoor/"
+    },
+    {
+      "slug": "ayushmann-khurrana",
+      "name": "Ayushmann Khurrana",
+      "category": "actor",
+      "url": "https://tkctalent.com/book-ayushmann-khurrana/"
+    },
+    {
+      "slug": "bobby-deol",
+      "name": "Bobby Deol",
+      "category": "actor",
+      "url": "https://tkctalent.com/book-bobby-deol/"
+    },
+    {
+      "slug": "hrithik-roshan",
+      "name": "Hrithik Roshan",
+      "category": "actor",
+      "url": "https://tkctalent.com/book-hrithik-roshan/"
+    },
+    {
+      "slug": "kartik-aaryan",
+      "name": "Kartik Aaryan",
+      "category": "actor",
+      "url": "https://tkctalent.com/book-kartik-aaryan/"
+    },
+    {
+      "slug": "manoj-bajpayee",
+      "name": "Manoj Bajpayee",
+      "category": "actor",
+      "url": "https://tkctalent.com/book-manoj-bajpayee/"
+    },
+    {
+      "slug": "nawazuddin-siddiqui",
+      "name": "Nawazuddin Siddiqui",
+      "category": "actor",
+      "url": "https://tkctalent.com/book-nawazuddin-siddiqui/"
+    },
+    {
+      "slug": "pankaj-tripathi",
+      "name": "Pankaj Tripathi",
+      "category": "actor",
+      "url": "https://tkctalent.com/book-pankaj-tripathi/"
+    },
+    {
+      "slug": "rajkummar-rao",
+      "name": "Rajkummar Rao",
+      "category": "actor",
+      "url": "https://tkctalent.com/book-rajkummar-rao/"
+    },
+    {
+      "slug": "ranbir-kapoor",
+      "name": "Ranbir Kapoor",
+      "category": "actor",
+      "url": "https://tkctalent.com/book-ranbir-kapoor/"
+    },
+    {
+      "slug": "ranveer-singh",
+      "name": "Ranveer Singh",
+      "category": "actor",
+      "url": "https://tkctalent.com/book-ranveer-singh/"
+    },
+    {
+      "slug": "salman-khan",
+      "name": "Salman Khan",
+      "category": "actor",
+      "url": "https://tkctalent.com/book-salman-khan/"
+    },
+    {
+      "slug": "shah-rukh-khan",
+      "name": "Shah Rukh Khan",
+      "category": "actor",
+      "url": "https://tkctalent.com/book-shah-rukh-khan/"
+    },
+    {
+      "slug": "shahid-kapoor",
+      "name": "Shahid Kapoor",
+      "category": "actor",
+      "url": "https://tkctalent.com/book-shahid-kapoor/"
+    },
+    {
+      "slug": "sidharth-malhotra",
+      "name": "Sidharth Malhotra",
+      "category": "actor",
+      "url": "https://tkctalent.com/book-sidharth-malhotra/"
+    },
+    {
+      "slug": "sunny-deol",
+      "name": "Sunny Deol",
+      "category": "actor",
+      "url": "https://tkctalent.com/book-sunny-deol/"
+    },
+    {
+      "slug": "tiger-shroff",
+      "name": "Tiger Shroff",
+      "category": "actor",
+      "url": "https://tkctalent.com/book-tiger-shroff/"
+    },
+    {
+      "slug": "varun-dhawan",
+      "name": "Varun Dhawan",
+      "category": "actor",
+      "url": "https://tkctalent.com/book-varun-dhawan/"
+    },
+    {
+      "slug": "vicky-kaushal",
+      "name": "Vicky Kaushal",
+      "category": "actor",
+      "url": "https://tkctalent.com/book-vicky-kaushal/"
+    },
+    {
+      "slug": "vijay-varma",
+      "name": "Vijay Varma",
+      "category": "actor",
+      "url": "https://tkctalent.com/book-vijay-varma/"
+    },
+    {
+      "slug": "adah-sharma",
+      "name": "Adah Sharma",
+      "category": "actress",
+      "url": "https://tkctalent.com/book-adah-sharma/"
+    },
+    {
+      "slug": "aditi-rao-hydari",
+      "name": "Aditi Rao Hydari",
+      "category": "actress",
+      "url": "https://tkctalent.com/book-aditi-rao-hydari/"
+    },
+    {
+      "slug": "akanksha-puri",
+      "name": "Akanksha Puri",
+      "category": "actress",
+      "url": "https://tkctalent.com/book-akanksha-puri/"
+    },
+    {
+      "slug": "alia-bhatt",
+      "name": "Alia Bhatt",
+      "category": "actress",
+      "url": "https://tkctalent.com/book-alia-bhatt/"
+    },
+    {
+      "slug": "ananya-panday",
+      "name": "Ananya Panday",
+      "category": "actress",
+      "url": "https://tkctalent.com/book-ananya-panday/"
+    },
+    {
+      "slug": "aneet-padda",
+      "name": "Aneet Padda",
+      "category": "actress",
+      "url": "https://tkctalent.com/book-aneet-padda/"
+    },
+    {
+      "slug": "anushka-sharma",
+      "name": "Anushka Sharma",
+      "category": "actress",
+      "url": "https://tkctalent.com/book-anushka-sharma/"
+    },
+    {
+      "slug": "chitrangada-singh",
+      "name": "Chitrangada Singh",
+      "category": "actress",
+      "url": "https://tkctalent.com/book-chitrangada-singh/"
+    },
+    {
+      "slug": "deepika-padukone",
+      "name": "Deepika Padukone",
+      "category": "actress",
+      "url": "https://tkctalent.com/book-deepika-padukone/"
+    },
+    {
+      "slug": "dia-mirza",
+      "name": "Dia Mirza",
+      "category": "actress",
+      "url": "https://tkctalent.com/book-dia-mirza/"
+    },
+    {
+      "slug": "disha-patani",
+      "name": "Disha Patani",
+      "category": "actress",
+      "url": "https://tkctalent.com/book-disha-patani/"
+    },
+    {
+      "slug": "esha-gupta",
+      "name": "Esha Gupta",
+      "category": "actress",
+      "url": "https://tkctalent.com/book-esha-gupta/"
+    },
+    {
+      "slug": "fatima-sana-shaikh",
+      "name": "Fatima Sana Shaikh",
+      "category": "actress",
+      "url": "https://tkctalent.com/book-fatima-sana-shaikh/"
+    },
+    {
+      "slug": "huma-qureshi",
+      "name": "Huma Qureshi",
+      "category": "actress",
+      "url": "https://tkctalent.com/book-huma-qureshi/"
+    },
+    {
+      "slug": "jacqueline-fernandez",
+      "name": "Jacqueline Fernandez",
+      "category": "actress",
+      "url": "https://tkctalent.com/book-jacqueline-fernandez/"
+    },
+    {
+      "slug": "janhvi-kapoor",
+      "name": "Janhvi Kapoor",
+      "category": "actress",
+      "url": "https://tkctalent.com/book-janhvi-kapoor/"
+    },
+    {
+      "slug": "jennifer-winget",
+      "name": "Jennifer Winget",
+      "category": "actress",
+      "url": "https://tkctalent.com/book-jennifer-winget/"
+    },
+    {
+      "slug": "kajol",
+      "name": "Kajol",
+      "category": "actress",
+      "url": "https://tkctalent.com/book-kajol/"
+    },
+    {
+      "slug": "kangana-ranaut",
+      "name": "Kangana Ranaut",
+      "category": "actress",
+      "url": "https://tkctalent.com/book-kangana-ranaut/"
+    },
+    {
+      "slug": "kareena-kapoor",
+      "name": "Kareena Kapoor",
+      "category": "actress",
+      "url": "https://tkctalent.com/book-kareena-kapoor/"
+    },
+    {
+      "slug": "karishma-tanna",
+      "name": "Karishma Tanna",
+      "category": "actress",
+      "url": "https://tkctalent.com/book-karishma-tanna/"
+    },
+    {
+      "slug": "katrina-kaif",
+      "name": "Katrina Kaif",
+      "category": "actress",
+      "url": "https://tkctalent.com/book-katrina-kaif/"
+    },
+    {
+      "slug": "kiara-advani",
+      "name": "Kiara Advani",
+      "category": "actress",
+      "url": "https://tkctalent.com/book-kiara-advani/"
+    },
+    {
+      "slug": "konkona-sen-sharma",
+      "name": "Konkona Sen Sharma",
+      "category": "actress",
+      "url": "https://tkctalent.com/book-konkona-sen-sharma/"
+    },
+    {
+      "slug": "kriti-sanon",
+      "name": "Kriti Sanon",
+      "category": "actress",
+      "url": "https://tkctalent.com/book-kriti-sanon/"
+    },
+    {
+      "slug": "lara-dutta",
+      "name": "Lara Dutta",
+      "category": "actress",
+      "url": "https://tkctalent.com/book-lara-dutta/"
+    },
+    {
+      "slug": "mandira-bedi",
+      "name": "Mandira Bedi",
+      "category": "actress",
+      "url": "https://tkctalent.com/book-mandira-bedi/"
+    },
+    {
+      "slug": "mrunal-thakur",
+      "name": "Mrunal Thakur",
+      "category": "actress",
+      "url": "https://tkctalent.com/book-mrunal-thakur/"
+    },
+    {
+      "slug": "nikita-dutta",
+      "name": "Nikita Dutta",
+      "category": "actress",
+      "url": "https://tkctalent.com/book-nikita-dutta/"
+    },
+    {
+      "slug": "nimrat-kaur",
+      "name": "Nimrat Kaur",
+      "category": "actress",
+      "url": "https://tkctalent.com/book-nimrat-kaur/"
+    },
+    {
+      "slug": "nora-fatehi",
+      "name": "Nora Fatehi",
+      "category": "actress",
+      "url": "https://tkctalent.com/book-nora-fatehi/"
+    },
+    {
+      "slug": "nushrratt-bharuccha",
+      "name": "Nushrratt Bharuccha",
+      "category": "actress",
+      "url": "https://tkctalent.com/book-nushrratt-bharuccha/"
+    },
+    {
+      "slug": "palak-tiwari",
+      "name": "Palak Tiwari",
+      "category": "actress",
+      "url": "https://tkctalent.com/book-palak-tiwari/"
+    },
+    {
+      "slug": "pooja-hegde",
+      "name": "Pooja Hegde",
+      "category": "actress",
+      "url": "https://tkctalent.com/book-pooja-hegde/"
+    },
+    {
+      "slug": "priyanka-chopra",
+      "name": "Priyanka Chopra",
+      "category": "actress",
+      "url": "https://tkctalent.com/book-priyanka-chopra/"
+    },
+    {
+      "slug": "rakul-preet",
+      "name": "Rakul Preet",
+      "category": "actress",
+      "url": "https://tkctalent.com/book-rakul-preet/"
+    },
+    {
+      "slug": "rani-mukerji",
+      "name": "Rani Mukerji",
+      "category": "actress",
+      "url": "https://tkctalent.com/book-rani-mukerji/"
+    },
+    {
+      "slug": "rashmika-mandanna",
+      "name": "Rashmika Mandanna",
+      "category": "actress",
+      "url": "https://tkctalent.com/book-rashmika-mandanna/"
+    },
+    {
+      "slug": "rhea-chakraborty",
+      "name": "Rhea Chakraborty",
+      "category": "actress",
+      "url": "https://tkctalent.com/book-rhea-chakraborty/"
+    },
+    {
+      "slug": "sanya-malhotra",
+      "name": "Sanya Malhotra",
+      "category": "actress",
+      "url": "https://tkctalent.com/book-sanya-malhotra/"
+    },
+    {
+      "slug": "sara-ali-khan",
+      "name": "Sara Ali Khan",
+      "category": "actress",
+      "url": "https://tkctalent.com/book-sara-ali-khan/"
+    },
+    {
+      "slug": "saumya-tandon",
+      "name": "Saumya Tandon",
+      "category": "actress",
+      "url": "https://tkctalent.com/book-saumya-tandon/"
+    },
+    {
+      "slug": "shanaya-kapoor",
+      "name": "Shanaya Kapoor",
+      "category": "actress",
+      "url": "https://tkctalent.com/book-shanaya-kapoor/"
+    },
+    {
+      "slug": "sharvari-wagh",
+      "name": "Sharvari Wagh",
+      "category": "actress",
+      "url": "https://tkctalent.com/book-sharvari-wagh/"
+    },
+    {
+      "slug": "shehnaaz-gill",
+      "name": "Shehnaaz Gill",
+      "category": "actress",
+      "url": "https://tkctalent.com/book-shehnaaz-gill/"
+    },
+    {
+      "slug": "shilpa-shetty",
+      "name": "Shilpa Shetty",
+      "category": "actress",
+      "url": "https://tkctalent.com/book-shilpa-shetty/"
+    },
+    {
+      "slug": "shraddha-kapoor",
+      "name": "Shraddha Kapoor",
+      "category": "actress",
+      "url": "https://tkctalent.com/book-shraddha-kapoor/"
+    },
+    {
+      "slug": "shruti-haasan",
+      "name": "Shruti Haasan",
+      "category": "actress",
+      "url": "https://tkctalent.com/book-shruti-haasan/"
+    },
+    {
+      "slug": "shweta-tiwari",
+      "name": "Shweta Tiwari",
+      "category": "actress",
+      "url": "https://tkctalent.com/book-shweta-tiwari/"
+    },
+    {
+      "slug": "sonakshi-sinha",
+      "name": "Sonakshi Sinha",
+      "category": "actress",
+      "url": "https://tkctalent.com/book-sonakshi-sinha/"
+    },
+    {
+      "slug": "sonam-bajwa",
+      "name": "Sonam Bajwa",
+      "category": "actress",
+      "url": "https://tkctalent.com/book-sonam-bajwa/"
+    },
+    {
+      "slug": "sreeleela",
+      "name": "Sreeleela",
+      "category": "actress",
+      "url": "https://tkctalent.com/book-sreeleela/"
+    },
+    {
+      "slug": "sunny-leone",
+      "name": "Sunny Leone",
+      "category": "actress",
+      "url": "https://tkctalent.com/book-sunny-leone/"
+    },
+    {
+      "slug": "taapsee-pannu",
+      "name": "Taapsee Pannu",
+      "category": "actress",
+      "url": "https://tkctalent.com/book-taapsee-pannu/"
+    },
+    {
+      "slug": "tamannaah-bhatia",
+      "name": "Tamannaah Bhatia",
+      "category": "actress",
+      "url": "https://tkctalent.com/book-tamannaah-bhatia/"
+    },
+    {
+      "slug": "tara-sutaria",
+      "name": "Tara Sutaria",
+      "category": "actress",
+      "url": "https://tkctalent.com/book-tara-sutaria/"
+    },
+    {
+      "slug": "urvashi-rautela",
+      "name": "Urvashi Rautela",
+      "category": "actress",
+      "url": "https://tkctalent.com/book-urvashi-rautela/"
+    },
+    {
+      "slug": "vaani-kapoor",
+      "name": "Vaani Kapoor",
+      "category": "actress",
+      "url": "https://tkctalent.com/book-vaani-kapoor/"
+    },
+    {
+      "slug": "vidya-balan",
+      "name": "Vidya Balan",
+      "category": "actress",
+      "url": "https://tkctalent.com/book-vidya-balan/"
+    },
+    {
+      "slug": "wamiqa-gabbi",
+      "name": "Wamiqa Gabbi",
+      "category": "actress",
+      "url": "https://tkctalent.com/book-wamiqa-gabbi/"
+    },
+    {
+      "slug": "yami-gautam",
+      "name": "Yami Gautam",
+      "category": "actress",
+      "url": "https://tkctalent.com/book-yami-gautam/"
+    },
+    {
+      "slug": "aakash-gupta",
+      "name": "Aakash Gupta",
+      "category": "artist",
+      "url": "https://tkctalent.com/book-aakash-gupta/"
+    },
+    {
+      "slug": "anubhav-singh-bassi",
+      "name": "Anubhav Singh Bassi",
+      "category": "artist",
+      "url": "https://tkctalent.com/book-anubhav-singh-bassi/"
+    },
+    {
+      "slug": "bharti-singh",
+      "name": "Bharti Singh",
+      "category": "artist",
+      "url": "https://tkctalent.com/book-bharti-singh/"
+    },
+    {
+      "slug": "biswa-kalyan-rath",
+      "name": "Biswa Kalyan Rath",
+      "category": "artist",
+      "url": "https://tkctalent.com/book-biswa-kalyan-rath/"
+    },
+    {
+      "slug": "kenny-sebastian",
+      "name": "Kenny Sebastian",
+      "category": "artist",
+      "url": "https://tkctalent.com/book-kenny-sebastian/"
+    },
+    {
+      "slug": "krushna-abhishek",
+      "name": "Krushna Abhishek",
+      "category": "artist",
+      "url": "https://tkctalent.com/book-krushna-abhishek/"
+    },
+    {
+      "slug": "munawar-faruqui",
+      "name": "Munawar Faruqui",
+      "category": "artist",
+      "url": "https://tkctalent.com/book-munawar-faruqui/"
+    },
+    {
+      "slug": "nishant-tanwar",
+      "name": "Nishant Tanwar",
+      "category": "artist",
+      "url": "https://tkctalent.com/book-nishant-tanwar/"
+    },
+    {
+      "slug": "rahul-subramanian",
+      "name": "Rahul Subramanian",
+      "category": "artist",
+      "url": "https://tkctalent.com/book-rahul-subramanian/"
+    },
+    {
+      "slug": "abish-mathew",
+      "name": "Abish Mathew",
+      "category": "comedian",
+      "url": "https://tkctalent.com/book-abish-mathew/"
+    },
+    {
+      "slug": "gaurav-kapoor",
+      "name": "Gaurav Kapoor",
+      "category": "comedian",
+      "url": "https://tkctalent.com/book-gaurav-kapoor/"
+    },
+    {
+      "slug": "kanan-gill",
+      "name": "Kanan Gill",
+      "category": "comedian",
+      "url": "https://tkctalent.com/book-kanan-gill/"
+    },
+    {
+      "slug": "kapil-sharma",
+      "name": "Kapil Sharma",
+      "category": "comedian",
+      "url": "https://tkctalent.com/book-kapil-sharma/"
+    },
+    {
+      "slug": "samay-raina",
+      "name": "Samay Raina",
+      "category": "comedian",
+      "url": "https://tkctalent.com/book-samay-raina/"
+    },
+    {
+      "slug": "sunil-grover",
+      "name": "Sunil Grover",
+      "category": "comedian",
+      "url": "https://tkctalent.com/book-sunil-grover/"
+    },
+    {
+      "slug": "zakir-khan",
+      "name": "Zakir Khan",
+      "category": "comedian",
+      "url": "https://tkctalent.com/book-zakir-khan/"
+    },
+    {
+      "slug": "altaf-raja",
+      "name": "Altaf Raja",
+      "category": "singer",
+      "url": "https://tkctalent.com/book-altaf-raja/"
+    },
+    {
+      "slug": "ar-rahman",
+      "name": "A.R. Rahman",
+      "category": "singer",
+      "url": "https://tkctalent.com/book-ar-rahman/"
+    },
+    {
+      "slug": "arijit-singh",
+      "name": "Arijit Singh",
+      "category": "singer",
+      "url": "https://tkctalent.com/book-arijit-singh/"
+    },
+    {
+      "slug": "armaan-malik",
+      "name": "Armaan Malik",
+      "category": "singer",
+      "url": "https://tkctalent.com/book-armaan-malik/"
+    },
+    {
+      "slug": "asees-kaur",
+      "name": "Asees Kaur",
+      "category": "singer",
+      "url": "https://tkctalent.com/book-asees-kaur/"
+    },
+    {
+      "slug": "b-praak",
+      "name": "B Praak",
+      "category": "singer",
+      "url": "https://tkctalent.com/book-b-praak/"
+    },
+    {
+      "slug": "badshah",
+      "name": "Badshah",
+      "category": "singer",
+      "url": "https://tkctalent.com/book-badshah/"
+    },
+    {
+      "slug": "darshan-raval",
+      "name": "Darshan Raval",
+      "category": "singer",
+      "url": "https://tkctalent.com/book-darshan-raval/"
+    },
+    {
+      "slug": "diljit-dosanjh",
+      "name": "Diljit Dosanjh",
+      "category": "singer",
+      "url": "https://tkctalent.com/book-diljit-dosanjh/"
+    },
+    {
+      "slug": "guru-randhawa",
+      "name": "Guru Randhawa",
+      "category": "singer",
+      "url": "https://tkctalent.com/book-guru-randhawa/"
+    },
+    {
+      "slug": "hanumankind",
+      "name": "Hanumankind",
+      "category": "singer",
+      "url": "https://tkctalent.com/book-hanumankind/"
+    },
+    {
+      "slug": "jasmine-sandlas",
+      "name": "Jasmine Sandlas",
+      "category": "singer",
+      "url": "https://tkctalent.com/book-jasmine-sandlas/"
+    },
+    {
+      "slug": "jonita-gandhi",
+      "name": "Jonita Gandhi",
+      "category": "singer",
+      "url": "https://tkctalent.com/book-jonita-gandhi/"
+    },
+    {
+      "slug": "jubin-nautiyal",
+      "name": "Jubin Nautiyal",
+      "category": "singer",
+      "url": "https://tkctalent.com/book-jubin-nautiyal/"
+    },
+    {
+      "slug": "kanika-kapoor",
+      "name": "Kanika Kapoor",
+      "category": "singer",
+      "url": "https://tkctalent.com/book-kanika-kapoor/"
+    },
+    {
+      "slug": "kumar-sanu",
+      "name": "Kumar Sanu",
+      "category": "singer",
+      "url": "https://tkctalent.com/book-kumar-sanu/"
+    },
+    {
+      "slug": "lucky-ali",
+      "name": "Lucky Ali",
+      "category": "singer",
+      "url": "https://tkctalent.com/book-lucky-ali/"
+    },
+    {
+      "slug": "meet-bros",
+      "name": "Meet Bros",
+      "category": "singer",
+      "url": "https://tkctalent.com/book-meet-bros/"
+    },
+    {
+      "slug": "mohit-chauhan",
+      "name": "Mohit Chauhan",
+      "category": "singer",
+      "url": "https://tkctalent.com/book-mohit-chauhan/"
+    },
+    {
+      "slug": "neha-bhasin",
+      "name": "Neha Bhasin",
+      "category": "singer",
+      "url": "https://tkctalent.com/book-neha-bhasin/"
+    },
+    {
+      "slug": "neha-kakkar",
+      "name": "Neha Kakkar",
+      "category": "singer",
+      "url": "https://tkctalent.com/book-neha-kakkar/"
+    },
+    {
+      "slug": "palak-muchhal",
+      "name": "Palak Muchhal",
+      "category": "singer",
+      "url": "https://tkctalent.com/book-palak-muchhal/"
+    },
+    {
+      "slug": "pritam",
+      "name": "Pritam",
+      "category": "singer",
+      "url": "https://tkctalent.com/book-pritam/"
+    },
+    {
+      "slug": "sachet-parampara",
+      "name": "Sachet Parampara",
+      "category": "singer",
+      "url": "https://tkctalent.com/book-sachet-parampara/"
+    },
+    {
+      "slug": "sachin-jigar",
+      "name": "Sachin Jigar",
+      "category": "singer",
+      "url": "https://tkctalent.com/book-sachin-jigar/"
+    },
+    {
+      "slug": "salim-sulaiman",
+      "name": "Salim Sulaiman",
+      "category": "singer",
+      "url": "https://tkctalent.com/book-salim-sulaiman/"
+    },
+    {
+      "slug": "sara-gurpal",
+      "name": "Sara Gurpal",
+      "category": "singer",
+      "url": "https://tkctalent.com/book-sara-gurpal/"
+    },
+    {
+      "slug": "shamsher-lehri",
+      "name": "Shamsher Lehri",
+      "category": "singer",
+      "url": "https://tkctalent.com/book-shamsher-lehri/"
+    },
+    {
+      "slug": "shankar-mahadevan",
+      "name": "Shankar Mahadevan",
+      "category": "singer",
+      "url": "https://tkctalent.com/book-shankar-mahadevan/"
+    },
+    {
+      "slug": "shreya-ghoshal",
+      "name": "Shreya Ghoshal",
+      "category": "singer",
+      "url": "https://tkctalent.com/book-shreya-ghoshal/"
+    },
+    {
+      "slug": "sonu-nigam",
+      "name": "Sonu Nigam",
+      "category": "singer",
+      "url": "https://tkctalent.com/book-sonu-nigam/"
+    },
+    {
+      "slug": "sunanda-sharma",
+      "name": "Sunanda Sharma",
+      "category": "singer",
+      "url": "https://tkctalent.com/book-sunanda-sharma/"
+    },
+    {
+      "slug": "sunidhi-chauhan",
+      "name": "Sunidhi Chauhan",
+      "category": "singer",
+      "url": "https://tkctalent.com/book-sunidhi-chauhan/"
+    },
+    {
+      "slug": "tanishk-bagchi",
+      "name": "Tanishk Bagchi",
+      "category": "singer",
+      "url": "https://tkctalent.com/book-tanishk-bagchi/"
+    },
+    {
+      "slug": "vishal-shekhar",
+      "name": "Vishal Shekhar",
+      "category": "singer",
+      "url": "https://tkctalent.com/book-vishal-shekhar/"
+    }
+  ]
+}
