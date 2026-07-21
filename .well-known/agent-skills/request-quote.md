@@ -19,9 +19,9 @@ Collect from the user before handing off:
 Send the collected details via any of these channels — all reach the same booking desk:
 
 - Web form: https://tkctalent.com/#book
-- Phone: +91 95995 99699
-- WhatsApp: https://wa.me/919599599699
-- Email: hello@tkctalent.com
+- Email (management desk): info@thekabircompany.com
+- Email (booking desk): hello@tkctalent.com
+- Web form is the fastest path — phone / WhatsApp channels are reserved for verified clients after initial email contact.
 
 ## Response SLA
 
