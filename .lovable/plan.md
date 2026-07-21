@@ -1,65 +1,47 @@
 ## Goal
 
-Add a dedicated "IITEO Legacy" section to the homepage that summarizes the `/iiteo/` page and shows the dignitary/leader photos already used there. This strengthens E-E-A-T by surfacing real, verifiable event heritage (Presidents, PM, CMs, Governors hosted by TKC / The Kabir Company) directly on the homepage, with a clear internal link to the full `/iiteo/` article.
+Stop the spam-call funnel without killing genuine call leads. Spammers scrape "management contact" strings (FAQ answers, JSON-LD, agent files). We replace the phone number **only in those management/manager contexts** with `info@thekabircompany.com`. Every existing CTA (header, hero, sticky mobile call button, footer, WhatsApp) keeps the phone number exactly as it is.
 
-The current homepage already has a text-only `tkc-legacy` band (injected by `assets/tkc-homepage-blocks.js`). We will keep it and add a NEW, richer IITEO Legacy section *below* it — different purpose (people + proof), different visuals, so no duplication.
+## Scope — what changes vs what stays
 
-## What to build
+**Changes to email only (`info@thekabircompany.com`):**
+- Artist page FAQ answers that respond to "[Name] management" and "[Name] contact details" (137 pages, added recently).
+- Any "Management Contact" / "Manager Details" / "Official Management" text blocks on artist and hub pages.
+- JSON-LD on artist pages — remove `telephone` from LocalBusiness/Organization/contactPoint under management/manager context; add `email`. Keep `telephone` in the site-wide LocalBusiness where it exists as the business phone (footer/homepage).
+- Agent-facing files: `.well-known/agent-card.json`, `.well-known/mcp/server-card.json`, `.well-known/agent-skills/index.json`, `.well-known/agent-skills/request-quote.md`, `.well-known/api-catalog`, `llms.txt` — swap management-contact phone references for the email.
 
-A new client-side injector script `assets/tkc-iiteo-legacy.js` that:
+**Stays untouched (CTA / conversion surface):**
+- Header phone number and click-to-call.
+- Hero "Call Now" buttons.
+- Sticky mobile call button.
+- Footer contact line.
+- WhatsApp deep links.
+- Google Business Profile.
+- Homepage / service page CTAs.
 
-1. Runs only on `/` (homepage).
-2. Injects a `<section id="tkc-iiteo-legacy">` right after the existing `#tkc-legacy` block (or, if not found, before the roster/pricing area — same anchor logic already used in `tkc-homepage-blocks.js`).
-3. Adds its own scoped CSS (dark premium band, gold accent to match brand — matches the existing legacy band styling language).
+## Approach
 
-### Section content
+1. Grep the repo for the phone number in three passes:
+   - Inside artist FAQ answer strings for "management" / "contact details" questions.
+   - Inside JSON-LD blocks (`"telephone"`) that sit in a management/manager/contactPoint node.
+   - Inside `.well-known/**` and `llms.txt`.
+   Each pass produces a review list before edits.
+2. For each match in scope, replace the phone value with `info@thekabircompany.com` (JSON-LD gets `"email"` key, prose gets "Email the management team at …").
+3. Leave every other occurrence of the number alone — verified by a diff pass that lists the CTA files we intentionally skipped (header, footer, hero, sticky bar, WhatsApp).
+4. Update the FAQ JSON-LD `acceptedAnswer` strings to match the new visible text so schema stays consistent.
+5. After edits: run the existing artist schema CI check to confirm no schema regressions.
 
-- **Eyebrow:** "IITEO × The Kabir Company — Two-Decade Event Legacy"
-- **H2:** "From India's biggest trade fairs to the country's most-booked stage."
-- **Lead paragraphs (~120–140 words, SEO-tuned around: IITEO, India International Trade Event Organisation, The Kabir Company, event management Delhi NCR, exhibitions, concerts, celebrity bookings)** — condensed summary of `/iiteo/`:
-  - Origins in India's trade-fair and exhibition ecosystem via IITEO (India International Trade Event Organisation).
-  - Evolution into concerts, corporate events, luxury weddings, celebrity bookings.
-  - HQ New Delhi; pan-India delivery; hosted by top political and cultural leadership across two decades.
-- **Proof gallery — 10 dignitaries** (already in `assets/iiteo-leaders/`):
-  - Pranab Mukherjee — 13th President of India
-  - Pratibha Patil — 12th President of India
-  - Narendra Modi — Prime Minister of India
-  - Rajnath Singh — Defence Minister
-  - Sheila Dikshit — CM Delhi
-  - Bhupinder Singh Hooda — CM Haryana
-  - Akhilesh Yadav — CM Uttar Pradesh
-  - Omar Abdullah — CM Jammu & Kashmir
-  - Arjun Munda — CM Jharkhand
-  - Ramesh Pokhriyal — CM Uttarakhand
-  - (+ Jagannath Pahadia, Syed Ahmed — Governors, as overflow)
-  - Rendered as a responsive grid of portrait cards: circular/rounded photo, name, role caption. Descriptive `alt` text for SEO/a11y (e.g. "Shri Pranab Mukherjee, 13th President of India, hosted by The Kabir Company / TKC Talent leadership").
-  - `loading="lazy"` and `decoding="async"` on every `<img>`.
-- **Stat row (3 KPIs):** "20+ Yrs Legacy", "10+ Heads of State & CMs Hosted", "500+ Talents · Pan-India".
-- **CTA row:** primary button "Read the full IITEO legacy →" linking to `/iiteo/` (internal link — real SEO juice), secondary WhatsApp/contact link.
+## Technical notes
 
-### Styling
+- FAQ answer replacement is a scripted pass over the 137 artist pages, matched on the question text ("… management", "… contact details") so we don't touch other CTAs on the same page.
+- JSON-LD edits target nodes whose `@type` is `ContactPoint` with `contactType` in {`management`, `customer service` when adjacent to management copy}, or a top-level `Organization`/`Person` `telephone` used as management contact. Site-wide `LocalBusiness.telephone` in the footer/global schema is left alone.
+- No changes to routing, forms, or backend. This is a content + JSON-LD pass only.
 
-- Dark premium background to visually separate from the light cream `tkc-legacy` band above it.
-- Gold accent (#c9a84c) on eyebrow and H2 highlight — brand-consistent.
-- Portrait cards: rounded top, subtle gold hairline border, name in Space Grotesk bold + role caption in Inter.
-- Reveal-on-scroll animation (reuse the same `.tkc-reveal` IntersectionObserver pattern from `tkc-homepage-blocks.js`).
-- Respects `prefers-reduced-motion`.
+## Out of scope
 
-### SEO / structured data
+- Number obfuscation / click-to-reveal on CTAs.
+- Swapping to a new phone number.
+- Form honeypot / rate-limit changes.
+- Any GBP changes.
 
-Append a JSON-LD `<script type="application/ld+json">` inside the injected section with an `ItemList` of the dignitaries as `Person` entries (name + jobTitle) — extends `/iiteo/`'s existing schema onto the homepage. Does not conflict with the existing homepage JSON-LD graph.
-
-### Wiring
-
-- Add `<script src="/assets/tkc-iiteo-legacy.js" defer></script>` to the homepage shell. The React app hydrates the DOM; the existing `tkc-homepage-blocks.js` and `tkc-clients-scroller.js` are already loaded the same way — locate where they're registered (likely `_shell.html` or `index.html`) and add the new one alongside them.
-
-## Files touched
-
-- **Create** `assets/tkc-iiteo-legacy.js` — the injector (styles + DOM + reveal + JSON-LD).
-- **Edit** `_shell.html` (or wherever the sibling `tkc-homepage-blocks.js` / `tkc-clients-scroller.js` are registered) — add one `<script defer>` tag.
-
-No changes to the React bundle, no changes to `/iiteo/` itself, no new image assets (reuse `assets/iiteo-leaders/*`).
-
-## Verification
-
-Playwright headless: load `http://localhost:8080/`, screenshot the new section, confirm all 10 leader images load (status 200), confirm the internal `/iiteo/` link is present, confirm the section does not appear on non-home routes.
+We can layer those on later if spam persists after this pass.
