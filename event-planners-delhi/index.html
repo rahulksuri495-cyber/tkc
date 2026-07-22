@@ -93,7 +93,7 @@
 (function(){
   if(typeof window==='undefined')return;
   var page='event-planners-delhi';
-  function track(n,p){try{(window.gtag||function(){(window.dataLayer=window.dataLayer||[]).push(arguments);}))('event',n,Object.assign({page_location:location.href,landing_page:page},p||{}));}catch(e){}}
+  function track(n,p){try{(window.gtag||function(){(window.dataLayer=window.dataLayer||[]).push(arguments);})('event',n,Object.assign({page_location:location.href,landing_page:page},p||{}));}catch(e){}}
   document.addEventListener('click',function(e){
     var a=e.target.closest && e.target.closest('a');if(!a)return;
     var h=(a.getAttribute('href')||'').toLowerCase();
