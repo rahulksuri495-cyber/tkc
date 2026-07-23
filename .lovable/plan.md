@@ -1,47 +1,58 @@
-## Goal
+## Instagram Bio Optimization — Based on Current Profile
 
-Stop the spam-call funnel without killing genuine call leads. Spammers scrape "management contact" strings (FAQ answers, JSON-LD, agent files). We replace the phone number **only in those management/manager contexts** with `info@thekabircompany.com`. Every existing CTA (header, hero, sticky mobile call button, footer, WhatsApp) keeps the phone number exactly as it is.
+Your current bio reads:
+> Talent Agency
+> We book the biggest names in India. Period. 🎤
+> Bollywood • Singers • Performers
+> Weddings | Corporates | Concerts
+> 🔗 tkctalent.com
 
-## Scope — what changes vs what stays
+**Observations from the screenshot:**
+- Category = "Talent Agency" (good — keep it)
+- Name field currently shows "TKC Talent | Celebrity booking" (truncates to "tkc.tal…")
+- Bio is decent but not SEO-optimized for Instagram search (missing high-intent keywords like *booking agency, India, Delhi, Mumbai*)
+- No clear CTA
+- Link-in-bio only points to homepage
 
-**Changes to email only (`info@thekabircompany.com`):**
-- Artist page FAQ answers that respond to "[Name] management" and "[Name] contact details" (137 pages, added recently).
-- Any "Management Contact" / "Manager Details" / "Official Management" text blocks on artist and hub pages.
-- JSON-LD on artist pages — remove `telephone` from LocalBusiness/Organization/contactPoint under management/manager context; add `email`. Keep `telephone` in the site-wide LocalBusiness where it exists as the business phone (footer/homepage).
-- Agent-facing files: `.well-known/agent-card.json`, `.well-known/mcp/server-card.json`, `.well-known/agent-skills/index.json`, `.well-known/agent-skills/request-quote.md`, `.well-known/api-catalog`, `llms.txt` — swap management-contact phone references for the email.
+---
 
-**Stays untouched (CTA / conversion surface):**
-- Header phone number and click-to-call.
-- Hero "Call Now" buttons.
-- Sticky mobile call button.
-- Footer contact line.
-- WhatsApp deep links.
-- Google Business Profile.
-- Homepage / service page CTAs.
+### Recommended Name Field (searchable — highest SEO weight, 30 char limit)
+**`TKC Talent • Celebrity Booking`** (30 chars) — surfaces for "celebrity booking" searches
 
-## Approach
+### Recommended Bio (150 char limit) — 3 options
 
-1. Grep the repo for the phone number in three passes:
-   - Inside artist FAQ answer strings for "management" / "contact details" questions.
-   - Inside JSON-LD blocks (`"telephone"`) that sit in a management/manager/contactPoint node.
-   - Inside `.well-known/**` and `llms.txt`.
-   Each pass produces a review list before edits.
-2. For each match in scope, replace the phone value with `info@thekabircompany.com` (JSON-LD gets `"email"` key, prose gets "Email the management team at …").
-3. Leave every other occurrence of the number alone — verified by a diff pass that lists the CTA files we intentionally skipped (header, footer, hero, sticky bar, WhatsApp).
-4. Update the FAQ JSON-LD `acceptedAnswer` strings to match the new visible text so schema stays consistent.
-5. After edits: run the existing artist schema CI check to confirm no schema regressions.
+**Option A — SEO + CTA balanced (recommended, 148 chars)**
+```
+India's #1 Celebrity Booking Agency 🎤
+Bollywood Actors • Singers • Comedians • DJs
+Weddings | Corporates | Concerts
+📩 DM / WhatsApp for quotes ↓
+```
 
-## Technical notes
+**Option B — Keyword-dense (149 chars)**
+```
+Book Bollywood Celebrities, Singers & Performers 🇮🇳
+Weddings • Corporate Events • Brand Endorsements
+Delhi | Mumbai | Goa
+📩 Quote in 24 hrs ↓
+```
 
-- FAQ answer replacement is a scripted pass over the 137 artist pages, matched on the question text ("… management", "… contact details") so we don't touch other CTAs on the same page.
-- JSON-LD edits target nodes whose `@type` is `ContactPoint` with `contactType` in {`management`, `customer service` when adjacent to management copy}, or a top-level `Organization`/`Person` `telephone` used as management contact. Site-wide `LocalBusiness.telephone` in the footer/global schema is left alone.
-- No changes to routing, forms, or backend. This is a content + JSON-LD pass only.
+**Option C — Trust + social proof (147 chars)**
+```
+Trusted by 500+ Brands 🎤
+Bollywood • Singers • Comedians • Performers
+Weddings | Corporates | Concerts across India
+📩 Fast quotes — tap link ↓
+```
 
-## Out of scope
+### Link-in-bio suggestion
+Instead of homepage, use a Linktree/Beacons or `/contact-us/?utm_source=instagram&utm_medium=bio` so GA4 attributes IG traffic and leads correctly. Optionally add sub-links to: Bollywood Actress Booking, Singer Fees 2026, Top Indian Celebrities.
 
-- Number obfuscation / click-to-reveal on CTAs.
-- Swapping to a new phone number.
-- Form honeypot / rate-limit changes.
-- Any GBP changes.
+### Category & Contact
+- Keep category **Talent Agency**
+- Ensure Contact button shows: Email (info@thekabircompany.com), Phone, WhatsApp
+- Add Location: **Mumbai / Delhi NCR** (helps IG local discovery)
 
-We can layer those on later if spam persists after this pass.
+---
+
+**Which option do you want me to finalize?** I'll also prep the UTM-tagged bio link and (optionally) draft 5 highlight cover titles (Bollywood, Singers, Comedians, Weddings, Corporates) to reinforce the same SEO keywords on your profile grid.
