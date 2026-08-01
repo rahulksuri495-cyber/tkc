@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-08-01T00:30:14+00:00",
+  "generated_at": "2026-08-01T01:41:54+00:00",
   "summary": {
-    "total": 174,
-    "pass": 167,
+    "total": 175,
+    "pass": 168,
     "warn": 7,
     "fail": 0,
-    "jsonld_blocks": 603,
+    "jsonld_blocks": 605,
     "jsonld_invalid": 0,
-    "in_sitemap": 173,
+    "in_sitemap": 174,
     "major_failing": 0,
-    "ai_parse_ok": 173,
+    "ai_parse_ok": 174,
     "ai_parse_failing_major": 0,
     "robots_status": "pass"
   },
@@ -401,7 +401,7 @@
     {
       "route": "/book-akshay-kumar/",
       "url": "https://tkctalent.com/book-akshay-kumar/",
-      "title": "Book Akshay Kumar \u2014 Fees  Availability 2026 | TKC Talent",
+      "title": "Akshay Kumar Booking Fees, Price & Availability 2026 | Brand, Corporate & Wedding | TKC Talent",
       "canonical": "https://tkctalent.com/book-akshay-kumar/",
       "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
       "og_image": "https://tkctalent.com/assets/og/actor-akshay-kumar.jpg",
@@ -423,7 +423,7 @@
     {
       "route": "/book-alia-bhatt/",
       "url": "https://tkctalent.com/book-alia-bhatt/",
-      "title": "Alia Bhatt Booking Price  Fees 2026 | Hire for Events \u2013 TKC Talent",
+      "title": "Alia Bhatt Booking Fees, Price & Availability 2026 | Brand, Wedding & Corporate | TKC Talent",
       "canonical": "https://tkctalent.com/book-alia-bhatt/",
       "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
       "og_image": "https://tkctalent.com/assets/og/actor-alia-bhatt.jpg",
@@ -555,7 +555,7 @@
     {
       "route": "/book-anushka-sharma/",
       "url": "https://tkctalent.com/book-anushka-sharma/",
-      "title": "Book Anushka Sharma \u2014 Fees, Availability  Booking | TKC Talent",
+      "title": "Anushka Sharma Booking Fees, Price & Availability 2026 | Brand, Corporate & Wedding | TKC Talent",
       "canonical": "https://tkctalent.com/book-anushka-sharma/",
       "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
       "og_image": "https://tkctalent.com/assets/og/actor-anushka-sharma.jpg",
@@ -577,7 +577,7 @@
     {
       "route": "/book-ar-rahman/",
       "url": "https://tkctalent.com/book-ar-rahman/",
-      "title": "Book A. R. Rahman \u2014 \u20b92 Cr \u2013 \u20b93 Cr+ Booking Fee 2026 | TKC Talent",
+      "title": "AR Rahman Booking Fees, Price & Availability 2026 | Concert, Corporate & Wedding | TKC Talent",
       "canonical": "https://tkctalent.com/book-ar-rahman/",
       "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
       "og_image": "https://tkctalent.com/assets/og/actor-ar-rahman.jpg",
@@ -599,7 +599,7 @@
     {
       "route": "/book-arijit-singh/",
       "url": "https://tkctalent.com/book-arijit-singh/",
-      "title": "Arijit Singh Booking Price  Concert Fees 2026 | Hire for Events \u2013 TKC Talent",
+      "title": "Arijit Singh Booking Fees, Price & Availability 2026 | Wedding, Sangeet & Concert | TKC Talent",
       "canonical": "https://tkctalent.com/book-arijit-singh/",
       "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
       "og_image": "https://tkctalent.com/assets/og/actor-arijit-singh.jpg",
@@ -709,7 +709,7 @@
     {
       "route": "/book-b-praak/",
       "url": "https://tkctalent.com/book-b-praak/",
-      "title": "Book B Praak \u2014 \u20b975 L \u2013 \u20b91 Cr Booking Fee 2026 | TKC Talent",
+      "title": "B Praak Booking Fees, Price & Availability 2026 | Wedding, Sangeet & Concert | TKC Talent",
       "canonical": "https://tkctalent.com/book-b-praak/",
       "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
       "og_image": "https://tkctalent.com/assets/og/actor-b-praak.jpg",
@@ -731,7 +731,7 @@
     {
       "route": "/book-badshah/",
       "url": "https://tkctalent.com/book-badshah/",
-      "title": "Badshah Booking Price  Concert Fees 2026 | Hire for Events \u2013 TKC Talent",
+      "title": "Badshah Booking Fees, Price & Availability 2026 | Wedding, Sangeet & Concert | TKC Talent",
       "canonical": "https://tkctalent.com/book-badshah/",
       "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
       "og_image": "https://tkctalent.com/assets/og/actor-badshah.jpg",
@@ -817,6 +817,28 @@
       "ai_notes": []
     },
     {
+      "route": "/book-celebrity-for-wedding/",
+      "url": "https://tkctalent.com/book-celebrity-for-wedding/",
+      "title": "Book Celebrities for Weddings in India 2026 | Singers, Actors & Comedians for Sangeet & Reception | TKC Talent",
+      "canonical": "https://tkctalent.com/book-celebrity-for-wedding/",
+      "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+      "og_image": "https://tkctalent.com/og-image.jpg",
+      "og_dimensions": "1200x630",
+      "jsonld_count": 2,
+      "jsonld_invalid": 0,
+      "errors": [],
+      "warnings": [],
+      "status": "pass",
+      "major": true,
+      "ai_declaration": "human",
+      "content_usage": "search=yes, ai-input=yes, ai-train=no",
+      "llms_links": [
+        "/llms.txt"
+      ],
+      "ai_parse_ok": true,
+      "ai_notes": []
+    },
+    {
       "route": "/book-chitrangada-singh/",
       "url": "https://tkctalent.com/book-chitrangada-singh/",
       "title": "Book Chitrangada Singh \u2014 Fees, Dates & Booking | TKC Talent",
@@ -841,7 +863,7 @@
     {
       "route": "/book-darshan-raval/",
       "url": "https://tkctalent.com/book-darshan-raval/",
-      "title": "Darshan Raval Booking Price  Concert Fees 2026 | Hire for Events \u2013 TKC Talent",
+      "title": "Darshan Raval Booking Fees, Price & Availability 2026 | Wedding, Sangeet & Concert | TKC Talent",
       "canonical": "https://tkctalent.com/book-darshan-raval/",
       "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
       "og_image": "https://tkctalent.com/assets/og/actor-darshan-raval.jpg",
@@ -863,7 +885,7 @@
     {
       "route": "/book-deepika-padukone/",
       "url": "https://tkctalent.com/book-deepika-padukone/",
-      "title": "Deepika Padukone Booking Price  Fees 2026 | Hire for Events \u2013 TKC Talent",
+      "title": "Deepika Padukone Booking Fees, Price & Availability 2026 | Brand, Wedding & Corporate | TKC Talent",
       "canonical": "https://tkctalent.com/book-deepika-padukone/",
       "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
       "og_image": "https://tkctalent.com/assets/og/actor-deepika-padukone.jpg",
@@ -907,7 +929,7 @@
     {
       "route": "/book-diljit-dosanjh/",
       "url": "https://tkctalent.com/book-diljit-dosanjh/",
-      "title": "Diljit Dosanjh Booking Price  Concert Fees 2026 | Hire for Events \u2013 TKC Talent",
+      "title": "Diljit Dosanjh Booking Fees, Price & Availability 2026 | Wedding, Concert & Corporate | TKC Talent",
       "canonical": "https://tkctalent.com/book-diljit-dosanjh/",
       "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
       "og_image": "https://tkctalent.com/assets/og/actor-diljit-dosanjh.jpg",
@@ -1325,7 +1347,7 @@
     {
       "route": "/book-kapil-sharma/",
       "url": "https://tkctalent.com/book-kapil-sharma/",
-      "title": "Kapil Sharma Booking Price  Fees 2026 | Hire for Events \u2013 TKC Talent",
+      "title": "Kapil Sharma Booking Fees, Price & Availability 2026 | Comedy, Corporate & Wedding | TKC Talent",
       "canonical": "https://tkctalent.com/book-kapil-sharma/",
       "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
       "og_image": "https://tkctalent.com/assets/og/actor-kapil-sharma.jpg",
@@ -1413,7 +1435,7 @@
     {
       "route": "/book-katrina-kaif/",
       "url": "https://tkctalent.com/book-katrina-kaif/",
-      "title": "Book Katrina Kaif \u2014 Fees, Dates & Booking | TKC Talent",
+      "title": "Katrina Kaif Booking Fees, Price & Availability 2026 | Brand, Wedding & Corporate | TKC Talent",
       "canonical": "https://tkctalent.com/book-katrina-kaif/",
       "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
       "og_image": "https://tkctalent.com/assets/og/actor-katrina-kaif.jpg",
@@ -1501,7 +1523,7 @@
     {
       "route": "/book-kriti-sanon/",
       "url": "https://tkctalent.com/book-kriti-sanon/",
-      "title": "Book Kriti Sanon \u2014 Fees, Availability  Booking | TKC Talent",
+      "title": "Kriti Sanon Booking Fees, Price & Availability 2026 | Brand, Corporate & Wedding | TKC Talent",
       "canonical": "https://tkctalent.com/book-kriti-sanon/",
       "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
       "og_image": "https://tkctalent.com/assets/og/actor-kriti-sanon.jpg",
@@ -1721,7 +1743,7 @@
     {
       "route": "/book-munawar-faruqui/",
       "url": "https://tkctalent.com/book-munawar-faruqui/",
-      "title": "Book Munawar Faruqui \u2014 Fees, Availability  Booking 2026 | TKC Talent",
+      "title": "Munawar Faruqui Booking Fees, Price & Availability 2026 | Comedy, Corporate & Private Shows | TKC Talent",
       "canonical": "https://tkctalent.com/book-munawar-faruqui/",
       "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
       "og_image": "https://tkctalent.com/assets/og/actor-munawar-faruqui.jpg",
@@ -1875,7 +1897,7 @@
     {
       "route": "/book-nora-fatehi/",
       "url": "https://tkctalent.com/book-nora-fatehi/",
-      "title": "Book Nora Fatehi \u2014 Fees, Availability  Booking | TKC Talent",
+      "title": "Nora Fatehi Booking Fees, Price & Availability 2026 | Brand, Wedding & Private Event | TKC Talent",
       "canonical": "https://tkctalent.com/book-nora-fatehi/",
       "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
       "og_image": "https://tkctalent.com/assets/og/actor-nora-fatehi.jpg",
@@ -1919,7 +1941,7 @@
     {
       "route": "/book-palak-muchhal/",
       "url": "https://tkctalent.com/book-palak-muchhal/",
-      "title": "Book Palak Muchhal \u2014 \u20b910 L \u2013 \u20b915 L Booking Fee 2026 | TKC Talent",
+      "title": "Palak Muchhal Booking Fees, Price & Availability 2026 | Wedding, Sangeet & Concert | TKC Talent",
       "canonical": "https://tkctalent.com/book-palak-muchhal/",
       "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
       "og_image": "https://tkctalent.com/assets/og/actor-palak-muchhal.jpg",
@@ -1963,7 +1985,7 @@
     {
       "route": "/book-pankaj-tripathi/",
       "url": "https://tkctalent.com/book-pankaj-tripathi/",
-      "title": "Book Pankaj Tripathi \u2014 Fees  Availability 2026 | TKC Talent",
+      "title": "Pankaj Tripathi Booking Fees, Price & Availability 2026 | Corporate, Brand & Wedding | TKC Talent",
       "canonical": "https://tkctalent.com/book-pankaj-tripathi/",
       "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
       "og_image": "https://tkctalent.com/assets/og/actor-pankaj-tripathi.jpg",
@@ -2117,7 +2139,7 @@
     {
       "route": "/book-ranbir-kapoor/",
       "url": "https://tkctalent.com/book-ranbir-kapoor/",
-      "title": "Book Ranbir Kapoor \u2014 Fees  Availability 2026 | TKC Talent",
+      "title": "Ranbir Kapoor Booking Fees, Price & Availability 2026 | Brand, Wedding & Corporate | TKC Talent",
       "canonical": "https://tkctalent.com/book-ranbir-kapoor/",
       "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
       "og_image": "https://tkctalent.com/assets/og/actor-ranbir-kapoor.jpg",
@@ -2293,7 +2315,7 @@
     {
       "route": "/book-salman-khan/",
       "url": "https://tkctalent.com/book-salman-khan/",
-      "title": "Salman Khan Booking Price  Fees 2026 | Hire for Events \u2013 TKC Talent",
+      "title": "Salman Khan Booking Fees, Price & Availability 2026 | Brand, Wedding & Corporate | TKC Talent",
       "canonical": "https://tkctalent.com/book-salman-khan/",
       "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
       "og_image": "https://tkctalent.com/assets/og/actor-salman-khan.jpg",
@@ -2425,7 +2447,7 @@
     {
       "route": "/book-shah-rukh-khan/",
       "url": "https://tkctalent.com/book-shah-rukh-khan/",
-      "title": "Shah Rukh Khan Booking Price  Fees 2026 | Hire for Events \u2013 TKC Talent",
+      "title": "Shah Rukh Khan Booking Fees, Price & Availability 2026 | Brand, Wedding & Corporate | TKC Talent",
       "canonical": "https://tkctalent.com/book-shah-rukh-khan/",
       "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
       "og_image": "https://tkctalent.com/assets/og/actor-shah-rukh-khan.jpg",
@@ -2447,7 +2469,7 @@
     {
       "route": "/book-shahid-kapoor/",
       "url": "https://tkctalent.com/book-shahid-kapoor/",
-      "title": "Book Shahid Kapoor \u2014 Fees  Availability 2026 | TKC Talent",
+      "title": "Shahid Kapoor Booking Fees, Price & Availability 2026 | Brand, Corporate & Wedding | TKC Talent",
       "canonical": "https://tkctalent.com/book-shahid-kapoor/",
       "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
       "og_image": "https://tkctalent.com/assets/og/actor-shahid-kapoor.jpg",
@@ -2623,7 +2645,7 @@
     {
       "route": "/book-shreya-ghoshal/",
       "url": "https://tkctalent.com/book-shreya-ghoshal/",
-      "title": "Shreya Ghoshal Booking Price  Concert Fees 2026 | Hire for Events \u2013 TKC Talent",
+      "title": "Shreya Ghoshal Booking Fees, Price & Availability 2026 | Wedding, Sangeet & Concert | TKC Talent",
       "canonical": "https://tkctalent.com/book-shreya-ghoshal/",
       "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
       "og_image": "https://tkctalent.com/assets/og/actor-shreya-ghoshal.jpg",
@@ -2689,7 +2711,7 @@
     {
       "route": "/book-sidharth-malhotra/",
       "url": "https://tkctalent.com/book-sidharth-malhotra/",
-      "title": "Book Sidharth Malhotra \u2014 Fees  Availability 2026 | TKC Talent",
+      "title": "Sidharth Malhotra Booking Fees, Price & Availability 2026 | Brand, Corporate & Wedding | TKC Talent",
       "canonical": "https://tkctalent.com/book-sidharth-malhotra/",
       "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
       "og_image": "https://tkctalent.com/assets/og/actor-sidharth-malhotra.jpg",
@@ -2755,7 +2777,7 @@
     {
       "route": "/book-sonu-nigam/",
       "url": "https://tkctalent.com/book-sonu-nigam/",
-      "title": "Book Sonu Nigam \u2014 \u20b955 L \u2013 \u20b980 L Booking Fee 2026 | TKC Talent",
+      "title": "Sonu Nigam Booking Fees, Price & Availability 2026 | Wedding, Sangeet & Concert | TKC Talent",
       "canonical": "https://tkctalent.com/book-sonu-nigam/",
       "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
       "og_image": "https://tkctalent.com/assets/og/actor-sonu-nigam.jpg",
@@ -3063,7 +3085,7 @@
     {
       "route": "/book-varun-dhawan/",
       "url": "https://tkctalent.com/book-varun-dhawan/",
-      "title": "Book Varun Dhawan \u2014 Fees  Availability 2026 | TKC Talent",
+      "title": "Varun Dhawan Booking Fees, Price & Availability 2026 | Brand, Corporate & Wedding | TKC Talent",
       "canonical": "https://tkctalent.com/book-varun-dhawan/",
       "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
       "og_image": "https://tkctalent.com/assets/og/actor-varun-dhawan.jpg",
