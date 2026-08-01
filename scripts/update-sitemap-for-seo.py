@@ -24,8 +24,14 @@ text = SITEMAP.read_text(encoding="utf-8")
 
 # Update lastmod for each priority artist page
 for slug in PRIORITY:
-    pattern = rf"(<loc>https://tkctalent\.com/{slug}/</loc><lastmod>)[^<]+(</lastmod>)"
-    text = re.sub(pattern, rf"\g<1>{today}\g<2>", text)
+    loc = f"https://tkctalent.com/{slug}/"
+    # If entry already has <lastmod>, update it
+    if f"<loc>{loc}</loc><lastmod>" in text:
+        text = re.sub(rf"(<loc>{re.escape(loc)}</loc><lastmod>)[^<]+(</lastmod>)", rf"\g<1>{today}\g<2>", text)
+    elif f"<loc>{loc}</loc>" in text:
+        # Insert lastmod after </loc> in the <url> block
+        text = re.sub(rf"(<loc>{re.escape(loc)}</loc>)", rf"\g<1><lastmod>{today}</lastmod>", text, count=1)
+
 
 # Add new hub if not present
 if "https://tkctalent.com/book-celebrity-for-wedding/" not in text:
