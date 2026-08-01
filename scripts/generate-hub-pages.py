@@ -146,6 +146,7 @@ def build_wedding_hub():
     faq_json = json.dumps(faq_schema(WEDDING_FAQS))
 
     body = f'''
+{HEADER}
 <main class="w-full">
 
   <!-- Hero -->
