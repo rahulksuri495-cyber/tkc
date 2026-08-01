@@ -319,5 +319,217 @@ def build_wedding_hub():
     print(f"Wrote {out_dir / 'index.html'} ({len(html)} bytes)")
 
 
+CORPORATE_FAQS = [
+    (
+        "How do I book a celebrity for a corporate event in India?",
+        "Share your event date, city, format (conference, annual day, product launch, dealer meet) and budget with TKC Talent. We check artist availability, share verified 2026 fees, and manage contracting, travel, technical riders and on-ground artist management end-to-end.",
+    ),
+    (
+        "What does it cost to book a celebrity for a corporate event?",
+        "Corporate appearance fees depend on artist tier and deliverables. Motivational speakers and emerging artists start around ₹3–8 lakh, mid-tier singers and comedians range ₹10–40 lakh, and A-list Bollywood actors or top playback singers can range from ₹50 lakh to ₹2.5 crore+ per appearance.",
+    ),
+    (
+        "Which celebrities are best for corporate annual day events?",
+        "Popular corporate annual day choices include Arijit Singh, Sunidhi Chauhan, Shreya Ghoshal and Sonu Nigam for concerts; Kapil Sharma, Zakir Khan and Samay Raina for comedy; and Bollywood actors such as Shah Rukh Khan and Deepika Padukone for keynote or brand moments.",
+    ),
+    (
+        "Can a celebrity host or emcee our conference?",
+        "Yes. TKC Talent books celebrity hosts, anchors and emcees for conferences, award nights, dealer meets and town halls, including script alignment, rehearsal calls and brand-message integration.",
+    ),
+    (
+        "Do you handle product launches and brand endorsements?",
+        "Yes. We negotiate product launch appearances, keynote fireside chats, brand ambassadorships, and social media deliverables with the artist's management, with usage rights documented clearly in the contract.",
+    ),
+    (
+        "How far in advance should a corporate event be booked?",
+        "For A-list artists we recommend 2–4 months. For peak corporate season (October–February) and award nights, 4–6 months is safer. Shorter timelines are possible subject to the artist's calendar.",
+    ),
+    (
+        "What is included in a celebrity corporate booking?",
+        "The quote covers the appearance or performance fee, plus travel, accommodation, security, and technical riders (sound, lights, backline) quoted transparently so there are no surprises.",
+    ),
+    (
+        "Which cities do you cover for corporate celebrity bookings?",
+        "We deliver corporate events across Delhi NCR, Gurgaon, Noida, Mumbai, Bangalore, Hyderabad, Chennai, Pune, Jaipur and Goa, plus international destinations such as Dubai, Singapore and Bangkok.",
+    ),
+    (
+        "What is the payment structure for corporate bookings?",
+        "Typically 50% advance to block the date and 50% before the event, against a GST invoice. Enterprise clients can be onboarded as vendors with standard PO and compliance documentation.",
+    ),
+    (
+        "Can you arrange a celebrity for a virtual or hybrid corporate event?",
+        "Yes. We book celebrities for virtual keynotes, hybrid town halls and recorded brand messages, coordinating studio setup, streaming quality and rehearsal slots.",
+    ),
+]
+
+
+def build_corporate_hub():
+    title = "Book Celebrities for Corporate Events in India 2026 | Speakers, Singers & Hosts | TKC Talent"
+    description = "Book celebrities for corporate events in India — Bollywood actors, singers, comedians & hosts for annual days, product launches, conferences & dealer meets. Verified 2026 fees, quote in 24 hrs."
+    keywords = "book celebrity for corporate event, corporate event celebrity booking, celebrity host for corporate event, book singer for corporate event, annual day celebrity, product launch celebrity, corporate entertainment india, celebrity speaker india, dealer meet celebrity, conference celebrity host"
+    canonical_path = "/book-celebrity-for-corporate-event/"
+
+    head = build_head(title, description, canonical_path, keywords, CORPORATE_FAQS)
+
+    formats = [
+        ("Annual Day & Townhall", "Concerts, comedy sets and celebrity hosts that make your annual day unforgettable."),
+        ("Product Launch", "A-list actor or influencer appearances that guarantee press pickup and social reach."),
+        ("Conference & Awards", "Celebrity keynote speakers, anchors and emcees aligned to your brand narrative."),
+        ("Dealer & Channel Meets", "High-energy performances and meet-and-greets that reward your partner network."),
+    ]
+    artists = [
+        ("Kapil Sharma", "/book-kapil-sharma/", "Comedy & hosting"),
+        ("Arijit Singh", "/book-arijit-singh/", "Corporate concerts"),
+        ("Sunidhi Chauhan", "/book-sunidhi-chauhan/", "Live band performances"),
+        ("Shah Rukh Khan", "/book-shah-rukh-khan/", "Keynote & brand moments"),
+        ("Samay Raina", "/book-samay-raina/", "Stand-up for young teams"),
+        ("Badshah", "/book-badshah/", "After-party headliner"),
+        ("Shreya Ghoshal", "/book-shreya-ghoshal/", "Elegant gala evenings"),
+        ("Deepika Padukone", "/book-deepika-padukone/", "Brand ambassador appearances"),
+    ]
+    cities = [
+        ("Delhi NCR", "/celebrity-booking-delhi/"),
+        ("Mumbai", "/celebrity-booking-mumbai/"),
+        ("Gurgaon", "/event-management-gurgaon/"),
+        ("Event Planners Delhi", "/event-planners-delhi/"),
+        ("Jaipur", "/celebrity-booking-jaipur/"),
+        ("Goa", "/celebrity-booking-goa/"),
+    ]
+
+    format_cards = "".join(
+        f'''<div class="rounded-2xl border border-foreground/10 bg-background p-6">
+          <h3 class="font-display text-xl font-bold">{n}</h3>
+          <p class="mt-3 text-sm text-foreground/70">{d}</p>
+        </div>''' for n, d in formats
+    )
+    artist_cards = "".join(
+        f'''<a href="{href}" class="group rounded-2xl border border-foreground/10 p-6 transition hover:border-amber-400/50">
+          <h3 class="font-display text-lg font-bold group-hover:text-amber-400">{n}</h3>
+          <p class="mt-2 text-sm text-foreground/60">{d}</p>
+        </a>''' for n, href, d in artists
+    )
+    city_links = "".join(
+        f'<a href="{href}" class="rounded-full border border-foreground/20 px-5 py-2 text-sm hover:bg-foreground/5">{n}</a>'
+        for n, href in cities
+    )
+    faq_items = "".join(
+        f'''<details class="rounded-2xl border border-foreground/10 bg-background p-6">
+          <summary class="cursor-pointer font-display text-lg font-semibold">{q}</summary>
+          <p class="mt-4 text-foreground/70">{a}</p>
+        </details>''' for q, a in CORPORATE_FAQS
+    )
+
+    body = f'''
+{HEADER}
+<main class="w-full">
+
+  <section class="relative overflow-hidden bg-[#0a0a0a] px-6 py-20 sm:px-10 sm:py-28 lg:py-36">
+    <div class="mx-auto max-w-7xl">
+      <div class="grid gap-12 lg:grid-cols-2 lg:items-center">
+        <div class="space-y-6">
+          <p class="text-sm font-semibold uppercase tracking-widest text-amber-400">Corporate Entertainment Experts</p>
+          <h1 class="font-display text-4xl font-bold leading-tight sm:text-5xl lg:text-6xl">
+            Book Celebrities for Corporate Events in India
+          </h1>
+          <p class="text-lg text-foreground/80">
+            Bollywood actors, playback singers, stand-up comedians, celebrity hosts and keynote speakers for annual days, product launches, conferences, award nights and dealer meets. Verified 2026 fees, pan-India execution, and 20+ years of corporate event delivery from TKC Talent.
+          </p>
+          <div class="flex flex-wrap gap-4">
+            <a href="mailto:hello&#64;tkctalent.com?subject=Celebrity%20for%20Corporate%20Event" class="inline-flex items-center justify-center rounded-full bg-amber-400 px-8 py-3 text-sm font-semibold text-[#0a0a0a] hover:bg-amber-300">Request a Corporate Quote</a>
+            <a href="tel:+919599599699" class="inline-flex items-center justify-center rounded-full border border-foreground/20 px-8 py-3 text-sm font-semibold hover:bg-foreground/5">Speak to Our Team</a>
+          </div>
+        </div>
+        <div class="relative">
+          <img src="/assets/featured-brand-Cc-YVddq.webp" alt="Celebrity performing on stage at a corporate event in India" class="w-full rounded-2xl object-cover shadow-2xl" loading="lazy" width="800" height="600"/>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="px-6 py-16 sm:px-10 lg:py-24">
+    <div class="mx-auto max-w-4xl text-center">
+      <h2 class="font-display text-3xl font-bold sm:text-4xl">Star Power That Moves Business Outcomes</h2>
+      <p class="mt-6 text-lg text-foreground/70">
+        A celebrity on your corporate stage does more than entertain — it drives employee attendance, dealer loyalty, press coverage and social amplification. TKC Talent has delivered celebrity-led annual days, product launches and award nights for India's largest enterprises, working directly with artist managers to secure fair pricing, watertight contracts and flawless on-ground execution.
+      </p>
+    </div>
+  </section>
+
+  <section class="bg-[#0f0f0f] px-6 py-16 sm:px-10 lg:py-24">
+    <div class="mx-auto max-w-7xl">
+      <h2 class="font-display text-center text-3xl font-bold sm:text-4xl">Celebrity Bookings for Every Corporate Format</h2>
+      <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">{format_cards}</div>
+    </div>
+  </section>
+
+  <section class="px-6 py-16 sm:px-10 lg:py-24">
+    <div class="mx-auto max-w-7xl">
+      <h2 class="font-display text-center text-3xl font-bold sm:text-4xl">Most Booked Celebrities for Corporate Events</h2>
+      <p class="mx-auto mt-4 max-w-3xl text-center text-foreground/70">These artists are consistently requested for annual days, launches and conferences across India.</p>
+      <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">{artist_cards}</div>
+    </div>
+  </section>
+
+  <section class="bg-[#0f0f0f] px-6 py-16 sm:px-10 lg:py-24">
+    <div class="mx-auto max-w-7xl">
+      <h2 class="font-display text-center text-3xl font-bold sm:text-4xl">How to Book a Celebrity for Your Corporate Event</h2>
+      <div class="mt-12 grid gap-8 sm:grid-cols-3">
+        <div class="relative rounded-2xl border border-foreground/10 bg-background p-8">
+          <span class="font-display text-4xl font-bold text-amber-400">01</span>
+          <h3 class="mt-4 font-display text-xl font-bold">Share Your Brief</h3>
+          <p class="mt-3 text-sm text-foreground/70">Event date, city, format, audience size, budget band and artist wish-list. We revert within 24 hours.</p>
+        </div>
+        <div class="relative rounded-2xl border border-foreground/10 bg-background p-8">
+          <span class="font-display text-4xl font-bold text-amber-400">02</span>
+          <h3 class="mt-4 font-display text-xl font-bold">Get Verified Options</h3>
+          <p class="mt-3 text-sm text-foreground/70">Confirmed availability, exact 2026 fees, rider costs and budget-fit alternatives — all in one comparison sheet.</p>
+        </div>
+        <div class="relative rounded-2xl border border-foreground/10 bg-background p-8">
+          <span class="font-display text-4xl font-bold text-amber-400">03</span>
+          <h3 class="mt-4 font-display text-xl font-bold">Contract & Execute</h3>
+          <p class="mt-3 text-sm text-foreground/70">GST invoicing, vendor onboarding, travel, security, technical production and on-ground artist management.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="px-6 py-16 sm:px-10 lg:py-24">
+    <div class="mx-auto max-w-7xl">
+      <h2 class="font-display text-center text-3xl font-bold sm:text-4xl">Corporate Celebrity Bookings Across India</h2>
+      <div class="mt-10 flex flex-wrap justify-center gap-3">{city_links}</div>
+    </div>
+  </section>
+
+  <section class="bg-[#0f0f0f] px-6 py-16 sm:px-10 lg:py-24">
+    <div class="mx-auto max-w-4xl">
+      <h2 class="font-display text-center text-3xl font-bold sm:text-4xl">Corporate Celebrity Booking FAQs</h2>
+      <div class="mt-10 space-y-4">{faq_items}</div>
+    </div>
+  </section>
+
+  <section class="px-6 py-16 sm:px-10 lg:py-24">
+    <div class="mx-auto max-w-4xl text-center">
+      <h2 class="font-display text-3xl font-bold sm:text-4xl">Planning a Corporate Event? Let's Get Your Star Confirmed.</h2>
+      <p class="mt-6 text-lg text-foreground/70">Share your event date, city and shortlist. Our team replies within 24 hours with verified 2026 fees and availability.</p>
+      <div class="mt-8 flex flex-wrap justify-center gap-4">
+        <a href="mailto:hello&#64;tkctalent.com?subject=Book%20Celebrity%20for%20Corporate%20Event" class="inline-flex items-center justify-center rounded-full bg-amber-400 px-8 py-3 text-sm font-semibold text-[#0a0a0a] hover:bg-amber-300">Email Your Event Brief</a>
+        <a href="tel:+919599599699" class="inline-flex items-center justify-center rounded-full border border-foreground/20 px-8 py-3 text-sm font-semibold hover:bg-foreground/5">Call +91 95995 99699</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+{FOOTER}
+</body></html>
+'''
+
+    html = f"<!DOCTYPE html><html lang=\\"en\\">{head}{body}"
+    out_dir = ROOT / "book-celebrity-for-corporate-event"
+    out_dir.mkdir(exist_ok=True)
+    (out_dir / "index.html").write_text(html, encoding="utf-8")
+    print(f"Wrote {out_dir / 'index.html'} ({len(html)} bytes)")
+
+
 if __name__ == "__main__":
     build_wedding_hub()
+    build_corporate_hub()
