@@ -76,7 +76,7 @@ def head_html(title, description, canonical_path, keywords):
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"/>
 <script src="/assets/nav-enhance-v3.js" defer></script>
 <script type="application/ld+json">{schema_json}</script>
-<link rel="stylesheet" href="/assets/index.css"/>'''
+<link rel="stylesheet" href="/assets/index.css"/></head>'''
 
 
 def faq_schema(faqs):
