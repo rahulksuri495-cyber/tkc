@@ -81,7 +81,7 @@ def build_head(title, description, canonical_path, keywords, faqs):
     head = replace_tag(head, r'<meta name="ai-content-declaration" content=".*?"\s*/>', f'<meta name="ai-content-declaration" content="human-authored, expert-reviewed" />')
     head = replace_tag(head, r'<meta name="content-usage" content=".*?"/>', f'<meta name="content-usage" content="ai-input=yes, search=yes"/>')
     head = replace_tag(head, r'<link rel="alternate" type="text/markdown" href=".*?".*?/>', f'<link rel="alternate" type="text/markdown" href="https://tkctalent.com/llms.txt" title="LLM-friendly site index" />')
-    head = replace_tag(head, r'<script type="application/ld+json">.*?</script>', schema_tags, flags=re.S)
+    head = replace_tag(head, r'<script type="application/ld\+json">[\s\S]*?</script>', schema_tags)
 
     return head
 
