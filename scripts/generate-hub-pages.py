@@ -68,7 +68,7 @@ def build_head(title, description, canonical_path, keywords, faqs):
     head = HEAD
     head = replace_tag(head, r"<title>.*?</title>", f"<title>{title}</title>")
     head = replace_tag(head, r'<meta name="description" content=".*?"/>', f'<meta name="description" content="{description}"/>')
-    head = replace_tag(head, r'<meta name="keywords" content=".*"/>', f'<meta name="keywords" content="{keywords}"/>')
+    head = replace_tag(head, r'<meta name="keywords" content=".*?"/>', f'<meta name="keywords" content="{keywords}"/>')
     head = replace_tag(head, r'<link rel="canonical" href=".*?"/>', f'<link rel="canonical" href="{url}"/>')
     head = replace_tag(head, r'<link rel="alternate" hreflang="en-IN" href=".*?"/>', f'<link rel="alternate" hreflang="en-IN" href="{url}"/>')
     head = replace_tag(head, r'<link rel="alternate" hreflang="x-default" href=".*?"/>', f'<link rel="alternate" hreflang="x-default" href="{url}"/>')
