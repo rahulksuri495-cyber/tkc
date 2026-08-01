@@ -145,10 +145,9 @@ def build_wedding_hub():
     canonical_path = "/book-celebrity-for-wedding/"
     faq_json = json.dumps(faq_schema(WEDDING_FAQS))
 
-    body = f'''
-<body class="bg-background text-foreground antialiased">
-{HEADER}
+body = f'''
 <main class="w-full">
+
   <!-- Hero -->
   <section class="relative overflow-hidden bg-[#0a0a0a] px-6 py-20 sm:px-10 sm:py-28 lg:py-36">
     <div class="mx-auto max-w-7xl">
