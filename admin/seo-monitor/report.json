@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-08-01T01:41:54+00:00",
+  "generated_at": "2026-08-01T07:12:36+00:00",
   "summary": {
     "total": 175,
     "pass": 168,
     "warn": 7,
     "fail": 0,
-    "jsonld_blocks": 605,
+    "jsonld_blocks": 609,
     "jsonld_invalid": 0,
     "in_sitemap": 174,
     "major_failing": 0,
@@ -824,16 +824,16 @@
       "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
       "og_image": "https://tkctalent.com/og-image.jpg",
       "og_dimensions": "1200x630",
-      "jsonld_count": 2,
+      "jsonld_count": 6,
       "jsonld_invalid": 0,
       "errors": [],
       "warnings": [],
       "status": "pass",
       "major": true,
-      "ai_declaration": "human",
-      "content_usage": "search=yes, ai-input=yes, ai-train=no",
+      "ai_declaration": "human-authored, expert-reviewed",
+      "content_usage": "ai-input=yes, search=yes",
       "llms_links": [
-        "/llms.txt"
+        "https://tkctalent.com/llms.txt"
       ],
       "ai_parse_ok": true,
       "ai_notes": []

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Generate new SEO hub pages by composing header + custom content + footer."""
+"""Generate new SEO hub pages by composing head template + header + custom content + footer."""
 from pathlib import Path
 import re
 import json
@@ -7,13 +7,20 @@ from datetime import datetime, timezone
 
 ROOT = Path(__file__).resolve().parent.parent
 
+HEAD = (ROOT / "_templates" / "head.html").read_text(encoding="utf-8")
 HEADER = (ROOT / "_templates" / "header.html").read_text(encoding="utf-8")
 FOOTER = (ROOT / "_templates" / "footer.html").read_text(encoding="utf-8")
 
 
-def head_html(title, description, canonical_path, keywords):
+def replace_tag(text, tag_pattern, new_tag, flags=re.S):
+    return re.sub(tag_pattern, lambda m: new_tag, text, flags=flags, count=1)
+
+
+
+def build_head(title, description, canonical_path, keywords, faqs):
     url = f"https://tkctalent.com{canonical_path}"
     today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+
     schemas = [
         {
             "@context": "https://schema.org",
@@ -40,58 +47,43 @@ def head_html(title, description, canonical_path, keywords):
                 "addressCountry": "IN",
             },
             "areaServed": "IN",
-            "priceRange": "$$$",
+            "priceRange": "₹₹₹₹",
             "description": description,
         },
     ]
+    if faqs:
+        schemas.append({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+                {"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}}
+                for q, a in faqs
+            ],
+        })
 
-    schema_json = json.dumps(schemas)
-    return f'''<head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
-<meta name="author" content="The Kabir Company"/>
-<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"/>
-<meta name="theme-color" content="#0a0a0a"/>
-<meta name="geo.region" content="IN"/><meta name="geo.placename" content="India"/>
-<meta name="geo.position" content="19.0760;72.8777"/><meta name="ICBM" content="19.0760, 72.8777"/>
-<title>{title}</title>
-<meta name="description" content="{description}"/>
-<meta name="keywords" content="{keywords}"/>
-<link rel="canonical" href="{url}"/>
-<link rel="alternate" hreflang="en-IN" href="{url}"/>
-<link rel="alternate" hreflang="x-default" href="{url}"/>
-<meta property="og:site_name" content="TKC Talent"/>
-<meta property="og:type" content="website"/><meta property="og:locale" content="en_IN"/>
-<meta property="og:url" content="{url}"/>
-<meta property="og:title" content="{title}"/>
-<meta property="og:description" content="{description}"/>
-<meta property="og:image" content="https://tkctalent.com/og-image.jpg"/>
-<meta property="og:image:width" content="1200"/><meta property="og:image:height" content="630"/>
-<meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:title" content="{title}"/>
-<meta name="twitter:description" content="{description}"/>
-<meta name="twitter:image" content="https://tkctalent.com/og-image.jpg"/>
-<meta name="ai-content-declaration" content="human"/>
-<meta name="content-usage" content="search=yes, ai-input=yes, ai-train=no"/>
-<link rel="alternate" type="text/markdown" href="/llms.txt"/>
-<link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"/>
-<script src="/assets/nav-enhance-v3.js" defer></script>
-<script type="application/ld+json">{schema_json}</script>
-<link rel="stylesheet" href="/assets/index.css"/></head>'''
+    schema_tags = "".join(
+        f'<script type="application/ld+json">{json.dumps(s)}</script>' for s in schemas
+    )
 
+    head = HEAD
+    head = replace_tag(head, r"<title>.*?</title>", f"<title>{title}</title>")
+    head = replace_tag(head, r'<meta name="description" content=".*?"/>', f'<meta name="description" content="{description}"/>')
+    head = replace_tag(head, r'<meta name="keywords" content=".*?"/>', f'<meta name="keywords" content="{keywords}"/>')
+    head = replace_tag(head, r'<link rel="canonical" href=".*?"/>', f'<link rel="canonical" href="{url}"/>')
+    head = replace_tag(head, r'<link rel="alternate" hreflang="en-IN" href=".*?"/>', f'<link rel="alternate" hreflang="en-IN" href="{url}"/>')
+    head = replace_tag(head, r'<link rel="alternate" hreflang="x-default" href=".*?"/>', f'<link rel="alternate" hreflang="x-default" href="{url}"/>')
+    head = replace_tag(head, r'<meta property="og:url" content=".*?"/>', f'<meta property="og:url" content="{url}"/>')
+    head = replace_tag(head, r'<meta property="og:title" content=".*?"/>', f'<meta property="og:title" content="{title}"/>')
+    head = replace_tag(head, r'<meta property="og:description" content=".*?"/>', f'<meta property="og:description" content="{description}"/>')
+    head = replace_tag(head, r'<meta property="og:image:secure_url" content=".*?"/>', f'<meta property="og:image:secure_url" content="https://tkctalent.com/og-image.jpg"/>')
+    head = replace_tag(head, r'<meta name="twitter:title" content=".*?"/>', f'<meta name="twitter:title" content="{title}"/>')
+    head = replace_tag(head, r'<meta name="twitter:description" content=".*?"/>', f'<meta name="twitter:description" content="{description}"/>')
+    head = replace_tag(head, r'<meta name="ai-content-declaration" content=".*?"\s*/>', f'<meta name="ai-content-declaration" content="human-authored, expert-reviewed" />')
+    head = replace_tag(head, r'<meta name="content-usage" content=".*?"/>', f'<meta name="content-usage" content="ai-input=yes, search=yes"/>')
+    head = replace_tag(head, r'<link rel="alternate" type="text/markdown" href=".*?".*?/>', f'<link rel="alternate" type="text/markdown" href="https://tkctalent.com/llms.txt" title="LLM-friendly site index" />')
+    head = replace_tag(head, r'<script type="application/ld\+json">[\s\S]*?</script>', schema_tags)
 
-def faq_schema(faqs):
-    return {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": [
-            {
-                "@type": "Question",
-                "name": q,
-                "acceptedAnswer": {"@type": "Answer", "text": a},
-            }
-            for q, a in faqs
-        ],
-    }
+    return head
 
 
 WEDDING_FAQS = [
@@ -143,7 +135,8 @@ def build_wedding_hub():
     description = "Book celebrities for weddings in India — Bollywood actors, singers, comedians for sangeet, reception & destination weddings. Verified 2026 fees, pan-India bookings & quote in 24 hrs."
     keywords = "book celebrity for wedding, book singer for wedding, wedding celebrity booking, bollywood celebrity wedding, celebrity for sangeet, celebrity wedding appearance, destination wedding celebrity, book celebrity for reception, wedding singer india, celebrity wedding entertainment"
     canonical_path = "/book-celebrity-for-wedding/"
-    faq_json = json.dumps(faq_schema(WEDDING_FAQS))
+
+    head = build_head(title, description, canonical_path, keywords, WEDDING_FAQS)
 
     body = f'''
 {HEADER}
@@ -303,27 +296,27 @@ def build_wedding_hub():
   </section>
 
   <!-- CTA -->
-  <section class="px-6 py-20 sm:px-10 lg:py-28">
-    <div class="mx-auto max-w-5xl rounded-3xl bg-gradient-to-br from-amber-400 to-amber-300 px-8 py-16 text-center text-[#0a0a0a] sm:px-16">
+  <section class="px-6 py-16 sm:px-10 lg:py-24">
+    <div class="mx-auto max-w-4xl text-center">
       <h2 class="font-display text-3xl font-bold sm:text-4xl">Ready to Book a Celebrity for Your Wedding?</h2>
-      <p class="mx-auto mt-4 max-w-2xl text-lg">Get verified 2026 fees, check availability, and lock in the perfect artist for your sangeet, reception or destination wedding.</p>
-      <a href="mailto:hello&#64;tkctalent.com?subject=Request%20Celebrity%20for%20Wedding" class="mt-8 inline-flex items-center justify-center rounded-full bg-[#0a0a0a] px-10 py-4 text-sm font-semibold text-white hover:bg-[#1a1a1a]">Request Your Wedding Quote</a>
+      <p class="mt-6 text-lg text-foreground/70">Share your wedding date, city, and preferred celebrity. Our team will reply within 24 hours with verified 2026 fees and availability.</p>
+      <div class="mt-8 flex flex-wrap justify-center gap-4">
+        <a href="mailto:hello&#64;tkctalent.com?subject=Book%20Celebrity%20for%20Wedding" class="inline-flex items-center justify-center rounded-full bg-amber-400 px-8 py-3 text-sm font-semibold text-[#0a0a0a] hover:bg-amber-300">Email Your Wedding Brief</a>
+        <a href="tel:+919599599699" class="inline-flex items-center justify-center rounded-full border border-foreground/20 px-8 py-3 text-sm font-semibold hover:bg-foreground/5">Call +91 95995 99699</a>
+      </div>
     </div>
   </section>
 
-  <script type="application/ld+json">{faq_json}</script>
 </main>
 {FOOTER}
-</body>
-</html>
+</body></html>
 '''
 
-    html = f"<!DOCTYPE html><html lang=\"en\">{head_html(title, description, canonical_path, keywords)}{body}"
+    html = f"<!DOCTYPE html><html lang=\"en\">{head}{body}"
     out_dir = ROOT / "book-celebrity-for-wedding"
     out_dir.mkdir(exist_ok=True)
     (out_dir / "index.html").write_text(html, encoding="utf-8")
-    print(f"Created {out_dir}/index.html ({len(html)} bytes)")
-    return canonical_path
+    print(f"Wrote {out_dir / 'index.html'} ({len(html)} bytes)")
 
 
 if __name__ == "__main__":
