@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-08-01T09:09:37+00:00",
+  "generated_at": "2026-08-01T09:09:54+00:00",
   "summary": {
     "total": 176,
-    "pass": 168,
-    "warn": 8,
+    "pass": 169,
+    "warn": 7,
     "fail": 0,
     "jsonld_blocks": 615,
     "jsonld_invalid": 0,
-    "in_sitemap": 174,
+    "in_sitemap": 175,
     "major_failing": 0,
     "ai_parse_ok": 175,
     "ai_parse_failing_major": 0,
@@ -827,10 +827,8 @@
       "jsonld_count": 6,
       "jsonld_invalid": 0,
       "errors": [],
-      "warnings": [
-        "not in sitemap.xml"
-      ],
-      "status": "warn",
+      "warnings": [],
+      "status": "pass",
       "major": true,
       "ai_declaration": "human-authored, expert-reviewed",
       "content_usage": "ai-input=yes, search=yes",
