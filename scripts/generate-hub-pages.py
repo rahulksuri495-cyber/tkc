@@ -145,7 +145,7 @@ def build_wedding_hub():
     canonical_path = "/book-celebrity-for-wedding/"
     faq_json = json.dumps(faq_schema(WEDDING_FAQS))
 
-body = f'''
+    body = f'''
 <main class="w-full">
 
   <!-- Hero -->
