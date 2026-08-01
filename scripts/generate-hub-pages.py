@@ -523,7 +523,7 @@ def build_corporate_hub():
 </body></html>
 '''
 
-    html = f"<!DOCTYPE html><html lang=\\"en\\">{head}{body}"
+    html = f'<!DOCTYPE html><html lang="en">' + head + body
     out_dir = ROOT / "book-celebrity-for-corporate-event"
     out_dir.mkdir(exist_ok=True)
     (out_dir / "index.html").write_text(html, encoding="utf-8")
