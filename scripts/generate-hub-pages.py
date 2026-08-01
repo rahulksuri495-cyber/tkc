@@ -13,7 +13,8 @@ FOOTER = (ROOT / "_templates" / "footer.html").read_text(encoding="utf-8")
 
 
 def replace_tag(text, tag_pattern, new_tag, flags=re.S):
-    return re.sub(tag_pattern, new_tag, text, flags=flags, count=1)
+    return re.sub(tag_pattern, lambda m: new_tag, text, flags=flags, count=1)
+
 
 
 def build_head(title, description, canonical_path, keywords, faqs):
