@@ -22,15 +22,28 @@ PRIORITY = [
 
 text = SITEMAP.read_text(encoding="utf-8")
 
-# Update lastmod for each priority artist page
+# Update lastmod for each priority artist page (operate on the whole <url> block so
+# a <lastmod> on a following line is replaced, never duplicated)
 for slug in PRIORITY:
     loc = f"https://tkctalent.com/{slug}/"
-    # If entry already has <lastmod>, update it
-    if f"<loc>{loc}</loc><lastmod>" in text:
-        text = re.sub(rf"(<loc>{re.escape(loc)}</loc><lastmod>)[^<]+(</lastmod>)", rf"\g<1>{today}\g<2>", text)
-    elif f"<loc>{loc}</loc>" in text:
-        # Insert lastmod after </loc> in the <url> block
-        text = re.sub(rf"(<loc>{re.escape(loc)}</loc>)", rf"\g<1><lastmod>{today}</lastmod>", text, count=1)
+
+    def update_block(match, loc=loc):
+        block = match.group(0)
+        if f"<loc>{loc}</loc>" not in block:
+            return block
+        if "<lastmod>" in block:
+            state = {"n": 0}
+
+            def repl(m):
+                state["n"] += 1
+                return f"<lastmod>{today}</lastmod>" if state["n"] == 1 else ""
+
+            block = re.sub(r"\s*<lastmod>[^<]*</lastmod>", repl, block)
+            block = re.sub(r"\n\s*\n", "\n", block)
+            return block
+        return block.replace(f"<loc>{loc}</loc>", f"<loc>{loc}</loc><lastmod>{today}</lastmod>", 1)
+
+    text = re.sub(r"<url>.*?</url>", update_block, text, flags=re.S)
 
 
 # Add new hub if not present
