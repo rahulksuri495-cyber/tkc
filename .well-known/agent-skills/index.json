@@ -18,8 +18,7 @@
       "type": "application/xml",
       "description": "Full sitemap of public TKC Talent pages, including per-artist booking pages.",
       "url": "https://tkctalent.com/sitemap.xml"
-    }
-    ,
+    },
     {
       "name": "tkc-talent-full-corpus",
       "type": "text/plain",
@@ -55,6 +54,12 @@
       "type": "application/json",
       "description": "Machine-readable catalog of artists bookable via TKC Talent: slug, name, category, booking page URL.",
       "url": "https://tkctalent.com/.well-known/agent-skills/artist-catalog.json"
+    },
+    {
+      "name": "tkc-corporate-event-management",
+      "type": "text/plain",
+      "description": "Grounding corpus for corporate event management and event management in India: definition, 2026 costs, top companies, cities and Q&A.",
+      "url": "https://tkctalent.com/llms-corporate-event-management.txt"
     }
   ]
 }
