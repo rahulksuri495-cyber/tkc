@@ -149,6 +149,7 @@
         +'<li><a href="/celebrity-dj-booking/" class="block rounded-md px-3 py-2 text-sm font-medium text-foreground/80 transition-colors hover:bg-foreground hover:text-background">Celebrity DJs</a></li>'
         +'<li><a href="/pan-india-celebrity-booking/" class="block rounded-md px-3 py-2 text-sm font-medium text-foreground/80 transition-colors hover:bg-foreground hover:text-background">Pan-India Celebrities</a></li>'
         +'<li><a href="/influencer-booking-india/" class="block rounded-md px-3 py-2 text-sm font-medium text-foreground/80 transition-colors hover:bg-foreground hover:text-background">Digital Influencers</a></li>'
+        +'<li><a href="/durga-puja-2026/" class="block rounded-md px-3 py-2 text-sm font-medium text-foreground/80 transition-colors hover:bg-foreground hover:text-background">Durga Puja 2026 &mdash; CR Park</a></li>'
         +'</ul>');
     });
 
@@ -166,6 +167,7 @@
         +'<li><a href="/celebrity-dj-booking/" class="flex min-h-9 items-center rounded-lg px-3 py-2 text-xs text-foreground/80 transition hover:bg-foreground/5">Celebrity DJs</a></li>'
         +'<li><a href="/pan-india-celebrity-booking/" class="flex min-h-9 items-center rounded-lg px-3 py-2 text-xs text-foreground/80 transition hover:bg-foreground/5">Pan-India Celebrities</a></li>'
         +'<li><a href="/influencer-booking-india/" class="flex min-h-9 items-center rounded-lg px-3 py-2 text-xs text-foreground/80 transition hover:bg-foreground/5">Digital Influencers</a></li>'
+        +'<li><a href="/durga-puja-2026/" class="flex min-h-9 items-center rounded-lg px-3 py-2 text-xs text-foreground/80 transition hover:bg-foreground/5">Durga Puja 2026 &mdash; CR Park</a></li>'
         +'</ul>');
     });
   }
