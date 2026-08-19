@@ -49,17 +49,6 @@
   function sweepImages(root){
     (root||document).querySelectorAll('img').forEach(forceImgVisible);
   }
-  function ensureBillingSupportLink(){
-    if(document.querySelector('[data-tkc-billing-support]') || location.pathname.indexOf('/support/billing')===0) return;
-    var link=document.createElement('a');
-    link.href='/support/billing/';
-    link.setAttribute('data-tkc-billing-support','1');
-    link.setAttribute('aria-label','Billing support');
-    link.textContent='Billing help';
-    // Sits above the floating global search bar so the two pills never collide.
-    link.style.cssText='position:fixed;right:18px;bottom:80px;z-index:9999;display:flex;align-items:center;min-height:40px;padding:0 16px;border:1px solid rgba(255,255,255,.2);border-radius:999px;background:#f5f1e8;color:#0a0a0a;box-shadow:0 12px 34px rgba(0,0,0,.35);font:700 12px/1 Inter,system-ui,sans-serif;text-decoration:none;';
-    document.body.appendChild(link);
-  }
   document.addEventListener('load',function(e){
     if(e.target && e.target.tagName==='IMG') forceImgVisible(e.target);
   },true);
@@ -503,8 +492,8 @@
     linkActressCards();
     fixAllSubmenus();
     sweepImages();
-    ensureBillingSupportLink();
     ensureGlobalSearch();
+
   }
 
   // Debounce + re-entrancy guard so our own DOM writes never re-trigger an
