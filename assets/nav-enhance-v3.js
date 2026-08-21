@@ -156,6 +156,33 @@
     });
   }
 
+  function ensureDurgaTopLevel(){
+    // Desktop: add a top-level "Durga Puja 2026" item to the main nav bar
+    var lists=Array.prototype.slice.call(document.querySelectorAll('nav ul'));
+    lists.forEach(function(ul){
+      if(ul.closest('#mobile-nav-drawer')) return;
+      if(ul.parentElement && ul.parentElement.tagName==='LI') return; // skip dropdowns
+      if(!ul.querySelector('a[href="/newsroom/"]')) return;
+      if(ul.querySelector(':scope > li > a[href="/durga-puja-2026/"]')) return;
+      var newsLi=ul.querySelector('a[href="/newsroom/"]').closest('li');
+      var li=document.createElement('li');
+      li.className='relative group';
+      li.innerHTML='<a href="/durga-puja-2026/" class="transition-opacity hover:opacity-60">Durga Puja 2026</a>';
+      ul.insertBefore(li, newsLi);
+    });
+
+    // Mobile drawer: add as a top-level entry
+    var drawer=document.getElementById('mobile-nav-drawer');
+    if(!drawer) return;
+    var mUl=drawer.querySelector('ul');
+    if(!mUl) return;
+    if(mUl.querySelector(':scope > li > a[href="/durga-puja-2026/"]')) return;
+    var mNews=mUl.querySelector(':scope > li > a[href="/newsroom/"]');
+    var mLi=document.createElement('li');
+    mLi.innerHTML='<a href="/durga-puja-2026/" class="flex min-h-11 items-center rounded-lg px-3 py-3 transition hover:bg-foreground/5">Durga Puja 2026</a>';
+    if(mNews) mUl.insertBefore(mLi, mNews.closest('li')); else mUl.appendChild(mLi);
+  }
+
   function ensureSingerSubmenus(){
     navLinks().forEach(function(a){
       if(!samePath(a,'/singer-booking-india/') && !textHas(a,['singer'])) return;
@@ -472,6 +499,7 @@
     removeOrphanNavMenus();
     ensureHomeSubmenu();
     ensureCelebrityBookingMenu();
+    ensureDurgaTopLevel();
     ensureSingerSubmenus();
     ensureActressSubmenus();
     ensureActorSubmenus();
