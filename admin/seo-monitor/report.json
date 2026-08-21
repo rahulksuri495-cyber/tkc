@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-19T11:10:12+00:00",
+  "generated_at": "2026-08-21T05:41:00+00:00",
   "summary": {
     "total": 178,
     "pass": 169,
@@ -3658,11 +3658,11 @@
       "major": false,
       "ai_declaration": "human-authored, expert-reviewed",
       "content_usage": "ai-input=yes, search=yes",
-      "llms_links": [],
+      "llms_links": [
+        "https://tkctalent.com/llms.txt"
+      ],
       "ai_parse_ok": true,
-      "ai_notes": [
-        "no llms.txt alternate link"
-      ]
+      "ai_notes": []
     },
     {
       "route": "/event-management-delhi/",
