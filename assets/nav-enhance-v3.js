@@ -145,7 +145,7 @@
     // Mobile drawer: append to existing Celebrity Booking sub-menu
     var drawer=document.getElementById('mobile-nav-drawer');
     if(!drawer) return;
-    Array.prototype.slice.call(drawer.querySelectorAll('a')).forEach(function(a){
+    Array.prototype.slice.call(drawer.querySelectorAll('a,button')).forEach(function(a){
       if(!textHas(a,['celebrity','booking','india'])) return;
       var li=a.parentElement;
       if(!li || li.tagName!=='LI') return;
