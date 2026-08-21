@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-08-21T05:41:00+00:00",
+  "generated_at": "2026-08-21T06:00:35+00:00",
   "summary": {
-    "total": 178,
+    "total": 181,
     "pass": 169,
-    "warn": 9,
+    "warn": 12,
     "fail": 0,
-    "jsonld_blocks": 627,
+    "jsonld_blocks": 630,
     "jsonld_invalid": 0,
-    "in_sitemap": 177,
+    "in_sitemap": 180,
     "major_failing": 0,
-    "ai_parse_ok": 177,
+    "ai_parse_ok": 180,
     "ai_parse_failing_major": 0,
     "robots_status": "pass"
   },
@@ -2865,6 +2865,30 @@
       "ai_notes": []
     },
     {
+      "route": "/book-stalls-durga-puja/",
+      "url": "https://tkctalent.com/book-stalls-durga-puja/",
+      "title": "Book Stalls in Durga Puja 2026 | Delhi & CR Park Rates",
+      "canonical": "https://tkctalent.com/book-stalls-durga-puja/",
+      "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+      "og_image": "https://tkctalent.com/durga-puja-2026/images/durga-puja-2026-themed-pandal-delhi-1200.jpg",
+      "og_dimensions": "1200x900",
+      "jsonld_count": 1,
+      "jsonld_invalid": 0,
+      "errors": [],
+      "warnings": [
+        "og:image dimensions not 1200x630 (got 1200x900)"
+      ],
+      "status": "warn",
+      "major": true,
+      "ai_declaration": "human-authored, expert-reviewed",
+      "content_usage": "ai-input=yes, search=yes",
+      "llms_links": [
+        "https://tkctalent.com/llms.txt"
+      ],
+      "ai_parse_ok": true,
+      "ai_notes": []
+    },
+    {
       "route": "/book-sunanda-sharma/",
       "url": "https://tkctalent.com/book-sunanda-sharma/",
       "title": "Book Sunanda Sharma: Fees  Availability 2026 | TKC Talent",
@@ -3641,6 +3665,30 @@
       "ai_notes": []
     },
     {
+      "route": "/cr-park-durga-puja/",
+      "url": "https://tkctalent.com/cr-park-durga-puja/",
+      "title": "CR Park Durga Puja 2026 | Pandals, Dates & Brand Guide",
+      "canonical": "https://tkctalent.com/cr-park-durga-puja/",
+      "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+      "og_image": "https://tkctalent.com/durga-puja-2026/images/durga-puja-2026-cr-park-pandal-crowd-1200.jpg",
+      "og_dimensions": "1200x900",
+      "jsonld_count": 1,
+      "jsonld_invalid": 0,
+      "errors": [],
+      "warnings": [
+        "og:image dimensions not 1200x630 (got 1200x900)"
+      ],
+      "status": "warn",
+      "major": false,
+      "ai_declaration": "human-authored, expert-reviewed",
+      "content_usage": "ai-input=yes, search=yes",
+      "llms_links": [
+        "https://tkctalent.com/llms.txt"
+      ],
+      "ai_parse_ok": true,
+      "ai_notes": []
+    },
+    {
       "route": "/durga-puja-2026/",
       "url": "https://tkctalent.com/durga-puja-2026/",
       "title": "Durga Puja 2026 CR Park Delhi | Stall Booking & Sponsorship",
@@ -3653,6 +3701,30 @@
       "errors": [],
       "warnings": [
         "og:image dimensions not 1200x630 (got 1200x933)"
+      ],
+      "status": "warn",
+      "major": false,
+      "ai_declaration": "human-authored, expert-reviewed",
+      "content_usage": "ai-input=yes, search=yes",
+      "llms_links": [
+        "https://tkctalent.com/llms.txt"
+      ],
+      "ai_parse_ok": true,
+      "ai_notes": []
+    },
+    {
+      "route": "/durga-puja-sponsorship/",
+      "url": "https://tkctalent.com/durga-puja-sponsorship/",
+      "title": "Durga Puja Sponsorship 2026 | Delhi & CR Park Packages",
+      "canonical": "https://tkctalent.com/durga-puja-sponsorship/",
+      "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+      "og_image": "https://tkctalent.com/durga-puja-2026/images/durga-puja-2026-evening-aarti-lights-1200.jpg",
+      "og_dimensions": "1200x900",
+      "jsonld_count": 1,
+      "jsonld_invalid": 0,
+      "errors": [],
+      "warnings": [
+        "og:image dimensions not 1200x630 (got 1200x900)"
       ],
       "status": "warn",
       "major": false,
