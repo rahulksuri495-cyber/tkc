@@ -499,6 +499,7 @@
     removeOrphanNavMenus();
     ensureHomeSubmenu();
     ensureCelebrityBookingMenu();
+    ensureDurgaTopLevel();
     ensureSingerSubmenus();
     ensureActressSubmenus();
     ensureActorSubmenus();
