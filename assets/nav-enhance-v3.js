@@ -130,45 +130,29 @@
   }
 
   function ensureCelebrityBookingMenu(){
+    // Desktop: append Durga Puja link to the existing Celebrity Booking dropdown
     navLinks().forEach(function(a){
       if(!textHas(a,['celebrity','booking','india'])) return;
       if(a.closest('#mobile-nav-drawer')) return;
       var li=a.parentElement;
       if(!li || li.tagName!=='LI') return;
-      if(li.querySelector('a[href="/bollywood-celebrity-booking/"]')) return;
-      li.classList.add('relative','group/sub');
-      a.classList.remove('block');
-      a.classList.add('flex','items-center','justify-between','gap-2','group-hover/sub:bg-foreground','group-hover/sub:text-background');
-      if(!a.querySelector('svg')) a.insertAdjacentHTML('beforeend',chevronRight());
-      var catCls='flex items-center justify-between gap-2 rounded-md px-3 py-2 text-sm font-medium text-foreground/80 transition-colors hover:bg-foreground hover:text-background';
-      a.insertAdjacentHTML('afterend','<ul style="max-height:calc(100vh - 120px)" class="invisible absolute left-0 top-full z-50 mt-2 min-w-72 overflow-y-auto overscroll-contain rounded-xl border border-foreground/10 bg-background p-2 text-foreground opacity-0 shadow-2xl ring-1 ring-foreground/5 transition-all duration-150 group-hover/sub:visible group-hover/sub:opacity-100 group-focus-within/sub:visible group-focus-within/sub:opacity-100">'
-        +categoryItemHtml('Bollywood Actors','/bollywood-celebrity-booking/',catCls)
-        +categoryItemHtml('Bollywood Actresses','/bollywood-actress-booking/',catCls)
-        +categoryItemHtml('Singers & Performers','/singer-booking-india/',catCls)
-        +'<li><a href="/comedian-booking-india/" class="block rounded-md px-3 py-2 text-sm font-medium text-foreground/80 transition-colors hover:bg-foreground hover:text-background">Comedian Booking India</a></li>'
-        +'<li><a href="/celebrity-dj-booking/" class="block rounded-md px-3 py-2 text-sm font-medium text-foreground/80 transition-colors hover:bg-foreground hover:text-background">Celebrity DJs</a></li>'
-        +'<li><a href="/pan-india-celebrity-booking/" class="block rounded-md px-3 py-2 text-sm font-medium text-foreground/80 transition-colors hover:bg-foreground hover:text-background">Pan-India Celebrities</a></li>'
-        +'<li><a href="/influencer-booking-india/" class="block rounded-md px-3 py-2 text-sm font-medium text-foreground/80 transition-colors hover:bg-foreground hover:text-background">Digital Influencers</a></li>'
-        +'<li><a href="/durga-puja-2026/" class="block rounded-md px-3 py-2 text-sm font-medium text-foreground/80 transition-colors hover:bg-foreground hover:text-background">Durga Puja 2026 &mdash; CR Park</a></li>'
-        +'</ul>');
+      var ul=li.querySelector(':scope > ul');
+      if(!ul) return;
+      if(ul.querySelector('a[href="/durga-puja-2026/"]')) return;
+      ul.insertAdjacentHTML('beforeend','<li><a href="/durga-puja-2026/" class="block rounded-md px-3 py-2 text-sm font-medium text-foreground/80 transition-colors hover:bg-foreground hover:text-background">Durga Puja 2026 &mdash; CR Park</a></li>');
     });
 
+    // Mobile drawer: append to existing Celebrity Booking sub-menu
     var drawer=document.getElementById('mobile-nav-drawer');
     if(!drawer) return;
-    Array.prototype.slice.call(drawer.querySelectorAll('a')).forEach(function(a){
+    Array.prototype.slice.call(drawer.querySelectorAll('a,button')).forEach(function(a){
       if(!textHas(a,['celebrity','booking','india'])) return;
       var li=a.parentElement;
-      if(!li || li.tagName!=='LI' || li.querySelector('a[href="/bollywood-celebrity-booking/"]')) return;
-      li.insertAdjacentHTML('beforeend','<ul class="ml-3 mt-1 flex max-h-64 flex-col gap-1 overflow-y-auto overscroll-contain border-l border-foreground/10 pl-3">'
-        +'<li><a href="/bollywood-celebrity-booking/" class="flex min-h-9 items-center rounded-lg px-3 py-2 text-xs text-foreground/80 transition hover:bg-foreground/5">Bollywood Actors</a></li>'
-        +'<li><a href="/bollywood-actress-booking/" class="flex min-h-9 items-center rounded-lg px-3 py-2 text-xs text-foreground/80 transition hover:bg-foreground/5">Bollywood Actresses</a></li>'
-        +'<li><a href="/singer-booking-india/" class="flex min-h-9 items-center rounded-lg px-3 py-2 text-xs text-foreground/80 transition hover:bg-foreground/5">Singers & Performers</a></li>'
-        +'<li><a href="/comedian-booking-india/" class="flex min-h-9 items-center rounded-lg px-3 py-2 text-xs text-foreground/80 transition hover:bg-foreground/5">Comedian Booking India</a></li>'
-        +'<li><a href="/celebrity-dj-booking/" class="flex min-h-9 items-center rounded-lg px-3 py-2 text-xs text-foreground/80 transition hover:bg-foreground/5">Celebrity DJs</a></li>'
-        +'<li><a href="/pan-india-celebrity-booking/" class="flex min-h-9 items-center rounded-lg px-3 py-2 text-xs text-foreground/80 transition hover:bg-foreground/5">Pan-India Celebrities</a></li>'
-        +'<li><a href="/influencer-booking-india/" class="flex min-h-9 items-center rounded-lg px-3 py-2 text-xs text-foreground/80 transition hover:bg-foreground/5">Digital Influencers</a></li>'
-        +'<li><a href="/durga-puja-2026/" class="flex min-h-9 items-center rounded-lg px-3 py-2 text-xs text-foreground/80 transition hover:bg-foreground/5">Durga Puja 2026 &mdash; CR Park</a></li>'
-        +'</ul>');
+      if(!li || li.tagName!=='LI') return;
+      var ul=li.querySelector(':scope > ul');
+      if(!ul) return;
+      if(ul.querySelector('a[href="/durga-puja-2026/"]')) return;
+      ul.insertAdjacentHTML('beforeend','<li><a href="/durga-puja-2026/" class="flex min-h-9 items-center rounded-lg px-3 py-2 text-xs text-foreground/80 transition hover:bg-foreground/5">Durga Puja 2026 &mdash; CR Park</a></li>');
     });
   }
 
