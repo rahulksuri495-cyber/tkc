@@ -130,31 +130,21 @@
   }
 
   function ensureCelebrityBookingMenu(){
-    // Desktop: append Durga Puja link to the existing Celebrity Booking dropdown
-    navLinks().forEach(function(a){
-      if(!textHas(a,['celebrity','booking','india'])) return;
-      if(a.closest('#mobile-nav-drawer')) return;
-      var li=a.parentElement;
-      if(!li || li.tagName!=='LI') return;
-      var ul=li.querySelector(':scope > ul');
-      if(!ul) return;
-      if(ul.querySelector('a[href="/durga-puja-2026/"]')) return;
-      ul.insertAdjacentHTML('beforeend','<li><a href="/durga-puja-2026/" class="block rounded-md px-3 py-2 text-sm font-medium text-foreground/80 transition-colors hover:bg-foreground hover:text-background">Durga Puja 2026 &mdash; CR Park</a></li>');
-    });
-
-    // Mobile drawer: append to existing Celebrity Booking sub-menu
-    var drawer=document.getElementById('mobile-nav-drawer');
-    if(!drawer) return;
-    Array.prototype.slice.call(drawer.querySelectorAll('a,button')).forEach(function(a){
-      if(!textHas(a,['celebrity','booking','india'])) return;
-      var li=a.parentElement;
-      if(!li || li.tagName!=='LI') return;
-      var ul=li.querySelector(':scope > ul');
-      if(!ul) return;
-      if(ul.querySelector('a[href="/durga-puja-2026/"]')) return;
-      ul.insertAdjacentHTML('beforeend','<li><a href="/durga-puja-2026/" class="flex min-h-9 items-center rounded-lg px-3 py-2 text-xs text-foreground/80 transition hover:bg-foreground/5">Durga Puja 2026 &mdash; CR Park</a></li>');
+    // Durga Puja 2026 lives as its own top-level nav item (see
+    // ensureDurgaTopLevel). It is intentionally NOT duplicated inside the
+    // Celebrity Booking India dropdown; older builds injected it in both
+    // places, so strip any leftover copy from the dropdown here.
+    document.querySelectorAll('nav a[href="/durga-puja-2026/"], #mobile-nav-drawer a[href="/durga-puja-2026/"]').forEach(function(a){
+      var li=a.closest('li');
+      if(!li) return;
+      var parentUl=li.parentElement;
+      // a nested dropdown <ul> always has an owning <li>; top level does not
+      if(parentUl && parentUl.tagName==='UL' && parentUl.parentElement && parentUl.parentElement.tagName==='LI'){
+        li.remove();
+      }
     });
   }
+
 
   function ensureDurgaTopLevel(){
     // Desktop: add a top-level "Durga Puja 2026" item to the main nav bar
@@ -495,6 +485,39 @@
     });
   }
 
+  // ===== Duplicate link cleanup =====
+  // Safety net: never show the same URL twice inside one menu level, and never
+  // let a dropdown repeat the link of its own parent item (e.g. "Trending 2026"
+  // -> "Top Indian Celebrities", both /top-indian-celebrities/).
+  function dedupeNav(){
+    var roots=[document.querySelector('nav'), document.getElementById('mobile-nav-drawer')];
+    roots.forEach(function(root){
+      if(!root) return;
+      root.querySelectorAll('ul').forEach(function(ul){
+        var seen={};
+        // a dropdown must not repeat its owning item's link
+        var ownerLi=ul.parentElement;
+        if(ownerLi && ownerLi.tagName==='LI'){
+          var ownerA=ownerLi.querySelector(':scope > a');
+          if(ownerA) seen[normHref(ownerA.getAttribute('href'))]=true;
+        }
+        Array.prototype.slice.call(ul.children).forEach(function(li){
+          if(li.tagName!=='LI') return;
+          var a=li.querySelector(':scope > a');
+          if(!a) return;
+          var key=normHref(a.getAttribute('href'));
+          if(!key) return;
+          if(seen[key]){
+            // keep the entry that carries a submenu, drop the bare duplicate
+            if(!li.querySelector('ul')) li.remove();
+            return;
+          }
+          seen[key]=true;
+        });
+      });
+    });
+  }
+
   function scan(){
     removeOrphanNavMenus();
     ensureHomeSubmenu();
@@ -507,8 +530,9 @@
     fixAllSubmenus();
     sweepImages();
     ensureGlobalSearch();
-
+    dedupeNav();
   }
+
 
   // Debounce + re-entrancy guard so our own DOM writes never re-trigger an
   // immediate synchronous re-scan (previously caused an infinite loop).
