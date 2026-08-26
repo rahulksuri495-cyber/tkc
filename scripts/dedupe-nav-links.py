@@ -2,8 +2,10 @@
 """Remove duplicate navigation links from static HTML.
 
 Scope is limited to header/nav/mobile-drawer regions so page body content is
-never touched. Within those regions, an <li><a href="X">…</a></li> item is
-dropped when the immediately preceding sibling item points at the same href.
+never touched. Within those regions a leaf <li><a href="X">…</a></li> item is
+removed when the same href already appeared in the *same* <ul> (menu level).
+Cross-menu links (e.g. a singer listed under both Booking and Fees menus) are
+left alone.
 """
 import re
 import sys
@@ -13,26 +15,32 @@ REGION_RE = re.compile(
     r"<header[\s\S]*?</header>|<nav[\s\S]*?</nav>|<aside[^>]*id=\"mobile-nav-drawer\"[\s\S]*?</aside>",
     re.I,
 )
-ITEM_RE = re.compile(r"<li[^>]*>\s*<a href=\"([^\"]+)\"[^>]*>[\s\S]{0,300}?</a>\s*</li>")
+# leaf item: <li ...><a href="...">text</a></li> with no nested <ul>
+ITEM_RE = re.compile(r"<li[^>]*>\s*<a href=\"([^\"]+)\"[^>]*>(?:(?!</li>)[\s\S]){0,400}?</a>\s*</li>")
+TOKEN_RE = re.compile(r"<ul\b[^>]*>|</ul>|" + ITEM_RE.pattern)
 
 
 def dedupe_region(region: str):
     out = []
     pos = 0
-    prev_href = None
-    prev_end = None
     removed = 0
-    for m in ITEM_RE.finditer(region):
+    stack = [set()]
+    for m in TOKEN_RE.finditer(region):
+        tok = m.group(0)
+        if tok.startswith("<ul"):
+            stack.append(set())
+            continue
+        if tok.startswith("</ul"):
+            if len(stack) > 1:
+                stack.pop()
+            continue
         href = m.group(1)
-        adjacent = prev_end is not None and region[prev_end:m.start()].strip() == ""
-        if adjacent and href == prev_href:
+        if href in stack[-1]:
             out.append(region[pos:m.start()])
             pos = m.end()
-            prev_end = m.end()
             removed += 1
-            continue
-        prev_href = href
-        prev_end = m.end()
+        else:
+            stack[-1].add(href)
     out.append(region[pos:])
     return "".join(out), removed
 
