@@ -485,6 +485,39 @@
     });
   }
 
+  // ===== Duplicate link cleanup =====
+  // Safety net: never show the same URL twice inside one menu level, and never
+  // let a dropdown repeat the link of its own parent item (e.g. "Trending 2026"
+  // -> "Top Indian Celebrities", both /top-indian-celebrities/).
+  function dedupeNav(){
+    var roots=[document.querySelector('nav'), document.getElementById('mobile-nav-drawer')];
+    roots.forEach(function(root){
+      if(!root) return;
+      root.querySelectorAll('ul').forEach(function(ul){
+        var seen={};
+        // a dropdown must not repeat its owning item's link
+        var ownerLi=ul.parentElement;
+        if(ownerLi && ownerLi.tagName==='LI'){
+          var ownerA=ownerLi.querySelector(':scope > a');
+          if(ownerA) seen[normHref(ownerA.getAttribute('href'))]=true;
+        }
+        Array.prototype.slice.call(ul.children).forEach(function(li){
+          if(li.tagName!=='LI') return;
+          var a=li.querySelector(':scope > a');
+          if(!a) return;
+          var key=normHref(a.getAttribute('href'));
+          if(!key) return;
+          if(seen[key]){
+            // keep the entry that carries a submenu, drop the bare duplicate
+            if(!li.querySelector('ul')) li.remove();
+            return;
+          }
+          seen[key]=true;
+        });
+      });
+    });
+  }
+
   function scan(){
     removeOrphanNavMenus();
     ensureHomeSubmenu();
@@ -497,8 +530,9 @@
     fixAllSubmenus();
     sweepImages();
     ensureGlobalSearch();
-
+    dedupeNav();
   }
+
 
   // Debounce + re-entrancy guard so our own DOM writes never re-trigger an
   // immediate synchronous re-scan (previously caused an infinite loop).
