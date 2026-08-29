@@ -86,7 +86,7 @@
         '<span class="eyebrow tkc-reveal">IITEO \u00D7 The Kabir Company \u2014 Two-Decade Event Legacy</span>'+
         '<h2 id="tkc-iiteo-heading" class="tkc-reveal" data-d="1">From India\u2019s biggest trade fairs to the country\u2019s <span class="accent">most-booked stage.</span></h2>'+
         '<p class="tkc-reveal" data-d="2">TKC Talent is the celebrity-booking vertical of <strong>The Kabir Company</strong>, a New Delhi-headquartered event management group whose legacy was shaped through India\u2019s trade fair and exhibition ecosystem\u2014including long-standing association with <strong>IITEO (India International Trade Event Organisation)</strong>. That operating DNA, forged across large public exhibitions and government-scale programming, is what now powers our concerts, corporate events, luxury weddings and Bollywood celebrity bookings across India.</p>'+
-        '<p class="tkc-reveal" data-d="3">Over two decades, the leadership team has hosted and worked alongside Presidents, Prime Ministers, Union Ministers, Governors and Chief Ministers of India\u2014credentials that underline the trust, compliance discipline and on-ground execution capability every TKC Talent booking is built on. <a href="/iiteo/">Read the full IITEO story \u2192</a></p>'+
+        '<p class="tkc-reveal" data-d="3">Over two decades, the leadership team has hosted and worked alongside Presidents, Prime Ministers, Union Ministers, Governors and Chief Ministers of India\u2014credentials that underline the trust, compliance discipline and on-ground execution capability every TKC Talent booking is built on. <a href="/topleader/">Meet the leaders we\u2019ve hosted \u2192</a></p>'+
         '<div class="stats">'+
           '<div class="stat tkc-reveal" data-d="1"><div class="n">20+ Yrs</div><div class="l">Event legacy</div></div>'+
           '<div class="stat tkc-reveal" data-d="2"><div class="n">10+</div><div class="l">Heads of State &amp; CMs hosted</div></div>'+
@@ -94,7 +94,7 @@
         '</div>'+
         '<div class="gallery">'+ buildGallery() +'</div>'+
         '<div class="cta-row">'+
-          '<a class="cta primary" href="/iiteo/">Read the full IITEO legacy \u2192</a>'+
+          '<a class="cta primary" href="/topleader/">Read the full IITEO legacy \u2192</a>'+
           '<a class="cta ghost" href="https://wa.me/919599599699?text=Hi%20TKC%20Talent%2C%20I%27d%20like%20to%20discuss%20an%20event." target="_blank" rel="noopener">Talk to our team on WhatsApp</a>'+
         '</div>'+
       '</div>';
