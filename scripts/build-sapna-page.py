@@ -55,22 +55,20 @@ DESC = ("Book Sapna Choudhary for stage shows, dance performances, weddings and 
 
 FAQS = [
     ("How to book Sapna Choudhary for a show?",
-     "To book Sapna Choudhary, send your event date, city, venue and budget to TKC Talent at "
-     "hello@tkctalent.com or through the booking enquiry form on this page. TKC Talent checks her "
-     "availability with her management and reverts with a written quote and contract."),
+     "Call or WhatsApp TKC Talent on +91 95995 99699, email hello@tkctalent.com, or send the booking "
+     "enquiry form with your event date, city and budget. TKC Talent checks Sapna Choudhary's availability "
+     "and sends a confirmed quote."),
     ("How do I contact Sapna Choudhary for booking?",
-     "Sapna Choudhary's team does not publish a personal contact number for the public. Booking, stage "
-     "show and appearance enquiries are handled by authorised agencies such as TKC Talent — email "
-     "hello@tkctalent.com and a booking manager responds within 24 hours."),
+     "Booking enquiries are handled by TKC Talent, an authorised agency. Call or WhatsApp "
+     "+91 95995 99699 or email hello@tkctalent.com. A booking manager responds within 24 hours."),
     ("How much does Sapna Choudhary charge for a show?",
-     "Indicative fees: stage show or mela from Rs 10 lakh, wedding or sangeet from Rs 15 lakh, college fest "
-     "Rs 8-10 lakh, corporate event Rs 12-15 lakh and club shows from Rs 10 lakh. The final price depends on "
-     "the city, event type, performance duration, date and travel. GST at 18%, travel, stay and technical "
-     "requirements are billed in addition to the artist fee."),
+     "Sapna Choudhary's indicative booking fees are: stage show / mela ₹10 lakh, club show ₹10 lakh, "
+     "college fest ₹8–10 lakh, corporate event ₹12–15 lakh, wedding / sangeet ₹15 lakh. Final price depends "
+     "on date, city, performance duration and travel. GST at 18%, travel, stay and technical requirements are "
+     "billed in addition to the artist fee."),
     ("What is Sapna Choudhary's stage show price for a wedding?",
-     "Wedding and sangeet performances start from around Rs 15 lakh. The exact figure depends on the date, "
-     "city and performance length — peak wedding dates cost more than off-season weekdays. Share your date "
-     "and city for an exact quote."),
+     "Wedding and sangeet performances start from ₹15 lakh. The exact price depends on the date, city and "
+     "performance length. Peak wedding dates cost more than off-season weekdays."),
     ("Can I book Sapna Choudhary for a college fest or corporate event?",
      "Yes. Sapna Choudhary performs at college festivals, corporate annual days, brand activations, melas "
      "and government-backed cultural events. TKC Talent handles the contract, artist rider, travel, security "
@@ -154,6 +152,19 @@ show booking price and confirmed availability.</p>
  class="h-auto w-full object-cover"/>
 <figcaption class="px-4 py-3 text-xs text-foreground/60">Haryanvi stage show production by TKC Talent. Artist photograph supplied on request.</figcaption>
 </figure>
+</section>
+
+<section class="mt-10">
+<div class="grid gap-4 sm:grid-cols-2">
+<div class="{CARD}">
+<h2 class="{H3}">How to book Sapna Choudhary?</h2>
+<p class="mt-2 text-sm text-foreground/80">Call or WhatsApp TKC Talent on <a href="tel:+919599599699" class="font-semibold underline">+91 95995 99699</a>, email <a href="mailto:hello@tkctalent.com" class="font-semibold underline">hello@tkctalent.com</a>, or send the booking enquiry form with your event date, city and budget. TKC Talent checks her availability and sends a confirmed quote.</p>
+</div>
+<div class="{CARD}">
+<h2 class="{H3}">Sapna Choudhary booking fees</h2>
+<p class="mt-2 text-sm text-foreground/80">Indicative fees: stage show / mela <strong>₹10 lakh</strong>, club show <strong>₹10 lakh</strong>, college fest <strong>₹8–10 lakh</strong>, corporate event <strong>₹12–15 lakh</strong>, wedding / sangeet <strong>₹15 lakh</strong>. Final price depends on date, city, duration and travel.</p>
+</div>
+</div>
 </section>
 
 <section class="mt-14">
