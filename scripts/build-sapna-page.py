@@ -16,6 +16,7 @@ FONTS = ('<link rel="preconnect" href="https://fonts.googleapis.com"/>'
 SCRIPTS = ('<script src="/assets/nav-enhance-v3.js" defer></script>'
            '<script src="/assets/footer-social-icons.js" defer></script>')
 TAIL = ('<p style="margin-top:24px;font-size:.9rem;opacity:.7">Enquire: '
+        '<a href="tel:+919599599699">+91 95995 99699</a> · '
         '<a href="mailto:hello@tkctalent.com">hello@tkctalent.com</a> · '
         '<a href="/contact-us/">Booking enquiry form</a></p>')
 
@@ -62,13 +63,14 @@ FAQS = [
      "show and appearance enquiries are handled by authorised agencies such as TKC Talent — email "
      "hello@tkctalent.com and a booking manager responds within 24 hours."),
     ("How much does Sapna Choudhary charge for a show?",
-     "Sapna Choudhary's show booking fee is quoted on request. The final price depends on the city, "
-     "event type (stage show, wedding, college fest or corporate event), performance duration, date and "
-     "travel. GST at 18%, travel, stay and technical requirements are billed in addition to the artist fee."),
+     "Indicative fees: stage show or mela from Rs 10 lakh, wedding or sangeet from Rs 15 lakh, college fest "
+     "Rs 8-10 lakh, corporate event Rs 12-15 lakh and club shows from Rs 10 lakh. The final price depends on "
+     "the city, event type, performance duration, date and travel. GST at 18%, travel, stay and technical "
+     "requirements are billed in addition to the artist fee."),
     ("What is Sapna Choudhary's stage show price for a wedding?",
-     "Wedding and private-function pricing is quoted per event because it depends on the date, city and "
-     "performance length. Peak wedding dates cost more than off-season weekdays. Share your date and city "
-     "for an exact figure."),
+     "Wedding and sangeet performances start from around Rs 15 lakh. The exact figure depends on the date, "
+     "city and performance length — peak wedding dates cost more than off-season weekdays. Share your date "
+     "and city for an exact quote."),
     ("Can I book Sapna Choudhary for a college fest or corporate event?",
      "Yes. Sapna Choudhary performs at college festivals, corporate annual days, brand activations, melas "
      "and government-backed cultural events. TKC Talent handles the contract, artist rider, travel, security "
@@ -141,6 +143,7 @@ performances, weddings, college fests and corporate events across India. Send yo
 show booking price and confirmed availability.</p>
 <div class="mt-6 flex flex-wrap gap-3">
 <a href="#book" class="{BTN}">Check Availability &amp; Price <span aria-hidden="true">→</span></a>
+<a href="https://wa.me/919599599699?text=Hi%20TKC%20Talent%2C%20I%20want%20to%20book%20Sapna%20Choudhary%20for%20an%20event." target="_blank" rel="noopener" class="{BTN2}">WhatsApp +91 95995 99699</a>
 <a href="mailto:hello@tkctalent.com" class="{BTN2}">Email hello@tkctalent.com</a>
 </div>
 <figure class="mt-8 overflow-hidden rounded-3xl border border-foreground/10">
@@ -163,18 +166,21 @@ most often for open-ground stage shows, melas, weddings and college festivals.</
 
 <section class="mt-14">
 <h2 class="{H2}">Sapna Choudhary Booking Price &amp; Show Fees</h2>
-<p class="{LEAD} max-w-3xl">Sapna Choudhary's booking fee is quoted on request, per event. TKC Talent sends a
-written, itemised quote once the date and city are confirmed.</p>
+<p class="{LEAD} max-w-3xl">Indicative booking fees for Sapna Choudhary by event type. TKC Talent confirms the
+final written quote once your date and city are locked.</p>
 <div class="mt-6 overflow-x-auto">
 <table class="w-full min-w-[520px] border-collapse text-left text-sm">
 <thead><tr class="border-b border-foreground/15 text-foreground/60">
-<th class="py-3 pr-4 font-medium">Booking type</th><th class="py-3 pr-4 font-medium">Typical format</th><th class="py-3 font-medium">Fee</th></tr></thead>
+<th class="py-3 pr-4 font-medium">Booking type</th><th class="py-3 pr-4 font-medium">Typical format</th><th class="py-3 font-medium">Fee (indicative)</th></tr></thead>
 <tbody class="text-foreground/85">
-<tr class="border-b border-foreground/10"><td class="py-3 pr-4">Stage show / mela</td><td class="py-3 pr-4">Live dance set with troupe</td><td class="py-3">On request</td></tr>
-<tr class="border-b border-foreground/10"><td class="py-3 pr-4">Wedding &amp; sangeet</td><td class="py-3 pr-4">Private performance</td><td class="py-3">On request</td></tr>
-<tr class="border-b border-foreground/10"><td class="py-3 pr-4">College fest</td><td class="py-3 pr-4">Campus stage show</td><td class="py-3">On request</td></tr>
-<tr><td class="py-3 pr-4">Corporate event</td><td class="py-3 pr-4">Annual day / brand activation</td><td class="py-3">On request</td></tr>
+<tr class="border-b border-foreground/10"><td class="py-3 pr-4">Stage show / mela</td><td class="py-3 pr-4">Live dance set with troupe</td><td class="py-3">&#8377;10 lakh</td></tr>
+<tr class="border-b border-foreground/10"><td class="py-3 pr-4">Wedding &amp; sangeet</td><td class="py-3 pr-4">Private performance</td><td class="py-3">&#8377;15 lakh</td></tr>
+<tr class="border-b border-foreground/10"><td class="py-3 pr-4">College fest</td><td class="py-3 pr-4">Campus stage show</td><td class="py-3">&#8377;8&#8211;10 lakh</td></tr>
+<tr class="border-b border-foreground/10"><td class="py-3 pr-4">Corporate event</td><td class="py-3 pr-4">Annual day / brand activation</td><td class="py-3">&#8377;12&#8211;15 lakh</td></tr>
+<tr><td class="py-3 pr-4">Club show</td><td class="py-3 pr-4">Club appearance / live set</td><td class="py-3">&#8377;10 lakh</td></tr>
 </tbody></table></div>
+<p class="mt-3 text-xs text-foreground/60">Indicative starting fees. Final quote depends on date, city, performance duration and technical requirements, plus 18% GST, travel and stay.</p>
+<p class="mt-4 text-sm text-foreground/85">For the best deals, call or WhatsApp <a href="tel:+919599599699" class="font-semibold underline">+91 95995 99699</a> or send the enquiry form below.</p>
 <p class="mt-5 text-sm text-foreground/70">What changes the price:</p>
 <ul class="mt-2 list-disc space-y-1 pl-5 text-sm text-foreground/80">
 <li>City and travel distance</li><li>Event type — public stage show, wedding, corporate or college fest</li>
@@ -207,10 +213,10 @@ public-ground shows with permissions and on-ground execution support.</p>
 
 <section class="mt-14" id="book">
 <h2 class="{H2}">Sapna Choudhary Contact for Booking</h2>
-<p class="{LEAD} max-w-3xl">To contact Sapna Choudhary for a booking, email TKC Talent at
+<p class="{LEAD} max-w-3xl">To contact Sapna Choudhary for a booking, call or WhatsApp TKC Talent on
+<a href="tel:+919599599699" class="underline">+91 95995 99699</a>, email
 <a href="mailto:hello@tkctalent.com" class="underline">hello@tkctalent.com</a> or send the enquiry form below.
-Her personal number is not published — every genuine booking is confirmed through a signed contract with her
-authorised management.</p>
+Every genuine booking is confirmed through a signed contract with her authorised management.</p>
 <div class="{CARD} mt-6">
 <form action="/contact-us/" method="get" class="grid gap-4 sm:grid-cols-2">
 <label class="text-sm">Your name<input required name="name" maxlength="100" class="mt-1 w-full rounded-lg border border-foreground/15 bg-background px-3 py-2 text-sm" placeholder="Full name"/></label>
