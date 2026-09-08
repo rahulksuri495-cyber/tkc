@@ -154,6 +154,19 @@ show booking price and confirmed availability.</p>
 </figure>
 </section>
 
+<section class="mt-10">
+<div class="grid gap-4 sm:grid-cols-2">
+<div class="{CARD}">
+<h2 class="{H3}">How to book Sapna Choudhary?</h2>
+<p class="mt-2 text-sm text-foreground/80">Call or WhatsApp TKC Talent on <a href="tel:+919599599699" class="font-semibold underline">+91 95995 99699</a>, email <a href="mailto:hello@tkctalent.com" class="font-semibold underline">hello@tkctalent.com</a>, or send the booking enquiry form with your event date, city and budget. TKC Talent checks her availability and sends a confirmed quote.</p>
+</div>
+<div class="{CARD}">
+<h2 class="{H3}">Sapna Choudhary booking fees</h2>
+<p class="mt-2 text-sm text-foreground/80">Indicative fees: stage show / mela <strong>₹10 lakh</strong>, club show <strong>₹10 lakh</strong>, college fest <strong>₹8–10 lakh</strong>, corporate event <strong>₹12–15 lakh</strong>, wedding / sangeet <strong>₹15 lakh</strong>. Final price depends on date, city, duration and travel.</p>
+</div>
+</div>
+</section>
+
 <section class="mt-14">
 <h2 class="{H2}">About Sapna Choudhary</h2>
 <p class="{LEAD} max-w-3xl">Sapna Choudhary is one of India's most in-demand Haryanvi stage performers — a dancer
