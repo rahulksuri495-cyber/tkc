@@ -168,13 +168,16 @@ written, itemised quote once the date and city are confirmed.</p>
 <div class="mt-6 overflow-x-auto">
 <table class="w-full min-w-[520px] border-collapse text-left text-sm">
 <thead><tr class="border-b border-foreground/15 text-foreground/60">
-<th class="py-3 pr-4 font-medium">Booking type</th><th class="py-3 pr-4 font-medium">Typical format</th><th class="py-3 font-medium">Fee</th></tr></thead>
+<th class="py-3 pr-4 font-medium">Booking type</th><th class="py-3 pr-4 font-medium">Typical format</th><th class="py-3 font-medium">Fee (indicative)</th></tr></thead>
 <tbody class="text-foreground/85">
-<tr class="border-b border-foreground/10"><td class="py-3 pr-4">Stage show / mela</td><td class="py-3 pr-4">Live dance set with troupe</td><td class="py-3">On request</td></tr>
-<tr class="border-b border-foreground/10"><td class="py-3 pr-4">Wedding &amp; sangeet</td><td class="py-3 pr-4">Private performance</td><td class="py-3">On request</td></tr>
-<tr class="border-b border-foreground/10"><td class="py-3 pr-4">College fest</td><td class="py-3 pr-4">Campus stage show</td><td class="py-3">On request</td></tr>
-<tr><td class="py-3 pr-4">Corporate event</td><td class="py-3 pr-4">Annual day / brand activation</td><td class="py-3">On request</td></tr>
+<tr class="border-b border-foreground/10"><td class="py-3 pr-4">Stage show / mela</td><td class="py-3 pr-4">Live dance set with troupe</td><td class="py-3">&#8377;10 lakh</td></tr>
+<tr class="border-b border-foreground/10"><td class="py-3 pr-4">Wedding &amp; sangeet</td><td class="py-3 pr-4">Private performance</td><td class="py-3">&#8377;15 lakh</td></tr>
+<tr class="border-b border-foreground/10"><td class="py-3 pr-4">College fest</td><td class="py-3 pr-4">Campus stage show</td><td class="py-3">&#8377;8&#8211;10 lakh</td></tr>
+<tr class="border-b border-foreground/10"><td class="py-3 pr-4">Corporate event</td><td class="py-3 pr-4">Annual day / brand activation</td><td class="py-3">&#8377;12&#8211;15 lakh</td></tr>
+<tr><td class="py-3 pr-4">Club show</td><td class="py-3 pr-4">Club appearance / live set</td><td class="py-3">&#8377;10 lakh</td></tr>
 </tbody></table></div>
+<p class="mt-3 text-xs text-foreground/60">Indicative starting fees. Final quote depends on date, city, performance duration and technical requirements, plus 18% GST, travel and stay.</p>
+<p class="mt-4 text-sm text-foreground/85">For the best deals, call or WhatsApp <a href="tel:+919599599699" class="font-semibold underline">+91 95995 99699</a> or send the enquiry form below.</p>
 <p class="mt-5 text-sm text-foreground/70">What changes the price:</p>
 <ul class="mt-2 list-disc space-y-1 pl-5 text-sm text-foreground/80">
 <li>City and travel distance</li><li>Event type — public stage show, wedding, corporate or college fest</li>
