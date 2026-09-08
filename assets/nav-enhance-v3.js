@@ -378,6 +378,39 @@
     ul.appendChild(empty);
   }
 
+  // ===== Haryanvi Artists (inside Celebrity Booking India, after Comedians) =====
+  var haryanvi=[["Book Sapna Choudhary","/book-sapna-choudhary/"]];
+  function ensureHaryanviMenu(){
+    document.querySelectorAll('nav a[href="/comedian-booking-india/"]').forEach(function(a){
+      if(a.closest('#mobile-nav-drawer')) return;
+      var li=a.closest('li'); if(!li) return;
+      var ul=li.parentElement; if(!ul || ul.tagName!=='UL') return;
+      if(!(ul.parentElement && ul.parentElement.tagName==='LI')) return; // dropdown only
+      if(ul.querySelector(':scope > li > a[href="/haryanvi-artist-booking/"]')) return;
+      var item=document.createElement('li');
+      item.className='relative group/sub';
+      item.innerHTML='<a href="/haryanvi-artist-booking/" class="flex items-center justify-between gap-2 rounded-md px-3 py-2 text-sm font-medium text-foreground/80 transition-colors hover:bg-foreground hover:text-background group-hover/sub:bg-foreground group-hover/sub:text-background">Haryanvi Artists'+chevronRight()+'</a>'
+        +'<ul class="invisible absolute left-full top-0 z-50 ml-1 min-w-60 overflow-y-auto overscroll-contain rounded-xl border border-foreground/10 bg-background p-2 text-foreground opacity-0 shadow-2xl ring-1 ring-foreground/5 transition-all duration-150 group-hover/sub:visible group-hover/sub:opacity-100 group-focus-within/sub:visible group-focus-within/sub:opacity-100">'
+        +haryanvi.map(function(it){return '<li><a href="'+it[1]+'" class="block rounded-md px-3 py-2 text-sm font-medium text-foreground/80 transition-colors hover:bg-foreground hover:text-background">'+it[0]+'</a></li>';}).join('')
+        +'</ul>';
+      ul.insertBefore(item, li.nextSibling);
+    });
+
+    var hDrawer=document.getElementById('mobile-nav-drawer');
+    if(!hDrawer) return;
+    hDrawer.querySelectorAll('a[href="/comedian-booking-india/"]').forEach(function(a){
+      var li=a.closest('li'); if(!li) return;
+      var ul=li.parentElement; if(!ul || ul.tagName!=='UL') return;
+      if(ul.querySelector(':scope > li > a[href="/haryanvi-artist-booking/"]')) return;
+      var item=document.createElement('li');
+      item.innerHTML='<a href="/haryanvi-artist-booking/" class="flex min-h-9 items-center rounded-lg px-3 py-2 text-sm text-foreground/80 transition hover:bg-foreground/5">Haryanvi Artists</a>'
+        +'<ul class="ml-3 mt-1 flex flex-col gap-1 border-l border-foreground/10 pl-3">'
+        +haryanvi.map(function(it){return '<li><a href="'+it[1]+'" class="flex min-h-9 items-center rounded-lg px-3 py-2 text-xs text-foreground/80 transition hover:bg-foreground/5">'+it[0]+'</a></li>';}).join('')
+        +'</ul>';
+      ul.insertBefore(item, li.nextSibling);
+    });
+  }
+
   // ===== Home submenu (IITEO under Home) =====
   function ensureHomeSubmenu(){
     navLinks().forEach(function(a){
