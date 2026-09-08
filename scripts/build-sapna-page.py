@@ -62,13 +62,14 @@ FAQS = [
      "show and appearance enquiries are handled by authorised agencies such as TKC Talent — email "
      "hello@tkctalent.com and a booking manager responds within 24 hours."),
     ("How much does Sapna Choudhary charge for a show?",
-     "Sapna Choudhary's show booking fee is quoted on request. The final price depends on the city, "
-     "event type (stage show, wedding, college fest or corporate event), performance duration, date and "
-     "travel. GST at 18%, travel, stay and technical requirements are billed in addition to the artist fee."),
+     "Indicative fees: stage show or mela from Rs 10 lakh, wedding or sangeet from Rs 15 lakh, college fest "
+     "Rs 8-10 lakh, corporate event Rs 12-15 lakh and club shows from Rs 10 lakh. The final price depends on "
+     "the city, event type, performance duration, date and travel. GST at 18%, travel, stay and technical "
+     "requirements are billed in addition to the artist fee."),
     ("What is Sapna Choudhary's stage show price for a wedding?",
-     "Wedding and private-function pricing is quoted per event because it depends on the date, city and "
-     "performance length. Peak wedding dates cost more than off-season weekdays. Share your date and city "
-     "for an exact figure."),
+     "Wedding and sangeet performances start from around Rs 15 lakh. The exact figure depends on the date, "
+     "city and performance length — peak wedding dates cost more than off-season weekdays. Share your date "
+     "and city for an exact quote."),
     ("Can I book Sapna Choudhary for a college fest or corporate event?",
      "Yes. Sapna Choudhary performs at college festivals, corporate annual days, brand activations, melas "
      "and government-backed cultural events. TKC Talent handles the contract, artist rider, travel, security "
