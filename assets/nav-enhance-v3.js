@@ -446,6 +446,8 @@
       ['Bollywood Actress Booking','/bollywood-actress-booking/'],
       ['Singer Booking India','/singer-booking-india/'],
       ['Comedian Booking India','/comedian-booking-india/'],
+      ['Haryanvi Artist Booking','/haryanvi-artist-booking/'],
+      ['Book Sapna Choudhary','/book-sapna-choudhary/'],
       ['Celebrity DJ Booking','/celebrity-dj-booking/'],
       ['Influencer Booking India','/influencer-booking-india/'],
       ['Billing Support','/support/billing/']
@@ -555,6 +557,7 @@
     removeOrphanNavMenus();
     ensureHomeSubmenu();
     ensureCelebrityBookingMenu();
+    ensureHaryanviMenu();
     ensureDurgaTopLevel();
     ensureSingerSubmenus();
     ensureActressSubmenus();
