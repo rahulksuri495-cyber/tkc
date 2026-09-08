@@ -142,6 +142,7 @@ performances, weddings, college fests and corporate events across India. Send yo
 show booking price and confirmed availability.</p>
 <div class="mt-6 flex flex-wrap gap-3">
 <a href="#book" class="{BTN}">Check Availability &amp; Price <span aria-hidden="true">→</span></a>
+<a href="https://wa.me/919599599699?text=Hi%20TKC%20Talent%2C%20I%20want%20to%20book%20Sapna%20Choudhary%20for%20an%20event." target="_blank" rel="noopener" class="{BTN2}">WhatsApp +91 95995 99699</a>
 <a href="mailto:hello@tkctalent.com" class="{BTN2}">Email hello@tkctalent.com</a>
 </div>
 <figure class="mt-8 overflow-hidden rounded-3xl border border-foreground/10">
@@ -164,8 +165,8 @@ most often for open-ground stage shows, melas, weddings and college festivals.</
 
 <section class="mt-14">
 <h2 class="{H2}">Sapna Choudhary Booking Price &amp; Show Fees</h2>
-<p class="{LEAD} max-w-3xl">Sapna Choudhary's booking fee is quoted on request, per event. TKC Talent sends a
-written, itemised quote once the date and city are confirmed.</p>
+<p class="{LEAD} max-w-3xl">Indicative booking fees for Sapna Choudhary by event type. TKC Talent confirms the
+final written quote once your date and city are locked.</p>
 <div class="mt-6 overflow-x-auto">
 <table class="w-full min-w-[520px] border-collapse text-left text-sm">
 <thead><tr class="border-b border-foreground/15 text-foreground/60">
