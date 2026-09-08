@@ -16,6 +16,7 @@ FONTS = ('<link rel="preconnect" href="https://fonts.googleapis.com"/>'
 SCRIPTS = ('<script src="/assets/nav-enhance-v3.js" defer></script>'
            '<script src="/assets/footer-social-icons.js" defer></script>')
 TAIL = ('<p style="margin-top:24px;font-size:.9rem;opacity:.7">Enquire: '
+        '<a href="tel:+919599599699">+91 95995 99699</a> · '
         '<a href="mailto:hello@tkctalent.com">hello@tkctalent.com</a> · '
         '<a href="/contact-us/">Booking enquiry form</a></p>')
 
@@ -212,10 +213,10 @@ public-ground shows with permissions and on-ground execution support.</p>
 
 <section class="mt-14" id="book">
 <h2 class="{H2}">Sapna Choudhary Contact for Booking</h2>
-<p class="{LEAD} max-w-3xl">To contact Sapna Choudhary for a booking, email TKC Talent at
+<p class="{LEAD} max-w-3xl">To contact Sapna Choudhary for a booking, call or WhatsApp TKC Talent on
+<a href="tel:+919599599699" class="underline">+91 95995 99699</a>, email
 <a href="mailto:hello@tkctalent.com" class="underline">hello@tkctalent.com</a> or send the enquiry form below.
-Her personal number is not published — every genuine booking is confirmed through a signed contract with her
-authorised management.</p>
+Every genuine booking is confirmed through a signed contract with her authorised management.</p>
 <div class="{CARD} mt-6">
 <form action="/contact-us/" method="get" class="grid gap-4 sm:grid-cols-2">
 <label class="text-sm">Your name<input required name="name" maxlength="100" class="mt-1 w-full rounded-lg border border-foreground/15 bg-background px-3 py-2 text-sm" placeholder="Full name"/></label>
