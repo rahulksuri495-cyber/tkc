@@ -119,12 +119,66 @@ BTN2 = ("inline-flex items-center gap-2 rounded-full border border-foreground/20
         "font-display text-sm font-bold text-foreground transition hover:bg-foreground hover:text-background")
 
 
+GALLERY = [
+    ("sapna-choudhary-haryanvi-dance-performance", 1200, 887,
+     "Sapna Choudhary Haryanvi dance performance — TKC Talent booking",
+     "Sapna Choudhary mid-dance in a silver embellished lehenga on a live stage, smiling with arms open during a Haryanvi dance performance.",
+     "Sapna Choudhary performing her signature Haryanvi dance set on a live stage."),
+    ("sapna-choudhary-wedding-sangeet-performance", 1200, 887,
+     "Sapna Choudhary wedding and sangeet performance booking",
+     "Sapna Choudhary dancing with a red dupatta under red stage lights during a wedding sangeet style performance.",
+     "Wedding and sangeet night performance — booked from ₹15 lakh."),
+    ("sapna-choudhary-live-stage-show-crowd", 1200, 887,
+     "Sapna Choudhary stage show and mela booking — TKC Talent",
+     "Wide view of a Sapna Choudhary stage show at a mela ground with fire jets, dance troupe and a large audience.",
+     "Open-ground stage show and mela performance with full production."),
+    ("sapna-choudhary-tkc-talent-artist-poster", 800, 1066,
+     "Sapna Choudhary official artist poster — TKC Talent",
+     "Official TKC Talent artist poster of Sapna Choudhary in an ivory embroidered saree with the tagline Rooted in Culture, Fearless on Stage.",
+     "Official TKC Talent artist profile poster for Sapna Choudhary."),
+]
+
+
+JSONLD["@graph"].append({
+    "@type": "ImageGallery",
+    "name": "Sapna Choudhary live show photos",
+    "url": URL + "#photos",
+    "associatedMedia": [
+        {"@type": "ImageObject",
+         "contentUrl": f"https://tkctalent.com/assets/haryanvi/{g[0]}-{'1200' if g[1] >= 1200 else '800'}.jpg",
+         "name": g[3], "description": g[4], "caption": g[5],
+         "creditText": "TKC Talent — The Kabir Company",
+         "representativeOfPage": g[0].endswith("crowd")}
+        for g in GALLERY]})
+
+JSONLD["@graph"][0]["image"] = [
+    f"https://tkctalent.com/assets/haryanvi/{g[0]}-{'1200' if g[1] >= 1200 else '800'}.jpg" for g in GALLERY]
+
+
+def gallery_html():
+    out = []
+    for slug, w, h, title, alt, cap in GALLERY:
+        out.append(
+            f'<figure class="overflow-hidden rounded-2xl border border-foreground/10">'
+            f'<picture><source type="image/webp" srcset="/assets/haryanvi/{slug}-800.webp 800w'
+            + (f', /assets/haryanvi/{slug}-1200.webp 1200w' if w >= 1200 else '')
+            + '" sizes="(max-width: 640px) 100vw, 460px"/>'
+            f'<img src="/assets/haryanvi/{slug}-800.jpg" srcset="/assets/haryanvi/{slug}-800.jpg 800w'
+            + (f', /assets/haryanvi/{slug}-1200.jpg 1200w' if w >= 1200 else '')
+            + '" sizes="(max-width: 640px) 100vw, 460px" width="800" height="'
+            + str(round(800 * h / w)) + '" loading="lazy" decoding="async" '
+            f'title="{title}" alt="{alt}" class="h-auto w-full object-cover"/></picture>'
+            f'<figcaption class="px-4 py-3 text-xs text-foreground/60">{cap}</figcaption></figure>')
+    return "".join(out)
+
+
 def faq_html():
     out = []
     for q, a in FAQS:
         out.append(f'<details class="{CARD} mt-3"><summary class="cursor-pointer font-display text-base font-semibold">{q}</summary>'
                    f'<p class="mt-3 text-sm text-foreground/80">{a}</p></details>')
     return "".join(out)
+
 
 
 MAIN = f"""
@@ -145,13 +199,18 @@ show booking price and confirmed availability.</p>
 <a href="mailto:hello@tkctalent.com" class="{BTN2}">Email hello@tkctalent.com</a>
 </div>
 <figure class="mt-8 overflow-hidden rounded-3xl border border-foreground/10">
-<img src="/assets/haryanvi/sapna-choudhary-stage-show-booking-tkc-talent-1200.jpg"
- srcset="/assets/haryanvi/sapna-choudhary-stage-show-booking-tkc-talent-800.jpg 800w, /assets/haryanvi/sapna-choudhary-stage-show-booking-tkc-talent-1200.jpg 1200w, /assets/haryanvi/sapna-choudhary-stage-show-booking-tkc-talent.jpg 1600w"
- sizes="(max-width: 768px) 100vw, 960px" width="1200" height="675" fetchpriority="high" decoding="async"
- alt="Large Haryanvi live stage show at night with crowd and gold stage lighting — the kind of stage show TKC Talent produces when you book Sapna Choudhary."
+<picture>
+<source type="image/webp" srcset="/assets/haryanvi/sapna-choudhary-live-stage-show-crowd-800.webp 800w, /assets/haryanvi/sapna-choudhary-live-stage-show-crowd-1200.webp 1200w" sizes="(max-width: 768px) 100vw, 960px"/>
+<img src="/assets/haryanvi/sapna-choudhary-live-stage-show-crowd-1200.jpg"
+ srcset="/assets/haryanvi/sapna-choudhary-live-stage-show-crowd-800.jpg 800w, /assets/haryanvi/sapna-choudhary-live-stage-show-crowd-1200.jpg 1200w"
+ sizes="(max-width: 768px) 100vw, 960px" width="1200" height="887" fetchpriority="high" decoding="async"
+ title="Sapna Choudhary live stage show booking — TKC Talent"
+ alt="Sapna Choudhary live stage show at night — her face on the giant LED screen with fire jets, dance troupe and a huge crowd at a mela ground."
  class="h-auto w-full object-cover"/>
-<figcaption class="px-4 py-3 text-xs text-foreground/60">Haryanvi stage show production by TKC Talent. Artist photograph supplied on request.</figcaption>
+</picture>
+<figcaption class="px-4 py-3 text-xs text-foreground/60">Sapna Choudhary performing a live Haryanvi stage show to a mela crowd. Booking managed by TKC Talent.</figcaption>
 </figure>
+
 </section>
 
 <section class="mt-10">
@@ -273,6 +332,16 @@ Bollywood actors, singers, comedians and regional stage artists since 2005.</p>
 <h2 class="{H2}">Frequently Asked Questions</h2>
 {faq_html()}
 </section>
+
+<section class="mt-14" id="photos">
+<h2 class="{H2}">Sapna Choudhary Live Show Photos</h2>
+<p class="{LEAD} max-w-3xl">Recent photographs from Sapna Choudhary's live Haryanvi dance shows and stage
+performances booked through TKC Talent.</p>
+<div class="mt-6 grid gap-5 sm:grid-cols-2">
+{gallery_html()}
+</div>
+</section>
+
 
 <section class="mt-14">
 <h2 class="{H2}">Related Booking Pages</h2>
