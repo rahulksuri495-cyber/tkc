@@ -1,0 +1,142 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta name="robots" content="noindex, nofollow, noarchive"/>
+<title>Sapna Choudhary Booking Register — TKC Talent (Private)</title>
+<style>
+:root{--bg:#0a0a0a;--fg:#f5f5f5;--muted:#a3a3a3;--line:#262626;--brand:#fbbf24}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:15px/1.5 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+.wrap{max-width:1100px;margin:0 auto;padding:24px 16px 80px}
+h1{font-size:1.5rem;margin:0 0 4px}
+p.sub{color:var(--muted);margin:0 0 24px;font-size:.9rem}
+.card{border:1px solid var(--line);border-radius:16px;padding:16px;background:#111;margin-bottom:20px}
+label{display:block;font-size:.78rem;color:var(--muted);margin-bottom:4px}
+input,select,textarea{width:100%;padding:9px 10px;border-radius:9px;border:1px solid var(--line);background:#0a0a0a;color:var(--fg);font:inherit;font-size:.9rem}
+.grid{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(180px,1fr))}
+button{cursor:pointer;border:0;border-radius:999px;padding:10px 18px;font-weight:700;font-size:.85rem;background:var(--brand);color:#0a0a0a}
+button.ghost{background:transparent;border:1px solid var(--line);color:var(--fg)}
+table{width:100%;border-collapse:collapse;font-size:.85rem}
+th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+th{color:var(--muted);font-weight:500;font-size:.75rem;text-transform:uppercase;letter-spacing:.06em}
+.tag{display:inline-block;padding:2px 9px;border-radius:999px;font-size:.72rem;border:1px solid var(--line)}
+.stats{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));margin-bottom:20px}
+.stat{border:1px solid var(--line);border-radius:14px;padding:14px;background:#111}
+.stat b{display:block;font-size:1.4rem}
+.stat span{color:var(--muted);font-size:.75rem}
+.row{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-top:14px}
+.scroll{overflow-x:auto}
+.gate{max-width:380px;margin:15vh auto;text-align:center}
+a{color:var(--brand)}
+</style></head><body>
+<div id="gate" class="gate card">
+  <h1>Private — TKC Talent</h1>
+  <p class="sub">Enter the team passcode to open the Sapna Choudhary booking register.</p>
+  <input id="pass" type="password" placeholder="Passcode" autocomplete="off"/>
+  <div class="row" style="justify-content:center"><button onclick="unlock()">Open register</button></div>
+  <p id="err" class="sub" style="color:#f87171;display:none">Wrong passcode.</p>
+</div>
+
+<div class="wrap" id="app" hidden>
+  <h1>Sapna Choudhary — Booking Register</h1>
+  <p class="sub">Private log of enquiries and confirmed bookings. Saved in this browser only (nothing is sent to a server). Export regularly.</p>
+
+  <div class="stats" id="stats"></div>
+
+  <div class="card">
+    <h2 style="font-size:1rem;margin:0 0 12px">Log an enquiry or booking</h2>
+    <form id="f" class="grid">
+      <div><label>Client name</label><input name="name" required maxlength="100"/></div>
+      <div><label>Phone / WhatsApp</label><input name="phone" maxlength="20"/></div>
+      <div><label>Email</label><input name="email" type="email" maxlength="120"/></div>
+      <div><label>Event date</label><input name="date" type="date"/></div>
+      <div><label>City</label><input name="city" maxlength="80" placeholder="Delhi / Mumbai / Kolkata / Bangalore"/></div>
+      <div><label>Event type</label><select name="type">
+        <option>Stage show / mela</option><option>Wedding / sangeet</option><option>College fest</option>
+        <option>Corporate event</option><option>Club show</option><option>Other</option></select></div>
+      <div><label>Quoted fee (INR)</label><input name="fee" maxlength="30" placeholder="e.g. 1500000"/></div>
+      <div><label>Status</label><select name="status">
+        <option>Enquiry</option><option>Quoted</option><option>Negotiating</option>
+        <option>Confirmed booking</option><option>Lost</option></select></div>
+      <div><label>Source</label><select name="source">
+        <option>Website form</option><option>WhatsApp</option><option>Phone call</option>
+        <option>Email</option><option>Referral</option></select></div>
+      <div style="grid-column:1/-1"><label>Notes</label><textarea name="notes" rows="2" maxlength="600"></textarea></div>
+      <div style="grid-column:1/-1" class="row"><button type="submit">Save entry</button>
+        <button type="button" class="ghost" onclick="exportCsv()">Export CSV</button>
+        <button type="button" class="ghost" onclick="clearAll()">Clear all</button></div>
+    </form>
+  </div>
+
+  <div class="card">
+    <div class="row" style="margin:0 0 12px;justify-content:space-between">
+      <h2 style="font-size:1rem;margin:0">Entries</h2>
+      <select id="filter" style="width:auto" onchange="render()">
+        <option value="">All statuses</option><option>Enquiry</option><option>Quoted</option>
+        <option>Negotiating</option><option>Confirmed booking</option><option>Lost</option></select>
+    </div>
+    <div class="scroll"><table><thead><tr>
+      <th>Logged</th><th>Client</th><th>Contact</th><th>Event</th><th>City</th><th>Date</th><th>Fee</th><th>Status</th><th></th>
+    </tr></thead><tbody id="rows"></tbody></table></div>
+  </div>
+</div>
+
+<script>
+var KEY='tkc_sapna_bookings_v1', PASS='tkc-sapna-2026';
+function unlock(){
+  var v=document.getElementById('pass').value.trim();
+  if(v===PASS){sessionStorage.setItem('tkc_sapna_ok','1');show();}
+  else document.getElementById('err').style.display='block';
+}
+function show(){document.getElementById('gate').style.display='none';document.getElementById('app').hidden=false;render();}
+if(sessionStorage.getItem('tkc_sapna_ok')==='1')show();
+document.getElementById('pass').addEventListener('keydown',function(e){if(e.key==='Enter')unlock();});
+
+function load(){try{return JSON.parse(localStorage.getItem(KEY))||[]}catch(e){return []}}
+function save(d){localStorage.setItem(KEY,JSON.stringify(d))}
+function esc(s){return String(s==null?'':s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+
+document.getElementById('f').addEventListener('submit',function(e){
+  e.preventDefault();
+  var fd=new FormData(e.target), o={id:Date.now(),logged:new Date().toISOString().slice(0,16).replace('T',' ')};
+  fd.forEach(function(v,k){o[k]=String(v).slice(0,600)});
+  if(!o.name){return}
+  var d=load(); d.unshift(o); save(d); e.target.reset(); render();
+});
+
+function del(id){var d=load().filter(function(x){return x.id!==id});save(d);render()}
+function clearAll(){if(confirm('Delete every entry in this browser?')){save([]);render()}}
+
+function render(){
+  var d=load(), f=document.getElementById('filter').value;
+  var list=f?d.filter(function(x){return x.status===f}):d;
+  document.getElementById('rows').innerHTML=list.length?list.map(function(x){
+    return '<tr><td>'+esc(x.logged)+'</td><td>'+esc(x.name)+'<br><span style="color:#a3a3a3;font-size:.75rem">'+esc(x.source)+'</span></td>'+
+    '<td>'+(x.phone?'<a href="tel:'+esc(x.phone)+'">'+esc(x.phone)+'</a>':'')+(x.email?'<br>'+esc(x.email):'')+'</td>'+
+    '<td>'+esc(x.type)+(x.notes?'<br><span style="color:#a3a3a3;font-size:.75rem">'+esc(x.notes)+'</span>':'')+'</td>'+
+    '<td>'+esc(x.city)+'</td><td>'+esc(x.date)+'</td><td>'+esc(x.fee)+'</td>'+
+    '<td><span class="tag">'+esc(x.status)+'</span></td>'+
+    '<td><button class="ghost" style="padding:4px 10px" onclick="del('+x.id+')">Delete</button></td></tr>';
+  }).join(''):'<tr><td colspan="9" style="color:#a3a3a3">No entries yet.</td></tr>';
+
+  var conf=d.filter(function(x){return x.status==='Confirmed booking'});
+  var val=conf.reduce(function(s,x){var n=parseFloat(String(x.fee).replace(/[^0-9.]/g,''));return s+(isNaN(n)?0:n)},0);
+  document.getElementById('stats').innerHTML=
+    '<div class="stat"><b>'+d.length+'</b><span>Total entries</span></div>'+
+    '<div class="stat"><b>'+d.filter(function(x){return x.status==='Enquiry'}).length+'</b><span>Open enquiries</span></div>'+
+    '<div class="stat"><b>'+conf.length+'</b><span>Confirmed bookings</span></div>'+
+    '<div class="stat"><b>&#8377;'+val.toLocaleString('en-IN')+'</b><span>Confirmed value</span></div>';
+}
+
+function exportCsv(){
+  var d=load(); if(!d.length){alert('Nothing to export.');return}
+  var cols=['logged','name','phone','email','date','city','type','fee','status','source','notes'];
+  var csv=[cols.join(',')].concat(d.map(function(x){
+    return cols.map(function(c){return '"'+String(x[c]==null?'':x[c]).replace(/"/g,'""')+'"'}).join(',')
+  })).join('\n');
+  var a=document.createElement('a');
+  a.href=URL.createObjectURL(new Blob([csv],{type:'text/csv'}));
+  a.download='sapna-bookings-'+new Date().toISOString().slice(0,10)+'.csv';
+  a.click();
+}
+</script>
+</body></html>

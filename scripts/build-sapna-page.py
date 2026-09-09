@@ -93,7 +93,9 @@ JSONLD = {"@context": "https://schema.org", "@graph": [
     {"@type": "Service", "name": "Sapna Choudhary Booking",
      "serviceType": "Celebrity and artist booking",
      "description": "Official booking service for Sapna Choudhary stage shows, dance performances, weddings, college fests and corporate events in India.",
-     "areaServed": {"@type": "Country", "name": "India"},
+     "areaServed": [{"@type": "Country", "name": "India"},
+                    {"@type": "City", "name": "Delhi"}, {"@type": "City", "name": "Mumbai"},
+                    {"@type": "City", "name": "Kolkata"}, {"@type": "City", "name": "Bangalore"}],
      "provider": {"@type": "Organization", "name": "TKC Talent — The Kabir Company",
                   "url": "https://tkctalent.com/", "email": "hello@tkctalent.com"},
      "offers": {"@type": "Offer", "availability": "https://schema.org/InStock",
@@ -251,7 +253,15 @@ final written quote once your date and city are locked.</p>
 </tbody></table></div>
 <p class="mt-3 text-xs text-foreground/60">Indicative starting fees. Final quote depends on date, city, performance duration and technical requirements, plus 18% GST, travel and stay.</p>
 <p class="mt-4 text-sm text-foreground/85">For the best deals, call or WhatsApp <a href="tel:+919599599699" class="font-semibold underline">+91 95995 99699</a> or send the enquiry form below.</p>
-<p class="mt-5 text-sm text-foreground/70">What changes the price:</p>
+<h3 class="{H3} mt-8">Booking fees at a glance</h3>
+<ul class="mt-2 list-disc space-y-1 pl-5 text-sm text-foreground/80">
+<li><strong>Stage show / mela:</strong> &#8377;10 lakh</li>
+<li><strong>Wedding &amp; sangeet:</strong> &#8377;15 lakh</li>
+<li><strong>College fest:</strong> &#8377;8&#8211;10 lakh</li>
+<li><strong>Corporate event:</strong> &#8377;12&#8211;15 lakh</li>
+<li><strong>Club show:</strong> &#8377;10 lakh</li>
+<li><strong>Add-ons:</strong> 18% GST, travel, stay and technical requirements billed over the artist fee</li></ul>
+<h3 class="{H3} mt-8">What changes the price</h3>
 <ul class="mt-2 list-disc space-y-1 pl-5 text-sm text-foreground/80">
 <li>City and travel distance</li><li>Event type — public stage show, wedding, corporate or college fest</li>
 <li>Performance duration and number of sets</li><li>Date — peak wedding and festival dates cost more</li>
@@ -287,6 +297,23 @@ public-ground shows with permissions and on-ground execution support.</p>
 <a href="tel:+919599599699" class="underline">+91 95995 99699</a>, email
 <a href="mailto:hello@tkctalent.com" class="underline">hello@tkctalent.com</a> or send the enquiry form below.
 Every genuine booking is confirmed through a signed contract with her authorised management.</p>
+<div class="mt-6 overflow-x-auto">
+<table class="w-full min-w-[520px] border-collapse text-left text-sm">
+<caption class="sr-only">Sapna Choudhary booking contact details via TKC Talent</caption>
+<thead><tr class="border-b border-foreground/15 text-foreground/60">
+<th class="py-3 pr-4 font-medium">Contact</th><th class="py-3 pr-4 font-medium">Details</th><th class="py-3 font-medium">Best for</th></tr></thead>
+<tbody class="text-foreground/85">
+<tr class="border-b border-foreground/10"><td class="py-3 pr-4">Phone</td><td class="py-3 pr-4"><a class="underline" href="tel:+919599599699">+91 95995 99699</a></td><td class="py-3">Same-day availability check</td></tr>
+<tr class="border-b border-foreground/10"><td class="py-3 pr-4">WhatsApp</td><td class="py-3 pr-4"><a class="underline" href="https://wa.me/919599599699" target="_blank" rel="noopener">+91 95995 99699</a></td><td class="py-3">Sharing event brief and dates</td></tr>
+<tr class="border-b border-foreground/10"><td class="py-3 pr-4">Email</td><td class="py-3 pr-4"><a class="underline" href="mailto:hello@tkctalent.com">hello@tkctalent.com</a></td><td class="py-3">Written quotes and contracts</td></tr>
+<tr class="border-b border-foreground/10"><td class="py-3 pr-4">Enquiry form</td><td class="py-3 pr-4"><a class="underline" href="#book">Booking enquiry form</a></td><td class="py-3">Full brief with budget</td></tr>
+<tr><td class="py-3 pr-4">Agency</td><td class="py-3 pr-4">TKC Talent — The Kabir Company, New Delhi</td><td class="py-3">Pan-India and overseas shows</td></tr>
+</tbody></table></div>
+<ul class="mt-5 list-disc space-y-1 pl-5 text-sm text-foreground/80">
+<li>Response within 24 hours on working days; within 30 minutes on WhatsApp during office hours</li>
+<li>Share event date, city, venue, audience size and budget for a faster quote</li>
+<li>Booking is confirmed only after a signed contract and advance payment</li>
+<li>TKC Talent does not share the artist's personal number — all contact is through the agency</li></ul>
 <div class="{CARD} mt-6">
 <form action="https://formsubmit.co/thekabircompany@gmail.com" method="POST" class="grid gap-4 sm:grid-cols-2">
 <input type="hidden" name="_subject" value="Sapna Choudhary Booking Enquiry — TKC Talent"/>
@@ -302,7 +329,8 @@ Every genuine booking is confirmed through a signed contract with her authorised
 <label class="text-sm">Budget (INR)<input name="Budget" maxlength="40" class="mt-1 w-full rounded-lg border border-foreground/15 bg-background px-3 py-2 text-sm" placeholder="Approx."/></label>
 <input type="hidden" name="Artist" value="Sapna Choudhary"/>
 <div class="sm:col-span-2"><button type="submit" class="{BTN}">Send booking enquiry <span aria-hidden="true">→</span></button></div>
-</form></div>
+</form>
+<p class="mt-4 text-xs text-foreground/50">TKC Talent team: <a class="underline" href="/admin/sapna-bookings/" rel="nofollow">log this enquiry in the booking register</a>.</p></div>
 </section>
 
 <section class="mt-14">
@@ -343,7 +371,40 @@ performances booked through TKC Talent.</p>
 </section>
 
 
+<section class="mt-14" id="cities">
+<h2 class="{H2}">Book Sapna Choudhary in Delhi, Mumbai, Kolkata &amp; Bangalore</h2>
+<p class="{LEAD} max-w-3xl">TKC Talent books Sapna Choudhary for shows in every major Indian city. Fees stay in
+the same band; travel, stay and local production are added to the city quote.</p>
+<div class="mt-6 overflow-x-auto">
+<table class="w-full min-w-[560px] border-collapse text-left text-sm">
+<caption class="sr-only">Sapna Choudhary booking by city</caption>
+<thead><tr class="border-b border-foreground/15 text-foreground/60">
+<th class="py-3 pr-4 font-medium">City</th><th class="py-3 pr-4 font-medium">Most booked for</th><th class="py-3 pr-4 font-medium">Indicative fee</th><th class="py-3 font-medium">City page</th></tr></thead>
+<tbody class="text-foreground/85">
+<tr class="border-b border-foreground/10"><td class="py-3 pr-4">Delhi NCR</td><td class="py-3 pr-4">Weddings, melas, college fests</td><td class="py-3 pr-4">&#8377;10&#8211;15 lakh</td><td class="py-3"><a class="underline" href="/celebrity-booking-delhi/">Celebrity booking Delhi</a></td></tr>
+<tr class="border-b border-foreground/10"><td class="py-3 pr-4">Mumbai</td><td class="py-3 pr-4">Brand events, club shows</td><td class="py-3 pr-4">&#8377;10&#8211;15 lakh + travel</td><td class="py-3"><a class="underline" href="/celebrity-booking-mumbai/">Celebrity booking Mumbai</a></td></tr>
+<tr class="border-b border-foreground/10"><td class="py-3 pr-4">Kolkata</td><td class="py-3 pr-4">Puja pandals, cultural nights</td><td class="py-3 pr-4">&#8377;10&#8211;15 lakh + travel</td><td class="py-3"><a class="underline" href="/durga-puja-2026/">Durga Puja 2026 events</a></td></tr>
+<tr><td class="py-3 pr-4">Bangalore</td><td class="py-3 pr-4">Corporate annual days, college fests</td><td class="py-3 pr-4">&#8377;10&#8211;15 lakh + travel</td><td class="py-3"><a class="underline" href="/corporate-event-management/">Corporate event management</a></td></tr>
+</tbody></table></div>
+<div class="mt-6 grid gap-4 sm:grid-cols-2">
+<div class="{CARD}"><h3 class="{H3}">Sapna Choudhary booking in Delhi NCR</h3>
+<p class="mt-2 text-sm text-foreground/80">Her home market — Delhi, Gurgaon, Noida, Faridabad and Ghaziabad
+farmhouse weddings, sangeet nights and open-ground melas, with the shortest travel cost.</p></div>
+<div class="{CARD}"><h3 class="{H3}">Sapna Choudhary booking in Mumbai</h3>
+<p class="mt-2 text-sm text-foreground/80">Brand launches, club nights and reality-show style appearances,
+with flights, hotel and local production coordinated by TKC Talent.</p></div>
+<div class="{CARD}"><h3 class="{H3}">Sapna Choudhary booking in Kolkata</h3>
+<p class="mt-2 text-sm text-foreground/80">Durga Puja pandal cultural nights, festival grounds and winter
+stage shows, including permissions and crowd management support.</p></div>
+<div class="{CARD}"><h3 class="{H3}">Sapna Choudhary booking in Bangalore</h3>
+<p class="mt-2 text-sm text-foreground/80">Corporate annual days, dealer meets and campus festivals with
+GST-compliant invoicing and a signed artist contract.</p></div>
+</div>
+<p class="mt-5 text-sm text-foreground/80">Send your city and date to <a class="underline" href="tel:+919599599699">+91 95995 99699</a> for a localised quote.</p>
+</section>
+
 <section class="mt-14">
+
 <h2 class="{H2}">Related Booking Pages</h2>
 <ul class="mt-4 grid gap-2 text-sm text-foreground/85 sm:grid-cols-2">
 <li><a class="underline" href="/haryanvi-artist-booking/">Haryanvi artist booking</a></li>
