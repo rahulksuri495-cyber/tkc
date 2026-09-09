@@ -295,6 +295,23 @@ public-ground shows with permissions and on-ground execution support.</p>
 <a href="tel:+919599599699" class="underline">+91 95995 99699</a>, email
 <a href="mailto:hello@tkctalent.com" class="underline">hello@tkctalent.com</a> or send the enquiry form below.
 Every genuine booking is confirmed through a signed contract with her authorised management.</p>
+<div class="mt-6 overflow-x-auto">
+<table class="w-full min-w-[520px] border-collapse text-left text-sm">
+<caption class="sr-only">Sapna Choudhary booking contact details via TKC Talent</caption>
+<thead><tr class="border-b border-foreground/15 text-foreground/60">
+<th class="py-3 pr-4 font-medium">Contact</th><th class="py-3 pr-4 font-medium">Details</th><th class="py-3 font-medium">Best for</th></tr></thead>
+<tbody class="text-foreground/85">
+<tr class="border-b border-foreground/10"><td class="py-3 pr-4">Phone</td><td class="py-3 pr-4"><a class="underline" href="tel:+919599599699">+91 95995 99699</a></td><td class="py-3">Same-day availability check</td></tr>
+<tr class="border-b border-foreground/10"><td class="py-3 pr-4">WhatsApp</td><td class="py-3 pr-4"><a class="underline" href="https://wa.me/919599599699" target="_blank" rel="noopener">+91 95995 99699</a></td><td class="py-3">Sharing event brief and dates</td></tr>
+<tr class="border-b border-foreground/10"><td class="py-3 pr-4">Email</td><td class="py-3 pr-4"><a class="underline" href="mailto:hello@tkctalent.com">hello@tkctalent.com</a></td><td class="py-3">Written quotes and contracts</td></tr>
+<tr class="border-b border-foreground/10"><td class="py-3 pr-4">Enquiry form</td><td class="py-3 pr-4"><a class="underline" href="#book">Booking enquiry form</a></td><td class="py-3">Full brief with budget</td></tr>
+<tr><td class="py-3 pr-4">Agency</td><td class="py-3 pr-4">TKC Talent — The Kabir Company, New Delhi</td><td class="py-3">Pan-India and overseas shows</td></tr>
+</tbody></table></div>
+<ul class="mt-5 list-disc space-y-1 pl-5 text-sm text-foreground/80">
+<li>Response within 24 hours on working days; within 30 minutes on WhatsApp during office hours</li>
+<li>Share event date, city, venue, audience size and budget for a faster quote</li>
+<li>Booking is confirmed only after a signed contract and advance payment</li>
+<li>TKC Talent does not share the artist's personal number — all contact is through the agency</li></ul>
 <div class="{CARD} mt-6">
 <form action="https://formsubmit.co/thekabircompany@gmail.com" method="POST" class="grid gap-4 sm:grid-cols-2">
 <input type="hidden" name="_subject" value="Sapna Choudhary Booking Enquiry — TKC Talent"/>
