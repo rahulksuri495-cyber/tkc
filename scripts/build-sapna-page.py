@@ -251,7 +251,15 @@ final written quote once your date and city are locked.</p>
 </tbody></table></div>
 <p class="mt-3 text-xs text-foreground/60">Indicative starting fees. Final quote depends on date, city, performance duration and technical requirements, plus 18% GST, travel and stay.</p>
 <p class="mt-4 text-sm text-foreground/85">For the best deals, call or WhatsApp <a href="tel:+919599599699" class="font-semibold underline">+91 95995 99699</a> or send the enquiry form below.</p>
-<p class="mt-5 text-sm text-foreground/70">What changes the price:</p>
+<h3 class="{H3} mt-8">Booking fees at a glance</h3>
+<ul class="mt-2 list-disc space-y-1 pl-5 text-sm text-foreground/80">
+<li><strong>Stage show / mela:</strong> &#8377;10 lakh</li>
+<li><strong>Wedding &amp; sangeet:</strong> &#8377;15 lakh</li>
+<li><strong>College fest:</strong> &#8377;8&#8211;10 lakh</li>
+<li><strong>Corporate event:</strong> &#8377;12&#8211;15 lakh</li>
+<li><strong>Club show:</strong> &#8377;10 lakh</li>
+<li><strong>Add-ons:</strong> 18% GST, travel, stay and technical requirements billed over the artist fee</li></ul>
+<h3 class="{H3} mt-8">What changes the price</h3>
 <ul class="mt-2 list-disc space-y-1 pl-5 text-sm text-foreground/80">
 <li>City and travel distance</li><li>Event type — public stage show, wedding, corporate or college fest</li>
 <li>Performance duration and number of sets</li><li>Date — peak wedding and festival dates cost more</li>
