@@ -102,14 +102,19 @@ public-ground shows with permissions and on-ground execution support.</p>
 <a href="mailto:hello@tkctalent.com" class="underline">hello@tkctalent.com</a> or send the enquiry form below.
 Every genuine booking is confirmed through a signed contract with her authorised management.</p>
 <div class="rounded-2xl border border-foreground/10 bg-foreground/[0.03] p-6 mt-6">
-<form action="/contact-us/" method="get" class="grid gap-4 sm:grid-cols-2">
-<label class="text-sm">Your name<input required name="name" maxlength="100" class="mt-1 w-full rounded-lg border border-foreground/15 bg-background px-3 py-2 text-sm" placeholder="Full name"/></label>
-<label class="text-sm">Phone / WhatsApp<input required name="phone" maxlength="20" class="mt-1 w-full rounded-lg border border-foreground/15 bg-background px-3 py-2 text-sm" placeholder="+91"/></label>
-<label class="text-sm">Event date<input required type="date" name="date" class="mt-1 w-full rounded-lg border border-foreground/15 bg-background px-3 py-2 text-sm"/></label>
-<label class="text-sm">City<input required name="city" maxlength="80" class="mt-1 w-full rounded-lg border border-foreground/15 bg-background px-3 py-2 text-sm" placeholder="Delhi NCR"/></label>
-<label class="text-sm">Event type<select name="event_type" class="mt-1 w-full rounded-lg border border-foreground/15 bg-background px-3 py-2 text-sm"><option>Stage show</option><option>Wedding / sangeet</option><option>College fest</option><option>Corporate event</option><option>Festival / mela</option></select></label>
-<label class="text-sm">Budget (INR)<input name="budget" maxlength="40" class="mt-1 w-full rounded-lg border border-foreground/15 bg-background px-3 py-2 text-sm" placeholder="Approx."/></label>
-<input type="hidden" name="artist" value="Sapna Choudhary"/>
+<form action="https://formsubmit.co/thekabircompany@gmail.com" method="POST" class="grid gap-4 sm:grid-cols-2">
+<input type="hidden" name="_subject" value="Sapna Choudhary Booking Enquiry — TKC Talent"/>
+<input type="hidden" name="_template" value="table"/>
+<input type="hidden" name="_captcha" value="false"/>
+<input type="hidden" name="_next" value="https://tkctalent.com/book-sapna-choudhary/?sent=1"/>
+<input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off"/>
+<label class="text-sm">Your name<input required name="Name" maxlength="100" class="mt-1 w-full rounded-lg border border-foreground/15 bg-background px-3 py-2 text-sm" placeholder="Full name"/></label>
+<label class="text-sm">Phone / WhatsApp<input required name="Phone" maxlength="20" class="mt-1 w-full rounded-lg border border-foreground/15 bg-background px-3 py-2 text-sm" placeholder="+91"/></label>
+<label class="text-sm">Event date<input required type="date" name="Event date" class="mt-1 w-full rounded-lg border border-foreground/15 bg-background px-3 py-2 text-sm"/></label>
+<label class="text-sm">City<input required name="City" maxlength="80" class="mt-1 w-full rounded-lg border border-foreground/15 bg-background px-3 py-2 text-sm" placeholder="Delhi NCR"/></label>
+<label class="text-sm">Event type<select name="Event type" class="mt-1 w-full rounded-lg border border-foreground/15 bg-background px-3 py-2 text-sm"><option>Stage show</option><option>Wedding / sangeet</option><option>College fest</option><option>Corporate event</option><option>Festival / mela</option></select></label>
+<label class="text-sm">Budget (INR)<input name="Budget" maxlength="40" class="mt-1 w-full rounded-lg border border-foreground/15 bg-background px-3 py-2 text-sm" placeholder="Approx."/></label>
+<input type="hidden" name="Artist" value="Sapna Choudhary"/>
 <div class="sm:col-span-2"><button type="submit" class="inline-flex items-center gap-2 rounded-full bg-brand px-6 py-3 font-display text-sm font-bold text-brand-foreground shadow-lg transition hover:scale-[1.03] hover:opacity-90">Send booking enquiry <span aria-hidden="true">→</span></button></div>
 </form></div>
 </section>
