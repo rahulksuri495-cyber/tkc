@@ -139,6 +139,22 @@ GALLERY = [
 ]
 
 
+JSONLD["@graph"].append({
+    "@type": "ImageGallery",
+    "name": "Sapna Choudhary live show photos",
+    "url": URL + "#photos",
+    "associatedMedia": [
+        {"@type": "ImageObject",
+         "contentUrl": f"https://tkctalent.com/assets/haryanvi/{g[0]}-{'1200' if g[1] >= 1200 else '800'}.jpg",
+         "name": g[3], "description": g[4], "caption": g[5],
+         "creditText": "TKC Talent — The Kabir Company",
+         "representativeOfPage": g[0].endswith("crowd")}
+        for g in GALLERY]})
+
+JSONLD["@graph"][0]["image"] = [
+    f"https://tkctalent.com/assets/haryanvi/{g[0]}-{'1200' if g[1] >= 1200 else '800'}.jpg" for g in GALLERY]
+
+
 def gallery_html():
     out = []
     for slug, w, h, title, alt, cap in GALLERY:
@@ -317,7 +333,7 @@ Bollywood actors, singers, comedians and regional stage artists since 2005.</p>
 {faq_html()}
 </section>
 
-<section class="mt-14">
+<section class="mt-14" id="photos">
 <h2 class="{H2}">Sapna Choudhary Live Show Photos</h2>
 <p class="{LEAD} max-w-3xl">Recent photographs from Sapna Choudhary's live Haryanvi dance shows and stage
 performances booked through TKC Talent.</p>
