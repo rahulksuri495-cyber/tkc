@@ -145,13 +145,18 @@ show booking price and confirmed availability.</p>
 <a href="mailto:hello@tkctalent.com" class="{BTN2}">Email hello@tkctalent.com</a>
 </div>
 <figure class="mt-8 overflow-hidden rounded-3xl border border-foreground/10">
-<img src="/assets/haryanvi/sapna-choudhary-stage-show-booking-tkc-talent-1200.jpg"
- srcset="/assets/haryanvi/sapna-choudhary-stage-show-booking-tkc-talent-800.jpg 800w, /assets/haryanvi/sapna-choudhary-stage-show-booking-tkc-talent-1200.jpg 1200w, /assets/haryanvi/sapna-choudhary-stage-show-booking-tkc-talent.jpg 1600w"
- sizes="(max-width: 768px) 100vw, 960px" width="1200" height="675" fetchpriority="high" decoding="async"
- alt="Large Haryanvi live stage show at night with crowd and gold stage lighting — the kind of stage show TKC Talent produces when you book Sapna Choudhary."
+<picture>
+<source type="image/webp" srcset="/assets/haryanvi/sapna-choudhary-live-stage-show-crowd-800.webp 800w, /assets/haryanvi/sapna-choudhary-live-stage-show-crowd-1200.webp 1200w" sizes="(max-width: 768px) 100vw, 960px"/>
+<img src="/assets/haryanvi/sapna-choudhary-live-stage-show-crowd-1200.jpg"
+ srcset="/assets/haryanvi/sapna-choudhary-live-stage-show-crowd-800.jpg 800w, /assets/haryanvi/sapna-choudhary-live-stage-show-crowd-1200.jpg 1200w"
+ sizes="(max-width: 768px) 100vw, 960px" width="1200" height="887" fetchpriority="high" decoding="async"
+ title="Sapna Choudhary live stage show booking — TKC Talent"
+ alt="Sapna Choudhary live stage show at night — her face on the giant LED screen with fire jets, dance troupe and a huge crowd at a mela ground."
  class="h-auto w-full object-cover"/>
-<figcaption class="px-4 py-3 text-xs text-foreground/60">Haryanvi stage show production by TKC Talent. Artist photograph supplied on request.</figcaption>
+</picture>
+<figcaption class="px-4 py-3 text-xs text-foreground/60">Sapna Choudhary performing a live Haryanvi stage show to a mela crowd. Booking managed by TKC Talent.</figcaption>
 </figure>
+
 </section>
 
 <section class="mt-10">
