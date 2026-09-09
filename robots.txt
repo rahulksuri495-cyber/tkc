@@ -10,6 +10,7 @@ Content-Signal: search=yes, ai-input=yes, ai-train=no
 User-agent: *
 Allow: /
 Disallow: /404.html
+Disallow: /admin/
 
 # Explicitly welcome major AI / answer-engine crawlers.
 User-agent: GPTBot
