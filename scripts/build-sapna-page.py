@@ -327,7 +327,8 @@ Every genuine booking is confirmed through a signed contract with her authorised
 <label class="text-sm">Budget (INR)<input name="Budget" maxlength="40" class="mt-1 w-full rounded-lg border border-foreground/15 bg-background px-3 py-2 text-sm" placeholder="Approx."/></label>
 <input type="hidden" name="Artist" value="Sapna Choudhary"/>
 <div class="sm:col-span-2"><button type="submit" class="{BTN}">Send booking enquiry <span aria-hidden="true">→</span></button></div>
-</form></div>
+</form>
+<p class="mt-4 text-xs text-foreground/50">TKC Talent team: <a class="underline" href="/admin/sapna-bookings/" rel="nofollow">log this enquiry in the booking register</a>.</p></div>
 </section>
 
 <section class="mt-14">
