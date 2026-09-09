@@ -280,6 +280,16 @@ Bollywood actors, singers, comedians and regional stage artists since 2005.</p>
 </section>
 
 <section class="mt-14">
+<h2 class="{H2}">Sapna Choudhary Live Show Photos</h2>
+<p class="{LEAD} max-w-3xl">Recent photographs from Sapna Choudhary's live Haryanvi dance shows and stage
+performances booked through TKC Talent.</p>
+<div class="mt-6 grid gap-5 sm:grid-cols-2">
+{gallery_html()}
+</div>
+</section>
+
+
+<section class="mt-14">
 <h2 class="{H2}">Related Booking Pages</h2>
 <ul class="mt-4 grid gap-2 text-sm text-foreground/85 sm:grid-cols-2">
 <li><a class="underline" href="/haryanvi-artist-booking/">Haryanvi artist booking</a></li>
