@@ -119,12 +119,50 @@ BTN2 = ("inline-flex items-center gap-2 rounded-full border border-foreground/20
         "font-display text-sm font-bold text-foreground transition hover:bg-foreground hover:text-background")
 
 
+GALLERY = [
+    ("sapna-choudhary-haryanvi-dance-performance", 1200, 887,
+     "Sapna Choudhary Haryanvi dance performance — TKC Talent booking",
+     "Sapna Choudhary mid-dance in a silver embellished lehenga on a live stage, smiling with arms open during a Haryanvi dance performance.",
+     "Sapna Choudhary performing her signature Haryanvi dance set on a live stage."),
+    ("sapna-choudhary-wedding-sangeet-performance", 1200, 887,
+     "Sapna Choudhary wedding and sangeet performance booking",
+     "Sapna Choudhary dancing with a red dupatta under red stage lights during a wedding sangeet style performance.",
+     "Wedding and sangeet night performance — booked from ₹15 lakh."),
+    ("sapna-choudhary-live-stage-show-crowd", 1200, 887,
+     "Sapna Choudhary stage show and mela booking — TKC Talent",
+     "Wide view of a Sapna Choudhary stage show at a mela ground with fire jets, dance troupe and a large audience.",
+     "Open-ground stage show and mela performance with full production."),
+    ("sapna-choudhary-tkc-talent-artist-poster", 800, 1066,
+     "Sapna Choudhary official artist poster — TKC Talent",
+     "Official TKC Talent artist poster of Sapna Choudhary in an ivory embroidered saree with the tagline Rooted in Culture, Fearless on Stage.",
+     "Official TKC Talent artist profile poster for Sapna Choudhary."),
+]
+
+
+def gallery_html():
+    out = []
+    for slug, w, h, title, alt, cap in GALLERY:
+        out.append(
+            f'<figure class="overflow-hidden rounded-2xl border border-foreground/10">'
+            f'<picture><source type="image/webp" srcset="/assets/haryanvi/{slug}-800.webp 800w'
+            + (f', /assets/haryanvi/{slug}-1200.webp 1200w' if w >= 1200 else '')
+            + '" sizes="(max-width: 640px) 100vw, 460px"/>'
+            f'<img src="/assets/haryanvi/{slug}-800.jpg" srcset="/assets/haryanvi/{slug}-800.jpg 800w'
+            + (f', /assets/haryanvi/{slug}-1200.jpg 1200w' if w >= 1200 else '')
+            + '" sizes="(max-width: 640px) 100vw, 460px" width="800" height="'
+            + str(round(800 * h / w)) + '" loading="lazy" decoding="async" '
+            f'title="{title}" alt="{alt}" class="h-auto w-full object-cover"/></picture>'
+            f'<figcaption class="px-4 py-3 text-xs text-foreground/60">{cap}</figcaption></figure>')
+    return "".join(out)
+
+
 def faq_html():
     out = []
     for q, a in FAQS:
         out.append(f'<details class="{CARD} mt-3"><summary class="cursor-pointer font-display text-base font-semibold">{q}</summary>'
                    f'<p class="mt-3 text-sm text-foreground/80">{a}</p></details>')
     return "".join(out)
+
 
 
 MAIN = f"""
