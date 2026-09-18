@@ -31,9 +31,9 @@ SKIP_PARTS = {"dist", "node_modules", ".git", "admin", ".lovable",
               ".agents", ".claude", ".workspace", "public"}
 
 CANON_RE = re.compile(
-    r'<link[^>]+rel=["\']canonical["\'][^>]+href=["\']([^"\']+)["\']', re.I)
+    r'<link(?=[^>]+rel=["\']canonical["\'])(?=[^>]+href=["\']([^"\']+)["\'])[^>]*>', re.I)
 OG_URL_RE = re.compile(
-    r'<meta[^>]+property=["\']og:url["\'][^>]+content=["\']([^"\']+)["\']', re.I)
+    r'<meta(?=[^>]+property=["\']og:url["\'])(?=[^>]+content=["\']([^"\']+)["\'])[^>]*>', re.I)
 ROBOTS_RE = re.compile(
     r'<meta[^>]+name=["\']robots["\'][^>]+content=["\']([^"\']+)["\']', re.I)
 
