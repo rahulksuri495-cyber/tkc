@@ -592,12 +592,6 @@
       "url": "https://tkctalent.com/book-kanan-gill/"
     },
     {
-      "slug": "kapil-sharma",
-      "name": "Kapil Sharma",
-      "category": "comedian",
-      "url": "https://tkctalent.com/book-kapil-sharma/"
-    },
-    {
       "slug": "samay-raina",
       "name": "Samay Raina",
       "category": "comedian",
@@ -628,12 +622,6 @@
       "url": "https://tkctalent.com/book-ar-rahman/"
     },
     {
-      "slug": "arijit-singh",
-      "name": "Arijit Singh",
-      "category": "singer",
-      "url": "https://tkctalent.com/book-arijit-singh/"
-    },
-    {
       "slug": "armaan-malik",
       "name": "Armaan Malik",
       "category": "singer",
@@ -644,12 +632,6 @@
       "name": "B Praak",
       "category": "singer",
       "url": "https://tkctalent.com/book-b-praak/"
-    },
-    {
-      "slug": "badshah",
-      "name": "Badshah",
-      "category": "singer",
-      "url": "https://tkctalent.com/book-badshah/"
     },
     {
       "slug": "darshan-raval",
