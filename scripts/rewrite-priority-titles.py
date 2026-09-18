@@ -6,8 +6,6 @@ import re
 ROOT = Path(__file__).resolve().parent.parent
 
 PRIORITY = [
-    "book-kapil-sharma",
-    "book-arijit-singh",
     "book-varun-dhawan",
     "book-munawar-faruqui",
     "book-sonu-nigam",
@@ -18,7 +16,6 @@ PRIORITY = [
     "book-b-praak",
     "book-sidharth-malhotra",
     "book-pankaj-tripathi",
-    "book-badshah",
     "book-kriti-sanon",
     "book-salman-khan",
     "book-shah-rukh-khan",
@@ -35,16 +32,13 @@ PRIORITY = [
 
 # Event-type hints for known artists
 ARTIST_EVENTS = {
-    "book-kapil-sharma": "Comedy, Corporate & Wedding",
     "book-munawar-faruqui": "Comedy, Corporate & Private Shows",
-    "book-arijit-singh": "Wedding, Sangeet & Concert",
     "book-ar-rahman": "Concert, Corporate & Wedding",
     "book-sonu-nigam": "Wedding, Sangeet & Concert",
     "book-palak-muchhal": "Wedding, Sangeet & Concert",
     "book-b-praak": "Wedding, Sangeet & Concert",
     "book-shreya-ghoshal": "Wedding, Sangeet & Concert",
     "book-darshan-raval": "Wedding, Sangeet & Concert",
-    "book-badshah": "Wedding, Sangeet & Concert",
     "book-diljit-dosanjh": "Wedding, Concert & Corporate",
     "book-sidharth-malhotra": "Brand, Corporate & Wedding",
     "book-pankaj-tripathi": "Corporate, Brand & Wedding",
@@ -67,8 +61,6 @@ def display_name(slug):
 
 def proper_artist_name(slug):
     mapping = {
-        "book-kapil-sharma": "Kapil Sharma",
-        "book-arijit-singh": "Arijit Singh",
         "book-varun-dhawan": "Varun Dhawan",
         "book-munawar-faruqui": "Munawar Faruqui",
         "book-sonu-nigam": "Sonu Nigam",
@@ -79,7 +71,6 @@ def proper_artist_name(slug):
         "book-b-praak": "B Praak",
         "book-sidharth-malhotra": "Sidharth Malhotra",
         "book-pankaj-tripathi": "Pankaj Tripathi",
-        "book-badshah": "Badshah",
         "book-kriti-sanon": "Kriti Sanon",
         "book-salman-khan": "Salman Khan",
         "book-shah-rukh-khan": "Shah Rukh Khan",

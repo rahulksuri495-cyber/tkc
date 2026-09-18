@@ -9,11 +9,11 @@ SITEMAP = ROOT / "sitemap.xml"
 today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
 
 PRIORITY = [
-    "book-kapil-sharma", "book-arijit-singh", "book-varun-dhawan",
+    "book-varun-dhawan",
     "book-munawar-faruqui", "book-sonu-nigam", "book-palak-muchhal",
     "book-anushka-sharma", "book-ar-rahman", "book-shahid-kapoor",
     "book-b-praak", "book-sidharth-malhotra", "book-pankaj-tripathi",
-    "book-badshah", "book-kriti-sanon", "book-salman-khan",
+    "book-kriti-sanon", "book-salman-khan",
     "book-shah-rukh-khan", "book-alia-bhatt", "book-deepika-padukone",
     "book-diljit-dosanjh", "book-shreya-ghoshal", "book-darshan-raval",
     "book-katrina-kaif", "book-ranbir-kapoor", "book-akshay-kumar",
