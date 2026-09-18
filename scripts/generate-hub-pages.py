@@ -330,7 +330,7 @@ CORPORATE_FAQS = [
     ),
     (
         "Which celebrities are best for corporate annual day events?",
-        "Popular corporate annual day choices include Arijit Singh, Sunidhi Chauhan, Shreya Ghoshal and Sonu Nigam for concerts; Kapil Sharma, Zakir Khan and Samay Raina for comedy; and Bollywood actors such as Shah Rukh Khan and Deepika Padukone for keynote or brand moments.",
+        "Popular corporate annual day choices include Arijit Singh, Shreya Ghoshal, Sonu Nigam and Badshah for concerts; Kapil Sharma, Zakir Khan and Samay Raina for comedy; and Bollywood actors such as Shah Rukh Khan and Deepika Padukone for keynote or brand moments.",
     ),
     (
         "Can a celebrity host or emcee our conference?",
@@ -380,7 +380,6 @@ def build_corporate_hub():
     artists = [
         ("Kapil Sharma", "/book-kapil-sharma/", "Comedy & hosting"),
         ("Arijit Singh", "/book-arijit-singh/", "Corporate concerts"),
-        ("Sunidhi Chauhan", "/book-sunidhi-chauhan/", "Live band performances"),
         ("Shah Rukh Khan", "/book-shah-rukh-khan/", "Keynote & brand moments"),
         ("Samay Raina", "/book-samay-raina/", "Stand-up for young teams"),
         ("Badshah", "/book-badshah/", "After-party headliner"),
