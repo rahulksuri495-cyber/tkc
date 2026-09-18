@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-06-15T03:07:00+00:00",
+  "generated_at": "2026-09-18T04:15:20+00:00",
   "summary": {
-    "pages_scanned": 126,
-    "gallery_pages": 105,
-    "image_tags_scanned": 866,
-    "images_indexed": 234,
-    "excluded_decorative_or_missing_alt": 185,
-    "eager_images": 109,
-    "lazy_images": 694,
-    "dimensioned_images": 802,
-    "redirects_validated": 13,
+    "pages_scanned": 185,
+    "gallery_pages": 157,
+    "image_tags_scanned": 995,
+    "images_indexed": 313,
+    "excluded_decorative_or_missing_alt": 188,
+    "eager_images": 161,
+    "lazy_images": 768,
+    "dimensioned_images": 928,
+    "redirects_validated": 1,
     "errors": 0
   },
   "checks": {
@@ -37,66 +37,6 @@
   },
   "redirects": [
     {
-      "old": "/assets/tamannaah/tamannaah-dark-dress.jpg",
-      "canonical": "/gallery/tamannaah-dark-dress.jpg",
-      "status": 301
-    },
-    {
-      "old": "/assets/tamannaah/tamannaah-dark-dress.jpg",
-      "canonical": "/gallery/tamannaah-dark-dress.jpg",
-      "status": 301
-    },
-    {
-      "old": "/images/tamannaah-dark-dress.jpg",
-      "canonical": "/gallery/tamannaah-dark-dress.jpg",
-      "status": 301
-    },
-    {
-      "old": "/assets/tamannaah/tamannaah-gold-yacht.jpg",
-      "canonical": "/gallery/tamannaah-gold-yacht.jpg",
-      "status": 301
-    },
-    {
-      "old": "/assets/tamannaah/tamannaah-gold-yacht.jpg",
-      "canonical": "/gallery/tamannaah-gold-yacht.jpg",
-      "status": 301
-    },
-    {
-      "old": "/images/tamannaah-gold-yacht.jpg",
-      "canonical": "/gallery/tamannaah-gold-yacht.jpg",
-      "status": 301
-    },
-    {
-      "old": "/assets/tamannaah/tamannaah-red-portrait.jpg",
-      "canonical": "/gallery/tamannaah-red-portrait.jpg",
-      "status": 301
-    },
-    {
-      "old": "/assets/tamannaah/tamannaah-red-portrait.jpg",
-      "canonical": "/gallery/tamannaah-red-portrait.jpg",
-      "status": 301
-    },
-    {
-      "old": "/images/tamannaah-red-portrait.jpg",
-      "canonical": "/gallery/tamannaah-red-portrait.jpg",
-      "status": 301
-    },
-    {
-      "old": "/assets/tamannaah/tamannaah-tkctalent.jpg",
-      "canonical": "/gallery/tamannaah-tkctalent.jpg",
-      "status": 301
-    },
-    {
-      "old": "/assets/tamannaah/tamannaah-tkctalent.jpg",
-      "canonical": "/gallery/tamannaah-tkctalent.jpg",
-      "status": 301
-    },
-    {
-      "old": "/images/tamannaah-tkctalent.jpg",
-      "canonical": "/gallery/tamannaah-tkctalent.jpg",
-      "status": 301
-    },
-    {
       "old": "/actresses/sonakshi-singha.png",
       "canonical": "/actresses/sonakshi-sinha.png",
       "status": 301
@@ -105,12 +45,40 @@
   "errors": [],
   "pages": [
     {
+      "route": "/artist-management-india/",
+      "image_count": 1
+    },
+    {
+      "route": "/blog/artist-booking-agency-india/",
+      "image_count": 1
+    },
+    {
+      "route": "/blog/celebrity-booking-agency-india/",
+      "image_count": 1
+    },
+    {
+      "route": "/blog/corporate-event-management-india/",
+      "image_count": 9
+    },
+    {
+      "route": "/blog/event-management-company-india/",
+      "image_count": 1
+    },
+    {
+      "route": "/blog/",
+      "image_count": 4
+    },
+    {
       "route": "/bollywood-actress-booking/",
       "image_count": 60
     },
     {
       "route": "/bollywood-celebrity-charges/",
       "image_count": 37
+    },
+    {
+      "route": "/book-aamir-khan/",
+      "image_count": 1
     },
     {
       "route": "/book-adah-sharma/",
@@ -121,7 +89,19 @@
       "image_count": 5
     },
     {
+      "route": "/book-aditya-roy-kapur/",
+      "image_count": 1
+    },
+    {
+      "route": "/book-ajay-devgn/",
+      "image_count": 1
+    },
+    {
       "route": "/book-akanksha-puri/",
+      "image_count": 1
+    },
+    {
+      "route": "/book-akshay-kumar/",
       "image_count": 1
     },
     {
@@ -141,6 +121,14 @@
       "image_count": 5
     },
     {
+      "route": "/book-anil-kapoor/",
+      "image_count": 1
+    },
+    {
+      "route": "/book-anjali-arora/",
+      "image_count": 10
+    },
+    {
       "route": "/book-anushka-sharma/",
       "image_count": 5
     },
@@ -153,12 +141,16 @@
       "image_count": 4
     },
     {
+      "route": "/book-arjun-kapoor/",
+      "image_count": 1
+    },
+    {
       "route": "/book-armaan-malik/",
       "image_count": 4
     },
     {
-      "route": "/book-asees-kaur/",
-      "image_count": 4
+      "route": "/book-ayushmann-khurrana/",
+      "image_count": 1
     },
     {
       "route": "/book-b-praak/",
@@ -167,6 +159,18 @@
     {
       "route": "/book-badshah/",
       "image_count": 4
+    },
+    {
+      "route": "/book-bobby-deol/",
+      "image_count": 1
+    },
+    {
+      "route": "/book-celebrity-for-corporate-event/",
+      "image_count": 1
+    },
+    {
+      "route": "/book-celebrity-for-wedding/",
+      "image_count": 1
     },
     {
       "route": "/book-chitrangada-singh/",
@@ -207,6 +211,10 @@
     {
       "route": "/book-hanumankind/",
       "image_count": 5
+    },
+    {
+      "route": "/book-hrithik-roshan/",
+      "image_count": 1
     },
     {
       "route": "/book-huma-qureshi/",
@@ -257,6 +265,10 @@
       "image_count": 5
     },
     {
+      "route": "/book-kartik-aaryan/",
+      "image_count": 1
+    },
+    {
       "route": "/book-katrina-kaif/",
       "image_count": 5
     },
@@ -289,6 +301,10 @@
       "image_count": 5
     },
     {
+      "route": "/book-manoj-bajpayee/",
+      "image_count": 1
+    },
+    {
       "route": "/book-meet-bros/",
       "image_count": 4
     },
@@ -299,6 +315,10 @@
     {
       "route": "/book-mrunal-thakur/",
       "image_count": 5
+    },
+    {
+      "route": "/book-nawazuddin-siddiqui/",
+      "image_count": 1
     },
     {
       "route": "/book-neha-bhasin/",
@@ -333,6 +353,10 @@
       "image_count": 5
     },
     {
+      "route": "/book-pankaj-tripathi/",
+      "image_count": 1
+    },
+    {
       "route": "/book-pooja-hegde/",
       "image_count": 5
     },
@@ -345,12 +369,24 @@
       "image_count": 5
     },
     {
+      "route": "/book-rajkummar-rao/",
+      "image_count": 1
+    },
+    {
       "route": "/book-rakul-preet/",
       "image_count": 5
     },
     {
+      "route": "/book-ranbir-kapoor/",
+      "image_count": 1
+    },
+    {
       "route": "/book-rani-mukerji/",
       "image_count": 5
+    },
+    {
+      "route": "/book-ranveer-singh/",
+      "image_count": 1
     },
     {
       "route": "/book-rashmika-mandanna/",
@@ -373,7 +409,15 @@
       "image_count": 4
     },
     {
+      "route": "/book-salman-khan/",
+      "image_count": 1
+    },
+    {
       "route": "/book-sanya-malhotra/",
+      "image_count": 5
+    },
+    {
+      "route": "/book-sapna-choudhary/",
       "image_count": 5
     },
     {
@@ -391,6 +435,10 @@
     {
       "route": "/book-shah-rukh-khan/",
       "image_count": 14
+    },
+    {
+      "route": "/book-shahid-kapoor/",
+      "image_count": 1
     },
     {
       "route": "/book-shamsher-lehri/",
@@ -433,6 +481,10 @@
       "image_count": 5
     },
     {
+      "route": "/book-sidharth-malhotra/",
+      "image_count": 1
+    },
+    {
       "route": "/book-sonakshi-sinha/",
       "image_count": 5
     },
@@ -449,12 +501,20 @@
       "image_count": 5
     },
     {
+      "route": "/book-stalls-durga-puja/",
+      "image_count": 1
+    },
+    {
       "route": "/book-sunanda-sharma/",
       "image_count": 4
     },
     {
       "route": "/book-sunil-grover/",
       "image_count": 13
+    },
+    {
+      "route": "/book-sunny-deol/",
+      "image_count": 1
     },
     {
       "route": "/book-sunny-leone/",
@@ -477,6 +537,10 @@
       "image_count": 5
     },
     {
+      "route": "/book-tiger-shroff/",
+      "image_count": 1
+    },
+    {
       "route": "/book-urvashi-rautela/",
       "image_count": 5
     },
@@ -485,8 +549,20 @@
       "image_count": 5
     },
     {
+      "route": "/book-varun-dhawan/",
+      "image_count": 1
+    },
+    {
+      "route": "/book-vicky-kaushal/",
+      "image_count": 1
+    },
+    {
       "route": "/book-vidya-balan/",
       "image_count": 5
+    },
+    {
+      "route": "/book-vijay-varma/",
+      "image_count": 1
     },
     {
       "route": "/book-vishal-shekhar/",
@@ -501,8 +577,80 @@
       "image_count": 5
     },
     {
+      "route": "/celebrity-booking-delhi/",
+      "image_count": 1
+    },
+    {
+      "route": "/celebrity-booking-goa/",
+      "image_count": 1
+    },
+    {
+      "route": "/celebrity-booking-gurgaon/",
+      "image_count": 1
+    },
+    {
       "route": "/celebrity-booking-india/",
-      "image_count": 3
+      "image_count": 7
+    },
+    {
+      "route": "/celebrity-booking-jaipur/",
+      "image_count": 1
+    },
+    {
+      "route": "/celebrity-booking-mumbai/",
+      "image_count": 1
+    },
+    {
+      "route": "/celebrity-booking-noida/",
+      "image_count": 1
+    },
+    {
+      "route": "/celebrity-brand-ambassador/",
+      "image_count": 1
+    },
+    {
+      "route": "/celebrity-brand-endorsement-fees-2026/",
+      "image_count": 9
+    },
+    {
+      "route": "/celebrity-management-company/",
+      "image_count": 1
+    },
+    {
+      "route": "/corporate-event-management/",
+      "image_count": 1
+    },
+    {
+      "route": "/cr-park-durga-puja/",
+      "image_count": 1
+    },
+    {
+      "route": "/durga-puja-2026/",
+      "image_count": 11
+    },
+    {
+      "route": "/durga-puja-sponsorship/",
+      "image_count": 1
+    },
+    {
+      "route": "/event-management-delhi/",
+      "image_count": 1
+    },
+    {
+      "route": "/event-management-gurgaon/",
+      "image_count": 1
+    },
+    {
+      "route": "/event-management-mumbai/",
+      "image_count": 1
+    },
+    {
+      "route": "/event-planners-delhi/",
+      "image_count": 1
+    },
+    {
+      "route": "/iiteo/",
+      "image_count": 20
     },
     {
       "route": "/",
@@ -510,15 +658,19 @@
     },
     {
       "route": "/newsroom/",
-      "image_count": 27
+      "image_count": 28
     },
     {
       "route": "/ourservice/",
-      "image_count": 3
+      "image_count": 8
     },
     {
       "route": "/singer-booking-india/",
-      "image_count": 35
+      "image_count": 33
+    },
+    {
+      "route": "/topleader/",
+      "image_count": 12
     }
   ]
 }
