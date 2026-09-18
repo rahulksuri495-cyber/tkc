@@ -33,14 +33,15 @@ DirectoryIndex index.html
   RewriteRule ^book-vijay-sethupathi/?$ /celebrity-booking-india [R=301,L]
   RewriteRule ^celebrity-charges-2026/?$ /bollywood-celebrity-charges [R=301,L]
 
-  # Permanently retire removed singer booking pages.
-  RewriteRule ^book-sunidhi-chauhan/?$ - [R=410,L]
-  RewriteRule ^book-asees-kaur/?$ - [R=410,L]
+  # 301 redirects for retired singer booking pages → singer hub.
+  # Close topical match, so Google passes link equity instead of soft-404ing.
+  RewriteRule ^book-sunidhi-chauhan/?$ /singer-booking-india/ [R=301,L]
+  RewriteRule ^book-asees-kaur/?$ /singer-booking-india/ [R=301,L]
 
-  # Permanently retire removed artist booking pages.
-  RewriteRule ^book-arijit-singh/?$ - [R=410,L]
-  RewriteRule ^book-badshah/?$ - [R=410,L]
-  RewriteRule ^book-kapil-sharma/?$ - [R=410,L]
+  # 301 redirects for retired artist booking pages → nearest matching hub.
+  RewriteRule ^book-arijit-singh/?$ /singer-booking-india/ [R=301,L]
+  RewriteRule ^book-badshah/?$ /singer-booking-india/ [R=301,L]
+  RewriteRule ^book-kapil-sharma/?$ /comedian-booking-india/ [R=301,L]
 
   # Canonical URL form: always use a trailing slash for directory routes.
   # If the request maps to an existing directory but is missing the trailing
