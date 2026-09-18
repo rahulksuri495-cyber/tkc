@@ -37,4 +37,4 @@ Artist confirmation, contracting, travel and hospitality, technical rider, on-gr
 - Singer fee bands 2026: https://tkctalent.com/celebrity-singer-fees-2026/
 - Brand endorsement fees 2026: https://tkctalent.com/celebrity-brand-endorsement-fees-2026/
 
-Indicative fees on tkctalent.com are booking bands, not final quotes — actual pricing depends on date, city, event type, usage rights and exclusivity.
+Indicative fees on tkctalent.com are booking bands, not final quotes — actual pricing depends on date, city, event type, usage rights and category restrictions.
