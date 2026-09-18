@@ -173,13 +173,30 @@ def clean_text(text: str, suffix: str) -> str:
     # 4. minified JS objects / string entries referencing the slugs
     for a in ARTISTS:
         slug = a["slug"]
+        name = re.escape(a["name"])
         text = re.sub(r"\{[^{}]*book-" + slug + r"[^{}]*\},?", "", text)
         text = re.sub(r'"[^"]*book-' + slug + r'[^"]*",?', "", text)
+        # flat JS data objects: {name:"Arijit Singh",...} / {q:"...",a:"..."} / slug:"arijit-singh"
+        text = re.sub(r'\{[^{}]*(?:slug:"' + slug + r'"|name:"' + name + r'")[^{}]*\},?', "", text)
+        text = re.sub(r"\{[^{}]*(?:q|title):\"[^\"]*" + name + r"[^\"]*\"[^{}]*\},?", "", text)
         for img in a["images"]:
             text = re.sub(r"\{[^{}]*" + re.escape(img) + r"[^{}]*\},?", "", text)
     text = re.sub(r",\s*([}\]])", r"\1", text)
     text = re.sub(r"([\[{])\s*,", r"\1", text)
     text = re.sub(r",\s*,+", ",", text)
+    # 4b. alternate FAQ markup variants containing a retired artist
+    for pat in (
+        r'<li class="py-6">[\s\S]*?</li>',
+        r"<details\b[\s\S]*?</details>",
+    ):
+        text = re.sub(pat, lambda m: "" if contains_marker(m.group(0)) else m.group(0), text)
+    # 4c. keywords meta: drop comma-separated phrases mentioning a retired artist
+    def kw_repl(m: re.Match) -> str:
+        parts = [p for p in m.group(1).split(",") if not contains_marker(p)]
+        return m.group(0).replace(m.group(1), ",".join(parts))
+
+    text = re.sub(r'name="keywords" content="([^"]*)"', kw_repl, text)
+    text = re.sub(r'content="([^"]*)" name="keywords"', kw_repl, text)
     # 5. sitemap <url> / <image:image> blocks
     if suffix == ".xml":
         text = re.sub(
