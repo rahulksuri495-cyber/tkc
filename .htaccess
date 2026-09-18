@@ -33,8 +33,9 @@ DirectoryIndex index.html
   RewriteRule ^book-vijay-sethupathi/?$ /celebrity-booking-india [R=301,L]
   RewriteRule ^celebrity-charges-2026/?$ /bollywood-celebrity-charges [R=301,L]
 
-  # Permanently retire the removed Sunidhi Chauhan booking page.
+  # Permanently retire removed singer booking pages.
   RewriteRule ^book-sunidhi-chauhan/?$ - [R=410,L]
+  RewriteRule ^book-asees-kaur/?$ - [R=410,L]
 
   # Canonical URL form: always use a trailing slash for directory routes.
   # If the request maps to an existing directory but is missing the trailing
