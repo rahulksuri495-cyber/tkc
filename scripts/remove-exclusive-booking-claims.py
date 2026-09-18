@@ -1,14 +1,41 @@
 #!/usr/bin/env python3
-"""Remove exclusivity marketing claims while retaining fee and contract terminology."""
+"""Replace exclusivity wording with precise booking, pricing and contract language."""
 
 from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parent.parent
 SKIP = {"dist", "node_modules", ".git", ".lovable", ".agents", ".claude", ".workspace"}
-TEXT_SUFFIXES = {".html", ".js", ".txt", ".xml"}
+TEXT_SUFFIXES = {".html", ".js", ".json", ".md", ".txt", ".xml", ".yml", ".yaml"}
 
 REPLACEMENTS = (
+    ("exclusive of 18% GST", "excluding 18% GST"),
+    ("exclusive of GST", "excluding GST"),
+    ("exclusive of gst", "excluding GST"),
+    ("exclusive of taxes", "excluding taxes"),
+    ("brand-category exclusivity", "brand-category conflict restrictions"),
+    ("brand category exclusivity", "brand-category conflict restrictions"),
+    ("category-exclusive sampling rights", "category-protected sampling rights"),
+    ("category exclusivity", "category conflict restrictions"),
+    ("brand exclusivity", "competitor-category restrictions"),
+    ("multi-year exclusivity", "multi-year category restrictions"),
+    ("Exclusivity &amp; Blocking", "Category Conflicts &amp; Blocking"),
+    ("Exclusivity & Blocking", "Category Conflicts & Blocking"),
+    ("exclusivity clauses", "category-conflict clauses"),
+    ("exclusivity clause", "category-conflict clause"),
+    ("exclusivity windows", "conflict-restriction windows"),
+    ("exclusivity window", "conflict-restriction window"),
+    ("exclusivity terms", "category-conflict terms"),
+    ("exclusivity and campaign duration", "campaign restrictions and duration"),
+    ("exclusivity and morality clauses", "category-conflict and morality clauses"),
+    ("exclusivity, deliverable and IP clauses", "category-conflict, deliverable and IP clauses"),
+    ("exclusivity, media windows", "category restrictions, media windows"),
+    ("usage rights and exclusivity", "usage rights and category restrictions"),
+    ("position and category exclusivity", "position and category restrictions"),
+    ("unlock exclusivity", "adjust category restrictions"),
+    ("taste, exclusivity and celebration", "taste, distinction and celebration"),
+    ("exclusivity and celebration", "distinction and celebration"),
+    ("the exclusivity of luxury resort venues", "the privacy of luxury resort venues"),
     ("exclusive access, the best pricing and complete event management support", "booking management, transparent pricing and complete event support"),
     ("exclusive access, the best pricing, and complete event management support", "booking management, transparent pricing, and complete event support"),
     ("exclusive relationships with Bollywood's top celebrity managers", "established booking relationships with Bollywood's top celebrity managers"),
