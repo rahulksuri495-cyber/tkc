@@ -57,6 +57,8 @@ REPLACEMENTS = (
 def main() -> None:
     changed = 0
     for path in ROOT.rglob("*"):
+        if path.resolve() == Path(__file__).resolve():
+            continue
         if not path.is_file() or path.suffix.lower() not in TEXT_SUFFIXES:
             continue
         if SKIP.intersection(path.relative_to(ROOT).parts):
