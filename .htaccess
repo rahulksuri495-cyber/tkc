@@ -37,6 +37,11 @@ DirectoryIndex index.html
   RewriteRule ^book-sunidhi-chauhan/?$ - [R=410,L]
   RewriteRule ^book-asees-kaur/?$ - [R=410,L]
 
+  # Permanently retire removed artist booking pages.
+  RewriteRule ^book-arijit-singh/?$ - [R=410,L]
+  RewriteRule ^book-badshah/?$ - [R=410,L]
+  RewriteRule ^book-kapil-sharma/?$ - [R=410,L]
+
   # Canonical URL form: always use a trailing slash for directory routes.
   # If the request maps to an existing directory but is missing the trailing
   # slash (e.g. /book-vaani-kapoor), 301 redirect to the slashed form.
