@@ -6,8 +6,8 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 SINGER_SLUGS = (
-    "ar-rahman", "altaf-raja", "arijit-singh", "armaan-malik", "b-praak",
-    "badshah", "darshan-raval", "diljit-dosanjh", "guru-randhawa",
+    "ar-rahman", "altaf-raja", "armaan-malik", "b-praak",
+    "darshan-raval", "diljit-dosanjh", "guru-randhawa",
     "hanumankind", "jasmine-sandlas", "jonita-gandhi", "jubin-nautiyal",
     "kanika-kapoor", "kumar-sanu", "lucky-ali", "meet-bros", "mohit-chauhan",
     "neha-bhasin", "neha-kakkar", "palak-muchhal", "pritam",

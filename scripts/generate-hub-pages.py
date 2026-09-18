@@ -97,7 +97,7 @@ WEDDING_FAQS = [
     ),
     (
         "Which celebrities are best for sangeet and wedding performances?",
-        "Top picks for sangeet nights include Arijit Singh, Shreya Ghoshal, Sonu Nigam, B Praak, Badshah, Diljit Dosanjh, and Darshan Raval. For emceeing, Kapil Sharma and Munawar Faruqui are popular. For a premium reception, Bollywood actors like Shah Rukh Khan, Salman Khan, Deepika Padukone and Ranbir Kapoor add star power.",
+        "Top picks for sangeet nights include Shreya Ghoshal, Sonu Nigam, B Praak, Diljit Dosanjh, and Darshan Raval. For emceeing, Sunil Grover and Munawar Faruqui are popular. For a premium reception, Bollywood actors like Shah Rukh Khan, Salman Khan, Deepika Padukone and Ranbir Kapoor add star power.",
     ),
     (
         "Can you book a celebrity for a destination wedding?",
@@ -171,7 +171,7 @@ def build_wedding_hub():
     <div class="mx-auto max-w-4xl text-center">
       <h2 class="font-display text-3xl font-bold sm:text-4xl">Make Your Wedding the Event Everyone Talks About</h2>
       <p class="mt-6 text-lg text-foreground/70">
-        A celebrity appearance at a wedding turns a celebration into a headline. Whether it is a soulful Arijit Singh ballad for the sangeet, a surprise Kapil Sharma comedy set for the cocktail, or a Shah Rukh Khan walk-in for the reception, TKC Talent has booked the biggest names for India's most prestigious weddings. With 20+ years of event management expertise and direct access to artist managers, we help you choose, contract, and execute the perfect celebrity moment — safely, on time, and on budget.
+        A celebrity appearance at a wedding turns a celebration into a headline. Whether it is a soulful Shreya Ghoshal ballad for the sangeet, a surprise Sunil Grover comedy set for the cocktail, or a Shah Rukh Khan walk-in for the reception, TKC Talent has booked the biggest names for India's most prestigious weddings. With 20+ years of event management expertise and direct access to artist managers, we help you choose, contract, and execute the perfect celebrity moment — safely, on time, and on budget.
       </p>
     </div>
   </section>
@@ -207,10 +207,6 @@ def build_wedding_hub():
       <h2 class="font-display text-center text-3xl font-bold sm:text-4xl">Most Booked Celebrities for Weddings</h2>
       <p class="mx-auto mt-4 max-w-3xl text-center text-foreground/70">These artists are consistently requested for sangeet, reception and destination wedding events.</p>
       <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-        <a href="/book-arijit-singh/" class="group rounded-2xl border border-foreground/10 p-6 transition hover:border-amber-400/50">
-          <h3 class="font-display text-lg font-bold group-hover:text-amber-400">Arijit Singh</h3>
-          <p class="mt-2 text-sm text-foreground/60">Wedding & sangeet performances</p>
-        </a>
         <a href="/book-shreya-ghoshal/" class="group rounded-2xl border border-foreground/10 p-6 transition hover:border-amber-400/50">
           <h3 class="font-display text-lg font-bold group-hover:text-amber-400">Shreya Ghoshal</h3>
           <p class="mt-2 text-sm text-foreground/60">Sangeet and classical fusion</p>
@@ -219,17 +215,9 @@ def build_wedding_hub():
           <h3 class="font-display text-lg font-bold group-hover:text-amber-400">Diljit Dosanjh</h3>
           <p class="mt-2 text-sm text-foreground/60">Punjabi wedding energy</p>
         </a>
-        <a href="/book-badshah/" class="group rounded-2xl border border-foreground/10 p-6 transition hover:border-amber-400/50">
-          <h3 class="font-display text-lg font-bold group-hover:text-amber-400">Badshah</h3>
-          <p class="mt-2 text-sm text-foreground/60">High-energy rap and dance</p>
-        </a>
         <a href="/book-sonu-nigam/" class="group rounded-2xl border border-foreground/10 p-6 transition hover:border-amber-400/50">
           <h3 class="font-display text-lg font-bold group-hover:text-amber-400">Sonu Nigam</h3>
           <p class="mt-2 text-sm text-foreground/60">Elegant reception concerts</p>
-        </a>
-        <a href="/book-kapil-sharma/" class="group rounded-2xl border border-foreground/10 p-6 transition hover:border-amber-400/50">
-          <h3 class="font-display text-lg font-bold group-hover:text-amber-400">Kapil Sharma</h3>
-          <p class="mt-2 text-sm text-foreground/60">Comedy and hosting</p>
         </a>
         <a href="/book-shah-rukh-khan/" class="group rounded-2xl border border-foreground/10 p-6 transition hover:border-amber-400/50">
           <h3 class="font-display text-lg font-bold group-hover:text-amber-400">Shah Rukh Khan</h3>
@@ -330,7 +318,7 @@ CORPORATE_FAQS = [
     ),
     (
         "Which celebrities are best for corporate annual day events?",
-        "Popular corporate annual day choices include Arijit Singh, Shreya Ghoshal, Sonu Nigam and Badshah for concerts; Kapil Sharma, Zakir Khan and Samay Raina for comedy; and Bollywood actors such as Shah Rukh Khan and Deepika Padukone for keynote or brand moments.",
+        "Popular corporate annual day choices include Shreya Ghoshal, Sonu Nigam and Diljit Dosanjh for concerts; Zakir Khan and Samay Raina for comedy; and Bollywood actors such as Shah Rukh Khan and Deepika Padukone for keynote or brand moments.",
     ),
     (
         "Can a celebrity host or emcee our conference?",
@@ -378,11 +366,8 @@ def build_corporate_hub():
         ("Dealer & Channel Meets", "High-energy performances and meet-and-greets that reward your partner network."),
     ]
     artists = [
-        ("Kapil Sharma", "/book-kapil-sharma/", "Comedy & hosting"),
-        ("Arijit Singh", "/book-arijit-singh/", "Corporate concerts"),
         ("Shah Rukh Khan", "/book-shah-rukh-khan/", "Keynote & brand moments"),
         ("Samay Raina", "/book-samay-raina/", "Stand-up for young teams"),
-        ("Badshah", "/book-badshah/", "After-party headliner"),
         ("Shreya Ghoshal", "/book-shreya-ghoshal/", "Elegant gala evenings"),
         ("Deepika Padukone", "/book-deepika-padukone/", "Brand ambassador appearances"),
     ]
