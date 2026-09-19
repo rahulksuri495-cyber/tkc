@@ -46,7 +46,9 @@ JSONLD_RE = re.compile(
 )
 
 SKIP_DIRS = {"node_modules", ".git", ".lovable"}
-SKIP_FILES = {"retire-artists.py"}
+# nav-enhance-v3.js is hand-maintained; the regex pass corrupts its
+# array-of-arrays and comment lines. Retired artists were removed manually.
+SKIP_FILES = {"retire-artists.py", "nav-enhance-v3.js"}
 
 
 def contains_marker(blob: str) -> bool:
