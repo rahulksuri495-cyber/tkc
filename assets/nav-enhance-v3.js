@@ -93,7 +93,7 @@
   }
 
   var singers=[
-    ['Book Altaf Raja','/book-altaf-raja/'],['Book A.R. Rahman','/book-ar-rahman/'],['Book Arijit Singh','/book-arijit-singh/'],['Book Armaan Malik','/book-armaan-malik/'],['Book B Praak','/book-b-praak/'],['Book Badshah','/book-badshah/'],['Book Darshan Raval','/book-darshan-raval/'],['Book Diljit Dosanjh','/book-diljit-dosanjh/'],['Book Guru Randhawa','/book-guru-randhawa/'],['Book Hanumankind','/book-hanumankind/'],['Book Jasmine Sandlas','/book-jasmine-sandlas/'],['Book Jonita Gandhi','/book-jonita-gandhi/'],['Book Jubin Nautiyal','/book-jubin-nautiyal/'],['Book Kanika Kapoor','/book-kanika-kapoor/'],['Book Kumar Sanu','/book-kumar-sanu/'],['Book Lucky Ali','/book-lucky-ali/'],['Book Meet Bros','/book-meet-bros/'],['Book Mohit Chauhan','/book-mohit-chauhan/'],['Book Neha Bhasin','/book-neha-bhasin/'],['Book Neha Kakkar','/book-neha-kakkar/'],['Book Palak Muchhal','/book-palak-muchhal/'],['Book Pritam','/book-pritam/'],['Book Sachet-Parampara','/book-sachet-parampara/'],['Book Sachin-Jigar','/book-sachin-jigar/'],['Book Salim-Sulaiman','/book-salim-sulaiman/'],['Book Sara Gurpal','/book-sara-gurpal/'],['Book Shamsher Lehri','/book-shamsher-lehri/'],['Book Shankar Mahadevan','/book-shankar-mahadevan/'],['Book Shreya Ghoshal','/book-shreya-ghoshal/'],['Book Sonu Nigam','/book-sonu-nigam/'],['Book Sunanda Sharma','/book-sunanda-sharma/'],['Book Tanishk Bagchi','/book-tanishk-bagchi/'],['Book Vishal-Shekhar','/book-vishal-shekhar/']
+    ['Book Altaf Raja','/book-altaf-raja/'],['Book A.R. Rahman','/book-ar-rahman/'],['Book Armaan Malik','/book-armaan-malik/'],['Book B Praak','/book-b-praak/'],['Book Darshan Raval','/book-darshan-raval/'],['Book Diljit Dosanjh','/book-diljit-dosanjh/'],['Book Guru Randhawa','/book-guru-randhawa/'],['Book Hanumankind','/book-hanumankind/'],['Book Jasmine Sandlas','/book-jasmine-sandlas/'],['Book Jonita Gandhi','/book-jonita-gandhi/'],['Book Jubin Nautiyal','/book-jubin-nautiyal/'],['Book Kanika Kapoor','/book-kanika-kapoor/'],['Book Kumar Sanu','/book-kumar-sanu/'],['Book Lucky Ali','/book-lucky-ali/'],['Book Meet Bros','/book-meet-bros/'],['Book Mohit Chauhan','/book-mohit-chauhan/'],['Book Neha Bhasin','/book-neha-bhasin/'],['Book Neha Kakkar','/book-neha-kakkar/'],['Book Palak Muchhal','/book-palak-muchhal/'],['Book Pritam','/book-pritam/'],['Book Sachet-Parampara','/book-sachet-parampara/'],['Book Sachin-Jigar','/book-sachin-jigar/'],['Book Salim-Sulaiman','/book-salim-sulaiman/'],['Book Sara Gurpal','/book-sara-gurpal/'],['Book Shamsher Lehri','/book-shamsher-lehri/'],['Book Shankar Mahadevan','/book-shankar-mahadevan/'],['Book Shreya Ghoshal','/book-shreya-ghoshal/'],['Book Sonu Nigam','/book-sonu-nigam/'],['Book Sunanda Sharma','/book-sunanda-sharma/'],['Book Tanishk Bagchi','/book-tanishk-bagchi/'],['Book Vishal-Shekhar','/book-vishal-shekhar/']
   ];
 
   function singerItemHtml(item, cls){
@@ -179,7 +179,7 @@
       if(a.closest('#mobile-nav-drawer')) return;
       var li=a.parentElement;
       if(!li || li.tagName!=='LI') return;
-      if(li.querySelector('ul a[href="/book-arijit-singh/"]')) return;
+      if(li.querySelector('ul a[href="/book-shreya-ghoshal/"]')) return;
       li.classList.add('relative','group/sub');
       a.classList.remove('block');
       a.classList.add('flex','items-center','justify-between','gap-2','group-hover/sub:bg-foreground','group-hover/sub:text-background');
@@ -192,7 +192,7 @@
     drawer.querySelectorAll('a[href="/singer-booking-india/"]').forEach(function(a){
       if((a.textContent||'').indexOf('Singers')===-1) return;
       var li=a.parentElement;
-      if(!li || li.tagName!=='LI' || li.querySelector('ul a[href="/book-arijit-singh/"]')) return;
+      if(!li || li.tagName!=='LI' || li.querySelector('ul a[href="/book-shreya-ghoshal/"]')) return;
       li.insertAdjacentHTML('beforeend','<ul class="ml-3 mt-1 flex max-h-64 flex-col gap-1 overflow-y-auto overscroll-contain border-l border-foreground/10 pl-3">'+singers.map(function(item){return singerItemHtml(item,'flex min-h-9 items-center rounded-lg px-3 py-2 text-xs text-foreground/80 transition hover:bg-foreground/5');}).join('')+'</ul>');
     });
   }
@@ -453,7 +453,7 @@
       ['Billing Support','/support/billing/']
     ];
     var extras=[
-      ['Book Aakash Gupta','/book-aakash-gupta/'],['Book Abish Mathew','/book-abish-mathew/'],['Book Anubhav Singh Bassi','/book-anubhav-singh-bassi/'],['Book Biswa Kalyan Rath','/book-biswa-kalyan-rath/'],['Book Bharti Singh','/book-bharti-singh/'],['Book Gaurav Kapoor','/book-gaurav-kapoor/'],['Book Kanan Gill','/book-kanan-gill/'],['Book Kapil Sharma','/book-kapil-sharma/'],['Book Kenny Sebastian','/book-kenny-sebastian/'],['Book Krushna Abhishek','/book-krushna-abhishek/'],['Book Munawar Faruqui','/book-munawar-faruqui/'],['Book Nishant Tanwar','/book-nishant-tanwar/'],['Book Rahul Subramanian','/book-rahul-subramanian/'],['Book Samay Raina','/book-samay-raina/'],['Book Zakir Khan','/book-zakir-khan/']
+      ['Book Aakash Gupta','/book-aakash-gupta/'],['Book Abish Mathew','/book-abish-mathew/'],['Book Anubhav Singh Bassi','/book-anubhav-singh-bassi/'],['Book Biswa Kalyan Rath','/book-biswa-kalyan-rath/'],['Book Bharti Singh','/book-bharti-singh/'],['Book Gaurav Kapoor','/book-gaurav-kapoor/'],['Book Kanan Gill','/book-kanan-gill/'],['Book Kenny Sebastian','/book-kenny-sebastian/'],['Book Krushna Abhishek','/book-krushna-abhishek/'],['Book Munawar Faruqui','/book-munawar-faruqui/'],['Book Nishant Tanwar','/book-nishant-tanwar/'],['Book Rahul Subramanian','/book-rahul-subramanian/'],['Book Samay Raina','/book-samay-raina/'],['Book Zakir Khan','/book-zakir-khan/']
     ];
     SEARCH_INDEX=sections.concat(singers).concat(actresses).concat(actors).concat(extras);
     // de-dup by url
