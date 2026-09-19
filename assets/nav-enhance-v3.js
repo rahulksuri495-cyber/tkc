@@ -385,7 +385,6 @@
       if(a.closest('#mobile-nav-drawer')) return;
       var li=a.closest('li'); if(!li) return;
       var ul=li.parentElement; if(!ul || ul.tagName!=='UL') return;
-      if(!(ul.parentElement && ul.parentElement.tagName==='LI')) return; // dropdown only
       if(ul.querySelector(':scope > li > a[href="/haryanvi-artist-booking/"]')) return;
       var item=document.createElement('li');
       item.className='relative group/sub';
