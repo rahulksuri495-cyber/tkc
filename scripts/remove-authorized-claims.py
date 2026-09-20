@@ -38,6 +38,12 @@ def revise(text: str) -> str:
     )
     text = re.sub(r"\bauthori[sz]ed management\b", "the artist's management", text, flags=re.IGNORECASE)
     text = re.sub(r"\bunauthori[sz]ed talent brokers\b", "unverified talent brokers", text, flags=re.IGNORECASE)
+    text = re.sub(
+        r"\bdirect, authori[sz]ed relationships with\b",
+        "established booking relationships with",
+        text,
+        flags=re.IGNORECASE,
+    )
     text = re.sub(r"\bauthori[sz]ed booking agenc(?:y|ies)\b", "booking agency", text, flags=re.IGNORECASE)
     text = re.sub(r"\bauthori[sz]ed agenc(?:y|ies)\b", "booking agency", text, flags=re.IGNORECASE)
     return text
