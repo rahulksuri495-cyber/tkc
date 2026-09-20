@@ -23,8 +23,6 @@ REPLACEMENTS = (
     ),
     (" represented for live bookings by TKC Talent ", " available for live booking through TKC Talent "),
     ("Official booking agency for ", "Artist booking agency for "),
-    ("authorised booking agency for ", "booking agency for "),
-    ("authorized booking agency for ", "booking agency for "),
 )
 
 
