@@ -6,7 +6,7 @@ Verifies, for /blog/index.html and every /blog/<slug>/index.html:
   - twitter:card, twitter:title, twitter:description, twitter:image
   - canonical link
   - og:url + canonical are absolute and self-reference the page
-  - og:image is absolute and the referenced file exists on disk
+  - og:image is absolute and the referenced local file or CDN asset pointer exists
 
 If a blog page is missing og:image (or points to a missing file), the script
 rewrites it to the default fallback /assets/blog/og-default.jpg so social
@@ -63,7 +63,16 @@ def expected_url(path: Path) -> str:
 
 def asset_exists(url: str) -> bool:
     p = urlparse(url).path
-    return (ROOT / p.lstrip("/")).is_file()
+    if (ROOT / p.lstrip("/")).is_file():
+        return True
+    if p.startswith("/__l5e/assets-v1/"):
+        for pointer in ROOT.glob("**/*.asset.json"):
+            try:
+                if f'"url": "{p}"' in pointer.read_text(encoding="utf-8"):
+                    return True
+            except (OSError, UnicodeDecodeError):
+                continue
+    return False
 
 
 def ensure_fallback_image(check_only: bool) -> list[str]:
