@@ -8,6 +8,7 @@ PAGES = [
     "book-salman-khan","book-shah-rukh-khan",
     "book-alia-bhatt","book-deepika-padukone","book-diljit-dosanjh",
     "book-darshan-raval","book-shreya-ghoshal",
+    "blog/event-management-company-india",
 ]
 GATEWAY = "https://connector-gateway.lovable.dev/google_search_console/webmasters/v3/sites/https%3A%2F%2Ftkctalent.com%2F/searchAnalytics/query"
 HEADERS = {
