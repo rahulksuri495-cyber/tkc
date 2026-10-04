@@ -1,0 +1,16 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="robots" content="noindex,nofollow"><meta name="viewport" content="width=device-width,initial-scale=1"><title>AI Search Visibility | TKC Admin</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4"></script>
+<style>body{font-family:system-ui,sans-serif;margin:24px;background:#0f0f12;color:#eee;max-width:1100px}.card{background:#1a1a20;border-radius:10px;padding:16px;margin:12px 0}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}.big{font-size:32px;font-weight:700;color:#d4a24c}small{color:#999}a{color:#d4a24c}li{margin:3px 0}</style></head><body>
+<h1>AI search & LLM visibility — monthly</h1>
+<div class="card"><small>Each month, AI engines are asked 40 fixed buyer questions (event management in Delhi NCR, celebrity booking, artist fees and more). Gemini and ChatGPT answer from what they already know, not a live web search. Perplexity uses live search and is added once its API key is set. Meta AI has no public interface, so it is checked by hand and logged in manual-meta.json. Google AI Mode is mixed into Search Console's web results and cannot be measured separately. Results come from a sample and vary between runs. <a href="/admin/keyword-audit/">← Keyword audit</a></small></div>
+<div class="grid" id="kpi"></div>
+<div class="card"><canvas id="c" height="110"></canvas></div>
+<div class="card"><h3>Competitors named most this month</h3><div id="comp"></div></div>
+<div class="card"><h3>Questions where TKC was mentioned</h3><ul id="ment"></ul></div>
+<script>
+fetch('history.jsonl').then(r=>r.text()).then(t=>{const H=t.trim().split('\n').map(JSON.parse),L=H[H.length-1],E=[...new Set(H.flatMap(h=>Object.keys(h.engines)))];
+kpi.innerHTML=Object.entries(L.engines).map(([e,v])=>`<div class="card"><small>${e} · ${L.month}</small><div class="big">${v.mention_rate}%</div><small>mentioned in ${v.mentioned}/${v.answered} answers · cited ${v.cited}</small></div>`).join('');
+new Chart(c,{type:'line',data:{labels:H.map(h=>h.month),datasets:E.map(e=>({label:e+' mention rate %',data:H.map(h=>h.engines[e]?.mention_rate??null)}))},options:{scales:{y:{min:0,max:100}},plugins:{legend:{labels:{color:'#eee'}}}}});
+comp.innerHTML=Object.entries(L.engines).map(([e,v])=>`<p><b>${e}:</b> ${Object.entries(v.top_competitors).map(([k,n])=>k+' ('+n+')').join(', ')||'—'}</p>`).join('');
+const m=Object.entries(L.engines).flatMap(([e,v])=>v.mentioned_for.map(q=>`<li>${e}: ${q}</li>`));ment.innerHTML=m.join('')||'<li>None yet — baseline month.</li>'})
+</script></body></html>

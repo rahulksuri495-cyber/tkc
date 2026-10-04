@@ -1,0 +1,30 @@
+name: ai-visibility-monthly
+# Monthly (1st, 05:00 UTC): asks AI engines 40 buyer questions, refreshes GSC
+# keyword data, and commits the updated AI visibility + keyword audit reports.
+on:
+  schedule:
+    - cron: "0 5 1 * *"
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.11" }
+      - name: Run probes
+        env:
+          LOVABLE_API_KEY: ${{ secrets.LOVABLE_API_KEY }}
+          GOOGLE_SEARCH_CONSOLE_API_KEY: ${{ secrets.GOOGLE_SEARCH_CONSOLE_API_KEY }}
+          PERPLEXITY_API_KEY: ${{ secrets.PERPLEXITY_API_KEY }}
+        run: |
+          python3 scripts/ai-visibility-probe.py
+          python3 scripts/fetch-gsc-keywords.py && python3 scripts/build-keyword-audit.py
+      - name: Commit
+        run: |
+          git config user.name "tkc-bot"; git config user.email "bot@tkctalent.com"
+          git add admin/ai-visibility admin/keyword-audit
+          git commit -m "Monthly AI visibility + keyword audit" || echo "no changes"
+          git push
