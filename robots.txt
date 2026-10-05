@@ -92,5 +92,9 @@ Allow: /
 User-agent: adidxbot
 Allow: /
 
+# LinkedIn (share/link preview crawling; used by section-5 OG checks)
+User-agent: LinkedInBot
+Allow: /
+
 Sitemap: https://tkctalent.com/sitemap.xml
 Sitemap: https://tkctalent.com/image-sitemap.xml
