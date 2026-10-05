@@ -169,6 +169,7 @@ def build(slug, d):
 <meta name="twitter:image" content="{og_img}"/>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@500;700&amp;display=swap"/>
 <link rel="stylesheet" href="/assets/styles-B3eDpzGa.css"/>
+<style>.max-w-5xl{max-width:64rem}.list-disc{list-style:disc}.list-decimal{list-style:decimal}.pl-5{padding-left:1.25rem}.min-w-\\[560px\\]{min-width:560px}.align-top{vertical-align:top}.underline{text-decoration-line:underline}.underline-offset-4{text-underline-offset:4px}main table th,main table td{text-align:left}main section a.underline{text-underline-offset:3px}</style>
 <link rel="alternate" type="text/markdown" href="{SITE}/{d.get("llms", "llms.txt")}" title="LLM-friendly summary"/>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-WQF5WX2TTB"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){{dataLayer.push(arguments);}}gtag('js',new Date());gtag('config','G-WQF5WX2TTB');</script>

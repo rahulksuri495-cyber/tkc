@@ -35,14 +35,19 @@ def set_meta(s, title=None, desc=None):
 
 def insert_after_first(s, pattern, block, key):
     if key in s:
-        return s
+        k = key.split('"')[1]
+        return re.sub(r'<div data-fix="' + re.escape(k) + r'".*?</div>', lambda m: block, s, count=1, flags=re.S)
     m = re.search(pattern, s, re.S)
     if not m:
         raise SystemExit(f"pattern not found for {key}")
     return s[:m.end()] + block + s[m.end():]
 
 
+UL = 'style="text-decoration:underline;text-underline-offset:3px"'
+
+
 def box(key, html):
+    html = html.replace('class="underline"', UL)
     return (f'<div data-fix="{key}" class="mt-6 max-w-3xl rounded-2xl border border-foreground/15 bg-foreground/[0.03] p-5 text-left text-sm leading-relaxed text-foreground/85" data-speakable="answer">{html}</div>')
 
 
@@ -152,7 +157,7 @@ wr(p, s); print("edited", p)
 
 # ------------------------------------------------------------------ 3. sitewide footer block + menu label
 FOOT = (MARK + '<div class="mt-10 border-t border-foreground/10 pt-6 text-sm"><p class="mb-3 text-xs uppercase tracking-[0.25em] text-foreground/50">Event management &amp; bookings</p>'
-        '<ul class="flex flex-wrap gap-x-5 gap-y-2 text-foreground/80">'
+        '<ul class="text-foreground/80" style="display:flex;flex-wrap:wrap;column-gap:1.25rem;row-gap:.5rem">'
         + "".join(f'<li><a href="{u}" class="hover:opacity-70">{t}</a></li>' for t, u in [
             ("Event Management Company", "/event-management-company/"),
             ("Event Management Delhi NCR", "/event-management-delhi/"),
@@ -184,17 +189,19 @@ print("footer/menu updated in", n, "pages")
 SECTION = ('<section data-fix="home-events" class="px-6 py-12 sm:px-10"><div class="mx-auto max-w-7xl rounded-3xl border border-foreground/10 bg-foreground/[0.03] p-8 sm:p-10">'
            '<h2 class="font-display text-2xl font-bold sm:text-3xl">Event management company in Delhi NCR and across India</h2>'
            '<p class="mt-4 max-w-3xl text-foreground/70">Besides celebrity booking, TKC Talent plans and produces complete events. Start with our '
-           '<a href="/event-management-company/" class="text-amber-300 underline underline-offset-4">event management company</a> services, or go straight to '
-           '<a href="/event-management-delhi/" class="text-amber-300 underline underline-offset-4">event management in Delhi NCR</a>, '
-           '<a href="/event-planners-delhi/" class="text-amber-300 underline underline-offset-4">event planners in Delhi</a>, '
-           '<a href="/event-management-gurgaon/" class="text-amber-300 underline underline-offset-4">event management in Gurgaon</a>, '
-           '<a href="/corporate-event-management/" class="text-amber-300 underline underline-offset-4">corporate event management</a>, '
-           '<a href="/wedding-planner-delhi/" class="text-amber-300 underline underline-offset-4">wedding planner in Delhi</a> and '
-           '<a href="/book-celebrity-for-wedding/" class="text-amber-300 underline underline-offset-4">celebrity booking for weddings</a>.</p></div></section>')
+           '<a href="/event-management-company/" style="text-decoration:underline;text-underline-offset:3px">event management company</a> services, or go straight to '
+           '<a href="/event-management-delhi/" style="text-decoration:underline;text-underline-offset:3px">event management in Delhi NCR</a>, '
+           '<a href="/event-planners-delhi/" style="text-decoration:underline;text-underline-offset:3px">event planners in Delhi</a>, '
+           '<a href="/event-management-gurgaon/" style="text-decoration:underline;text-underline-offset:3px">event management in Gurgaon</a>, '
+           '<a href="/corporate-event-management/" style="text-decoration:underline;text-underline-offset:3px">corporate event management</a>, '
+           '<a href="/wedding-planner-delhi/" style="text-decoration:underline;text-underline-offset:3px">wedding planner in Delhi</a> and '
+           '<a href="/book-celebrity-for-wedding/" style="text-decoration:underline;text-underline-offset:3px">celebrity booking for weddings</a>.</p></div></section>')
 for p in ["index.html", "ourservice/index.html"]:
     s = rd(p)
-    if 'data-fix="home-events"' not in s:
+    if 'data-fix="home-events"' in s:
+        s = re.sub(r'<section data-fix="home-events".*?</section>', lambda m: SECTION, s, count=1, flags=re.S)
+    else:
         i = s.rfind("</footer>") if p == "index.html" else s.find("<footer")
         s = s[:i] + SECTION + s[i:]
-        wr(p, s); print("section added", p)
+    wr(p, s); print("section ok", p)
 print("done")
