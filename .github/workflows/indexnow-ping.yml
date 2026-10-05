@@ -55,3 +55,30 @@ jobs:
             fi
           done
           exit "${fail}"
+  ping-priority-pages:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Submit priority keyword pages to IndexNow
+        env:
+          KEY: 377abe1193244f129029210522605df7
+        run: |
+          set -euo pipefail
+          cat > /tmp/payload.json <<JSON
+          {"host":"tkctalent.com","key":"${KEY}","keyLocation":"https://tkctalent.com/${KEY}.txt","urlList":[
+          "https://tkctalent.com/event-management-company/",
+          "https://tkctalent.com/event-management-delhi/",
+          "https://tkctalent.com/event-planners-delhi/",
+          "https://tkctalent.com/event-management-gurgaon/",
+          "https://tkctalent.com/wedding-planner-delhi/",
+          "https://tkctalent.com/corporate-event-management/",
+          "https://tkctalent.com/blog/corporate-event-management-india/",
+          "https://tkctalent.com/celebrity-booking-india/",
+          "https://tkctalent.com/pan-india-celebrity-booking/",
+          "https://tkctalent.com/book-celebrity-for-wedding/",
+          "https://tkctalent.com/celebrity-booking-delhi/",
+          "https://tkctalent.com/bollywood-celebrity-booking/"]}
+          JSON
+          status=$(curl -sS -o /tmp/body.txt -w "%{http_code}" -X POST "https://api.indexnow.org/IndexNow" \
+            -H "Content-Type: application/json; charset=utf-8" --data @/tmp/payload.json)
+          echo "IndexNow HTTP ${status}"; cat /tmp/body.txt || true
+          case "${status}" in 200|202) exit 0;; *) exit 1;; esac

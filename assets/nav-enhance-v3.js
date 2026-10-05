@@ -146,6 +146,34 @@
   }
 
 
+  // Top-level "Event Management" item with a dropdown of the main event pages.
+  var EVENT_PAGES=[["Event Management Company","/event-management-company/"],["Delhi NCR","/event-management-delhi/"],["Event Planners Delhi","/event-planners-delhi/"],["Gurgaon","/event-management-gurgaon/"],["Wedding Planner Delhi","/wedding-planner-delhi/"],["Corporate Events","/corporate-event-management/"]];
+  function ensureEventsTopLevel(){
+    Array.prototype.slice.call(document.querySelectorAll('nav ul')).forEach(function(ul){
+      if(ul.closest('#mobile-nav-drawer')) return;
+      if(ul.parentElement && ul.parentElement.tagName==='LI') return;
+      if(!ul.querySelector('a[href="/newsroom/"]')) return;
+      if(ul.querySelector(':scope > li > a[href="/event-management-company/"]')) return;
+      var before=(ul.querySelector(':scope > li > a[href="/durga-puja-2026/"]')||ul.querySelector('a[href="/newsroom/"]')).closest('li');
+      var li=document.createElement('li');
+      li.className='relative group';
+      li.innerHTML='<a href="/event-management-company/" class="transition-opacity hover:opacity-60">Event Management</a>'
+        +'<ul class="invisible absolute left-0 top-full z-50 mt-2 w-64 rounded-xl border border-foreground/10 bg-background p-2 opacity-0 shadow-xl transition group-hover:visible group-hover:opacity-100">'
+        +EVENT_PAGES.map(function(it){return '<li><a href="'+it[1]+'" class="block rounded-md px-3 py-2 text-sm font-medium text-foreground/80 transition-colors hover:bg-foreground hover:text-background">'+it[0]+'</a></li>';}).join('')
+        +'</ul>';
+      ul.insertBefore(li, before);
+    });
+    var drawer=document.getElementById('mobile-nav-drawer');
+    if(!drawer) return;
+    var mUl=drawer.querySelector('ul');
+    if(!mUl || mUl.querySelector(':scope > li > a[href="/event-management-company/"]')) return;
+    var mLi=document.createElement('li');
+    mLi.innerHTML='<a href="/event-management-company/" class="flex min-h-11 items-center rounded-lg px-3 py-3 transition hover:bg-foreground/5">Event Management</a>'
+      +'<ul class="ml-3 border-l border-foreground/10 pl-2">'+EVENT_PAGES.slice(1).map(function(it){return '<li><a href="'+it[1]+'" class="flex min-h-9 items-center rounded-lg px-3 py-2 text-sm text-foreground/80 transition hover:bg-foreground/5">'+it[0]+'</a></li>';}).join('')+'</ul>';
+    var mD=mUl.querySelector(':scope > li > a[href="/durga-puja-2026/"]');
+    if(mD) mUl.insertBefore(mLi, mD.closest('li')); else mUl.appendChild(mLi);
+  }
+
   function ensureDurgaTopLevel(){
     // Desktop: add a top-level "Durga Puja 2026" item to the main nav bar
     var lists=Array.prototype.slice.call(document.querySelectorAll('nav ul'));
@@ -440,7 +468,14 @@
       ['IITEO Legacy','/iiteo/'],
       ['Our Services','/ourservice/'],
       ['Celebrity Booking India','/celebrity-booking-india/'],
-      ['Pan India Celebrity Booking','/pan-india-celebrity-booking/'],
+      ['Multi-City Celebrity Tours','/pan-india-celebrity-booking/'],
+      ['Event Management Company','/event-management-company/'],
+      ['Event Management Delhi NCR','/event-management-delhi/'],
+      ['Event Planners Delhi','/event-planners-delhi/'],
+      ['Event Management Gurgaon','/event-management-gurgaon/'],
+      ['Wedding Planner Delhi','/wedding-planner-delhi/'],
+      ['Corporate Event Management','/corporate-event-management/'],
+      ['Book Celebrity for Wedding','/book-celebrity-for-wedding/'],
       ['Bollywood Celebrity Booking','/bollywood-celebrity-booking/'],
       ['Bollywood Actress Booking','/bollywood-actress-booking/'],
       ['Singer Booking India','/singer-booking-india/'],
@@ -558,6 +593,7 @@
     ensureCelebrityBookingMenu();
     ensureHaryanviMenu();
     ensureDurgaTopLevel();
+    ensureEventsTopLevel();
     ensureSingerSubmenus();
     ensureActressSubmenus();
     ensureActorSubmenus();
