@@ -223,6 +223,16 @@ PAGES["event-planners-delhi"] = dict(
             ul(["<strong>We do:</strong> budget plan, venue shortlist, vendor contracts, design, stage and sound, artist booking, permits, guest logistics, run-of-show and settlement.",
                 "<strong>You do:</strong> approve the brief and budget, choose from shortlisted options, share guest lists and sign off final designs.",
                 "<strong>On the day:</strong> your planner runs the show; you host."])),
+        sec("What a Delhi event budget usually covers",
+            p("When you compare quotes from event planners, check that each one includes the same line items:")
+            + table(["Line item", "Includes"], [
+                ["Venue", "Hall or lawn hire, F&amp;B minimums, overtime charges"],
+                ["Production", "Stage, sound, lighting, LED screens, power back-up"],
+                ["Design", "Décor, branding, signage, printed material"],
+                ["Talent", "Anchor, performers, celebrity fee and riders"],
+                ["Logistics", "Guest transport, travel, rooms, crew meals"],
+                ["Compliance", "Permit fees, insurance, security staff"],
+                ["Planner fee &amp; GST", "Fee as a percentage or fixed amount, plus 18% GST"]])),
         sec("Questions to ask any event planner in Delhi",
             ol(["Who exactly will be my planner, and will they be there on the day?",
                 "Which Delhi venues have you worked at in the last year?",
@@ -284,6 +294,12 @@ PAGES["event-management-gurgaon"] = dict(
         sec("Corporate events for Gurgaon offices",
             p("Gurgaon is home to the India offices of many IT, consulting, BFSI and consumer companies. That means weekday town halls, quarterly award nights and leadership offsites, often at short notice. We plan these around Cyber City traffic, building security rules and hotel load-in windows, and can add a celebrity host or performer through our in-house booking team.")
             + p('See also: <a class="underline" href="/corporate-event-management/">corporate event management</a> and <a class="underline" href="/celebrity-booking-gurgaon/">celebrity booking in Gurgaon</a>.')),
+        sec("Planning tips for events in Gurgaon",
+            ul(["<strong>Traffic:</strong> NH-48, Golf Course Road and Sohna Road jam between 6 and 9 pm on weekdays. Set guest arrival after 8 pm or arrange shuttles from metro stations.",
+                "<strong>Office buildings:</strong> Cyber City towers need security passes and fixed load-in slots. Apply a week ahead.",
+                "<strong>Monsoon:</strong> for July–August outdoor events, keep a covered or indoor backup, because low-lying roads can flood.",
+                "<strong>Weekend weddings:</strong> resorts on Sohna Road and in Manesar book out early in November–February.",
+                "<strong>Festivals:</strong> Durga Puja and Diwali weeks bring large crowds to the Sector 29 and 56 grounds. Plan parking and stall logistics early."])),
         sec("Permits for events in Gurgaon",
             table(["Approval", "Used for"], [
                 ["MCG (Municipal Corporation of Gurugram)", "Temporary structures and public spaces"],
@@ -341,6 +357,13 @@ PAGES["wedding-planner-delhi"] = dict(
                 ["Final month", "Rehearsals, final guest list, transport plan"],
                 ["Wedding week", "Planner team on site for every function"]],
                 "October–February is peak season in Delhi; popular venues and artists book out early.")),
+        sec("Wedding functions we plan",
+            table(["Function", "What we arrange"], [
+                ["Roka / engagement", "Venue, décor, ring ceremony set-up, photography coordination"],
+                ["Mehendi & haldi", "Day décor, seating, live music or dhol, food counters"],
+                ["Sangeet", "Stage, sound, LED, choreographer, DJ, live singer or celebrity act"],
+                ["Wedding ceremony", "Mandap, baraat logistics, pandit coordination, guest flow"],
+                ["Reception", "Stage, entertainment, celebrity appearance, guest hospitality"]])),
         sec("Popular wedding venues in Delhi NCR",
             ul(["<strong>Five-star hotels:</strong> ITC Maurya, The Leela Palace, Taj Mansingh, Roseate House, Oberoi Gurgaon, Leela Ambience.",
                 "<strong>Farmhouses:</strong> Chattarpur, Westend Greens and Sultanpur farm venues.",
