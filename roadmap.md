@@ -8,14 +8,14 @@
 - [ ] Meta AI — manual monthly check by user
 
 # Priority keyword fix (Oct 2026)
-- [ ] New /event-management-company/ service hub
-- [ ] Rewrite /event-management-delhi/ (Delhi NCR main page)
-- [ ] Rewrite /event-planners-delhi/ (planning-focused)
-- [ ] Rewrite /event-management-gurgaon/
-- [ ] New /wedding-planner-delhi/
-- [ ] Wedding celebrity: /book-celebrity-for-wedding/ main, de-target Delhi + Bollywood pages
-- [ ] Corporate: /corporate-event-management/ main, blog retitled as guide
-- [ ] Celebrity booking: /celebrity-booking-india/ main, pan-India refocused on tours
-- [ ] Sitewide footer links + menu group + homepage/services links
-- [ ] Sitemap, llms.txt, audit data, checks, browser check
+- [x] New /event-management-company/ service hub
+- [x] Rewrite /event-management-delhi/ (Delhi NCR main page)
+- [x] Rewrite /event-planners-delhi/ (planning-focused)
+- [x] Rewrite /event-management-gurgaon/
+- [x] New /wedding-planner-delhi/
+- [x] Wedding celebrity: /book-celebrity-for-wedding/ main, de-target Delhi + Bollywood pages
+- [x] Corporate: /corporate-event-management/ main, blog retitled as guide
+- [x] Celebrity booking: /celebrity-booking-india/ main, pan-India refocused on tours
+- [x] Sitewide footer links + menu group + homepage/services links
+- [x] Sitemap, llms.txt, audit data, checks, browser check
 - [ ] Request indexing in Search Console — user action
