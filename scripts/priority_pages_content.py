@@ -18,8 +18,21 @@ REL_EVENTS = [
 ]
 
 
-def rel(exclude):
-    return [x for x in REL_EVENTS if x[1] != exclude]
+KEEP = {
+    "/event-management-company/": ["/event-management-delhi/", "/corporate-event-management/", "/event-management-mumbai/", "/blog/event-management-company-india/", "/celebrity-booking-india/"],
+    "/event-management-delhi/": ["/event-planners-delhi/", "/event-management-gurgaon/", "/wedding-planner-delhi/", "/event-management-company/", "/celebrity-booking-delhi/"],
+    "/event-planners-delhi/": ["/event-management-delhi/", "/corporate-event-management/", "/wedding-planner-delhi/", "/contact-us/"],
+    "/event-management-gurgaon/": ["/event-management-delhi/", "/celebrity-booking-gurgaon/", "/durga-puja-2026/", "/corporate-event-management/"],
+    "/wedding-planner-delhi/": ["/book-celebrity-for-wedding/", "/event-management-delhi/", "/bollywood-celebrity-charges/", "/contact-us/"],
+}
+EXTRA = {"/celebrity-booking-delhi/": "Celebrity booking in Delhi", "/celebrity-booking-gurgaon/": "Celebrity booking in Gurgaon",
+         "/bollywood-celebrity-charges/": "Bollywood celebrity charges 2026"}
+
+
+def rel(page):
+    names = {u: t for t, u in REL_EVENTS}
+    names.update(EXTRA)
+    return [(names[u], u) for u in KEEP[page]]
 
 
 PAGES = {}
