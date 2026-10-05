@@ -6,14 +6,14 @@
    "keyword": "event management company",
    "volume_in": "6600",
    "difficulty": "25",
-   "target_page": "/blog/event-management-company-india/",
+   "target_page": "/event-management-company/",
    "impressions_90d": 0,
    "clicks_90d": 0,
    "avg_position": null,
    "page_google_shows": "",
    "status": "Not ranking (no impressions)",
    "priority": "Critical",
-   "fix": "No Google impressions at all. Add 'Event Management Company' to the H1 and title; link to it from the homepage and main menu (only 8 internal links today); build a service page, since a blog list rarely ranks for service searches."
+   "fix": "Fixed 5 Oct 2026: new service page /event-management-company/ (answer-first intro, cost table, FAQ + Service schema), linked from every page footer, the homepage and the menu. Next: Request indexing."
   },
   {
    "keyword": "event planners in delhi",
@@ -26,33 +26,33 @@
    "page_google_shows": "",
    "status": "Not ranking (no impressions)",
    "priority": "Critical",
-   "fix": "No impressions. Add a 2\u20133 sentence answer at the top, a Delhi address and LocalBusiness details, real event photos, and links from the homepage and footer."
+   "fix": "Fixed 5 Oct 2026: rewritten as a planning page (timeline, Delhi permits, budget items) distinct from the Delhi NCR page; linked sitewide. Next: Request indexing."
   },
   {
    "keyword": "wedding planner delhi",
    "volume_in": "1900",
    "difficulty": "14",
-   "target_page": "(none)",
+   "target_page": "/wedding-planner-delhi/",
    "impressions_90d": 0,
    "clicks_90d": 0,
    "avg_position": null,
    "page_google_shows": "",
-   "status": "No page",
+   "status": "Not ranking (no impressions)",
    "priority": "High",
-   "fix": "No page exists. Build a /wedding-planner-delhi/ page with a direct answer, packages and photos."
+   "fix": "Fixed 5 Oct 2026: new /wedding-planner-delhi/ page, linked sitewide. Next: Request indexing."
   },
   {
    "keyword": "event management company in delhi",
    "volume_in": "1300",
    "difficulty": "31",
-   "target_page": "(none \u2014 /event-planners-delhi/ partly)",
+   "target_page": "/event-management-delhi/",
    "impressions_90d": 0,
    "clicks_90d": 0,
    "avg_position": null,
    "page_google_shows": "",
-   "status": "No page",
+   "status": "Not ranking (no impressions)",
    "priority": "Critical",
-   "fix": "No dedicated page. Build an /event-management-company-delhi/ service page that covers Delhi NCR, and point the 'Delhi NCR' searches to it."
+   "fix": "Fixed 5 Oct 2026: existing /event-management-delhi/ made the main Delhi NCR page (rewritten, H1 = keyword), links raised from 11 pages to sitewide. Next: Request indexing."
   },
   {
    "keyword": "event management company in gurgaon",
@@ -65,20 +65,20 @@
    "page_google_shows": "",
    "status": "Not ranking (no impressions)",
    "priority": "High",
-   "fix": "No impressions. Change the URL wording or title to start with 'Event Management Company in Gurgaon', add real Gurgaon events and the Gurgaon Durga Puja stalls, and link from Durga Puja pages."
+   "fix": "Fixed 5 Oct 2026: rewritten with Gurgaon areas, permits, tips and Durga Puja Gurgaon stalls; linked sitewide. Next: Request indexing."
   },
   {
    "keyword": "corporate event management company",
    "volume_in": "880",
    "difficulty": "37",
-   "target_page": "/blog/corporate-event-management-india/",
+   "target_page": "/corporate-event-management/",
    "impressions_90d": 0,
    "clicks_90d": 0,
    "avg_position": null,
    "page_google_shows": "",
    "status": "Not ranking (no impressions)",
    "priority": "High",
-   "fix": "No impressions. Link to it from the homepage, the services page and the menu (8 internal links today)."
+   "fix": "Fixed 5 Oct 2026: /corporate-event-management/ is the main page (title fixed, answer-first box); blog retitled as a costs guide linking to it."
   },
   {
    "keyword": "best event management company in india",
@@ -97,27 +97,27 @@
    "keyword": "event management company in delhi ncr",
    "volume_in": "70",
    "difficulty": "0",
-   "target_page": "(none)",
+   "target_page": "/event-management-delhi/",
    "impressions_90d": 0,
    "clicks_90d": 0,
    "avg_position": null,
    "page_google_shows": "",
-   "status": "No page",
+   "status": "Not ranking (no impressions)",
    "priority": "High",
-   "fix": "Cover on the new Delhi event management page; add 'Delhi NCR' to the H1."
+   "fix": "Fixed 5 Oct 2026: covered by /event-management-delhi/ (H1: Event Management Company in Delhi NCR)."
   },
   {
    "keyword": "best event management company in delhi ncr",
    "volume_in": "10",
    "difficulty": "0",
-   "target_page": "(none)",
+   "target_page": "/event-management-delhi/",
    "impressions_90d": 0,
    "clicks_90d": 0,
    "avg_position": null,
    "page_google_shows": "",
-   "status": "No page",
+   "status": "Not ranking (no impressions)",
    "priority": "Medium",
-   "fix": "Cover on the new Delhi page with an answer-first 'Best event management company in Delhi NCR' section and comparison table."
+   "fix": "Fixed 5 Oct 2026: a best-event-management-company-in-Delhi-NCR section + comparison table on /event-management-delhi/."
   },
   {
    "keyword": "celebrity management company",
@@ -143,7 +143,7 @@
    "page_google_shows": "/pan-india-celebrity-booking/",
    "status": "Pages competing",
    "priority": "High",
-   "fix": "Google shows /pan-india-celebrity-booking/ instead, at position 12. Use /celebrity-booking-india/ as the main page: H1 'Book a Celebrity in India', an answer-first intro, and FAQ."
+   "fix": "Fixed 5 Oct 2026: /celebrity-booking-india/ new title/H1 (Book a Celebrity for Your Event) + answer box; pan-India page refocused on multi-city tours and links back."
   },
   {
    "keyword": "celebrity booking",
@@ -156,7 +156,7 @@
    "page_google_shows": "/pan-india-celebrity-booking/",
    "status": "Wrong page ranking",
    "priority": "High",
-   "fix": "Wrong page ranks (/pan-india-celebrity-booking/, position 7.4). Change the H1 'Celebrity Booking in India.' to a descriptive one, add a fee table, and point pan-india internal links to it."
+   "fix": "Fixed 5 Oct 2026: same as above; menu label 'Pan-India Celebrities' renamed 'Multi-City Celebrity Tours' on 180 pages."
   },
   {
    "keyword": "celebrity booking agency",
@@ -195,7 +195,7 @@
    "page_google_shows": "/celebrity-booking-delhi/",
    "status": "Pages competing",
    "priority": "Critical",
-   "fix": "Three pages compete (Delhi page position 10, wedding page position 26, Bollywood page position 38) across 636 impressions. Make /book-celebrity-for-wedding/ the main page: link to it sitewide (only 2 internal links now) and remove wedding wording from the other two."
+   "fix": "Fixed 5 Oct 2026: /book-celebrity-for-wedding/ is the only wedding page (new title/H1, answer box), linked from every page footer; Delhi and Bollywood pages no longer target weddings."
   },
   {
    "keyword": "book celebrity for event",
